@@ -1,0 +1,256 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Calculator" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">?attr/colorSurfaceVariant</item>
+        <item name="android:colorControlActivated">?attr/colorPrimary</item>
+        <item name="android:textColorHighlight">?attr/colorPrimaryContainer</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+
+
+
+
+    <style name="dynamicColors" parent="Base.Theme.Calculator">
+        <item name="colorPrimary">@color/material_dynamic_primary80</item>
+        <item name="colorOnPrimary">@color/material_dynamic_primary20</item>
+        <item name="colorPrimaryContainer">@color/material_dynamic_primary40</item>
+        <item name="colorOnPrimaryContainer">@color/material_dynamic_primary90</item>
+
+        <item name="colorSecondary">@color/material_dynamic_secondary80</item>
+        <item name="colorOnSecondary">@color/material_dynamic_secondary20</item>
+        <item name="colorSecondaryContainer">@color/material_dynamic_secondary30</item>
+        <item name="colorOnSecondaryContainer">@color/material_dynamic_secondary90</item>
+
+        <item name="colorTertiary">@color/material_dynamic_tertiary80</item>
+        <item name="colorOnTertiary">@color/material_dynamic_tertiary20</item>
+        <item name="colorTertiaryContainer">@color/material_dynamic_tertiary30</item>
+        <item name="colorOnTertiaryContainer">@color/material_dynamic_tertiary90</item>
+
+        <item name="colorSurface">@color/material_dynamic_neutral10</item>
+        <item name="colorOnSurface">@color/material_dynamic_neutral90</item>
+        <item name="colorSurfaceVariant">@color/material_dynamic_neutral_variant20</item>
+        <item name="colorOnSurfaceVariant">@color/material_dynamic_neutral_variant80</item>
+
+        <item name="colorOutline">@color/material_dynamic_neutral_variant60</item>
+
+        <item name="colorOnSurfaceInverse">@color/material_dynamic_neutral20</item>
+        <item name="colorSurfaceInverse">@color/material_dynamic_neutral80</item>
+        <item name="colorPrimaryInverse">@color/material_dynamic_primary30</item>
+    </style>
+
+
+
+
+
+
+
+
+    <style name="color_0" parent="Base.Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimary_0</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_0</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer_0</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer_0</item>
+
+        <item name="colorSecondary">@color/colorSecondary_0</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary_0</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer_0</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer_0</item>
+
+        <item name="colorTertiary">@color/colorTertiary_0</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary_0</item>
+        <item name="colorTertiaryContainer">@color/colorTertiaryContainer_0</item>
+        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer_0</item>
+
+        <item name="colorSurface">@color/colorSurface_0</item>
+        <item name="colorOnSurface">@color/colorOnSurface_0</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant_0</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_0</item>
+
+        <item name="colorOutline">@color/colorOutline_0</item>
+
+        <item name="colorOnSurfaceInverse">@color/colorOnSurfaceInverse_0</item>
+        <item name="colorSurfaceInverse">@color/colorSurfaceInverse_0</item>
+        <item name="colorPrimaryInverse">@color/colorPrimaryInverse_0</item>
+    </style>
+
+
+
+    <style name="color_Black_And_White" parent="Base.Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimary_Black_And_White</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_Black_And_White</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer_Black_And_White</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer_Black_And_White</item>
+
+        <item name="colorSecondary">@color/colorSecondary_Black_And_White</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary_Black_And_White</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer_Black_And_White</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer_Black_And_White</item>
+
+        <item name="colorTertiary">@color/colorTertiary_Black_And_White</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary_Black_And_White</item>
+        <item name="colorTertiaryContainer">@color/colorTertiaryContainer_Black_And_White</item>
+        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer_Black_And_White</item>
+
+        <item name="colorSurface">@color/colorSurface_Black_And_White</item>
+        <item name="colorOnSurface">@color/colorOnSurface_Black_And_White</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant_Black_And_White</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_Black_And_White</item>
+
+        <item name="colorOutline">@color/colorOutline_5</item>
+
+        <item name="colorOnSurfaceInverse">@color/colorOnSurfaceInverse_Black_And_White</item>
+        <item name="colorSurfaceInverse">@color/colorSurfaceInverse_Black_And_White</item>
+        <item name="colorPrimaryInverse">@color/colorPrimaryInverse_Black_And_White</item>
+    </style>
+
+
+
+
+
+
+    <style name="color_1" parent="Base.Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimary_1</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_1</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer_1</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer_1</item>
+
+        <item name="colorSecondary">@color/colorSecondary_1</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary_1</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer_1</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer_1</item>
+
+        <item name="colorTertiary">@color/colorTertiary_1</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary_1</item>
+        <item name="colorTertiaryContainer">@color/colorTertiaryContainer_1</item>
+        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer_1</item>
+
+        <item name="colorSurface">@color/colorSurface_1</item>
+        <item name="colorOnSurface">@color/colorOnSurface_1</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant_1</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_1</item>
+
+        <item name="colorOutline">@color/colorOutline_1</item>
+
+        <item name="colorOnSurfaceInverse">@color/colorOnSurfaceInverse_1</item>
+        <item name="colorSurfaceInverse">@color/colorSurfaceInverse_1</item>
+        <item name="colorPrimaryInverse">@color/colorPrimaryInverse_1</item>
+    </style>
+
+
+    <style name="color_2" parent="Base.Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimary_2</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_2</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer_2</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer_2</item>
+
+        <item name="colorSecondary">@color/colorSecondary_2</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary_2</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer_2</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer_2</item>
+
+        <item name="colorTertiary">@color/colorTertiary_2</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary_2</item>
+        <item name="colorTertiaryContainer">@color/colorTertiaryContainer_2</item>
+        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer_2</item>
+
+        <item name="colorSurface">@color/colorSurface_2</item>
+        <item name="colorOnSurface">@color/colorOnSurface_2</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant_2</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_2</item>
+
+        <item name="colorOutline">@color/colorOutline_2</item>
+
+        <item name="colorOnSurfaceInverse">@color/colorOnSurfaceInverse_2</item>
+        <item name="colorSurfaceInverse">@color/colorSurfaceInverse_2</item>
+        <item name="colorPrimaryInverse">@color/colorPrimaryInverse_2</item>
+    </style>
+
+
+    <style name="color_3" parent="Base.Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimary_3</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_3</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer_3</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer_3</item>
+
+        <item name="colorSecondary">@color/colorSecondary_3</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary_3</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer_3</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer_3</item>
+
+        <item name="colorTertiary">@color/colorTertiary_3</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary_3</item>
+        <item name="colorTertiaryContainer">@color/colorTertiaryContainer_3</item>
+        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer_3</item>
+
+        <item name="colorSurface">@color/colorSurface_3</item>
+        <item name="colorOnSurface">@color/colorOnSurface_3</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant_3</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_3</item>
+
+        <item name="colorOutline">@color/colorOutline_3</item>
+
+        <item name="colorOnSurfaceInverse">@color/colorOnSurfaceInverse_3</item>
+        <item name="colorSurfaceInverse">@color/colorSurfaceInverse_3</item>
+        <item name="colorPrimaryInverse">@color/colorPrimaryInverse_3</item>
+    </style>
+
+
+    <style name="color_4" parent="Base.Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimary_4</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_4</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer_4</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer_4</item>
+
+        <item name="colorSecondary">@color/colorSecondary_4</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary_4</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer_4</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer_4</item>
+
+        <item name="colorTertiary">@color/colorTertiary_4</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary_4</item>
+        <item name="colorTertiaryContainer">@color/colorTertiaryContainer_4</item>
+        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer_4</item>
+
+        <item name="colorSurface">@color/colorSurface_4</item>
+        <item name="colorOnSurface">@color/colorOnSurface_4</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant_4</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_4</item>
+
+        <item name="colorOutline">@color/colorOutline_4</item>
+
+        <item name="colorOnSurfaceInverse">@color/colorOnSurfaceInverse_4</item>
+        <item name="colorSurfaceInverse">@color/colorSurfaceInverse_4</item>
+        <item name="colorPrimaryInverse">@color/colorPrimaryInverse_4</item>
+    </style>
+
+
+    <style name="color_5" parent="Base.Theme.Calculator">
+        <item name="colorPrimary">@color/colorPrimary_5</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary_5</item>
+        <item name="colorPrimaryContainer">@color/colorPrimaryContainer_5</item>
+        <item name="colorOnPrimaryContainer">@color/colorOnPrimaryContainer_5</item>
+
+        <item name="colorSecondary">@color/colorSecondary_5</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary_5</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryContainer_5</item>
+        <item name="colorOnSecondaryContainer">@color/colorOnSecondaryContainer_5</item>
+
+        <item name="colorTertiary">@color/colorTertiary_5</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary_5</item>
+        <item name="colorTertiaryContainer">@color/colorTertiaryContainer_5</item>
+        <item name="colorOnTertiaryContainer">@color/colorOnTertiaryContainer_5</item>
+
+        <item name="colorSurface">@color/colorSurface_5</item>
+        <item name="colorOnSurface">@color/colorOnSurface_5</item>
+        <item name="colorSurfaceVariant">@color/colorSurfaceVariant_5</item>
+        <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_5</item>
+
+        <item name="colorOutline">@color/colorOutline_5</item>
+
+        <item name="colorOnSurfaceInverse">@color/colorOnSurfaceInverse_5</item>
+        <item name="colorSurfaceInverse">@color/colorSurfaceInverse_5</item>
+        <item name="colorPrimaryInverse">@color/colorPrimaryInverse_5</item>
+    </style>
+</resources>

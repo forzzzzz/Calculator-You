@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_icon">@color/material_dynamic_secondary80</color>
+    <color name="primary_icon">@color/material_dynamic_primary40</color>
+    <color name="secondary_icon">@color/material_dynamic_secondary95</color>
+</resources>

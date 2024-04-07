@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="actionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">64dp</item>
+
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center|start</item>
+    </style>
+
+    <style name="ArrowBack">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">38dp</item>
+
+        <item name="android:padding">6dp</item>
+
+        <item name="android:layout_marginStart">16dp</item>
+
+        <item name="android:src">@drawable/arrow_back</item>
+        <item name="android:background">@drawable/background_options_menu</item>
+        <item name="android:tooltipText">@string/arrow_back_tooltip</item>
+        <item name="android:onClick">onClickBack</item>
+    </style>
+
+    <style name="titleText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginStart">16dp</item>
+
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+
+
+
+    <style name="sectionText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginStart">66dp</item>
+        <item name="android:layout_marginTop">48dp</item>
+
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="optionLayout">
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="optionImage">
+        <item name="android:layout_width">26dp</item>
+        <item name="android:layout_height">26dp</item>
+
+        <item name="android:layout_marginStart">20dp</item>
+    </style>
+
+    <style name="optionTitleText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="optionSpinner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+
+        <item name="android:spinnerMode">dropdown</item>
+    </style>
+
+    <style name="optionDescriptionText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="optionSwitch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="optionHorizontalScroll">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+
+        <item name="android:scrollbars">none</item>
+    </style>
+
+
+
+    <style name="backgroundSelectColor">
+        <item name="android:background">@drawable/background_select_color</item>
+
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+
+        <item name="android:layout_marginStart">8dp</item>
+
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:onClick">selectColor</item>
+    </style>
+
+    <style name="selectColorView">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+
+        <item name="android:layout_gravity">center</item>
+        <item name="cv_border">true</item>
+        <item name="cv_border_width">2dp</item>
+        <item name="cv_border_color">?attr/colorOnSurfaceVariant</item>
+    </style>
+
+    <style name="doneSelectColor">
+        <item name="android:layout_width">26dp</item>
+        <item name="android:layout_height">26dp</item>
+
+        <item name="android:layout_gravity">center</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:src">@drawable/done</item>
+    </style>
+
+    <style name="optionSeekBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <style name="optionSeekBarValueText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

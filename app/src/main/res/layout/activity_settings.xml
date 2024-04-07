@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+
+    <LinearLayout
+        android:id="@+id/actionBar"
+        style="@style/actionBar">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/arrowBack"
+            style="@style/ArrowBack" />
+
+        <TextView
+            android:id="@+id/titleText"
+            style="@style/titleText"
+            android:text="@string/title_settings" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/backgroundScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/themeSelectionText"
+                style="@style/sectionText"
+                android:layout_marginTop="24dp"
+                android:text="@string/theme_selection_text" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chooseThemeLayout"
+                style="@style/optionLayout"
+                android:layout_marginTop="8dp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chooseThemeImage"
+                    style="@style/optionImage"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintBottom_toTopOf="@+id/chooseThemeHorizontalScroll"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/light_mode" />
+
+                <TextView
+                    android:id="@+id/chooseThemeTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_select_theme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/chooseThemeImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/chooseThemeText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_select_theme"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/chooseThemeImage"
+                    app:layout_constraintTop_toBottomOf="@+id/chooseThemeTitleText" />
+
+                <HorizontalScrollView
+                    android:id="@+id/chooseThemeHorizontalScroll"
+                    style="@style/optionHorizontalScroll"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/chooseThemeImage"
+                    app:layout_constraintTop_toBottomOf="@+id/chooseThemeText">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButtonToggleGroup
+                            android:id="@+id/chooseThemeButtonToggleGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:selectionRequired="true"
+                            app:singleSelection="true">
+
+                            <Button
+                                android:id="@+id/chooseThemeAutoButton"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/theme_element_1" />
+
+                            <Button
+                                android:id="@+id/chooseThemeLightButton"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/theme_element_2" />
+
+                            <Button
+                                android:id="@+id/chooseThemeDarkButton"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/theme_element_3" />
+
+                        </com.google.android.material.button.MaterialButtonToggleGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dynamicColorsLayout"
+                style="@style/optionLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dynamicColorsImage"
+                    style="@style/optionImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/colorize" />
+
+                <TextView
+                    android:id="@+id/dynamicColorsTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_dynamic_colors"
+                    app:layout_constraintEnd_toStartOf="@+id/dynamicColorsSwitch"
+                    app:layout_constraintStart_toEndOf="@+id/dynamicColorsImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dynamicColorsText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_dynamic_colors"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/dynamicColorsSwitch"
+                    app:layout_constraintStart_toEndOf="@+id/dynamicColorsImage"
+                    app:layout_constraintTop_toBottomOf="@+id/dynamicColorsTitleText" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/dynamicColorsSwitch"
+                    style="@style/optionSwitch"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chooseColorLayout"
+                style="@style/optionLayout">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chooseColorImage"
+                    style="@style/optionImage"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintBottom_toTopOf="@+id/chooseColorHorizontalScroll"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/palette" />
+
+                <TextView
+                    android:id="@+id/chooseColorTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_select_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/chooseColorImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/chooseColorText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_select_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/chooseColorImage"
+                    app:layout_constraintTop_toBottomOf="@+id/chooseColorTitleText" />
+
+                <HorizontalScrollView
+                    android:id="@+id/chooseColorHorizontalScroll"
+                    style="@style/optionHorizontalScroll"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/chooseColorImage"
+                    app:layout_constraintTop_toBottomOf="@+id/chooseColorText">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/color_0"
+                            style="@style/backgroundSelectColor"
+                            android:layout_marginStart="0dp">
+
+                            <com.mikhaellopez.circleview.CircleView
+                                android:id="@+id/color_0_view"
+                                style="@style/selectColorView"
+                                app:cv_color="@color/colorPrimaryContainer_0" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/color_0_selected"
+                                style="@style/doneSelectColor" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/color_Black_And_White"
+                            style="@style/backgroundSelectColor" >
+
+                            <com.mikhaellopez.circleview.CircleView
+                                android:id="@+id/color_Black_And_White_view"
+                                style="@style/selectColorView"
+                                app:cv_color="@color/colorPrimaryContainer_Black_And_White" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/color_Black_And_White_selected"
+                                style="@style/doneSelectColor" />
+                        </FrameLayout>
+
+                        <View
+                            android:id="@+id/selectColorBorder"
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="?attr/colorOnSurface" />
+
+                        <FrameLayout
+                            android:id="@+id/color_1"
+                            style="@style/backgroundSelectColor">
+
+                            <com.mikhaellopez.circleview.CircleView
+                                android:id="@+id/color_1_view"
+                                style="@style/selectColorView"
+                                app:cv_color="@color/colorPrimaryContainer_1" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/color_1_selected"
+                                style="@style/doneSelectColor" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/color_2"
+                            style="@style/backgroundSelectColor" >
+
+                            <com.mikhaellopez.circleview.CircleView
+                                android:id="@+id/color_2_view"
+                                style="@style/selectColorView"
+                                app:cv_color="@color/colorPrimaryContainer_2" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/color_2_selected"
+                                style="@style/doneSelectColor" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/color_3"
+                            style="@style/backgroundSelectColor" >
+
+                            <com.mikhaellopez.circleview.CircleView
+                                android:id="@+id/color_3_view"
+                                style="@style/selectColorView"
+                                app:cv_color="@color/colorPrimaryContainer_3" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/color_3_selected"
+                                style="@style/doneSelectColor" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/color_4"
+                            style="@style/backgroundSelectColor" >
+
+                            <com.mikhaellopez.circleview.CircleView
+                                android:id="@+id/color_4_view"
+                                style="@style/selectColorView"
+                                app:cv_color="@color/colorPrimaryContainer_4" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/color_4_selected"
+                                style="@style/doneSelectColor" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/color_5"
+                            style="@style/backgroundSelectColor" >
+
+                            <com.mikhaellopez.circleview.CircleView
+                                android:id="@+id/color_5_view"
+                                style="@style/selectColorView"
+                                app:cv_color="@color/colorPrimaryContainer_5" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/color_5_selected"
+                                style="@style/doneSelectColor" />
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/formattingSelectionText"
+                style="@style/sectionText"
+                android:text="@string/formatting_selection_text" />
+
+            <LinearLayout
+                android:id="@+id/previewFormatLayout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/background_preview_number"
+                android:gravity="center"
+                android:clickable="true">
+
+                <TextView
+                    android:id="@+id/previewFormatText"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:autoSizeMaxTextSize="52sp"
+                    android:autoSizeMinTextSize="10sp"
+                    android:autoSizeStepGranularity="1sp"
+                    android:autoSizeTextType="uniform"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/previewFormatText"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="52sp" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/precisionLayout"
+                style="@style/optionLayout"
+                android:layout_marginTop="16dp">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/precisionImage"
+                    style="@style/optionImage"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/precisionText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/architecture" />
+
+                <TextView
+                    android:id="@+id/precisionTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_precision"
+                    app:layout_constraintEnd_toStartOf="@+id/precisionValueText"
+                    app:layout_constraintStart_toEndOf="@+id/precisionImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/precisionText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_precision"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/precisionImage"
+                    app:layout_constraintTop_toBottomOf="@+id/precisionTitleText" />
+
+                <TextView
+                    android:id="@+id/precisionValueText"
+                    style="@style/optionSeekBarValueText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/precisionTitleText"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <SeekBar
+                    android:id="@+id/precisionSeekBar"
+                    style="@style/optionSeekBar"
+                    android:max="16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/precisionImage"
+                    app:layout_constraintTop_toBottomOf="@id/precisionText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/groupingSeparatorSymbolLayout"
+                style="@style/optionLayout">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/groupingSeparatorSymbolImage"
+                    style="@style/optionImage"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintBottom_toTopOf="@+id/groupingSeparatorSymbolHorizontalScroll"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_123" />
+
+                <TextView
+                    android:id="@+id/groupingSeparatorSymbolTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_separator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/groupingSeparatorSymbolImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/groupingSeparatorSymbolText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_separator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/groupingSeparatorSymbolImage"
+                    app:layout_constraintTop_toBottomOf="@+id/groupingSeparatorSymbolTitleText" />
+
+                <HorizontalScrollView
+                    android:id="@+id/groupingSeparatorSymbolHorizontalScroll"
+                    style="@style/optionHorizontalScroll"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/groupingSeparatorSymbolImage"
+                    app:layout_constraintTop_toBottomOf="@+id/groupingSeparatorSymbolText">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButtonToggleGroup
+                            android:id="@+id/groupingSeparatorSymbolButtonToggleGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:selectionRequired="true"
+                            app:singleSelection="true">
+
+                            <Button
+                                android:id="@+id/groupingSeparatorSymbolCommaButton"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/separator_element_1" />
+
+                            <Button
+                                android:id="@+id/groupingSeparatorSymbolDotButton"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/separator_element_2" />
+
+                            <Button
+                                android:id="@+id/groupingSeparatorSymbolSpaceButton"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/separator_element_3" />
+
+                        </com.google.android.material.button.MaterialButtonToggleGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/decimalSeparatorSymbolLayout"
+                style="@style/optionLayout">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/decimalSeparatorSymbolImage"
+                    style="@style/optionImage"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintBottom_toTopOf="@+id/decimalSeparatorSymbolHorizontalScroll"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/decimalminor" />
+
+                <TextView
+                    android:id="@+id/decimalSeparatorSymbolTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_decimal_separator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/decimalSeparatorSymbolImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/decimalSeparatorSymbolText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_decimal_separator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/decimalSeparatorSymbolImage"
+                    app:layout_constraintTop_toBottomOf="@+id/decimalSeparatorSymbolTitleText" />
+
+                <HorizontalScrollView
+                    android:id="@+id/decimalSeparatorSymbolHorizontalScroll"
+                    style="@style/optionHorizontalScroll"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/decimalSeparatorSymbolImage"
+                    app:layout_constraintTop_toBottomOf="@+id/decimalSeparatorSymbolText">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButtonToggleGroup
+                            android:id="@+id/decimalSeparatorSymbolButtonToggleGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:selectionRequired="true"
+                            app:singleSelection="true">
+
+                            <Button
+                                android:id="@+id/decimalSeparatorSymbolDotButton"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/separator_element_2" />
+
+                            <Button
+                                android:id="@+id/decimalSeparatorSymbolCommaButton"
+                                style="@style/Widget.Material3.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/separator_element_1" />
+                        </com.google.android.material.button.MaterialButtonToggleGroup>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/otherSelectionText"
+                style="@style/sectionText"
+                android:text="@string/other_selection_text" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vibrationLayout"
+                style="@style/optionLayout"
+                android:layout_marginTop="8dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/vibrationImage"
+                    style="@style/optionImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/vibration" />
+
+                <TextView
+                    android:id="@+id/vibrationTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_vibrations"
+                    app:layout_constraintEnd_toStartOf="@+id/vibrationSwitch"
+                    app:layout_constraintStart_toEndOf="@+id/vibrationImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/vibrationText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_vibrations"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/vibrationSwitch"
+                    app:layout_constraintStart_toEndOf="@+id/vibrationImage"
+                    app:layout_constraintTop_toBottomOf="@+id/vibrationTitleText" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/vibrationSwitch"
+                    style="@style/optionSwitch"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/soundEffectsLayout"
+                style="@style/optionLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/soundEffectsImage"
+                    style="@style/optionImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/volume" />
+
+                <TextView
+                    android:id="@+id/soundEffectsTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_sound_effects"
+                    app:layout_constraintEnd_toStartOf="@+id/soundEffectsSwitch"
+                    app:layout_constraintStart_toEndOf="@+id/soundEffectsImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/soundEffectsText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_sound_effects"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/soundEffectsSwitch"
+                    app:layout_constraintStart_toEndOf="@+id/soundEffectsImage"
+                    app:layout_constraintTop_toBottomOf="@+id/soundEffectsTitleText" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/soundEffectsSwitch"
+                    style="@style/optionSwitch"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
