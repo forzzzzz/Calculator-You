@@ -1,25 +1,26 @@
 <resources>
     <string name="app_name" translatable="false">Calculator You</string>
+    <string name="language">English</string>
 
-    <string name="clearButton" translatable="false">AC</string>
-    <string name="bracketsButton" translatable="false">(&#160;&#160;)</string>
-    <string name="percentageButton" translatable="false">%</string>
-    <string name="divisionButton" translatable="false">÷</string>
-    <string name="number7Button" translatable="false">7</string>
-    <string name="number8Button" translatable="false">8</string>
-    <string name="number9Button" translatable="false">9</string>
-    <string name="multiplicationButton" translatable="false">×</string>
-    <string name="number4Button" translatable="false">4</string>
-    <string name="number5Button" translatable="false">5</string>
-    <string name="number6Button" translatable="false">6</string>
-    <string name="minusButton" translatable="false">–</string>
-    <string name="number1Button" translatable="false">1</string>
-    <string name="number2Button" translatable="false">2</string>
-    <string name="number3Button" translatable="false">3</string>
-    <string name="plusButton" translatable="false">+</string>
-    <string name="number0Button" translatable="false">0</string>
-    <string name="dotButton" translatable="false">.</string>
-    <string name="equalsButton" translatable="false">=</string>
+    <string name="clear_button" translatable="false">AC</string>
+    <string name="brackets_button" translatable="false">(&#160;&#160;)</string>
+    <string name="percentage_button" translatable="false">%</string>
+    <string name="division_button" translatable="false">÷</string>
+    <string name="number_7_button" translatable="false">7</string>
+    <string name="number_8_button" translatable="false">8</string>
+    <string name="number_9_button" translatable="false">9</string>
+    <string name="multiplication_button" translatable="false">×</string>
+    <string name="number_4_button" translatable="false">4</string>
+    <string name="number_5_button" translatable="false">5</string>
+    <string name="number_6_button" translatable="false">6</string>
+    <string name="minus_button" translatable="false">–</string>
+    <string name="number_1_button" translatable="false">1</string>
+    <string name="number_2_button" translatable="false">2</string>
+    <string name="number_3_button" translatable="false">3</string>
+    <string name="plus_button" translatable="false">+</string>
+    <string name="number_0_button" translatable="false">0</string>
+    <string name="dot_button" translatable="false">.</string>
+    <string name="equals_button" translatable="false">=</string>
     <string name="sqrt" translatable="false">√</string>
     <string name="pi" translatable="false">π</string>
     <string name="power" translatable="false">x<sup><small>n</small></sup></string>
@@ -56,6 +57,7 @@
     <string name="title_precision">Precision</string>
     <string name="title_separator">Separator</string>
     <string name="title_decimal_separator">Decimal separator</string>
+    <string name="title_swipes">Swipes</string>
 
 
     <string name="description_vibrations">Haptic feedback when clicking keyboard buttons</string>
@@ -66,6 +68,9 @@
     <string name="description_precision">Number of decimal places</string>
     <string name="description_separator">Group separator symbol</string>
     <string name="description_decimal_separator">Decimal separator symbol</string>
+    <string name="description_swipes">Swipe between modes and history</string>
+    <string name="description_swipes2">History and calculator</string>
+    <string name="description_swipes3">Digits and scientific functions</string>
 
 
     <string name="theme_element_1">System default</string>
@@ -81,31 +86,35 @@
     <string name="helpMe_selection_text">Help me</string>
     <string name="support_selection_text">Support</string>
     <string name="info_selection_text">App info</string>
+    <string name="translators_selection_text">Translators</string>
 
 
     <string name="share">Share</string>
     <string name="title_translate">Translate</string>
     <string name="title_rate">Rate</string>
+    <string name="title_danate">Donate</string>
     <string name="title_telegram">Telegram</string>
     <string name="title_email">Email</string>
-    <string name="title_openSource">Open source code</string>
+    <string name="title_open_source">Open source code</string>
     <string name="title_licenses">Licenses</string>
-    <string name="title_privacyPolicy">Privacy policy</string>
-    <string name="title_versionApp">Version</string>
+    <string name="title_privacy_policy">Privacy policy</string>
+    <string name="title_version_app">Version</string>
 
 
-    <string name="description_translate">Help translate this app</string>
+    <string name="description_translate">Help translate and translators</string>
+    <string name="description_translate2">Help translate with Hosted Weblate</string>
     <string name="description_rate">Write a review about the app</string>
+    <string name="description_donate">Support this app with a donation</string>
     <string name="description_telegram" translatable="false">\@millioner_1OODollar</string>
     <string name="description_email" translatable="false">mark.tka.development@gmail.com</string>
-    <string name="description_openSource">View open source on GitHub</string>
+    <string name="description_open_source">View open source on GitHub</string>
     <string name="description_licenses">View licenses</string>
-    <string name="description_privacyPolicy">View privacy policy</string>
-    <string name="description_versionApp" translatable="false">2.0 in development</string>
+    <string name="description_privacy_policy">View privacy policy</string>
+    <string name="description_version_app" translatable="false">2.0.1 in development</string>
 
 
-    <string name="loveText">Made not with love❤️, but by love❤️</string>
-    <string name="tapMe">Tap here😊</string>
+    <string name="love_text">Made not with love❤️, but by love❤️</string>
+    <string name="tap_me">Tap here😊</string>
 
 
     <!--Url-->
@@ -114,39 +123,41 @@
     <string name="url_privacy_policy" translatable="false">https://sites.google.com/view/privacy-policy-calculator-you/privacy-policy</string>
 
     <!--Dialogs-->
-    <string name="clearHistoryTitle">Clear the history?</string>
-    <string name="clearHistoryDismiss">Dismiss</string>
-    <string name="clearHistoryClear">Clear</string>
+    <string name="clear_history_title">Clear the history?</string>
+    <string name="clear_history_dismiss">Dismiss</string>
+    <string name="clear_history_clear">Clear</string>
+    <string name="swipes_cancel">Cancel</string>
+    <string name="swipes_ok">OK</string>
 
 
     <!--Tool tips-->
-    <string name="options_toolTip">More options</string>
+    <string name="options_tool_tip">More options</string>
     <string name="arrow_back_tooltip">Back</string>
 
 
     <!--Other-->
-    <string name="previewFormatText" translatable="false">123456.789123456789123456789123</string>
-    <string name="emptyHistory">No history</string>
+    <string name="preview_format_text" translatable="false">123456.789123456789123456789123</string>
+    <string name="empty_history">No history</string>
     
-    <string name="month1Date">January</string>
-    <string name="month2Date">February</string>
-    <string name="month3Date">March</string>
-    <string name="month4Date">April</string>
-    <string name="month5Date">May</string>
-    <string name="month6Date">June</string>
-    <string name="month7Date">July</string>
-    <string name="month8Date">August</string>
-    <string name="month9Date">September</string>
-    <string name="month10Date">October</string>
-    <string name="month11Date">November</string>
-    <string name="month12Date">December</string>
+    <string name="month_1_date">January</string>
+    <string name="month_2_date">February</string>
+    <string name="month_3_date">March</string>
+    <string name="month_4_date">April</string>
+    <string name="month_5_date">May</string>
+    <string name="month_6_date">June</string>
+    <string name="month_7_date">July</string>
+    <string name="month_8_date">August</string>
+    <string name="month_9_date">September</string>
+    <string name="month_10_date">October</string>
+    <string name="month_11_date">November</string>
+    <string name="month_12_date">December</string>
 
-    <string name="todayDate">Today</string>
-    <string name="yesterdayDate">Yesterday</string>
-    <string name="daysAgo2Date">2 days ago</string>
-    <string name="daysAgo3Date">3 days ago</string>
-    <string name="daysAgo4Date">4 days ago</string>
-    <string name="daysAgo5Date">5 days ago</string>
-    <string name="daysAgo6Date">6 days ago</string>
-    <string name="daysAgo7Date">7 days ago</string>
+    <string name="today_date">Today</string>
+    <string name="yesterday_date">Yesterday</string>
+    <string name="days_ago_2_date">2 days ago</string>
+    <string name="days_ago_3_date">3 days ago</string>
+    <string name="days_ago_4_date">4 days ago</string>
+    <string name="days_ago_5_date">5 days ago</string>
+    <string name="days_ago_6_date">6 days ago</string>
+    <string name="days_ago_7_date">7 days ago</string>
 </resources>

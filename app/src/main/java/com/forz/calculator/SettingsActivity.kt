@@ -18,8 +18,6 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import com.forz.calculator.databinding.ActivitySettingsBinding
 import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.viewModels.SettingsViewModel
-import com.forz.calculator.viewModels.SettingsViewModel.color
 import com.forz.calculator.viewModels.SettingsViewModel.decimalSeparatorSymbol
 import com.forz.calculator.viewModels.SettingsViewModel.groupingSeparatorSymbol
 import com.forz.calculator.viewModels.SettingsViewModel.numberPrecision
@@ -158,7 +156,7 @@ class SettingsActivity : AppCompatActivity() {
         binding.precisionSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 binding.precisionValueText.text = binding.precisionSeekBar.progress.toString()
-                binding.previewFormatText.text = updatePreviewText(getString(R.string.previewFormatText), binding.precisionSeekBar.progress, preferences.getGroupingSeparatorSymbol(), preferences.getDecimalSeparatorSymbol())
+                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), binding.precisionSeekBar.progress, preferences.getGroupingSeparatorSymbol(), preferences.getDecimalSeparatorSymbol())
             }
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
             }
@@ -176,7 +174,7 @@ class SettingsActivity : AppCompatActivity() {
             if (isChecked) {
                 val separator = invertedGroupingSeparatorMap[checkedId]
                 setGroupingSeparatorSymbol(separator!!)
-                binding.previewFormatText.text = updatePreviewText(getString(R.string.previewFormatText), numberPrecision.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
 
                 if (separator == "."){
                     binding.decimalSeparatorSymbolButtonToggleGroup.check(R.id.decimalSeparatorSymbolCommaButton)
@@ -192,7 +190,7 @@ class SettingsActivity : AppCompatActivity() {
             if (isChecked) {
                 val separator = invertedDecimalSeparatorMap[checkedId]
                 setDecimalSeparatorSymbol(separator!!)
-                binding.previewFormatText.text = updatePreviewText(getString(R.string.previewFormatText), numberPrecision.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
 
                 if (binding.groupingSeparatorSymbolButtonToggleGroup.checkedButtonId != R.id.groupingSeparatorSymbolSpaceButton){
                     if (separator == ","){
@@ -273,7 +271,7 @@ class SettingsActivity : AppCompatActivity() {
         loadVibrationSwitch()
         loadSoundEffectsSwitchSwitch()
         loadSeekBar(binding.precisionSeekBar, binding.precisionValueText, preferences.getNumberPrecision())
-        binding.previewFormatText.text = updatePreviewText(getString(R.string.previewFormatText), preferences.getNumberPrecision(), preferences.getGroupingSeparatorSymbol(), preferences.getDecimalSeparatorSymbol())
+        binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), preferences.getNumberPrecision(), preferences.getGroupingSeparatorSymbol(), preferences.getDecimalSeparatorSymbol())
     }
 
 

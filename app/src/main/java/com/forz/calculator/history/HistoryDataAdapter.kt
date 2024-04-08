@@ -242,28 +242,28 @@ class HistoryDataAdapter(
         if (differenceInDays in 0..7){
             when (differenceInDays) {
                 0 -> {
-                    outputDate = context.getString(R.string.todayDate)
+                    outputDate = context.getString(R.string.today_date)
                 }
                 1 -> {
-                    outputDate = context.getString(R.string.yesterdayDate)
+                    outputDate = context.getString(R.string.yesterday_date)
                 }
                 2 -> {
-                    outputDate = context.getString(R.string.daysAgo2Date)
+                    outputDate = context.getString(R.string.days_ago_2_date)
                 }
                 3 -> {
-                    outputDate = context.getString(R.string.daysAgo3Date)
+                    outputDate = context.getString(R.string.days_ago_3_date)
                 }
                 4 -> {
-                    outputDate = context.getString(R.string.daysAgo4Date)
+                    outputDate = context.getString(R.string.days_ago_4_date)
                 }
                 5 -> {
-                    outputDate = context.getString(R.string.daysAgo5Date)
+                    outputDate = context.getString(R.string.days_ago_5_date)
                 }
                 6 -> {
-                    outputDate = context.getString(R.string.daysAgo6Date)
+                    outputDate = context.getString(R.string.days_ago_6_date)
                 }
                 else -> {
-                    outputDate = context.getString(R.string.daysAgo7Date)
+                    outputDate = context.getString(R.string.days_ago_7_date)
                 }
             }
         } else{
@@ -275,40 +275,40 @@ class HistoryDataAdapter(
 
             when (date.month) {
                 Month.JANUARY -> {
-                    month = context.getString(R.string.month1Date)
+                    month = context.getString(R.string.month_1_date)
                 }
                 Month.FEBRUARY -> {
-                    month = context.getString(R.string.month2Date)
+                    month = context.getString(R.string.month_2_date)
                 }
                 Month.MARCH -> {
-                    month = context.getString(R.string.month3Date)
+                    month = context.getString(R.string.month_3_date)
                 }
                 Month.APRIL -> {
-                    month = context.getString(R.string.month4Date)
+                    month = context.getString(R.string.month_4_date)
                 }
                 Month.MAY -> {
-                    month = context.getString(R.string.month5Date)
+                    month = context.getString(R.string.month_5_date)
                 }
                 Month.JUNE -> {
-                    month = context.getString(R.string.month6Date)
+                    month = context.getString(R.string.month_6_date)
                 }
                 Month.JULY -> {
-                    month = context.getString(R.string.month7Date)
+                    month = context.getString(R.string.month_7_date)
                 }
                 Month.AUGUST -> {
-                    month = context.getString(R.string.month8Date)
+                    month = context.getString(R.string.month_8_date)
                 }
                 Month.SEPTEMBER -> {
-                    month = context.getString(R.string.month9Date)
+                    month = context.getString(R.string.month_9_date)
                 }
                 Month.OCTOBER -> {
-                    month = context.getString(R.string.month10Date)
+                    month = context.getString(R.string.month_10_date)
                 }
                 Month.NOVEMBER -> {
-                    month = context.getString(R.string.month11Date)
+                    month = context.getString(R.string.month_11_date)
                 }
                 else -> {
-                    month = context.getString(R.string.month12Date)
+                    month = context.getString(R.string.month_12_date)
                 }
             }
 

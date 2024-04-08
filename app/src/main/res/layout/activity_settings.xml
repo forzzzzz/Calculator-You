@@ -342,7 +342,7 @@
                     android:autoSizeTextType="uniform"
                     android:gravity="center"
                     android:maxLines="1"
-                    android:text="@string/previewFormatText"
+                    android:text="@string/preview_format_text"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="52sp" />
             </LinearLayout>

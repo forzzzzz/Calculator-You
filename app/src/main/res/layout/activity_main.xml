@@ -44,7 +44,7 @@
         android:id="@+id/optionsMenuButton"
         style="@style/OptionsButton"
         android:src="@drawable/baseline_more_vert"
-        android:tooltipText="@string/options_toolTip"
+        android:tooltipText="@string/options_tool_tip"
         app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

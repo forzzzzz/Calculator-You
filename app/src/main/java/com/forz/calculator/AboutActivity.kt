@@ -97,7 +97,7 @@ class AboutActivity : AppCompatActivity() {
         }
 
         versionLayout.setOnLongClickListener {
-            copy(getString(R.string.description_versionApp))
+            copy(getString(R.string.description_version_app))
             true
         }
 

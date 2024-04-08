@@ -195,7 +195,7 @@
                 <TextView
                     android:id="@+id/openSourceTitleText"
                     style="@style/optionTitleText"
-                    android:text="@string/title_openSource"
+                    android:text="@string/title_open_source"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/openSourceImage"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -203,7 +203,7 @@
                 <TextView
                     android:id="@+id/openSourceText"
                     style="@style/optionDescriptionText"
-                    android:text="@string/description_openSource"
+                    android:text="@string/description_open_source"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/openSourceImage"
@@ -261,7 +261,7 @@
                 <TextView
                     android:id="@+id/privacyPolicyTitleText"
                     style="@style/optionTitleText"
-                    android:text="@string/title_privacyPolicy"
+                    android:text="@string/title_privacy_policy"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/privacyPolicyImage"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -269,7 +269,7 @@
                 <TextView
                     android:id="@+id/privacyPolicyText"
                     style="@style/optionDescriptionText"
-                    android:text="@string/description_privacyPolicy"
+                    android:text="@string/description_privacy_policy"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/privacyPolicyImage"
@@ -292,7 +292,7 @@
                 <TextView
                     android:id="@+id/versionTitleText"
                     style="@style/optionTitleText"
-                    android:text="@string/title_versionApp"
+                    android:text="@string/title_version_app"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/versionImage"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -300,7 +300,7 @@
                 <TextView
                     android:id="@+id/versionText"
                     style="@style/optionDescriptionText"
-                    android:text="@string/description_versionApp"
+                    android:text="@string/description_version_app"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/versionImage"
@@ -319,7 +319,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="@string/loveText"
+                    android:text="@string/love_text"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="18sp" />
 
@@ -330,7 +330,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:layout_marginBottom="48dp"
-                    android:text="@string/tapMe"
+                    android:text="@string/tap_me"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="14sp" />
 

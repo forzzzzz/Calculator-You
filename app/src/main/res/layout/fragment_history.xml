@@ -24,7 +24,7 @@
         android:id="@+id/emptyHistoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/emptyHistory"
+        android:text="@string/empty_history"
         android:textColor="?attr/colorOnSurface"
         android:textSize="22sp"
         android:visibility="gone"/>

@@ -37,7 +37,7 @@
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:background">@drawable/background_button_equals</item>
-        <item name="android:text">@string/equalsButton</item>
+        <item name="android:text">@string/equals_button</item>
     </style>
     <style name="Button.ScientificFunction">
         <item name="android:textSize">30sp</item>

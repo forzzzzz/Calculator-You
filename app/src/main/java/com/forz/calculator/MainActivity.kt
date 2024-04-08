@@ -193,12 +193,12 @@ class MainActivity : AppCompatActivity() {
                     R.id.clearHistory -> {
                         val builder: AlertDialog.Builder = AlertDialog.Builder(this)
                         builder
-                            .setMessage(getString(R.string.clearHistoryTitle))
-                            .setPositiveButton(getString(R.string.clearHistoryClear)) { _, _ ->
+                            .setMessage(getString(R.string.clear_history_title))
+                            .setPositiveButton(getString(R.string.clear_history_clear)) { _, _ ->
                                 historyService.clearHistoryData()
                                 binding.pager.setCurrentItem(1, true)
                             }
-                            .setNegativeButton(getString(R.string.clearHistoryDismiss)) { _, _ ->
+                            .setNegativeButton(getString(R.string.clear_history_dismiss)) { _, _ ->
                             }
 
                         val dialog: AlertDialog = builder.create()
