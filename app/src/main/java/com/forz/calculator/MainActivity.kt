@@ -172,7 +172,7 @@ class MainActivity : AppCompatActivity() {
             if (binding.pager.currentItem == 1){
                 popupMenu.inflate(R.menu.options_menu)
             } else{
-                popupMenu.inflate(R.menu.options_menu_history)
+                popupMenu.inflate(R.menu.history_options_menu)
             }
             popupMenu.setOnMenuItemClickListener { menuItem ->
                 when(menuItem.itemId){
@@ -180,7 +180,7 @@ class MainActivity : AppCompatActivity() {
                         binding.pager.setCurrentItem(0, true)
                         true
                     }
-                    R.id.chooseThemeSpinner -> {
+                    R.id.settings -> {
                         val intent = Intent(this, SettingsActivity::class.java)
                         startActivityForResult(intent, REQUEST_CODE_CHILD)
                         true

@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/clearHistory"
-        android:title="@string/options_menu_history"/>
+        android:title="@string/history_options_menu"/>
     <item
-        android:id="@+id/chooseThemeSpinner"
+        android:id="@+id/settings"
         android:title="@string/title_settings"/>
     <item
         android:id="@+id/about"

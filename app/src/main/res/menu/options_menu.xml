@@ -4,7 +4,7 @@
         android:id="@+id/history"
         android:title="@string/title_history"/>
     <item
-        android:id="@+id/chooseThemeSpinner"
+        android:id="@+id/settings"
         android:title="@string/title_settings"/>
     <item
         android:id="@+id/about"

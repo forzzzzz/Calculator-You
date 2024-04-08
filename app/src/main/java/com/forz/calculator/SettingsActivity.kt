@@ -18,6 +18,8 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import com.forz.calculator.databinding.ActivitySettingsBinding
 import com.forz.calculator.viewModels.ExpressionViewModel
+import com.forz.calculator.viewModels.SettingsViewModel
+import com.forz.calculator.viewModels.SettingsViewModel.color
 import com.forz.calculator.viewModels.SettingsViewModel.decimalSeparatorSymbol
 import com.forz.calculator.viewModels.SettingsViewModel.groupingSeparatorSymbol
 import com.forz.calculator.viewModels.SettingsViewModel.numberPrecision
@@ -46,7 +48,7 @@ class SettingsActivity : AppCompatActivity() {
     @SuppressLint("DiscouragedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         preferences = Preferences(this)
-        (this.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator).also { vibrator = it }
+        vibrator = this.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
         if (!preferences.getDynamicColor()){
             setTheme(resources.getIdentifier(preferences.getColor(), "style", packageName))

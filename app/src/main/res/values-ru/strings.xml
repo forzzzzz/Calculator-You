@@ -4,7 +4,10 @@
     <string name="theme_selection_text">Тема</string>
     <string name="formatting_selection_text">Форматирование</string>
     <string name="other_selection_text">Другое</string>
-    <string name="options_menu_history">Очистить историю</string>
+    <string name="history_data_menu_copy">Копировать</string>
+    <string name="history_data_menu_share">Поделиться</string>
+    <string name="history_data_menu_delete">Удалить</string>
+    <string name="history_options_menu">Очистить историю</string>
     <string name="title_history">История</string>
     <string name="title_settings">Настройки</string>
     <string name="title_about">О приложении</string>
@@ -38,12 +41,11 @@
     <string name="support_selection_text">Поддержка</string>
     <string name="info_selection_text">О приложении</string>
     <string name="translators_selection_text">Переводчики</string>
-    <string name="share">Поделиться</string>
     <string name="title_translate">Перевести</string>
     <string name="title_rate">Оценить</string>
     <string name="title_danate">Пожертвовать</string>
     <string name="title_telegram">Телеграм</string>
-    <string name="title_email">Електроная почта</string>
+    <string name="title_email">Электронная почта</string>
     <string name="title_open_source">Исходный код</string>
     <string name="title_licenses">Лицензии</string>
     <string name="title_privacy_policy">Политика конфиденциальности</string>
