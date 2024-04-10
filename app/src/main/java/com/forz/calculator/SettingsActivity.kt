@@ -9,16 +9,18 @@ import android.os.Bundle
 import android.os.Vibrator
 import android.util.TypedValue
 import android.view.View
-import android.view.ViewTreeObserver
 import android.widget.ArrayAdapter
 import android.widget.SeekBar
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.forz.calculator.colorThemes.Color
+import com.forz.calculator.colorThemes.ColorActionListener
+import com.forz.calculator.colorThemes.ColorAdapter
 import com.forz.calculator.databinding.ActivitySettingsBinding
 import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.viewModels.SettingsViewModel
 import com.forz.calculator.viewModels.SettingsViewModel.color
 import com.forz.calculator.viewModels.SettingsViewModel.decimalSeparatorSymbol
 import com.forz.calculator.viewModels.SettingsViewModel.groupingSeparatorSymbol
@@ -43,6 +45,7 @@ class SettingsActivity : AppCompatActivity() {
     private var binding: ActivitySettingsBinding by notNull()
     private var preferences: Preferences by notNull()
     private var vibrator: Vibrator by notNull()
+    private var adapter: ColorAdapter by notNull()
 
 
     @SuppressLint("DiscouragedApi")
@@ -51,7 +54,7 @@ class SettingsActivity : AppCompatActivity() {
         vibrator = this.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
         if (!preferences.getDynamicColor()){
-            setTheme(resources.getIdentifier(preferences.getColor(), "style", packageName))
+            setTheme(resources.getIdentifier(color.value!!, "style", packageName))
         }else{
             setTheme(R.style.dynamicColors)
         }
@@ -85,26 +88,17 @@ class SettingsActivity : AppCompatActivity() {
         } else{
             binding.chooseColorLayout.visibility = View.VISIBLE
 
-            val id = preferences.getColor()
-            val idDone = id + "_selected"
-            val resourceIdDone = resources.getIdentifier(idDone, "id", packageName)
-
-            val viewDone = findViewById<View>(resourceIdDone)
-            viewDone.visibility = View.VISIBLE
-
-            val resourceId = resources.getIdentifier(id, "id", packageName)
-            val view = findViewById<View>(resourceId)
-            binding.chooseColorHorizontalScroll.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-                override fun onGlobalLayout() {
-                    view.post {
-                        val targetLeft = view.left
-                        val scrollX = targetLeft + view.width/2 - binding.chooseColorHorizontalScroll.width / 2
-                        binding.chooseColorHorizontalScroll.smoothScrollTo(scrollX, 0)
-                    }
-
-                    binding.chooseColorHorizontalScroll.viewTreeObserver.removeOnGlobalLayoutListener(this)
+            adapter = ColorAdapter(this, object : ColorActionListener{
+                override fun onSelectColor(color: Color) {
+                    adapter.selectColor(color)
+                    recreate()
                 }
             })
+
+            val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            binding.chooseColorRecyclerView.layoutManager = layoutManager
+            binding.chooseColorRecyclerView.adapter = adapter
+            binding.chooseColorRecyclerView.scrollToPosition(adapter.getIdSelectedColor())
         }
 
         if (!vibrator.hasVibrator()){
@@ -255,7 +249,7 @@ class SettingsActivity : AppCompatActivity() {
         )
 
 //        preferences.setTheme(SettingsViewModel.theme.value!!)
-//        preferences.setColor(color.value!!)
+        preferences.setColor(color.value!!)
         preferences.setGroupingSeparatorSymbol(groupingSeparatorSymbol.value!!)
         preferences.setDecimalSeparatorSymbol(decimalSeparatorSymbol.value!!)
         preferences.setNumberPrecision(numberPrecision.value!!)
@@ -366,18 +360,6 @@ class SettingsActivity : AppCompatActivity() {
     }
     private fun loadButtonToggleGroupString(buttonToggleGroup: MaterialButtonToggleGroup, map: Map<String, Int>, value: String) {
         map[value]?.let { buttonToggleGroup.check(it) }
-    }
-
-
-
-
-
-    fun selectColor(view: View){
-        val resourceId = view.id
-        val resourceName = view.resources.getResourceName(resourceId)
-        val resourceNameWithoutPackage = resourceName.substringAfterLast("/")
-        preferences.setColor(resourceNameWithoutPackage)
-        recreate()
     }
 
 

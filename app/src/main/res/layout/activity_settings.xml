@@ -164,7 +164,7 @@
                     android:id="@+id/chooseColorImage"
                     style="@style/optionImage"
                     android:layout_marginTop="12dp"
-                    app:layout_constraintBottom_toTopOf="@+id/chooseColorHorizontalScroll"
+                    app:layout_constraintBottom_toTopOf="@+id/chooseColorRecyclerView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/palette" />
@@ -185,130 +185,14 @@
                     app:layout_constraintStart_toEndOf="@+id/chooseColorImage"
                     app:layout_constraintTop_toBottomOf="@+id/chooseColorTitleText" />
 
-                <HorizontalScrollView
-                    android:id="@+id/chooseColorHorizontalScroll"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chooseColorRecyclerView"
                     style="@style/optionHorizontalScroll"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/chooseColorImage"
-                    app:layout_constraintTop_toBottomOf="@+id/chooseColorText">
+                    app:layout_constraintTop_toBottomOf="@+id/chooseColorText"/>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:id="@+id/color_0"
-                            style="@style/backgroundSelectColor"
-                            android:layout_marginStart="0dp">
-
-                            <com.mikhaellopez.circleview.CircleView
-                                android:id="@+id/color_0_view"
-                                style="@style/selectColorView"
-                                app:cv_color="@color/colorPrimaryContainer_0" />
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/color_0_selected"
-                                style="@style/doneSelectColor" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:id="@+id/color_Black_And_White"
-                            style="@style/backgroundSelectColor" >
-
-                            <com.mikhaellopez.circleview.CircleView
-                                android:id="@+id/color_Black_And_White_view"
-                                style="@style/selectColorView"
-                                app:cv_color="@color/colorPrimaryContainer_Black_And_White" />
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/color_Black_And_White_selected"
-                                style="@style/doneSelectColor" />
-                        </FrameLayout>
-
-                        <View
-                            android:id="@+id/selectColorBorder"
-                            android:layout_width="2dp"
-                            android:layout_height="match_parent"
-                            android:layout_marginStart="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="16dp"
-                            android:background="?attr/colorOnSurface" />
-
-                        <FrameLayout
-                            android:id="@+id/color_1"
-                            style="@style/backgroundSelectColor">
-
-                            <com.mikhaellopez.circleview.CircleView
-                                android:id="@+id/color_1_view"
-                                style="@style/selectColorView"
-                                app:cv_color="@color/colorPrimaryContainer_1" />
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/color_1_selected"
-                                style="@style/doneSelectColor" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:id="@+id/color_2"
-                            style="@style/backgroundSelectColor" >
-
-                            <com.mikhaellopez.circleview.CircleView
-                                android:id="@+id/color_2_view"
-                                style="@style/selectColorView"
-                                app:cv_color="@color/colorPrimaryContainer_2" />
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/color_2_selected"
-                                style="@style/doneSelectColor" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:id="@+id/color_3"
-                            style="@style/backgroundSelectColor" >
-
-                            <com.mikhaellopez.circleview.CircleView
-                                android:id="@+id/color_3_view"
-                                style="@style/selectColorView"
-                                app:cv_color="@color/colorPrimaryContainer_3" />
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/color_3_selected"
-                                style="@style/doneSelectColor" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:id="@+id/color_4"
-                            style="@style/backgroundSelectColor" >
-
-                            <com.mikhaellopez.circleview.CircleView
-                                android:id="@+id/color_4_view"
-                                style="@style/selectColorView"
-                                app:cv_color="@color/colorPrimaryContainer_4" />
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/color_4_selected"
-                                style="@style/doneSelectColor" />
-                        </FrameLayout>
-
-                        <FrameLayout
-                            android:id="@+id/color_5"
-                            style="@style/backgroundSelectColor" >
-
-                            <com.mikhaellopez.circleview.CircleView
-                                android:id="@+id/color_5_view"
-                                style="@style/selectColorView"
-                                app:cv_color="@color/colorPrimaryContainer_5" />
-
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/color_5_selected"
-                                style="@style/doneSelectColor" />
-                        </FrameLayout>
-
-
-                    </LinearLayout>
-                </HorizontalScrollView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView

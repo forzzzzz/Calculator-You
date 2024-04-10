@@ -17,6 +17,7 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import com.forz.calculator.viewModels.SettingsViewModel
 
 class AboutActivity : AppCompatActivity() {
 
@@ -30,7 +31,7 @@ class AboutActivity : AppCompatActivity() {
         preferences = Preferences(this@AboutActivity)
 
         if (!preferences.getDynamicColor()){
-            setTheme(resources.getIdentifier(preferences.getColor(), "style", packageName))
+            setTheme(resources.getIdentifier(SettingsViewModel.color.value!!, "style", packageName))
         }else{
             setTheme(R.style.dynamicColors)
         }

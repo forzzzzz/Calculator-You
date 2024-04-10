@@ -55,6 +55,14 @@ object SettingsViewModel : ViewModel() {
     }
 
 
+    fun setTheme(value: Int){
+        _theme.value = value
+    }
+
+    fun setColor(value: String){
+        _color.value = value
+    }
+
     fun setNumberPrecision(value: Int){
         _numberPrecision.value = value
     }
