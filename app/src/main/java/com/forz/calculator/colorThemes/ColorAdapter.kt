@@ -5,19 +5,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.core.view.marginStart
-import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.RecyclerView
 import com.forz.calculator.R
 import com.forz.calculator.databinding.ItemColorBinding
-import com.forz.calculator.databinding.ItemHistoryDataBinding
-import com.forz.calculator.history.HistoryDataAdapter
 import com.forz.calculator.viewModels.SettingsViewModel
-
-typealias OnSelectListener = (Color) -> Unit
 
 interface ColorActionListener {
     fun onSelectColor(color: Color)
@@ -89,18 +81,22 @@ class ColorAdapter(
 
             binding.color.circleColor = ContextCompat.getColor(context, color.color)
 
-            if (position == 0) {
-                binding.selectColorBorder.visibility = View.GONE
-                (binding.background.layoutParams as ViewGroup.MarginLayoutParams).marginStart = 0
-            } else if (position == 1) {
-                binding.selectColorBorder.visibility = View.VISIBLE
-                (binding.background.layoutParams as ViewGroup.MarginLayoutParams).marginStart = 0
-            } else {
-                binding.selectColorBorder.visibility = View.GONE
+            when (position) {
+                0 -> {
+                    binding.selectColorBorder.visibility = View.GONE
+                    (binding.background.layoutParams as ViewGroup.MarginLayoutParams).marginStart = 0
+                }
+                1 -> {
+                    binding.selectColorBorder.visibility = View.VISIBLE
+                    (binding.background.layoutParams as ViewGroup.MarginLayoutParams).marginStart = 0
+                }
+                else -> {
+                    binding.selectColorBorder.visibility = View.GONE
 
-                val density = context.resources.displayMetrics.density
-                val marginStart = (8 * density).toInt()
-                (binding.background.layoutParams as ViewGroup.MarginLayoutParams).marginStart = marginStart
+                    val density = context.resources.displayMetrics.density
+                    val marginStart = (8 * density).toInt()
+                    (binding.background.layoutParams as ViewGroup.MarginLayoutParams).marginStart = marginStart
+                }
             }
 
             if (color.isSelected) {
