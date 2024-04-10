@@ -27,7 +27,17 @@ class ColorAdapter(
         Color(id = 3, name = "color_2", color = R.color.colorPrimaryContainer_2, isSelected = false),
         Color(id = 4, name = "color_3", color = R.color.colorPrimaryContainer_3, isSelected = false),
         Color(id = 5, name = "color_4", color = R.color.colorPrimaryContainer_4, isSelected = false),
-        Color(id = 6, name = "color_5", color = R.color.colorPrimaryContainer_5, isSelected = false)
+        Color(id = 6, name = "color_5", color = R.color.colorPrimaryContainer_5, isSelected = false),
+        Color(id = 7, name = "color_6", color = R.color.colorPrimaryContainer_6, isSelected = false),
+        Color(id = 8, name = "color_7", color = R.color.colorPrimaryContainer_7, isSelected = false),
+        Color(id = 9, name = "color_8", color = R.color.colorPrimaryContainer_8, isSelected = false),
+        Color(id = 10, name = "color_9", color = R.color.colorPrimaryContainer_9, isSelected = false),
+        Color(id = 11, name = "color_10", color = R.color.colorPrimaryContainer_10, isSelected = false),
+        Color(id = 12, name = "color_11", color = R.color.colorPrimaryContainer_11, isSelected = false),
+        Color(id = 13, name = "color_12", color = R.color.colorPrimaryContainer_12, isSelected = false),
+        Color(id = 14, name = "color_13", color = R.color.colorPrimaryContainer_13, isSelected = false),
+        Color(id = 15, name = "color_14", color = R.color.colorPrimaryContainer_14, isSelected = false),
+        Color(id = 16, name = "color_15", color = R.color.colorPrimaryContainer_15, isSelected = false)
     )
 
     init {
