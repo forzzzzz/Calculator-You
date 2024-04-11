@@ -37,7 +37,22 @@ class ColorAdapter(
         Color(id = 13, name = "color_12", color = R.color.colorPrimaryContainer_12, isSelected = false),
         Color(id = 14, name = "color_13", color = R.color.colorPrimaryContainer_13, isSelected = false),
         Color(id = 15, name = "color_14", color = R.color.colorPrimaryContainer_14, isSelected = false),
-        Color(id = 16, name = "color_15", color = R.color.colorPrimaryContainer_15, isSelected = false)
+        Color(id = 16, name = "color_15", color = R.color.colorPrimaryContainer_15, isSelected = false),
+        Color(id = 17, name = "color_16", color = R.color.colorPrimaryContainer_16, isSelected = false),
+        Color(id = 18, name = "color_17", color = R.color.colorPrimaryContainer_17, isSelected = false),
+        Color(id = 19, name = "color_18", color = R.color.colorPrimaryContainer_18, isSelected = false),
+        Color(id = 20, name = "color_19", color = R.color.colorPrimaryContainer_19, isSelected = false),
+        Color(id = 21, name = "color_20", color = R.color.colorPrimaryContainer_20, isSelected = false),
+        Color(id = 22, name = "color_21", color = R.color.colorPrimaryContainer_21, isSelected = false),
+        Color(id = 23, name = "color_22", color = R.color.colorPrimaryContainer_22, isSelected = false),
+        Color(id = 24, name = "color_23", color = R.color.colorPrimaryContainer_23, isSelected = false),
+        Color(id = 25, name = "color_24", color = R.color.colorPrimaryContainer_24, isSelected = false),
+        Color(id = 26, name = "color_25", color = R.color.colorPrimaryContainer_25, isSelected = false),
+        Color(id = 27, name = "color_26", color = R.color.colorPrimaryContainer_26, isSelected = false),
+        Color(id = 28, name = "color_27", color = R.color.colorPrimaryContainer_27, isSelected = false),
+        Color(id = 29, name = "color_28", color = R.color.colorPrimaryContainer_28, isSelected = false),
+        Color(id = 30, name = "color_29", color = R.color.colorPrimaryContainer_29, isSelected = false),
+        Color(id = 31, name = "color_30", color = R.color.colorPrimaryContainer_30, isSelected = false),
     )
 
     init {
