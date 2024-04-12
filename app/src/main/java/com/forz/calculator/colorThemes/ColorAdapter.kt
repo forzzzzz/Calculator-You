@@ -63,6 +63,12 @@ class ColorAdapter(
         Color(id = 39, name = "color_38", color = R.color.colorPrimaryContainer_38, isSelected = false),
         Color(id = 40, name = "color_39", color = R.color.colorPrimaryContainer_39, isSelected = false),
         Color(id = 41, name = "color_40", color = R.color.colorPrimaryContainer_40, isSelected = false),
+        Color(id = 42, name = "color_41", color = R.color.colorPrimaryContainer_41, isSelected = false),
+        Color(id = 43, name = "color_42", color = R.color.colorPrimaryContainer_42, isSelected = false),
+        Color(id = 44, name = "color_43", color = R.color.colorPrimaryContainer_43, isSelected = false),
+        Color(id = 45, name = "color_44", color = R.color.colorPrimaryContainer_44, isSelected = false),
+        Color(id = 46, name = "color_45", color = R.color.colorPrimaryContainer_45, isSelected = false),
+        Color(id = 47, name = "color_46", color = R.color.colorPrimaryContainer_46, isSelected = false),
     )
 
     init {
