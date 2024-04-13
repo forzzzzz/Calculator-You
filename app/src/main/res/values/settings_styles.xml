@@ -62,6 +62,8 @@
         <item name="android:layout_height">26dp</item>
 
         <item name="android:layout_marginStart">20dp</item>
+
+        <item name="android:tint">?attr/colorOnSurface</item>
     </style>
 
     <style name="optionTitleText">
