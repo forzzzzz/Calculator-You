@@ -1,6 +1,6 @@
 package com.forz.calculator
 
-object SaveStateViews{
+object StateViews{
     var firstLoadRecyclerViewHistory = true
     var oldRecyclerViewSizeHistory = 0
     var newRecyclerViewSizeHistory = 0

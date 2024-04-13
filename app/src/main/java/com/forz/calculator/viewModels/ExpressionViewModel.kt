@@ -13,9 +13,9 @@ import com.darkempire78.opencalculator.syntax_error
 import com.forz.calculator.InsertInExpression
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.viewModels.CalculatorViewModel.isDegreeModActivated
-import com.forz.calculator.viewModels.SettingsViewModel.decimalSeparatorSymbol
-import com.forz.calculator.viewModels.SettingsViewModel.groupingSeparatorSymbol
-import com.forz.calculator.viewModels.SettingsViewModel.numberPrecision
+import com.forz.calculator.settings.SettingsState.decimalSeparatorSymbol
+import com.forz.calculator.settings.SettingsState.groupingSeparatorSymbol
+import com.forz.calculator.settings.SettingsState.numberPrecision
 import kotlin.properties.Delegates.notNull
 
 
@@ -100,49 +100,49 @@ object ExpressionViewModel : ViewModel() {
     }
 
     fun enterOperator(operator: String) {
-        val newValues = InsertInExpression.enterOperator(operator, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.enterOperator(operator, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
     fun enterScienceFunction(operator: String) {
-        val newValues = InsertInExpression.enterScienceFunction(operator, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.enterScienceFunction(operator, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol, decimalSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
     fun enterOperator2(operator: String) {
-        val newValues = InsertInExpression.enterOperator2(operator, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.enterOperator2(operator, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
     fun enterBackspace() {
-        val newValues = InsertInExpression.enterBackspace(_expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.enterBackspace(_expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
 
     fun enterConstant(operator: String) {
-        val newValues = InsertInExpression.enterConstant(operator, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.enterConstant(operator, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol, decimalSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
 
     fun enterBracket() {
-        val newValues = InsertInExpression.enterBracket(_expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.enterBracket(_expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
 
     fun enterDot() {
-        val newValues = InsertInExpression.enterDot(_expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.enterDot(_expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol, decimalSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
 
     fun enterDoubleBrackets() {
-        val newValues = InsertInExpression.enterDoubleBrackets(expression.value!!, expressionCursorPositionEnd.value!!, decimalSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.enterDoubleBrackets(expression.value!!, expressionCursorPositionEnd.value!!, decimalSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
 
     fun insertExpression(expression: String) {
-        val newValues = InsertInExpression.insertExpression(expression, this.expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.insertExpression(expression, this.expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol, decimalSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
 
     fun insertResult(result: String){
-        val newValues = InsertInExpression.insertResult(result, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+        val newValues = InsertInExpression.insertResult(result, expression.value!!, expressionCursorPositionStart.value!!, expressionCursorPositionEnd.value!!, groupingSeparatorSymbol, decimalSeparatorSymbol)
         formatExpression(newValues.second, newValues.first)
     }
 
@@ -158,8 +158,8 @@ object ExpressionViewModel : ViewModel() {
     private fun formatExpression(selection: Int, inputString: String){
         val newText = NumberFormatter.formatExpression(
             inputString,
-            groupingSeparatorSymbol.value!!,
-            decimalSeparatorSymbol.value!!
+            groupingSeparatorSymbol,
+            decimalSeparatorSymbol
         )
 
         val lengthDiff = newText.length - inputString.length
@@ -177,11 +177,11 @@ object ExpressionViewModel : ViewModel() {
         is_infinity = false
         require_real_number = false
 
-        val calculationTmp = Expression().getCleanExpression(inputString, decimalSeparatorSymbol.value!!, groupingSeparatorSymbol.value!!)
-        val calculationResult = Calculator(numberPrecision.value!!).evaluate(calculationTmp, isDegreeModActivated.value!!)
+        val calculationTmp = Expression().getCleanExpression(inputString, decimalSeparatorSymbol, groupingSeparatorSymbol)
+        val calculationResult = Calculator(numberPrecision).evaluate(calculationTmp, isDegreeModActivated.value!!)
 
         return if (!(division_by_0 || domain_error || syntax_error || is_infinity || require_real_number) && calculationTmp.toDoubleOrNull() == null) {
-            val result = NumberFormatter.formatResult(calculationResult.toString(), numberPrecision.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+            val result = NumberFormatter.formatResult(calculationResult.toString(), numberPrecision, groupingSeparatorSymbol, decimalSeparatorSymbol)
             result
         }else{
             ""

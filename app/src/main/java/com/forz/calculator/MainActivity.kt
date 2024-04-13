@@ -19,12 +19,13 @@ import com.forz.calculator.fragments.CalculatorFragment
 import com.forz.calculator.fragments.HistoryFragment
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
 import com.forz.calculator.history.HistoryService
+import com.forz.calculator.settings.SettingsActivity
 import com.forz.calculator.viewModels.CalculatorViewModel
 import com.forz.calculator.viewModels.CalculatorViewModel.isDegreeModActivated
 import com.forz.calculator.viewModels.CalculatorViewModel.updateDegreeModActivated
 import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.viewModels.SettingsViewModel
-import com.forz.calculator.viewModels.SettingsViewModel.groupingSeparatorSymbol
+import com.forz.calculator.settings.SettingsState
+import com.forz.calculator.settings.SettingsState.groupingSeparatorSymbol
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlin.properties.Delegates.notNull
 
@@ -275,7 +276,7 @@ class MainActivity : AppCompatActivity() {
                 ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!.substring(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expressionCursorPositionEnd.value!!))
             }else if (!isSelection && ExpressionViewModel.previousIsSelection){
                 ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!)
-            } else if (InsertInExpression.stringAfterCursor(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expression.value!!).startsWith(groupingSeparatorSymbol.value.toString())){
+            } else if (InsertInExpression.stringAfterCursor(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expression.value!!).startsWith(groupingSeparatorSymbol)){
                 binding.expressionEditText.setSelection(ExpressionViewModel.expressionCursorPositionStart.value!! + 1)
             }
         }
@@ -284,9 +285,10 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        SettingsViewModel.init(
+        SettingsState.init(
             preferences.getTheme(),
             preferences.getColor(),
+            preferences.getDynamicColor(),
             preferences.getGroupingSeparatorSymbol(),
             preferences.getDecimalSeparatorSymbol(),
             preferences.getNumberPrecision(),

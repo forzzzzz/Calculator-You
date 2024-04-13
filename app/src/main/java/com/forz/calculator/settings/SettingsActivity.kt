@@ -1,4 +1,4 @@
-package com.forz.calculator
+package com.forz.calculator.settings
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,31 +9,28 @@ import android.os.Bundle
 import android.os.Vibrator
 import android.util.TypedValue
 import android.view.View
-import android.widget.ArrayAdapter
 import android.widget.SeekBar
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.forz.calculator.NumberFormatter
+import com.forz.calculator.Preferences
+import com.forz.calculator.R
 import com.forz.calculator.colorThemes.Color
 import com.forz.calculator.colorThemes.ColorActionListener
 import com.forz.calculator.colorThemes.ColorAdapter
 import com.forz.calculator.databinding.ActivitySettingsBinding
 import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.viewModels.SettingsViewModel.color
-import com.forz.calculator.viewModels.SettingsViewModel.decimalSeparatorSymbol
-import com.forz.calculator.viewModels.SettingsViewModel.groupingSeparatorSymbol
-import com.forz.calculator.viewModels.SettingsViewModel.numberPrecision
-import com.forz.calculator.viewModels.SettingsViewModel.previousDecimalSeparatorSymbol
-import com.forz.calculator.viewModels.SettingsViewModel.previousGroupingSeparatorSymbol
-import com.forz.calculator.viewModels.SettingsViewModel.setDecimalSeparatorSymbol
-import com.forz.calculator.viewModels.SettingsViewModel.setGroupingSeparatorSymbol
-import com.forz.calculator.viewModels.SettingsViewModel.setNumberPrecision
-import com.forz.calculator.viewModels.SettingsViewModel.setSound
-import com.forz.calculator.viewModels.SettingsViewModel.setVibration
-import com.forz.calculator.viewModels.SettingsViewModel.sound
-import com.forz.calculator.viewModels.SettingsViewModel.vibration
+import com.forz.calculator.settings.SettingsState.color
+import com.forz.calculator.settings.SettingsState.decimalSeparatorSymbol
+import com.forz.calculator.settings.SettingsState.groupingSeparatorSymbol
+import com.forz.calculator.settings.SettingsState.isDynamicColor
+import com.forz.calculator.settings.SettingsState.numberPrecision
+import com.forz.calculator.settings.SettingsState.previousDecimalSeparatorSymbol
+import com.forz.calculator.settings.SettingsState.previousGroupingSeparatorSymbol
+import com.forz.calculator.settings.SettingsState.sound
+import com.forz.calculator.settings.SettingsState.vibration
 import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.materialswitch.MaterialSwitch
 import kotlin.properties.Delegates.notNull
@@ -53,8 +50,8 @@ class SettingsActivity : AppCompatActivity() {
         preferences = Preferences(this)
         vibrator = this.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
-        if (!preferences.getDynamicColor()){
-            setTheme(resources.getIdentifier(color.value!!, "style", packageName))
+        if (!isDynamicColor){
+            setTheme(resources.getIdentifier(preferences.getColor(), "style", packageName))
         }else{
             setTheme(R.style.dynamicColors)
         }
@@ -76,14 +73,26 @@ class SettingsActivity : AppCompatActivity() {
 
 
 
-        loadButtonToggleGroupInt(binding.chooseThemeButtonToggleGroup, themeMap, preferences.getTheme())
-        loadButtonToggleGroupString(binding.groupingSeparatorSymbolButtonToggleGroup, groupingSeparatorMap, preferences.getGroupingSeparatorSymbol())
-        loadButtonToggleGroupString(binding.decimalSeparatorSymbolButtonToggleGroup, decimalSeparatorMap, preferences.getDecimalSeparatorSymbol())
+
+        loadChooseThemeImage()
+        loadButtonToggleGroupInt(binding.chooseThemeButtonToggleGroup, themeMap, SettingsState.theme)
+        loadDynamicColorSwitch()
+
+        loadSeekBar(binding.precisionSeekBar, binding.precisionValueText, numberPrecision)
+        binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, groupingSeparatorSymbol, decimalSeparatorSymbol)
+        loadButtonToggleGroupString(binding.groupingSeparatorSymbolButtonToggleGroup, groupingSeparatorMap, groupingSeparatorSymbol)
+        loadButtonToggleGroupString(binding.decimalSeparatorSymbolButtonToggleGroup, decimalSeparatorMap, decimalSeparatorSymbol)
+
+        loadSwitch(binding.vibrationSwitch, vibration)
+        loadSwitch(binding.soundEffectsSwitch, sound)
 
 
 
 
-        if (preferences.getDynamicColor()){
+
+
+
+        if (isDynamicColor){
             binding.chooseColorLayout.visibility = View.GONE
         } else{
             binding.chooseColorLayout.visibility = View.VISIBLE
@@ -109,10 +118,6 @@ class SettingsActivity : AppCompatActivity() {
 
 
 
-        loadSettings()
-
-
-
 
         binding.chooseThemeButtonToggleGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (isChecked) {
@@ -124,19 +129,21 @@ class SettingsActivity : AppCompatActivity() {
                 }
 
                 val currentNightMode = preferences.getTheme()
+                SettingsState.theme = currentNightMode
                 if (currentNightMode != newNightMode) {
-                    preferences.setTheme(newNightMode)
-                    AppCompatDelegate.setDefaultNightMode(newNightMode)
+                    SettingsState.theme = newNightMode
+                    preferences.setTheme(SettingsState.theme)
+                    AppCompatDelegate.setDefaultNightMode(SettingsState.theme)
                 }
             }
         }
 
         binding.dynamicColorsLayout.setOnClickListener {
-            preferences.setDynamicColor(switchSwitch(binding.dynamicColorsSwitch))
+            isDynamicColor = switchSwitch(binding.dynamicColorsSwitch)
             recreate()
         }
         binding.dynamicColorsSwitch.setOnCheckedChangeListener { _, isChecked ->
-            preferences.setDynamicColor(isChecked)
+            isDynamicColor = isChecked
             recreate()
         }
 
@@ -157,7 +164,7 @@ class SettingsActivity : AppCompatActivity() {
             override fun onStartTrackingTouch(seekBar: SeekBar?) {
             }
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                setNumberPrecision(binding.precisionSeekBar.progress)
+                numberPrecision = binding.precisionSeekBar.progress
             }
         })
 
@@ -169,8 +176,8 @@ class SettingsActivity : AppCompatActivity() {
         binding.groupingSeparatorSymbolButtonToggleGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (isChecked) {
                 val separator = invertedGroupingSeparatorMap[checkedId]
-                setGroupingSeparatorSymbol(separator!!)
-                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+                groupingSeparatorSymbol = separator!!
+                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, groupingSeparatorSymbol, decimalSeparatorSymbol)
 
                 if (separator == "."){
                     binding.decimalSeparatorSymbolButtonToggleGroup.check(R.id.decimalSeparatorSymbolCommaButton)
@@ -185,8 +192,8 @@ class SettingsActivity : AppCompatActivity() {
         binding.decimalSeparatorSymbolButtonToggleGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (isChecked) {
                 val separator = invertedDecimalSeparatorMap[checkedId]
-                setDecimalSeparatorSymbol(separator!!)
-                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision.value!!, groupingSeparatorSymbol.value!!, decimalSeparatorSymbol.value!!)
+                decimalSeparatorSymbol = separator!!
+                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, groupingSeparatorSymbol, decimalSeparatorSymbol)
 
                 if (binding.groupingSeparatorSymbolButtonToggleGroup.checkedButtonId != R.id.groupingSeparatorSymbolSpaceButton){
                     if (separator == ","){
@@ -208,25 +215,17 @@ class SettingsActivity : AppCompatActivity() {
 
 
         binding.vibrationLayout.setOnClickListener {
-            setVibration(switchSwitch(binding.vibrationSwitch))
+            vibration = switchSwitch(binding.vibrationSwitch)
         }
         binding.vibrationSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                setVibration(true)
-            } else {
-                setVibration(false)
-            }
+            vibration = isChecked
         }
 
         binding.soundEffectsLayout.setOnClickListener {
-            setSound(switchSwitch(binding.soundEffectsSwitch))
+            sound = switchSwitch(binding.soundEffectsSwitch)
         }
         binding.soundEffectsSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                setSound(true)
-            } else {
-                setSound(false)
-            }
+            sound = isChecked
         }
 
 
@@ -243,55 +242,21 @@ class SettingsActivity : AppCompatActivity() {
 
         ExpressionViewModel.updateSymbolsInExpression(
             previousGroupingSeparatorSymbol,
-            groupingSeparatorSymbol.value!!,
+            groupingSeparatorSymbol,
             previousDecimalSeparatorSymbol,
-            decimalSeparatorSymbol.value!!
+            decimalSeparatorSymbol
         )
 
-//        preferences.setTheme(SettingsViewModel.theme.value!!)
-        preferences.setColor(color.value!!)
-        preferences.setGroupingSeparatorSymbol(groupingSeparatorSymbol.value!!)
-        preferences.setDecimalSeparatorSymbol(decimalSeparatorSymbol.value!!)
-        preferences.setNumberPrecision(numberPrecision.value!!)
-        preferences.setVibration(vibration.value!!)
-        preferences.setSoundEffects(sound.value!!)
-    }
-
-    private fun loadSettings(){
-
-
-
-//        loadChooseThemeButtonToggleGroup()
-        loadChooseThemeImage()
-        loadDynamicColorSwitch()
-        loadVibrationSwitch()
-        loadSoundEffectsSwitchSwitch()
-        loadSeekBar(binding.precisionSeekBar, binding.precisionValueText, preferences.getNumberPrecision())
-        binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), preferences.getNumberPrecision(), preferences.getGroupingSeparatorSymbol(), preferences.getDecimalSeparatorSymbol())
+        preferences.setDynamicColor(isDynamicColor)
+        preferences.setColor(color)
+        preferences.setGroupingSeparatorSymbol(groupingSeparatorSymbol)
+        preferences.setDecimalSeparatorSymbol(decimalSeparatorSymbol)
+        preferences.setNumberPrecision(numberPrecision)
+        preferences.setVibration(vibration)
+        preferences.setSoundEffects(sound)
     }
 
 
-
-    private fun loadSpinner(spinner: Spinner, item: Int, arrayResId: Int, context: Context) {
-        ArrayAdapter.createFromResource(
-            context,
-            arrayResId,
-            android.R.layout.simple_spinner_item
-        ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            spinner.adapter = adapter
-        }
-
-        spinner.setSelection(item)
-    }
-
-    private fun loadChooseThemeButtonToggleGroup(){
-        when (preferences.getTheme()){
-            -1 -> binding.chooseThemeButtonToggleGroup.check(R.id.chooseThemeAutoButton)
-            1 -> binding.chooseThemeButtonToggleGroup.check(R.id.chooseThemeLightButton)
-            2 -> binding.chooseThemeButtonToggleGroup.check(R.id.chooseThemeDarkButton)
-        }
-    }
 
     private fun loadChooseThemeImage(){
         when (AppCompatDelegate.getDefaultNightMode()) {
@@ -316,23 +281,17 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun loadDynamicColorSwitch(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S){
-            binding.dynamicColorsSwitch.isChecked = preferences.getDynamicColor()
+            binding.dynamicColorsSwitch.isChecked = isDynamicColor
         }else{
             binding.dynamicColorsLayout.visibility = View.GONE
         }
     }
 
-    private fun loadVibrationSwitch(){
-        binding.vibrationSwitch.isChecked = preferences.getVibration()
+
+
+    private fun loadSwitch(switch: MaterialSwitch, value: Boolean){
+        switch.isChecked = value
     }
-
-    private fun loadSoundEffectsSwitchSwitch(){
-        binding.soundEffectsSwitch.isChecked = preferences.getSoundEffects()
-    }
-
-
-
-
 
     private fun switchSwitch(switch: MaterialSwitch): Boolean{
         return when (switch.isChecked){
@@ -348,12 +307,10 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-
     private fun loadSeekBar(seekBar: SeekBar, textView: TextView, value: Int){
         seekBar.progress = value
         textView.text = value.toString()
     }
-
 
     private fun loadButtonToggleGroupInt(buttonToggleGroup: MaterialButtonToggleGroup, map: Map<Int, Int>, value: Int) {
         map[value]?.let { buttonToggleGroup.check(it) }
@@ -362,11 +319,15 @@ class SettingsActivity : AppCompatActivity() {
         map[value]?.let { buttonToggleGroup.check(it) }
     }
 
-
     private fun updatePreviewText(inputString: String, numberPrecision: Int, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String{
         var text = inputString
         text = NumberFormatter.removeSeparators(text, ",")
-        text = NumberFormatter.formatResult(text, numberPrecision,  groupingSeparatorSymbol, decimalSeparatorSymbol)
+        text = NumberFormatter.formatResult(
+            text,
+            numberPrecision,
+            groupingSeparatorSymbol,
+            decimalSeparatorSymbol
+        )
 
         return text
     }

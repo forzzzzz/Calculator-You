@@ -23,9 +23,9 @@ import com.forz.calculator.history.HistoryDataAdapter
 import com.forz.calculator.history.HistoryDataListListener
 import com.forz.calculator.history.HistoryService
 import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.SaveStateViews.firstLoadRecyclerViewHistory
-import com.forz.calculator.SaveStateViews.newRecyclerViewSizeHistory
-import com.forz.calculator.SaveStateViews.oldRecyclerViewSizeHistory
+import com.forz.calculator.StateViews.firstLoadRecyclerViewHistory
+import com.forz.calculator.StateViews.newRecyclerViewSizeHistory
+import com.forz.calculator.StateViews.oldRecyclerViewSizeHistory
 import kotlin.properties.Delegates.notNull
 
 class HistoryFragment : Fragment() {

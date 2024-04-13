@@ -9,8 +9,7 @@ import com.forz.calculator.Anim
 import com.forz.calculator.HapticAndSound
 import com.forz.calculator.databinding.FragmentDigitBinding
 import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.viewModels.SettingsViewModel
-import com.forz.calculator.viewModels.SettingsViewModel.decimalSeparatorSymbol
+import com.forz.calculator.settings.SettingsState.decimalSeparatorSymbol
 import kotlin.properties.Delegates
 
 class DigitFragment : Fragment() {
@@ -41,7 +40,7 @@ class DigitFragment : Fragment() {
         hapticAndSound = HapticAndSound(requireContext(), views)
         hapticAndSound.setHapticFeedback()
         hapticAndSound.setSoundEffects()
-        binding.dotButton.text = decimalSeparatorSymbol.value
+        binding.dotButton.text = decimalSeparatorSymbol
 
         binding.digit0Button.setOnClickListener {
             ExpressionViewModel.enterDigit("0")

@@ -5,8 +5,8 @@ import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.view.View
-import com.forz.calculator.viewModels.SettingsViewModel.sound
-import com.forz.calculator.viewModels.SettingsViewModel.vibration
+import com.forz.calculator.settings.SettingsState.sound
+import com.forz.calculator.settings.SettingsState.vibration
 
 @Suppress("DEPRECATION")
 class HapticAndSound(context: Context, private val views: Array<View>) {
@@ -30,7 +30,7 @@ class HapticAndSound(context: Context, private val views: Array<View>) {
 
 
     fun setSoundEffects() {
-        if (sound.value!!){
+        if (sound){
             for (view in views) {
                 view.isSoundEffectsEnabled = true
             }
@@ -42,7 +42,7 @@ class HapticAndSound(context: Context, private val views: Array<View>) {
     }
 
     fun setHapticFeedback() {
-        if (vibration.value!!){
+        if (vibration){
             for (view in views) {
                 view.isHapticFeedbackEnabled = true
             }
@@ -55,6 +55,6 @@ class HapticAndSound(context: Context, private val views: Array<View>) {
     }
 
     private fun shouldPerformHapticFeedback(): Boolean {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && vibrator.hasVibrator() && vibration.value!!
+        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && vibrator.hasVibrator() && vibration
     }
 }
