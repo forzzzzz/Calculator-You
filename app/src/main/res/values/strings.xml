@@ -86,7 +86,7 @@
 
 
     <!--About-->
-    <string name="helpMe_selection_text">Help me</string>
+    <string name="helpMe_selection_text">Help</string>
     <string name="support_selection_text">Support</string>
     <string name="info_selection_text">App info</string>
     <string name="translators_selection_text">Translators</string>
@@ -112,7 +112,7 @@
     <string name="description_open_source">View open source on GitHub</string>
     <string name="description_licenses">View licenses</string>
     <string name="description_privacy_policy">View privacy policy</string>
-    <string name="description_version_app" translatable="false">2.0.1 in development</string>
+    <string name="description_version_app" translatable="false">2.0.2 (in development)</string>
 
 
     <string name="love_text">Made not with love❤️, but by love❤️</string>
@@ -123,6 +123,7 @@
     <string name="url_app" translatable="false">https://play.google.com/store/apps/details?id=com.marktka.calculatorYou</string>
     <string name="url_telegram" translatable="false">https://t.me/millioner_1OODollar</string>
     <string name="url_privacy_policy" translatable="false">https://sites.google.com/view/privacy-policy-calculator-you/privacy-policy</string>
+    <string name="url_open_source" translatable="false">https://github.com/forzzzzz/Calculator-You</string>
 
     <!--Dialogs-->
     <string name="clear_history_title">Clear the history?</string>

@@ -28,7 +28,7 @@
             style="@style/titleText"
             android:text="@string/title_about"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/arrowBack"
+            app:layout_constraintStart_toEndOf="@id/arrowBack"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
@@ -40,7 +40,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/actionBar">
+        app:layout_constraintTop_toBottomOf="@id/actionBar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,7 +71,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_translate"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/translateImage"
+                    app:layout_constraintStart_toEndOf="@id/translateImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -80,8 +80,8 @@
                     android:text="@string/description_translate"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/translateImage"
-                    app:layout_constraintTop_toBottomOf="@+id/translateTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/translateImage"
+                    app:layout_constraintTop_toBottomOf="@id/translateTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -101,7 +101,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_rate"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/rateImage"
+                    app:layout_constraintStart_toEndOf="@id/rateImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -110,8 +110,38 @@
                     android:text="@string/description_rate"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/rateImage"
-                    app:layout_constraintTop_toBottomOf="@+id/rateTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/rateImage"
+                    app:layout_constraintTop_toBottomOf="@id/rateTitleText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/donateLayout"
+                style="@style/optionLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/donateImage"
+                    style="@style/optionImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_attach_money" />
+
+                <TextView
+                    android:id="@+id/donateTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_donate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/donateImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/donateText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_donate"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/donateImage"
+                    app:layout_constraintTop_toBottomOf="@id/donateTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -137,7 +167,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_telegram"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/telegramImage"
+                    app:layout_constraintStart_toEndOf="@id/telegramImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -146,8 +176,8 @@
                     android:text="@string/description_telegram"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/telegramImage"
-                    app:layout_constraintTop_toBottomOf="@+id/telegramTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/telegramImage"
+                    app:layout_constraintTop_toBottomOf="@id/telegramTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -167,7 +197,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_email"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/emailImage"
+                    app:layout_constraintStart_toEndOf="@id/emailImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -176,13 +206,19 @@
                     android:text="@string/description_email"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/emailImage"
-                    app:layout_constraintTop_toBottomOf="@+id/emailTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/emailImage"
+                    app:layout_constraintTop_toBottomOf="@id/emailTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/infoSelectionText"
+                style="@style/sectionText"
+                android:text="@string/info_selection_text" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/openSourceLayout"
-                style="@style/optionLayout">
+                style="@style/optionLayout"
+                android:layout_marginTop="8dp" >
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/openSourceImage"
@@ -197,7 +233,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_open_source"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/openSourceImage"
+                    app:layout_constraintStart_toEndOf="@id/openSourceImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -206,19 +242,13 @@
                     android:text="@string/description_open_source"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/openSourceImage"
-                    app:layout_constraintTop_toBottomOf="@+id/openSourceTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/openSourceImage"
+                    app:layout_constraintTop_toBottomOf="@id/openSourceTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/infoSelectionText"
-                style="@style/sectionText"
-                android:text="@string/info_selection_text" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/licensesLayout"
-                style="@style/optionLayout"
-                android:layout_marginTop="8dp">
+                style="@style/optionLayout" >
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/licensesImage"
@@ -233,7 +263,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_licenses"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/licensesImage"
+                    app:layout_constraintStart_toEndOf="@id/licensesImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -242,8 +272,8 @@
                     android:text="@string/description_licenses"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/licensesImage"
-                    app:layout_constraintTop_toBottomOf="@+id/licensesTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/licensesImage"
+                    app:layout_constraintTop_toBottomOf="@id/licensesTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -263,7 +293,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_privacy_policy"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/privacyPolicyImage"
+                    app:layout_constraintStart_toEndOf="@id/privacyPolicyImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -272,8 +302,8 @@
                     android:text="@string/description_privacy_policy"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/privacyPolicyImage"
-                    app:layout_constraintTop_toBottomOf="@+id/privacyPolicyTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/privacyPolicyImage"
+                    app:layout_constraintTop_toBottomOf="@id/privacyPolicyTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -294,7 +324,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_version_app"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/versionImage"
+                    app:layout_constraintStart_toEndOf="@id/versionImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -303,8 +333,8 @@
                     android:text="@string/description_version_app"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/versionImage"
-                    app:layout_constraintTop_toBottomOf="@+id/versionTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/versionImage"
+                    app:layout_constraintTop_toBottomOf="@id/versionTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout

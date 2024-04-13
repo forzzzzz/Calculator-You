@@ -13,25 +13,25 @@ import android.os.Bundle
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import com.forz.calculator.databinding.ActivityAboutBinding
 import com.forz.calculator.settings.SettingsState
+import kotlin.properties.Delegates
 
 class AboutActivity : AppCompatActivity() {
 
-    private lateinit var preferences: Preferences
+    private var binding: ActivityAboutBinding by Delegates.notNull()
+    private var preferences: Preferences by Delegates.notNull()
 
 
     @SuppressLint("DiscouragedApi", "ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
         preferences = Preferences(this@AboutActivity)
 
-        if (SettingsState.isDynamicColor){
-            setTheme(resources.getIdentifier(SettingsState.color, "style", packageName))
+        if (!SettingsState.isDynamicColor){
+            setTheme(resources.getIdentifier(preferences.getColor(), "style", packageName))
         }else{
             setTheme(R.style.dynamicColors)
         }
@@ -42,62 +42,49 @@ class AboutActivity : AppCompatActivity() {
 
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about)
-
-
-        val arrowBack: ImageView = findViewById(R.id.arrowBack)
-
-        val translateLayout: ConstraintLayout = findViewById(R.id.translateLayout)
-        val rateLayout: ConstraintLayout = findViewById(R.id.rateLayout)
-        val telegramLayout: ConstraintLayout = findViewById(R.id.telegramLayout)
-        val emailLayout: ConstraintLayout = findViewById(R.id.emailLayout)
-        val openSourceLayout: ConstraintLayout = findViewById(R.id.openSourceLayout)
-        val licensesLayout: ConstraintLayout = findViewById(R.id.licensesLayout)
-        val privacyPolicyLayout: ConstraintLayout = findViewById(R.id.privacyPolicyLayout)
-        val versionLayout: ConstraintLayout = findViewById(R.id.versionLayout)
-        val loveLayout: LinearLayout = findViewById(R.id.loveLayout)
+        binding = ActivityAboutBinding.inflate(layoutInflater).also { setContentView(it.root) }
 
 
 
-
-        translateLayout.setOnClickListener {
+        binding.translateLayout.setOnClickListener {
             Toast.makeText(this@AboutActivity, "Test", Toast.LENGTH_SHORT).show()
         }
 
-
-        rateLayout.setOnClickListener {
+        binding.rateLayout.setOnClickListener {
             url(getString(R.string.url_app))
         }
 
+        binding.donateLayout.setOnClickListener {
+            Toast.makeText(this@AboutActivity, "ААААА, я старался", Toast.LENGTH_SHORT).show()
+        }
 
-        telegramLayout.setOnClickListener {
+        binding.telegramLayout.setOnClickListener {
             url(getString(R.string.url_telegram))
         }
-        telegramLayout.setOnLongClickListener {
+
+        binding.telegramLayout.setOnLongClickListener {
             copy(getString(R.string.description_telegram))
             true
         }
 
-
-        emailLayout.setOnLongClickListener {
+        binding.emailLayout.setOnLongClickListener {
             copy(getString(R.string.description_email))
             true
         }
 
+        binding.openSourceLayout.setOnClickListener {
+            url(getString(R.string.url_open_source))
+        }
 
-        openSourceLayout.setOnClickListener {
+        binding.licensesLayout.setOnClickListener {
             Toast.makeText(this@AboutActivity, "Test", Toast.LENGTH_SHORT).show()
         }
 
-        licensesLayout.setOnClickListener {
-            Toast.makeText(this@AboutActivity, "Test", Toast.LENGTH_SHORT).show()
-        }
-
-        privacyPolicyLayout.setOnClickListener {
+        binding.privacyPolicyLayout.setOnClickListener {
             url(getString(R.string.url_privacy_policy))
         }
 
-        versionLayout.setOnLongClickListener {
+        binding.versionLayout.setOnLongClickListener {
             copy(getString(R.string.description_version_app))
             true
         }
@@ -105,7 +92,7 @@ class AboutActivity : AppCompatActivity() {
 
 
         val background: ConstraintLayout = findViewById(R.id.background)
-        loveLayout.setOnTouchListener { _, event ->
+        binding.loveLayout.setOnTouchListener { _, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     val sizeInDp = 256
@@ -135,18 +122,7 @@ class AboutActivity : AppCompatActivity() {
             false
         }
 
-
-
-
-
-
-
-
-
-
-
-
-        arrowBack.setOnClickListener {
+        binding.arrowBack.setOnClickListener {
             finish()
         }
     }
@@ -154,7 +130,7 @@ class AboutActivity : AppCompatActivity() {
 
     private fun copy(string: String){
         val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clipData = ClipData.newPlainText("versionApp", string)
+        val clipData = ClipData.newPlainText(null, string)
         clipboardManager.setPrimaryClip(clipData)
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU){
