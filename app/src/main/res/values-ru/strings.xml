@@ -43,7 +43,7 @@
     <string name="translators_selection_text">Переводчики</string>
     <string name="title_translate">Перевести</string>
     <string name="title_rate">Оценить</string>
-    <string name="title_danate">Пожертвовать</string>
+    <string name="title_donate">Пожертвовать</string>
     <string name="title_telegram">Телеграм</string>
     <string name="title_email">Электронная почта</string>
     <string name="title_open_source">Исходный код</string>
@@ -53,7 +53,7 @@
     <string name="description_translate">Помочь перевести и переводчики</string>
     <string name="description_translate2">Помочь перевести с помощью Hosted Weblate</string>
     <string name="description_rate">Написать отзыв о приложении</string>
-    <string name="description_donate">Поддержать это приложение пожертвованием</string>
+    <string name="description_donate">Поддержать это приложение пожертвованием с помощью PayPal</string>
     <string name="description_open_source">Посмотреть исходный код на GitHub</string>
     <string name="description_licenses">Посмотреть лицензии</string>
     <string name="description_privacy_policy">Ознакомиться с политикой конфиденциальности</string>

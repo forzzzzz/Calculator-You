@@ -94,7 +94,7 @@
 
     <string name="title_translate">Translate</string>
     <string name="title_rate">Rate</string>
-    <string name="title_danate">Donate</string>
+    <string name="title_donate">Donate</string>
     <string name="title_telegram">Telegram</string>
     <string name="title_email">Email</string>
     <string name="title_open_source">Open source code</string>
@@ -106,7 +106,7 @@
     <string name="description_translate">Help translate and translators</string>
     <string name="description_translate2">Help translate with Hosted Weblate</string>
     <string name="description_rate">Write a review about the app</string>
-    <string name="description_donate">Support this app with a donation</string>
+    <string name="description_donate">Support this app with a PayPal donation</string>
     <string name="description_telegram" translatable="false">\@millioner_1OODollar</string>
     <string name="description_email" translatable="false">mark.tka.development@gmail.com</string>
     <string name="description_open_source">View open source on GitHub</string>
