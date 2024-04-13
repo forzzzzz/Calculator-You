@@ -28,7 +28,7 @@
     <string name="description_precision">Количество дробных цифр</string>
     <string name="description_separator">Символ разделяющий число</string>
     <string name="description_decimal_separator">Символ разделяющий дробь</string>
-    <string name="description_swipes">Смахивания между режимами и историей</string>
+    <string name="description_swipes">Смахивания по экрану</string>
     <string name="description_swipes2">История и калькулятор</string>
     <string name="description_swipes3">Цифры и научные функции</string>
     <string name="theme_element_1">По умолчанию</string>

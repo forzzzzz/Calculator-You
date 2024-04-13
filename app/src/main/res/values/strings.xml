@@ -71,7 +71,7 @@
     <string name="description_precision">Number of decimal places</string>
     <string name="description_separator">Group separator symbol</string>
     <string name="description_decimal_separator">Decimal separator symbol</string>
-    <string name="description_swipes">Swipe between modes and history</string>
+    <string name="description_swipes">Swipes across the screen</string>
     <string name="description_swipes2">History and calculator</string>
     <string name="description_swipes3">Digits and scientific functions</string>
 
