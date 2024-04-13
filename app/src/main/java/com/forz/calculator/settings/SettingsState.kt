@@ -13,6 +13,8 @@ object SettingsState {
     var previousDecimalSeparatorSymbol: String by notNull()
     var numberPrecision: Int by notNull()
 
+    var swipeHistoryAndCalculator: Boolean by notNull()
+    var swipeDigitsAndScientificFunctions: Boolean by notNull()
     var vibration: Boolean by notNull()
     var sound: Boolean by notNull()
 
@@ -25,21 +27,25 @@ object SettingsState {
             groupingSeparatorSymbol: String,
             decimalSeparatorSymbol: String,
             numberPrecision: Int,
+            swipeHistoryAndCalculator: Boolean,
+            swipeDigitsAndScientificFunctions: Boolean,
             vibration: Boolean,
             sound: Boolean
     ){
 
-        SettingsState.theme = theme
-        SettingsState.color = color
-        SettingsState.isDynamicColor = isDynamicColor
+        this.theme = theme
+        this.color = color
+        this.isDynamicColor = isDynamicColor
 
-        SettingsState.groupingSeparatorSymbol = groupingSeparatorSymbol
+        this.groupingSeparatorSymbol = groupingSeparatorSymbol
         previousGroupingSeparatorSymbol = groupingSeparatorSymbol
-        SettingsState.decimalSeparatorSymbol = decimalSeparatorSymbol
+        this.decimalSeparatorSymbol = decimalSeparatorSymbol
         previousDecimalSeparatorSymbol = decimalSeparatorSymbol
-        SettingsState.numberPrecision = numberPrecision
+        this.numberPrecision = numberPrecision
 
-        SettingsState.vibration = vibration
-        SettingsState.sound = sound
+        this.swipeHistoryAndCalculator = swipeHistoryAndCalculator
+        this.swipeDigitsAndScientificFunctions = swipeDigitsAndScientificFunctions
+        this.vibration = vibration
+        this.sound = sound
     }
 }

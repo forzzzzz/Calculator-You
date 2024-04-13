@@ -16,6 +16,7 @@ import com.forz.calculator.R
 import com.forz.calculator.databinding.FragmentCalculatorBinding
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
 import com.forz.calculator.history.HistoryService
+import com.forz.calculator.settings.SettingsState
 import com.forz.calculator.viewModels.CalculatorViewModel.isScienceModActivated
 import com.forz.calculator.viewModels.CalculatorViewModel.previousScienceModActivated
 import com.forz.calculator.viewModels.CalculatorViewModel.updateScienceModActivated
@@ -218,6 +219,12 @@ class CalculatorFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        binding.pager.isUserInputEnabled = SettingsState.swipeDigitsAndScientificFunctions
     }
 
 

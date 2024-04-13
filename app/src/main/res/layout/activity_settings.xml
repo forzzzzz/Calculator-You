@@ -51,7 +51,7 @@
                     android:id="@+id/chooseThemeImage"
                     style="@style/optionImage"
                     android:layout_marginTop="12dp"
-                    app:layout_constraintBottom_toTopOf="@+id/chooseThemeHorizontalScroll"
+                    app:layout_constraintBottom_toTopOf="@id/chooseThemeHorizontalScroll"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/light_mode" />
@@ -61,7 +61,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_select_theme"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/chooseThemeImage"
+                    app:layout_constraintStart_toEndOf="@id/chooseThemeImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -69,16 +69,16 @@
                     style="@style/optionDescriptionText"
                     android:text="@string/description_select_theme"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/chooseThemeImage"
-                    app:layout_constraintTop_toBottomOf="@+id/chooseThemeTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/chooseThemeImage"
+                    app:layout_constraintTop_toBottomOf="@id/chooseThemeTitleText" />
 
                 <HorizontalScrollView
                     android:id="@+id/chooseThemeHorizontalScroll"
                     style="@style/optionHorizontalScroll"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/chooseThemeImage"
-                    app:layout_constraintTop_toBottomOf="@+id/chooseThemeText">
+                    app:layout_constraintStart_toEndOf="@id/chooseThemeImage"
+                    app:layout_constraintTop_toBottomOf="@id/chooseThemeText">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -134,8 +134,8 @@
                     android:id="@+id/dynamicColorsTitleText"
                     style="@style/optionTitleText"
                     android:text="@string/title_dynamic_colors"
-                    app:layout_constraintEnd_toStartOf="@+id/dynamicColorsSwitch"
-                    app:layout_constraintStart_toEndOf="@+id/dynamicColorsImage"
+                    app:layout_constraintEnd_toStartOf="@id/dynamicColorsSwitch"
+                    app:layout_constraintStart_toEndOf="@id/dynamicColorsImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -143,9 +143,9 @@
                     style="@style/optionDescriptionText"
                     android:text="@string/description_dynamic_colors"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/dynamicColorsSwitch"
-                    app:layout_constraintStart_toEndOf="@+id/dynamicColorsImage"
-                    app:layout_constraintTop_toBottomOf="@+id/dynamicColorsTitleText" />
+                    app:layout_constraintEnd_toStartOf="@id/dynamicColorsSwitch"
+                    app:layout_constraintStart_toEndOf="@id/dynamicColorsImage"
+                    app:layout_constraintTop_toBottomOf="@id/dynamicColorsTitleText" />
 
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:id="@+id/dynamicColorsSwitch"
@@ -174,7 +174,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_select_color"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/chooseColorImage"
+                    app:layout_constraintStart_toEndOf="@id/chooseColorImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -182,16 +182,16 @@
                     style="@style/optionDescriptionText"
                     android:text="@string/description_select_color"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/chooseColorImage"
-                    app:layout_constraintTop_toBottomOf="@+id/chooseColorTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/chooseColorImage"
+                    app:layout_constraintTop_toBottomOf="@id/chooseColorTitleText" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/chooseColorRecyclerView"
                     style="@style/optionHorizontalScroll"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/chooseColorImage"
-                    app:layout_constraintTop_toBottomOf="@+id/chooseColorText"/>
+                    app:layout_constraintStart_toEndOf="@id/chooseColorImage"
+                    app:layout_constraintTop_toBottomOf="@id/chooseColorText"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -241,7 +241,7 @@
                     android:id="@+id/precisionImage"
                     style="@style/optionImage"
                     android:layout_marginTop="12dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/precisionText"
+                    app:layout_constraintBottom_toBottomOf="@id/precisionText"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/architecture" />
@@ -250,8 +250,8 @@
                     android:id="@+id/precisionTitleText"
                     style="@style/optionTitleText"
                     android:text="@string/title_precision"
-                    app:layout_constraintEnd_toStartOf="@+id/precisionValueText"
-                    app:layout_constraintStart_toEndOf="@+id/precisionImage"
+                    app:layout_constraintEnd_toStartOf="@id/precisionValueText"
+                    app:layout_constraintStart_toEndOf="@id/precisionImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -259,14 +259,14 @@
                     style="@style/optionDescriptionText"
                     android:text="@string/description_precision"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/precisionImage"
-                    app:layout_constraintTop_toBottomOf="@+id/precisionTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/precisionImage"
+                    app:layout_constraintTop_toBottomOf="@id/precisionTitleText" />
 
                 <TextView
                     android:id="@+id/precisionValueText"
                     style="@style/optionSeekBarValueText"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/precisionTitleText"
+                    app:layout_constraintStart_toEndOf="@id/precisionTitleText"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <SeekBar
@@ -275,7 +275,7 @@
                     android:max="16"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/precisionImage"
+                    app:layout_constraintStart_toEndOf="@id/precisionImage"
                     app:layout_constraintTop_toBottomOf="@id/precisionText" />
 
 
@@ -290,7 +290,7 @@
                     android:id="@+id/groupingSeparatorSymbolImage"
                     style="@style/optionImage"
                     android:layout_marginTop="12dp"
-                    app:layout_constraintBottom_toTopOf="@+id/groupingSeparatorSymbolHorizontalScroll"
+                    app:layout_constraintBottom_toTopOf="@id/groupingSeparatorSymbolHorizontalScroll"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/baseline_123" />
@@ -300,7 +300,7 @@
                     style="@style/optionTitleText"
                     android:text="@string/title_separator"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/groupingSeparatorSymbolImage"
+                    app:layout_constraintStart_toEndOf="@id/groupingSeparatorSymbolImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -308,16 +308,16 @@
                     style="@style/optionDescriptionText"
                     android:text="@string/description_separator"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/groupingSeparatorSymbolImage"
-                    app:layout_constraintTop_toBottomOf="@+id/groupingSeparatorSymbolTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/groupingSeparatorSymbolImage"
+                    app:layout_constraintTop_toBottomOf="@id/groupingSeparatorSymbolTitleText" />
 
                 <HorizontalScrollView
                     android:id="@+id/groupingSeparatorSymbolHorizontalScroll"
                     style="@style/optionHorizontalScroll"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/groupingSeparatorSymbolImage"
-                    app:layout_constraintTop_toBottomOf="@+id/groupingSeparatorSymbolText">
+                    app:layout_constraintStart_toEndOf="@id/groupingSeparatorSymbolImage"
+                    app:layout_constraintTop_toBottomOf="@id/groupingSeparatorSymbolText">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -366,7 +366,7 @@
                     android:id="@+id/decimalSeparatorSymbolImage"
                     style="@style/optionImage"
                     android:layout_marginTop="12dp"
-                    app:layout_constraintBottom_toTopOf="@+id/decimalSeparatorSymbolHorizontalScroll"
+                    app:layout_constraintBottom_toTopOf="@id/decimalSeparatorSymbolHorizontalScroll"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/decimalminor" />
@@ -384,16 +384,16 @@
                     style="@style/optionDescriptionText"
                     android:text="@string/description_decimal_separator"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/decimalSeparatorSymbolImage"
-                    app:layout_constraintTop_toBottomOf="@+id/decimalSeparatorSymbolTitleText" />
+                    app:layout_constraintStart_toEndOf="@id/decimalSeparatorSymbolImage"
+                    app:layout_constraintTop_toBottomOf="@id/decimalSeparatorSymbolTitleText" />
 
                 <HorizontalScrollView
                     android:id="@+id/decimalSeparatorSymbolHorizontalScroll"
                     style="@style/optionHorizontalScroll"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/decimalSeparatorSymbolImage"
-                    app:layout_constraintTop_toBottomOf="@+id/decimalSeparatorSymbolText">
+                    app:layout_constraintStart_toEndOf="@id/decimalSeparatorSymbolImage"
+                    app:layout_constraintTop_toBottomOf="@id/decimalSeparatorSymbolText">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -432,9 +432,40 @@
                 android:text="@string/other_selection_text" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/vibrationLayout"
+                android:id="@+id/swipesLayout"
                 style="@style/optionLayout"
                 android:layout_marginTop="8dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/swipesImage"
+                    style="@style/optionImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_swipe" />
+
+                <TextView
+                    android:id="@+id/swipesTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_swipes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/swipesImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/swipesText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_swipes"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/swipesImage"
+                    app:layout_constraintTop_toBottomOf="@id/swipesTitleText" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vibrationLayout"
+                style="@style/optionLayout">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/vibrationImage"
@@ -448,8 +479,8 @@
                     android:id="@+id/vibrationTitleText"
                     style="@style/optionTitleText"
                     android:text="@string/title_vibrations"
-                    app:layout_constraintEnd_toStartOf="@+id/vibrationSwitch"
-                    app:layout_constraintStart_toEndOf="@+id/vibrationImage"
+                    app:layout_constraintEnd_toStartOf="@id/vibrationSwitch"
+                    app:layout_constraintStart_toEndOf="@id/vibrationImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -457,9 +488,9 @@
                     style="@style/optionDescriptionText"
                     android:text="@string/description_vibrations"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/vibrationSwitch"
-                    app:layout_constraintStart_toEndOf="@+id/vibrationImage"
-                    app:layout_constraintTop_toBottomOf="@+id/vibrationTitleText" />
+                    app:layout_constraintEnd_toStartOf="@id/vibrationSwitch"
+                    app:layout_constraintStart_toEndOf="@id/vibrationImage"
+                    app:layout_constraintTop_toBottomOf="@id/vibrationTitleText" />
 
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:id="@+id/vibrationSwitch"
@@ -488,8 +519,8 @@
                     android:id="@+id/soundEffectsTitleText"
                     style="@style/optionTitleText"
                     android:text="@string/title_sound_effects"
-                    app:layout_constraintEnd_toStartOf="@+id/soundEffectsSwitch"
-                    app:layout_constraintStart_toEndOf="@+id/soundEffectsImage"
+                    app:layout_constraintEnd_toStartOf="@id/soundEffectsSwitch"
+                    app:layout_constraintStart_toEndOf="@id/soundEffectsImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -497,9 +528,9 @@
                     style="@style/optionDescriptionText"
                     android:text="@string/description_sound_effects"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/soundEffectsSwitch"
-                    app:layout_constraintStart_toEndOf="@+id/soundEffectsImage"
-                    app:layout_constraintTop_toBottomOf="@+id/soundEffectsTitleText" />
+                    app:layout_constraintEnd_toStartOf="@id/soundEffectsSwitch"
+                    app:layout_constraintStart_toEndOf="@id/soundEffectsImage"
+                    app:layout_constraintTop_toBottomOf="@id/soundEffectsTitleText" />
 
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:id="@+id/soundEffectsSwitch"

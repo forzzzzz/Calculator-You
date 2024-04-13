@@ -11,6 +11,7 @@ import android.util.TypedValue
 import android.view.View
 import android.widget.SeekBar
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -30,6 +31,8 @@ import com.forz.calculator.settings.SettingsState.numberPrecision
 import com.forz.calculator.settings.SettingsState.previousDecimalSeparatorSymbol
 import com.forz.calculator.settings.SettingsState.previousGroupingSeparatorSymbol
 import com.forz.calculator.settings.SettingsState.sound
+import com.forz.calculator.settings.SettingsState.swipeDigitsAndScientificFunctions
+import com.forz.calculator.settings.SettingsState.swipeHistoryAndCalculator
 import com.forz.calculator.settings.SettingsState.vibration
 import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.materialswitch.MaterialSwitch
@@ -212,7 +215,28 @@ class SettingsActivity : AppCompatActivity() {
 
 
 
+        binding.swipesLayout.setOnClickListener {
+            val selectedItems = booleanArrayOf(swipeHistoryAndCalculator, swipeDigitsAndScientificFunctions)
+            val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+            builder
+                .setTitle(getString(R.string.title_swipes))
+                .setPositiveButton(getString(R.string.swipes_ok)) { _, _ ->
+                    swipeHistoryAndCalculator = selectedItems[0]
+                    swipeDigitsAndScientificFunctions = selectedItems[1]
+                }
+                .setNegativeButton(getString(R.string.swipes_cancel)) { _, _ ->
 
+                }
+                .setMultiChoiceItems(
+                    arrayOf(getString(R.string.description_swipes2), getString(R.string.description_swipes3)),
+                    selectedItems
+                ) { _, which, isChecked ->
+                    selectedItems[which] = isChecked
+                }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
 
         binding.vibrationLayout.setOnClickListener {
             vibration = switchSwitch(binding.vibrationSwitch)
@@ -252,6 +276,8 @@ class SettingsActivity : AppCompatActivity() {
         preferences.setGroupingSeparatorSymbol(groupingSeparatorSymbol)
         preferences.setDecimalSeparatorSymbol(decimalSeparatorSymbol)
         preferences.setNumberPrecision(numberPrecision)
+        preferences.setSwipeHistoryAndCalculator(swipeHistoryAndCalculator)
+        preferences.setSwipeDigitsAndScientificFunctions(swipeDigitsAndScientificFunctions)
         preferences.setVibration(vibration)
         preferences.setSoundEffects(sound)
     }

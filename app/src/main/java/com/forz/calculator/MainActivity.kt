@@ -292,6 +292,8 @@ class MainActivity : AppCompatActivity() {
             preferences.getGroupingSeparatorSymbol(),
             preferences.getDecimalSeparatorSymbol(),
             preferences.getNumberPrecision(),
+            preferences.getSwipeHistoryAndCalculator(),
+            preferences.getSwipeDigitsAndScientificFunctions(),
             preferences.getVibration(),
             preferences.getSoundEffects()
         )
@@ -299,6 +301,7 @@ class MainActivity : AppCompatActivity() {
 
         hapticAndSound.setHapticFeedback()
         hapticAndSound.setSoundEffects()
+        binding.pager.isUserInputEnabled = SettingsState.swipeHistoryAndCalculator
     }
 
     override fun onStop() {
