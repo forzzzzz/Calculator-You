@@ -36,7 +36,7 @@
     <string name="separator_element_1">Запятая</string>
     <string name="separator_element_2">Точка</string>
     <string name="separator_element_3">Пробел</string>
-    <string name="helpMe_selection_text">Помощь</string>
+    <string name="help_selection_text">Помощь</string>
     <string name="support_selection_text">Поддержка</string>
     <string name="info_selection_text">Информация о приложении</string>
     <string name="title_translate">Перевести</string>

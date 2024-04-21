@@ -51,7 +51,7 @@
                 android:id="@+id/helpMeSelectionText"
                 style="@style/sectionText"
                 android:layout_marginTop="24dp"
-                android:text="@string/helpMe_selection_text" />
+                android:text="@string/help_selection_text" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/translateLayout"

@@ -85,7 +85,7 @@
 
 
     <!--About-->
-    <string name="helpMe_selection_text">Help</string>
+    <string name="help_selection_text">Help</string>
     <string name="support_selection_text">Support</string>
     <string name="info_selection_text">App info</string>
 
