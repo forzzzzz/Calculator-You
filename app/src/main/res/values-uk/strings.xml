@@ -20,4 +20,5 @@
     <string name="title_select_color">Обрати колір</string>
     <string name="title_separator">Роздільник</string>
     <string name="title_swipes">Змахи</string>
+    <string name="description_swipes2">Історія та калькулятор</string>
 </resources>
