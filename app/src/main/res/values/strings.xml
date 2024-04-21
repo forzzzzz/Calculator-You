@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name" translatable="false">Calculator You</string>
-    <string name="language">English</string>
 
     <string name="clear_button" translatable="false">AC</string>
     <string name="brackets_button" translatable="false">(&#160;&#160;)</string>
@@ -89,7 +88,6 @@
     <string name="helpMe_selection_text">Help</string>
     <string name="support_selection_text">Support</string>
     <string name="info_selection_text">App info</string>
-    <string name="translators_selection_text">Translators</string>
 
 
     <string name="title_translate">Translate</string>
@@ -103,8 +101,7 @@
     <string name="title_version_app">Version</string>
 
 
-    <string name="description_translate">Help translate and translators</string>
-    <string name="description_translate2">Help translate with Hosted Weblate</string>
+    <string name="description_translate">Help translate with Hosted Weblate</string>
     <string name="description_rate">Write a review about the app</string>
     <string name="description_donate">Support this app with a PayPal donation</string>
     <string name="description_telegram" translatable="false">\@millioner_1OODollar</string>

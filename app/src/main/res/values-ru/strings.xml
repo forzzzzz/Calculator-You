@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="language">Русский</string>
     <string name="theme_selection_text">Тема</string>
     <string name="formatting_selection_text">Форматирование</string>
     <string name="other_selection_text">Другое</string>
@@ -40,7 +39,6 @@
     <string name="helpMe_selection_text">Помощь</string>
     <string name="support_selection_text">Поддержка</string>
     <string name="info_selection_text">Информация о приложении</string>
-    <string name="translators_selection_text">Переводчики</string>
     <string name="title_translate">Перевести</string>
     <string name="title_rate">Оценить</string>
     <string name="title_donate">Пожертвовать</string>
@@ -50,8 +48,7 @@
     <string name="title_licenses">Лицензии</string>
     <string name="title_privacy_policy">Политика конфиденциальности</string>
     <string name="title_version_app">Версия</string>
-    <string name="description_translate">Помочь перевести и переводчики</string>
-    <string name="description_translate2">Помочь перевести с помощью Hosted Weblate</string>
+    <string name="description_translate">Помочь перевести с помощью Hosted Weblate</string>
     <string name="description_rate">Написать отзыв о приложении</string>
     <string name="description_donate">Поддержать это приложение пожертвованием с помощью PayPal</string>
     <string name="description_open_source">Посмотреть исходный код на GitHub</string>
