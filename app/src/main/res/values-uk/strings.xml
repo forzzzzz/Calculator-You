@@ -1,2 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="title_about">Про додаток</string>
+    <string name="title_select_theme">Обрати тему</string>
+    <string name="title_vibrations">Вібрації</string>
+    <string name="title_sound_effects">Звуки</string>
+    <string name="title_dynamic_colors">Динамічні кольори</string>
+    <string name="title_decimal_separator">Десятковий роздільник</string>
+    <string name="language">Українська</string>
+    <string name="theme_selection_text">Тема</string>
+    <string name="formatting_selection_text">Форматування</string>
+    <string name="other_selection_text">Інше</string>
+    <string name="history_data_menu_share">Поділитися</string>
+    <string name="title_history">Історія</string>
+    <string name="history_options_menu">Очистити історію</string>
+    <string name="history_data_menu_delete">Видалити</string>
+    <string name="history_data_menu_copy">Копіювати</string>
+    <string name="title_settings">Налаштування</string>
+    <string name="title_precision">Точність</string>
+    <string name="title_select_color">Обрати колір</string>
+    <string name="title_separator">Роздільник</string>
+    <string name="title_swipes">Змахи</string>
+</resources>
