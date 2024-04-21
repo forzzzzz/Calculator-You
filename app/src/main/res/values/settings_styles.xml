@@ -20,7 +20,7 @@
         <item name="android:tint">?attr/colorOnSurface</item>
         <item name="android:src">@drawable/arrow_back</item>
         <item name="android:background">@drawable/background_options_menu</item>
-        <item name="android:tooltipText">@string/arrow_back_tooltip</item>
+        <item name="android:tooltipText">@string/arrow_back_tool_tip</item>
         <item name="android:onClick">onClickBack</item>
     </style>
 

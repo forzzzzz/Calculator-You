@@ -62,7 +62,7 @@
     <string name="swipes_cancel">Отмена</string>
     <string name="swipes_ok">ОK</string>
     <string name="options_tool_tip">Больше настроек</string>
-    <string name="arrow_back_tooltip">Вернуться назад</string>
+    <string name="arrow_back_tool_tip">Вернуться назад</string>
     <string name="empty_history">Нет истории</string>
     <string name="month_1_date">Января</string>
     <string name="month_2_date">Февраля</string>

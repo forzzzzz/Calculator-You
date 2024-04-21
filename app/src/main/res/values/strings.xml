@@ -132,7 +132,7 @@
 
     <!--Tool tips-->
     <string name="options_tool_tip">More options</string>
-    <string name="arrow_back_tooltip">Back</string>
+    <string name="arrow_back_tool_tip">Back</string>
 
 
     <!--Other-->
