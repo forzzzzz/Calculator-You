@@ -1,2 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="theme_selection_text">Thème</string>
+    <string name="formatting_selection_text">Formatage</string>
+    <string name="history_data_menu_share">Partager</string>
+    <string name="title_history">L\'histoire</string>
+    <string name="title_settings">Paramètres</string>
+    <string name="title_select_theme">Choisir un thème</string>
+    <string name="title_sound_effects">Sons</string>
+    <string name="title_vibrations">Les vibrations</string>
+    <string name="title_dynamic_colors">Couleurs dynamiques</string>
+    <string name="title_select_color">Choisir une couleur</string>
+    <string name="title_precision">La précision</string>
+    <string name="history_data_menu_delete">Supprimer</string>
+    <string name="other_selection_text">Autres</string>
+    <string name="title_about">À propos</string>
+    <string name="history_data_menu_copy">Copie</string>
+</resources>
