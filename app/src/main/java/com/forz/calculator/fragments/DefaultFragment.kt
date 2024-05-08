@@ -23,6 +23,7 @@ import com.forz.calculator.MainActivity
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.Preferences
 import com.forz.calculator.R
+import com.forz.calculator.StateViews
 import com.forz.calculator.databinding.FragmentDefaultBinding
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
 import com.forz.calculator.history.HistoryService
@@ -66,7 +67,7 @@ class DefaultFragment : Fragment() {
         adapter.addFragment(HistoryFragment())
         adapter.addFragment(CalculatorFragment())
         binding.pager.adapter = adapter
-        binding.pager.setCurrentItem(1, false)
+        binding.pager.setCurrentItem(StateViews.currentItemPager, false)
         binding.pager.offscreenPageLimit = 2
         TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
             tab.setIcon(
@@ -81,15 +82,19 @@ class DefaultFragment : Fragment() {
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
-
+        if (binding.pager.currentItem == 0){
+            binding.historyTitleText.visibility = View.VISIBLE
+        }
 
         binding.pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 hapticAndSound.vibrateEffectClick()
 
+                StateViews.currentItemPager = position
+
                 when (position) {
                     0 -> {
-                        if (binding.degreeTitleText.visibility == View.VISIBLE){
+                        if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
                             binding.degreeTitleText.startAnimation(fadeOutAnimation200.apply {
                                 setAnimationListener(object : Animation.AnimationListener {
                                     override fun onAnimationStart(animation: Animation?) {
