@@ -95,15 +95,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showFragment(fragment: Fragment){
-        if (StateViews.firstStart){
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.main)
+        if (currentFragment != null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main, fragment)
+                .detach(currentFragment)
                 .commit()
-
-            StateViews.firstStart = false
         }
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.main, fragment)
+            .commit()
     }
+
+
 
     @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -1,8 +1,6 @@
 package com.forz.calculator
 
 object StateViews{
-    var firstStart = true
-
     var currentItemPager = 1
 
     var firstLoadRecyclerViewHistory = true
