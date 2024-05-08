@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.forz.calculator.App
 import com.forz.calculator.R
+import com.forz.calculator.StateViews
 import com.forz.calculator.databinding.FragmentHistoryBinding
 import com.forz.calculator.history.HistoryData
 import com.forz.calculator.history.HistoryDataActionListener
@@ -89,6 +90,9 @@ class HistoryFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
+        val layoutManager = binding.recyclerView.layoutManager as LinearLayoutManager?
+        StateViews.currentPositionRecyclerViewSizeHistory = layoutManager!!.findFirstCompletelyVisibleItemPosition()
+
         historyService.removeListener(historyDataListListener)
     }
 
@@ -97,9 +101,14 @@ class HistoryFragment : Fragment() {
 
         newRecyclerViewSizeHistory = adapter.historyDataList.size
 
+
+
+
         if (firstLoadRecyclerViewHistory || oldRecyclerViewSizeHistory < newRecyclerViewSizeHistory){
             binding.recyclerView.scrollToPosition(newRecyclerViewSizeHistory - 1)
             firstLoadRecyclerViewHistory = false
+        }else{
+            binding.recyclerView.scrollToPosition(StateViews.currentPositionRecyclerViewSizeHistory)
         }
 
         oldRecyclerViewSizeHistory = adapter.historyDataList.size
@@ -122,7 +131,7 @@ class HistoryFragment : Fragment() {
 
     private fun copy(string: String){
         val clipboardManager = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clipData = ClipData.newPlainText("versionApp", string)
+        val clipData = ClipData.newPlainText(null, string)
         clipboardManager.setPrimaryClip(clipData)
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU){

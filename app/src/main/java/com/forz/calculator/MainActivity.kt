@@ -100,13 +100,14 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager
                 .beginTransaction()
                 .detach(currentFragment)
+                .replace(R.id.main, fragment)
+                .commit()
+        }else{
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.main, fragment)
                 .commit()
         }
-
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.main, fragment)
-            .commit()
     }
 
 
