@@ -2,8 +2,6 @@ package com.forz.calculator.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +11,7 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.PopupMenu
 import androidx.appcompat.app.AlertDialog
+import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.forz.calculator.AboutActivity
@@ -238,22 +237,14 @@ class DefaultFragment : Fragment() {
         }
 
 
+        binding.expressionEditText.addTextChangedListener{
+            if (ExpressionViewModel.expression.value!! != binding.expressionEditText.text.toString()){
+                ExpressionViewModel.updateNumberOfCharactersOfInsertedText(binding.expressionEditText.text!!.length)
+                ExpressionViewModel.updateExpression(binding.expressionEditText.text.toString(), binding.expressionEditText.selectionStart)
+            }
 
-        val textWatcher = object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (ExpressionViewModel.expression.value!! != s.toString()) {
-                    ExpressionViewModel.updateNumberOfCharactersOfInsertedText(s!!.length)
-                    ExpressionViewModel.updateExpression(s.toString(), binding.expressionEditText.selectionStart)
-                }
-                AutoSizeText.expression(binding.expressionEditText, binding.expressionEditText.resources)
-            }
-            override fun afterTextChanged(s: Editable?) {
-            }
+            AutoSizeText.expression(binding.expressionEditText, binding.expressionEditText.resources)
         }
-
-        binding.expressionEditText.addTextChangedListener(textWatcher)
 
 
         ExpressionViewModel.isSelection.observe(requireActivity()){ isSelection ->
