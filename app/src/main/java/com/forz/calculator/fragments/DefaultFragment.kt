@@ -82,10 +82,6 @@ class DefaultFragment : Fragment() {
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
-        if (binding.pager.currentItem == 0){
-            binding.historyTitleText.visibility = View.VISIBLE
-        }
-
         binding.pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 hapticAndSound.vibrateEffectClick()
