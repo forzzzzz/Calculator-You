@@ -138,7 +138,7 @@
     <!--Other-->
     <string name="preview_format_text" translatable="false">123456.789123456789123456789123</string>
     <string name="empty_history">No history</string>
-    
+
     <string name="month_1_date">January</string>
     <string name="month_2_date">February</string>
     <string name="month_3_date">March</string>
