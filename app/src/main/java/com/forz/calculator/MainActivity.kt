@@ -8,10 +8,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.forz.calculator.databinding.ActivityMainBinding
-import com.forz.calculator.fragments.DefaultFragment
+import com.forz.calculator.fragments.MainFragment
+import com.forz.calculator.fragments.land.MainLandFragment
 import kotlin.properties.Delegates.notNull
 
-@Suppress("DEPRECATION")
 @SuppressLint("DiscouragedApi")
 class MainActivity : AppCompatActivity() {
 
@@ -50,44 +50,42 @@ class MainActivity : AppCompatActivity() {
 
         when (resources.configuration.screenLayout and Configuration.SCREENLAYOUT_SIZE_MASK) {
             Configuration.SCREENLAYOUT_SIZE_SMALL -> {
-
-            }
-            Configuration.SCREENLAYOUT_SIZE_LARGE -> {
-
-            }
-            Configuration.SCREENLAYOUT_SIZE_XLARGE -> {
                 when (resources.configuration.orientation) {
-                    Configuration.ORIENTATION_PORTRAIT -> {
-
-                    }
                     Configuration.ORIENTATION_LANDSCAPE -> {
 
                     }
-
-                    Configuration.ORIENTATION_SQUARE -> {
+                    else -> {
 
                     }
+                }
+            }
+            Configuration.SCREENLAYOUT_SIZE_LARGE -> {
+                when (resources.configuration.orientation) {
+                    Configuration.ORIENTATION_LANDSCAPE -> {
 
-                    Configuration.ORIENTATION_UNDEFINED -> {
+                    }
+                    else -> {
+
+                    }
+                }
+            }
+            Configuration.SCREENLAYOUT_SIZE_XLARGE -> {
+                when (resources.configuration.orientation) {
+                    Configuration.ORIENTATION_LANDSCAPE -> {
+
+                    }
+                    else -> {
 
                     }
                 }
             }
             else -> {
                 when (resources.configuration.orientation) {
-                    Configuration.ORIENTATION_PORTRAIT -> {
-                        showFragment(DefaultFragment())
-                    }
                     Configuration.ORIENTATION_LANDSCAPE -> {
-
+                        showFragment(MainLandFragment())
                     }
-
-                    Configuration.ORIENTATION_SQUARE -> {
-
-                    }
-
-                    Configuration.ORIENTATION_UNDEFINED -> {
-
+                    else -> {
+                        showFragment(MainFragment())
                     }
                 }
             }

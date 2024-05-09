@@ -109,7 +109,7 @@
     <string name="description_open_source">View open source on GitHub</string>
     <string name="description_licenses">View licenses</string>
     <string name="description_privacy_policy">View privacy policy</string>
-    <string name="description_version_app" translatable="false">2.0.2 (in development)</string>
+    <string name="description_version_app" translatable="false">2.0.3 beta</string>
 
 
     <string name="love_text">Made not with love❤️, but by love❤️</string>

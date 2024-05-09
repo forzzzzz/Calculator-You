@@ -57,8 +57,6 @@ class CalculatorFragment : Fragment() {
         )
 
         hapticAndSound = HapticAndSound(requireContext(), views)
-        hapticAndSound.setHapticFeedback()
-        hapticAndSound.setSoundEffects()
 
 
         val adapter = ViewPageAdapter(childFragmentManager, lifecycle)
@@ -224,6 +222,8 @@ class CalculatorFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
+        hapticAndSound.setHapticFeedback()
+        hapticAndSound.setSoundEffects()
         binding.pager.isUserInputEnabled = SettingsState.swipeDigitsAndScientificFunctions
     }
 

@@ -36,14 +36,14 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlin.properties.Delegates
 
 @Suppress("DEPRECATION")
-class DefaultFragment : Fragment() {
+class MainFragment : Fragment() {
 
     private var binding: FragmentDefaultBinding by Delegates.notNull()
     private var preferences: Preferences by Delegates.notNull()
     private var hapticAndSound: HapticAndSound by Delegates.notNull()
 
     private val historyService: HistoryService
-        get() = (requireContext() as App).historyService
+        get() = (requireContext().applicationContext as App).historyService
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -225,8 +225,6 @@ class DefaultFragment : Fragment() {
             }else{
                 binding.resultText.text = ""
             }
-
-            AutoSizeText.result(binding.resultText, binding.resultText.resources)
         }
 
         binding.expressionEditText.requestFocus()
