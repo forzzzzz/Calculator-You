@@ -12,7 +12,7 @@ object AutoSizeText {
     private var expressionTextSize = 0f
     private var resultTextSize = 0f
     fun expression(inputEditText: EditText, resources: Resources){
-        var textSize = 34f
+        var textSize = 40f
         val step = 1f
         var high = 64f
         val maxWidth = inputEditText.width.toFloat()
@@ -22,7 +22,7 @@ object AutoSizeText {
 
             }
             Configuration.SCREENLAYOUT_SIZE_NORMAL -> {
-                textSize = 34f
+                textSize = 40f
                 high = 64f
             }
             Configuration.SCREENLAYOUT_SIZE_XLARGE -> {
@@ -37,11 +37,11 @@ object AutoSizeText {
                     }
 
                     Configuration.ORIENTATION_SQUARE -> {
-                        TODO()
+
                     }
 
                     Configuration.ORIENTATION_UNDEFINED -> {
-                        TODO()
+
                     }
                 }
             }
@@ -105,11 +105,11 @@ object AutoSizeText {
                     }
 
                     Configuration.ORIENTATION_SQUARE -> {
-                        TODO()
+
                     }
 
                     Configuration.ORIENTATION_UNDEFINED -> {
-                        TODO()
+
                     }
                 }
             }
