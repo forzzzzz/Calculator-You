@@ -80,7 +80,7 @@
         <item name="android:layout_marginStart">@dimen/_16sdp</item>
         <item name="android:layout_marginEnd">@dimen/_16sdp</item>
         <item name="android:layout_marginTop">@dimen/_6sdp</item>
-        <item name="android:layout_marginBottom">@dimen/_minus16sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_minus12sdp</item>
         
         <item name="android:background">@android:color/transparent</item>
         <item name="android:fontFamily">sans-serif</item>
