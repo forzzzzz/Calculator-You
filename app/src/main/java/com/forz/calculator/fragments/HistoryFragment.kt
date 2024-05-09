@@ -16,7 +16,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.forz.calculator.App
 import com.forz.calculator.R
-import com.forz.calculator.StateViews
 import com.forz.calculator.databinding.FragmentHistoryBinding
 import com.forz.calculator.history.HistoryData
 import com.forz.calculator.history.HistoryDataActionListener
@@ -24,7 +23,6 @@ import com.forz.calculator.history.HistoryDataAdapter
 import com.forz.calculator.history.HistoryDataListListener
 import com.forz.calculator.history.HistoryService
 import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.StateViews.firstLoadRecyclerViewHistory
 import com.forz.calculator.StateViews.newRecyclerViewSizeHistory
 import com.forz.calculator.StateViews.oldRecyclerViewSizeHistory
 import kotlin.properties.Delegates.notNull
@@ -90,8 +88,6 @@ class HistoryFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        val layoutManager = binding.recyclerView.layoutManager as LinearLayoutManager?
-        StateViews.currentPositionRecyclerViewSizeHistory = layoutManager!!.findFirstCompletelyVisibleItemPosition()
 
         historyService.removeListener(historyDataListListener)
     }
@@ -104,11 +100,8 @@ class HistoryFragment : Fragment() {
 
 
 
-        if (firstLoadRecyclerViewHistory || oldRecyclerViewSizeHistory < newRecyclerViewSizeHistory){
+        if (oldRecyclerViewSizeHistory <= newRecyclerViewSizeHistory){
             binding.recyclerView.scrollToPosition(newRecyclerViewSizeHistory - 1)
-            firstLoadRecyclerViewHistory = false
-        }else{
-            binding.recyclerView.scrollToPosition(StateViews.currentPositionRecyclerViewSizeHistory)
         }
 
         oldRecyclerViewSizeHistory = adapter.historyDataList.size
