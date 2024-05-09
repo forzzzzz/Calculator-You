@@ -6,6 +6,8 @@ object InsertInExpression {
     private val beforeDigitArray: Array<String> = arrayOf("π", "e", "%", ")", "!")
     private val scientificFunctionArray: Array<String> = arrayOf("√(", "ln(", "log(", "sin(", "cos(", "tan(", "sin⁻¹(", "cos⁻¹(", "tan⁻¹(", "exp(")
 
+    val triggersIsDegreeModActivatedShowArray = arrayOf("sin", "cos", "tan", "sin⁻¹", "cos⁻¹", "tan⁻¹")
+
 
     fun enterBackspace(inputString: String, cursorPositionStart: Int, cursorPositionEnd: Int, groupingSeparatorSymbol: String): Pair<String, Int>{
         var string = inputString

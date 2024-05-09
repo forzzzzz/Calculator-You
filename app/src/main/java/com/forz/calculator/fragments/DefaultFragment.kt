@@ -19,6 +19,7 @@ import com.forz.calculator.App
 import com.forz.calculator.AutoSizeText
 import com.forz.calculator.HapticAndSound
 import com.forz.calculator.InsertInExpression
+import com.forz.calculator.InsertInExpression.triggersIsDegreeModActivatedShowArray
 import com.forz.calculator.MainActivity
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.Preferences
@@ -36,8 +37,6 @@ import kotlin.properties.Delegates
 
 @Suppress("DEPRECATION")
 class DefaultFragment : Fragment() {
-
-    private val triggersIsDegreeModActivatedShowArray = arrayOf("sin", "cos", "tan", "sin⁻¹", "cos⁻¹", "tan⁻¹")
 
     private var binding: FragmentDefaultBinding by Delegates.notNull()
     private var preferences: Preferences by Delegates.notNull()
