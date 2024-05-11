@@ -16,6 +16,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.forz.calculator.App
 import com.forz.calculator.R
+import com.forz.calculator.StateViews.currentPositionRecyclerViewHistory
+import com.forz.calculator.StateViews.isFirstStartRecyclerViewHistory
 import com.forz.calculator.databinding.FragmentHistoryBinding
 import com.forz.calculator.history.HistoryData
 import com.forz.calculator.history.HistoryDataActionListener
@@ -23,8 +25,8 @@ import com.forz.calculator.history.HistoryDataAdapter
 import com.forz.calculator.history.HistoryDataListListener
 import com.forz.calculator.history.HistoryService
 import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.StateViews.newRecyclerViewSizeHistory
-import com.forz.calculator.StateViews.oldRecyclerViewSizeHistory
+import com.forz.calculator.StateViews.newSizeRecyclerViewHistory
+import com.forz.calculator.StateViews.oldSizeRecyclerViewHistory
 import kotlin.properties.Delegates.notNull
 
 class HistoryFragment : Fragment() {
@@ -92,19 +94,28 @@ class HistoryFragment : Fragment() {
         historyService.removeListener(historyDataListListener)
     }
 
+    override fun onStop() {
+        super.onStop()
+
+        val layoutManager = binding.recyclerView.layoutManager as LinearLayoutManager?
+        currentPositionRecyclerViewHistory = layoutManager!!.findFirstVisibleItemPosition()
+    }
+
     private val historyDataListListener: HistoryDataListListener = {
         adapter.historyDataList = it
 
-        newRecyclerViewSizeHistory = adapter.historyDataList.size
+        newSizeRecyclerViewHistory = adapter.historyDataList.size
 
-
-
-
-        if (oldRecyclerViewSizeHistory <= newRecyclerViewSizeHistory){
-            binding.recyclerView.scrollToPosition(newRecyclerViewSizeHistory - 1)
+        if (isFirstStartRecyclerViewHistory){
+            binding.recyclerView.scrollToPosition(newSizeRecyclerViewHistory - 1)
+            isFirstStartRecyclerViewHistory = false
+        }else if (oldSizeRecyclerViewHistory < newSizeRecyclerViewHistory){
+            binding.recyclerView.scrollToPosition(newSizeRecyclerViewHistory - 1)
+        }else if (oldSizeRecyclerViewHistory == newSizeRecyclerViewHistory){
+            binding.recyclerView.scrollToPosition(currentPositionRecyclerViewHistory)
         }
 
-        oldRecyclerViewSizeHistory = adapter.historyDataList.size
+        oldSizeRecyclerViewHistory = adapter.historyDataList.size
 
         if (adapter.historyDataList.isEmpty()){
             val fadeInAnimation200: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_in_200)

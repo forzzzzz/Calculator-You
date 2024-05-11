@@ -40,8 +40,6 @@ class ScientificFunctionFragment : Fragment() {
         )
 
         hapticAndSound = HapticAndSound(requireContext(), views)
-        hapticAndSound.setHapticFeedback()
-        hapticAndSound.setSoundEffects()
 
         binding.degreeButton.setOnClickListener {
             updateDegreeModActivated()
@@ -110,5 +108,12 @@ class ScientificFunctionFragment : Fragment() {
 
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        hapticAndSound.setHapticFeedback()
+        hapticAndSound.setSoundEffects()
     }
 }

@@ -38,8 +38,6 @@ class DigitFragment : Fragment() {
         )
 
         hapticAndSound = HapticAndSound(requireContext(), views)
-        hapticAndSound.setHapticFeedback()
-        hapticAndSound.setSoundEffects()
         binding.dotButton.text = decimalSeparatorSymbol
 
         binding.digit0Button.setOnClickListener {
@@ -99,5 +97,12 @@ class DigitFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onStart() {
+        super.onStart()
+
+        hapticAndSound.setHapticFeedback()
+        hapticAndSound.setSoundEffects()
     }
 }

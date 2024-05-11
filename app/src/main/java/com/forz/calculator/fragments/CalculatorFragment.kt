@@ -73,7 +73,6 @@ class CalculatorFragment : Fragment() {
             override fun onPageSelected(position: Int) {
                 if (userScroll.contains(1)) {
                     updateScienceModActivated()
-                    hapticAndSound.vibrateEffectClick()
                 }
                 userScroll.clear()
             }
