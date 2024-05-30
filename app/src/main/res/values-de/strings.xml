@@ -85,4 +85,5 @@
     <string name="help_selection_text">Hilfe</string>
     <string name="expression_error">Fehler</string>
     <string name="expression_infinity">Wert ist zu hoch</string>
+    <string name="description_swipes2"></string>
 </resources>
