@@ -6,5 +6,8 @@ object StateViews{
     var oldSizeRecyclerViewHistory = 0
     var newSizeRecyclerViewHistory = 0
     var currentPositionRecyclerViewHistory = 0
-    var isFirstStartRecyclerViewHistory = true
+    var recyclerViewHistoryIsRecreated = false
+    var recyclerViewHistoryElementIsAdded = false
+
+    var expressionEditTextIsRecreated = false
 }

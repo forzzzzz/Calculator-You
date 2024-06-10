@@ -58,6 +58,7 @@ class MainFragment : Fragment() {
         hapticAndSound = HapticAndSound(requireContext(), views)
         binding.expressionEditText.showSoftInputOnFocus = false
 
+
         val fadeOutAnimation200: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_out_200)
         val fadeInAnimation200: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_in_200)
 
@@ -201,6 +202,7 @@ class MainFragment : Fragment() {
 
             ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!)
         }
+
 
         ExpressionViewModel.expression.observe(requireActivity()){ expression ->
             val expressionCursorPositionStart = ExpressionViewModel.expressionCursorPositionStart.value!!

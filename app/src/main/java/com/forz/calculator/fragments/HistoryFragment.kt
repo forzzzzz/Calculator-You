@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.forz.calculator.App
 import com.forz.calculator.R
 import com.forz.calculator.StateViews.currentPositionRecyclerViewHistory
-import com.forz.calculator.StateViews.isFirstStartRecyclerViewHistory
 import com.forz.calculator.databinding.FragmentHistoryBinding
 import com.forz.calculator.history.HistoryData
 import com.forz.calculator.history.HistoryDataActionListener
@@ -27,6 +26,7 @@ import com.forz.calculator.history.HistoryService
 import com.forz.calculator.viewModels.ExpressionViewModel
 import com.forz.calculator.StateViews.newSizeRecyclerViewHistory
 import com.forz.calculator.StateViews.oldSizeRecyclerViewHistory
+import com.forz.calculator.StateViews.recyclerViewHistoryElementIsAdded
 import kotlin.properties.Delegates.notNull
 
 class HistoryFragment : Fragment() {
@@ -101,16 +101,16 @@ class HistoryFragment : Fragment() {
         currentPositionRecyclerViewHistory = layoutManager!!.findFirstVisibleItemPosition()
     }
 
+
+
     private val historyDataListListener: HistoryDataListListener = {
         adapter.historyDataList = it
 
         newSizeRecyclerViewHistory = adapter.historyDataList.size
 
-        if (isFirstStartRecyclerViewHistory){
+        if (oldSizeRecyclerViewHistory < newSizeRecyclerViewHistory || recyclerViewHistoryElementIsAdded){
             binding.recyclerView.scrollToPosition(newSizeRecyclerViewHistory - 1)
-            isFirstStartRecyclerViewHistory = false
-        }else if (oldSizeRecyclerViewHistory < newSizeRecyclerViewHistory){
-            binding.recyclerView.scrollToPosition(newSizeRecyclerViewHistory - 1)
+            recyclerViewHistoryElementIsAdded = !recyclerViewHistoryElementIsAdded
         }else if (oldSizeRecyclerViewHistory == newSizeRecyclerViewHistory){
             binding.recyclerView.scrollToPosition(currentPositionRecyclerViewHistory)
         }

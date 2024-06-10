@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import com.forz.calculator.StateViews.expressionEditTextIsRecreated
+import com.forz.calculator.StateViews.recyclerViewHistoryIsRecreated
 import com.forz.calculator.databinding.ActivityMainBinding
 import com.forz.calculator.fragments.MainFragment
 import com.forz.calculator.fragments.land.MainLandFragment
@@ -106,6 +108,13 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.main, fragment)
                 .commit()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        expressionEditTextIsRecreated = true
+        recyclerViewHistoryIsRecreated = true
     }
 
 
