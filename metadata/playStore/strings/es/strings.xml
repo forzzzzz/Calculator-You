@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="short_description">Calculator You es una hermosa calculadora para resolver tareas simples.</string>
+    <string name="full_description">Hermoso diseño:
+\n
+\nLa calculadora tiene un diseño hermoso y agradable que se ha desarrollado durante mucho tiempo. La aplicación utiliza Material 3 y colores dinámicos basados en tu fondo de pantalla. Además de temas claros y oscuros, la aplicación también ofrece más de 60 temas coloridos para adaptarse a tu gusto. ¡Haga de esta calculadora exclusivamente suya!
+\n
+\nFunciones científicas:
+\n
+\nAdemás de simples operadores básicos, también hay otras funciones. Por ejemplo, cos, pecado, bronceado, tronco, etc.
+\n
+\nHistoria:
+\n
+\nLa calculadora tiene la capacidad de guardar sus cálculos. A continuación, puede trabajar con ellos: volver a enviar para el cálculo, copiar, compartir y eliminar convenientemente.
+\n
+\nConveniencia:
+\n
+\nLa aplicación está diseñada para que todas las operaciones y acciones se puedan realizar con una sola mano. Historia, calculadora, funciones científicas... todo bajo un solo dedo. ¡Rápido y conveniente!
+\n
+\nEsta es mi primera aplicación para Android. Hecha sin amor❤️, pero por amor❤️.</string>
+</resources>
