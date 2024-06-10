@@ -83,6 +83,10 @@ class MainFragment : Fragment() {
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
+        if (pagerIsRecreated &&  binding.pager.currentItem == 1){
+            pagerIsRecreated = false
+        }
+
         binding.pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 StateViews.currentItemPager = position
