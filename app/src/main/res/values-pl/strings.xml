@@ -1,2 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="title_separator">Separator</string>
+    <string name="description_sound_effects">Efekty dźwiękowe podczas naciskania przycisków na klawiaturze</string>
+    <string name="description_vibrations">Wibracje podczas naciskania przycisków na klawiaturze</string>
+    <string name="description_dynamic_colors">Dostosowane kolory do twojej tapety</string>
+    <string name="theme_selection_text">Motyw</string>
+    <string name="formatting_selection_text">Formatowanie</string>
+    <string name="history_data_menu_delete">Usuń</string>
+    <string name="other_selection_text">Inne</string>
+    <string name="history_data_menu_share">Udostępnij</string>
+    <string name="history_options_menu">Wyczyść historię</string>
+    <string name="title_history">Historia</string>
+    <string name="history_data_menu_copy">Kopiuj</string>
+    <string name="title_settings">Ustawienia</string>
+    <string name="title_about">O aplikacji</string>
+    <string name="title_vibrations">Wibracje</string>
+    <string name="title_sound_effects">Dźwięki</string>
+    <string name="title_select_theme">Wybierz motyw</string>
+    <string name="title_dynamic_colors">Dynamiczne kolory</string>
+    <string name="title_select_color">Wybierz kolor</string>
+    <string name="title_precision">Precyzja</string>
+    <string name="title_swipes">Przeciągnięcia</string>
+    <string name="description_select_theme">Jasny lub ciemny motyw aplikacji</string>
+</resources>
