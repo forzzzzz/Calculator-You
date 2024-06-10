@@ -25,6 +25,7 @@ import com.forz.calculator.NumberFormatter
 import com.forz.calculator.Preferences
 import com.forz.calculator.R
 import com.forz.calculator.StateViews
+import com.forz.calculator.StateViews.pagerIsRecreated
 import com.forz.calculator.databinding.FragmentDefaultBinding
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
 import com.forz.calculator.history.HistoryService
@@ -88,7 +89,12 @@ class MainFragment : Fragment() {
 
                 when (position) {
                     0 -> {
-                        if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
+                        if (pagerIsRecreated){
+                            binding.degreeTitleText.visibility = ImageView.GONE
+                            binding.historyTitleText.visibility = ImageView.VISIBLE
+
+                            pagerIsRecreated = false
+                        }else if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
                             binding.degreeTitleText.startAnimation(fadeOutAnimation200.apply {
                                 setAnimationListener(object : Animation.AnimationListener {
                                     override fun onAnimationStart(animation: Animation?) {
