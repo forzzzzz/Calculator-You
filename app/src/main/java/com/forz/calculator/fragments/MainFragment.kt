@@ -210,7 +210,7 @@ class MainFragment : Fragment() {
             binding.expressionEditText.text = NumberFormatter.changeColorOperators(expression, requireContext())
             binding.expressionEditText.setSelection(expressionCursorPositionStart, expressionCursorPositionEnd)
 
-            if (triggersIsDegreeModActivatedShowArray.any { expression.contains(it) }){
+            if (triggersIsDegreeModActivatedShowArray.any { expression.contains(it) } && binding.pager.currentItem == 1){
                 binding.degreeTitleText.visibility = ImageView.VISIBLE
             } else{
                 binding.degreeTitleText.visibility = ImageView.GONE
