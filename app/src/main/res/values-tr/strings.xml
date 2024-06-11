@@ -118,4 +118,5 @@
     <string name="sin" translatable="false"></string>
     <string name="url_open_source" translatable="false"></string>
     <string name="ln" translatable="false"></string>
+    <string name="description_swipes2"></string>
 </resources>
