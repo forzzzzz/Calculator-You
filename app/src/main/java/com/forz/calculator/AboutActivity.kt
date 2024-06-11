@@ -50,7 +50,7 @@ class AboutActivity : AppCompatActivity() {
 
 
         binding.translateLayout.setOnClickListener {
-            Toast.makeText(this@AboutActivity, "Test", Toast.LENGTH_SHORT).show()
+            url(getString(R.string.url_translate))
         }
 
         binding.rateLayout.setOnClickListener {
@@ -58,7 +58,7 @@ class AboutActivity : AppCompatActivity() {
         }
 
         binding.donateLayout.setOnClickListener {
-            Toast.makeText(this@AboutActivity, "ААААА, я старался", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@AboutActivity, "Test", Toast.LENGTH_SHORT).show()
         }
 
         binding.telegramLayout.setOnClickListener {
