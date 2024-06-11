@@ -5,6 +5,7 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.drawable.AnimatedVectorDrawable
 import android.net.Uri
 import android.os.Build
@@ -43,6 +44,8 @@ class AboutActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         binding = ActivityAboutBinding.inflate(layoutInflater).also { setContentView(it.root) }
+
+        binding.versionText.text = getAppVersionName()
 
 
 
@@ -85,7 +88,7 @@ class AboutActivity : AppCompatActivity() {
         }
 
         binding.versionLayout.setOnLongClickListener {
-            copy(getString(R.string.description_version_app))
+            copy(getAppVersionName())
             true
         }
 
@@ -141,5 +144,15 @@ class AboutActivity : AppCompatActivity() {
     private fun url(string: String){
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(string))
         startActivity(intent)
+    }
+
+    private fun getAppVersionName(): String {
+        return try {
+            val packageInfo = packageManager.getPackageInfo(packageName, 0)
+            packageInfo.versionName
+        } catch (e: PackageManager.NameNotFoundException) {
+            e.printStackTrace()
+            "Unknown"
+        }
     }
 }
