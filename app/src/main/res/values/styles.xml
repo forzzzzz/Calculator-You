@@ -88,9 +88,9 @@
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textCursorDrawable">@drawable/cursor</item>
 
-        <item name="android:textSize">64sp</item>
-        <item name="android:autoSizeMaxTextSize">64sp</item>
-        <item name="android:autoSizeMinTextSize">40sp</item>
+        <item name="android:textSize">72sp</item>
+        <item name="android:autoSizeMaxTextSize">72sp</item>
+        <item name="android:autoSizeMinTextSize">48sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
     </style>

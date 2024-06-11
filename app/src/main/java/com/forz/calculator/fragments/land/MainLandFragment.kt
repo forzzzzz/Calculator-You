@@ -6,13 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import android.widget.ImageView
 import android.widget.PopupMenu
 import androidx.appcompat.app.AlertDialog
 import androidx.core.widget.addTextChangedListener
 import com.forz.calculator.AboutActivity
 import com.forz.calculator.App
-import com.forz.calculator.AutoSizeText
 import com.forz.calculator.HapticAndSound
 import com.forz.calculator.InsertInExpression
 import com.forz.calculator.InsertInExpression.triggersIsDegreeModActivatedShowArray
@@ -141,8 +141,15 @@ class MainLandFragment : Fragment() {
                 ExpressionViewModel.updateExpression(binding.expressionEditText.text.toString(), binding.expressionEditText.selectionStart)
             }
 
-            AutoSizeText.expression(binding.expressionEditText, binding.expressionEditText.resources)
+            autoSizeTextExpressionEditText()
         }
+
+        binding.root.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                autoSizeTextExpressionEditText()
+                binding.root.viewTreeObserver.removeOnGlobalLayoutListener(this)
+            }
+        })
 
 
         ExpressionViewModel.isSelection.observe(requireActivity()){ isSelection ->
@@ -187,5 +194,11 @@ class MainLandFragment : Fragment() {
         super.onStop()
 
         preferences.setDegreeMod(CalculatorViewModel.isDegreeModActivated.value!!)
+    }
+
+
+    private fun autoSizeTextExpressionEditText(){
+        binding.expressionTextView.text = binding.expressionEditText.text
+        binding.expressionEditText.textSize = binding.expressionTextView.textSize / resources.displayMetrics.scaledDensity
     }
 }

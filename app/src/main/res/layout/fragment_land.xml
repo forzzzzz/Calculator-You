@@ -81,6 +81,16 @@
         app:layout_constraintStart_toStartOf="@id/background"
         app:layout_constraintTop_toTopOf="@id/background" />
 
+    <TextView
+        android:id="@+id/expressionTextView"
+        style="@style/Expression"
+        android:visibility="invisible"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toStartOf="@id/actionBarGuideline"
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintTop_toTopOf="@id/background" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topResultGuideline"
         android:layout_width="wrap_content"
