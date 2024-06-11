@@ -100,7 +100,7 @@ class HistoryFragment : Fragment() {
         super.onStop()
 
         val layoutManager = binding.recyclerView.layoutManager as LinearLayoutManager?
-        currentPositionRecyclerViewHistory = layoutManager!!.findFirstVisibleItemPosition()
+        currentPositionRecyclerViewHistory = layoutManager!!.findFirstCompletelyVisibleItemPosition()
     }
 
 
