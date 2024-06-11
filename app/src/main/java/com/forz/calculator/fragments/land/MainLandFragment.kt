@@ -2,6 +2,7 @@ package com.forz.calculator.fragments.land
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.TypedValue
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -199,6 +200,6 @@ class MainLandFragment : Fragment() {
 
     private fun autoSizeTextExpressionEditText(){
         binding.expressionTextView.text = binding.expressionEditText.text
-        binding.expressionEditText.textSize = binding.expressionTextView.textSize / resources.displayMetrics.scaledDensity
+        binding.expressionEditText.setTextSize(TypedValue.COMPLEX_UNIT_PX, binding.expressionTextView.textSize)
     }
 }
