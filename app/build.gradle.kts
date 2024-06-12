@@ -58,8 +58,8 @@ dependencies {
     implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("com.intuit.ssp:ssp-android:1.1.0")
     implementation ("com.mikhaellopez:circleview:1.4.1")
-    implementation("androidx.viewpager2:viewpager2:1.1.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
 
 //    debugImplementation ("com.squareup.leakcanary:leakcanary-android:3.0-alpha-1")
 }
