@@ -11,8 +11,8 @@ android {
         applicationId = "com.marktka.calculatorYou"
         minSdk = 27
         targetSdk = 34
-        versionCode = 16
-        versionName = "2.1.0 beta"
+        versionCode = 17
+        versionName = "2.2.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
