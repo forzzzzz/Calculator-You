@@ -9,7 +9,7 @@ object StateViews{
     var currentPositionRecyclerViewHistory = 0
     var recyclerViewHistoryElementIsAdded = false
     var recyclerViewHistoryElementIsDeleted = false
-    var firstStartRecyclerViewHistory = true
+    var recyclerViewHistoryIsRecreated = false
 
     var expressionEditTextIsRecreated = false
 }

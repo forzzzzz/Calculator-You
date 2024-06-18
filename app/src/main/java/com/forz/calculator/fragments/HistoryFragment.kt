@@ -17,7 +17,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.forz.calculator.App
 import com.forz.calculator.R
 import com.forz.calculator.StateViews.currentPositionRecyclerViewHistory
-import com.forz.calculator.StateViews.firstStartRecyclerViewHistory
 import com.forz.calculator.databinding.FragmentHistoryBinding
 import com.forz.calculator.history.HistoryData
 import com.forz.calculator.history.HistoryDataActionListener
@@ -29,6 +28,7 @@ import com.forz.calculator.StateViews.newSizeRecyclerViewHistory
 import com.forz.calculator.StateViews.oldSizeRecyclerViewHistory
 import com.forz.calculator.StateViews.recyclerViewHistoryElementIsAdded
 import com.forz.calculator.StateViews.recyclerViewHistoryElementIsDeleted
+import com.forz.calculator.StateViews.recyclerViewHistoryIsRecreated
 import kotlin.properties.Delegates.notNull
 
 class HistoryFragment : Fragment() {
@@ -100,7 +100,7 @@ class HistoryFragment : Fragment() {
         super.onStop()
 
         val layoutManager = binding.recyclerView.layoutManager as LinearLayoutManager?
-        currentPositionRecyclerViewHistory = layoutManager!!.findFirstCompletelyVisibleItemPosition()
+        currentPositionRecyclerViewHistory = layoutManager!!.findFirstVisibleItemPosition()
     }
 
 
@@ -110,15 +110,16 @@ class HistoryFragment : Fragment() {
 
         newSizeRecyclerViewHistory = adapter.historyDataList.size
 
-        if (firstStartRecyclerViewHistory){
-            binding.recyclerView.scrollToPosition(newSizeRecyclerViewHistory - 1)
-            firstStartRecyclerViewHistory = false
+        if (oldSizeRecyclerViewHistory < newSizeRecyclerViewHistory || recyclerViewHistoryElementIsAdded){
+            adapter.addHistoryDataUpdate()
+            binding.recyclerView.scrollToPosition(0)
+            if (recyclerViewHistoryIsRecreated){
+                recyclerViewHistoryElementIsAdded = !recyclerViewHistoryElementIsAdded
+            }
         }else if (oldSizeRecyclerViewHistory > newSizeRecyclerViewHistory || recyclerViewHistoryElementIsDeleted){
-            recyclerViewHistoryElementIsAdded = false
-            recyclerViewHistoryElementIsDeleted = !recyclerViewHistoryElementIsDeleted
-        }else if (oldSizeRecyclerViewHistory < newSizeRecyclerViewHistory || recyclerViewHistoryElementIsAdded){
-            binding.recyclerView.scrollToPosition(newSizeRecyclerViewHistory - 1)
-            recyclerViewHistoryElementIsAdded = !recyclerViewHistoryElementIsAdded
+            if (recyclerViewHistoryIsRecreated){
+                recyclerViewHistoryElementIsDeleted = !recyclerViewHistoryElementIsDeleted
+            }
         }else{
             binding.recyclerView.scrollToPosition(currentPositionRecyclerViewHistory)
         }

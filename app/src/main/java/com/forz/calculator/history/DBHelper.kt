@@ -45,7 +45,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
    fun selectAllOrderByDate(): MutableList<HistoryData> {
         val historyDataList = mutableListOf<HistoryData>()
         val db = readableDatabase
-        val cursor = db.query(TABLE_NAME, null, null, null, null, null, "$COLUMN_DATE ASC")
+        val cursor = db.query(TABLE_NAME, null, null, null, null, null, "$COLUMN_DATE DESC")
 
         cursor?.use {
             val idIndex = it.getColumnIndexOrThrow(COLUMN_ID)

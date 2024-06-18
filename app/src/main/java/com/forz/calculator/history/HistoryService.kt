@@ -17,7 +17,7 @@ class HistoryService(context: Context) {
 
 
     fun addHistoryData(expression: String, result: String){
-        val id = if (historyDataList.isNotEmpty()) historyDataList.last().id + 1 else 1
+        val id = if (historyDataList.isNotEmpty()) historyDataList.first().id + 1 else 1
         val historyData = HistoryData(
             id = id,
             expression = expression,
@@ -25,7 +25,7 @@ class HistoryService(context: Context) {
             date = LocalDate.now())
 
         historyDataList = ArrayList(historyDataList)
-        historyDataList.add(historyData)
+        historyDataList.add(0, historyData)
         dbHelper.insertData(historyData.expression, historyData.result)
         notifyChanges()
     }

@@ -87,6 +87,10 @@ class HistoryDataAdapter(
         notifyItemRangeChanged(index, 2)
     }
 
+    fun addHistoryDataUpdate(){
+        notifyItemRangeChanged(0, 2)
+    }
+
     override fun onClick(v: View) {
         val historyData = v.tag as HistoryData
         when (v.id){
