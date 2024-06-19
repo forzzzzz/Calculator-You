@@ -1,4 +1,4 @@
-package com.forz.calculator.fragments
+package com.forz.calculator.fragments.small
 
 import android.content.Intent
 import android.os.Bundle
@@ -27,7 +27,8 @@ import com.forz.calculator.Preferences
 import com.forz.calculator.R
 import com.forz.calculator.StateViews
 import com.forz.calculator.StateViews.pagerIsRecreated
-import com.forz.calculator.databinding.FragmentDefaultBinding
+import com.forz.calculator.databinding.FragmentSmallBinding
+import com.forz.calculator.fragments.HistoryFragment
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
 import com.forz.calculator.history.HistoryService
 import com.forz.calculator.settings.SettingsActivity
@@ -38,9 +39,9 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlin.properties.Delegates
 
 @Suppress("DEPRECATION")
-class MainFragment : Fragment() {
+class SmallFragment : Fragment() {
 
-    private var binding: FragmentDefaultBinding by Delegates.notNull()
+    private var binding: FragmentSmallBinding by Delegates.notNull()
     private var preferences: Preferences by Delegates.notNull()
     private var hapticAndSound: HapticAndSound by Delegates.notNull()
 
@@ -51,7 +52,7 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDefaultBinding.inflate(inflater, container, false)
+        binding = FragmentSmallBinding.inflate(inflater, container, false)
         preferences = Preferences(requireContext())
 
         val views: Array<View> = arrayOf(
@@ -67,7 +68,7 @@ class MainFragment : Fragment() {
 
         val adapter = ViewPageAdapter(childFragmentManager, lifecycle)
         adapter.addFragment(HistoryFragment())
-        adapter.addFragment(CalculatorFragment())
+        adapter.addFragment(SmallCalculatorFragment())
         binding.pager.adapter = adapter
         binding.pager.setCurrentItem(StateViews.currentItemPager, false)
         binding.pager.offscreenPageLimit = 2

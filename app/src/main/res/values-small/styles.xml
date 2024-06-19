@@ -62,8 +62,8 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
 
-        <item name="android:layout_marginStart">@dimen/_8sdp</item>
-        <item name="android:layout_marginEnd">@dimen/_8sdp</item>
+        <item name="android:layout_marginStart">@dimen/_13sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_13sdp</item>
         <item name="android:layout_marginTop">@dimen/_6sdp</item>
         <item name="android:layout_marginBottom">@dimen/_minus6sdp</item>
 
@@ -73,9 +73,9 @@
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textCursorDrawable">@drawable/cursor</item>
 
-        <item name="android:textSize">60sp</item>
-        <item name="android:autoSizeMaxTextSize">60sp</item>
-        <item name="android:autoSizeMinTextSize">36sp</item>
+        <item name="android:textSize">54sp</item>
+        <item name="android:autoSizeMaxTextSize">54sp</item>
+        <item name="android:autoSizeMinTextSize">30sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
     </style>

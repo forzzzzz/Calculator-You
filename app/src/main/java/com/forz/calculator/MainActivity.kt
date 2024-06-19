@@ -13,6 +13,7 @@ import com.forz.calculator.StateViews.recyclerViewHistoryIsRecreated
 import com.forz.calculator.databinding.ActivityMainBinding
 import com.forz.calculator.fragments.MainFragment
 import com.forz.calculator.fragments.land.MainLandFragment
+import com.forz.calculator.fragments.small.SmallFragment
 import kotlin.properties.Delegates.notNull
 
 @SuppressLint("DiscouragedApi")
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
                     }
                     else -> {
-
+                        showFragment(SmallFragment())
                     }
                 }
             }
