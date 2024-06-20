@@ -1,5 +1,6 @@
 package com.forz.calculator.fragments
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue
@@ -47,6 +48,7 @@ class MainFragment : Fragment() {
     private val historyService: HistoryService
         get() = (requireContext().applicationContext as App).historyService
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

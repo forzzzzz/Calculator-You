@@ -14,6 +14,7 @@ import com.forz.calculator.databinding.ActivityMainBinding
 import com.forz.calculator.fragments.MainFragment
 import com.forz.calculator.fragments.land.MainLandFragment
 import com.forz.calculator.fragments.small.SmallFragment
+import com.forz.calculator.fragments.smallLand.SmallLandFragment
 import kotlin.properties.Delegates.notNull
 
 @SuppressLint("DiscouragedApi")
@@ -56,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             Configuration.SCREENLAYOUT_SIZE_SMALL -> {
                 when (resources.configuration.orientation) {
                     Configuration.ORIENTATION_LANDSCAPE -> {
-
+                        showFragment(SmallLandFragment())
                     }
                     else -> {
                         showFragment(SmallFragment())

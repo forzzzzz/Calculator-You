@@ -1,6 +1,5 @@
-package com.forz.calculator.fragments.small
+package com.forz.calculator.fragments.smallLand
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.TypedValue
 import androidx.fragment.app.Fragment
@@ -15,25 +14,26 @@ import com.forz.calculator.InsertInExpression
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.Preferences
 import com.forz.calculator.StateViews
-import com.forz.calculator.databinding.FragmentSmallBinding
+import com.forz.calculator.databinding.FragmentSmallLandBinding
 import com.forz.calculator.fragments.HistoryFragment
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
+import com.forz.calculator.fragments.small.SmallCalculatorFragment
 import com.forz.calculator.settings.SettingsState
 import com.forz.calculator.viewModels.CalculatorViewModel
 import com.forz.calculator.viewModels.ExpressionViewModel
 import kotlin.properties.Delegates
 
-class SmallFragment : Fragment() {
+class SmallLandFragment : Fragment() {
 
-    private var binding: FragmentSmallBinding by Delegates.notNull()
+
+    private var binding: FragmentSmallLandBinding by Delegates.notNull()
     private var preferences: Preferences by Delegates.notNull()
 
-    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSmallBinding.inflate(inflater, container, false)
+        binding = FragmentSmallLandBinding.inflate(inflater, container, false)
         preferences = Preferences(requireContext())
 
         binding.expressionEditText.showSoftInputOnFocus = false
@@ -61,7 +61,6 @@ class SmallFragment : Fragment() {
             ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!)
         }
 
-
         ExpressionViewModel.expression.observe(requireActivity()){ expression ->
             val expressionCursorPositionStart = ExpressionViewModel.expressionCursorPositionStart.value!!
             val expressionCursorPositionEnd = ExpressionViewModel.expressionCursorPositionEnd.value!!
@@ -69,14 +68,6 @@ class SmallFragment : Fragment() {
             binding.expressionEditText.setSelection(expressionCursorPositionStart, expressionCursorPositionEnd)
 
             ExpressionViewModel.updateResult(expression)
-        }
-
-        ExpressionViewModel.result.observe(requireActivity()){ result ->
-            if (result != ExpressionViewModel.expression.value!!){
-                binding.resultText.text = result
-            }else{
-                binding.resultText.text = ""
-            }
         }
 
         binding.expressionEditText.requestFocus()

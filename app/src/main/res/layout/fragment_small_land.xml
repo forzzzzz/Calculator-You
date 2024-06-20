@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
-    tools:context=".fragments.MainFragment">
+    tools:context=".fragments.smallLand.SmallLandFragment">
 
     <View
         android:id="@+id/background"
@@ -18,45 +18,37 @@
         app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
 
 
-    <TextView
-        android:id="@+id/resultText"
-        style="@style/Expression.Result"
-        app:layout_constraintBottom_toBottomOf="@id/background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topResultGuideline" />
-
     <com.forz.calculator.customViews.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
-        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintBottom_toBottomOf="@id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintTop_toTopOf="@id/background" />
 
     <TextView
         android:id="@+id/expressionTextView"
         style="@style/Expression"
         android:visibility="invisible"
         android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintBottom_toBottomOf="@id/background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintTop_toTopOf="@id/background" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topResultGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24"/>
+        app:layout_constraintGuide_percent="0.22"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/pagerGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.38" />
+        app:layout_constraintGuide_percent="0.36" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pager"
