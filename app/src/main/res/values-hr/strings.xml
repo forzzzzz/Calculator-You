@@ -276,4 +276,5 @@
     <string name="unit_gigahertz"></string>
     <string name="unit_gigapascal"></string>
     <string name="unit_dyne"></string>
+    <string name="description_swipes2"></string>
 </resources>
