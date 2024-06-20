@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="1.5"
         app:layout_constraintEnd_toStartOf="@id/block2"
         app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -21,6 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="2"
         app:layout_constraintEnd_toStartOf="@id/block3"
         app:layout_constraintStart_toEndOf="@id/block1"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -30,6 +32,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="2"
         app:layout_constraintEnd_toStartOf="@id/block4"
         app:layout_constraintStart_toEndOf="@id/block2"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -39,6 +42,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="2"
         app:layout_constraintEnd_toStartOf="@id/block5"
         app:layout_constraintStart_toEndOf="@id/block3"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -48,6 +52,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="2"
         app:layout_constraintEnd_toStartOf="@id/paddingRightGuideline"
         app:layout_constraintStart_toEndOf="@id/block4"
         app:layout_constraintTop_toTopOf="parent" />
@@ -74,6 +79,7 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
         android:background="@drawable/science_mod_image_button_background"
         android:padding="8dp"
         android:scaleType="fitCenter"

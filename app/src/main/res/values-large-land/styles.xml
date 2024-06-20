@@ -9,30 +9,30 @@
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:fontFamily">sans-serif</item>
 
-        <item name="android:layout_marginStart">@dimen/_3sdp</item>
-        <item name="android:layout_marginEnd">@dimen/_3sdp</item>
-        <item name="android:layout_marginTop">@dimen/_3sdp</item>
-        <item name="android:layout_marginBottom">@dimen/_3sdp</item>
+        <item name="android:layout_marginStart">@dimen/_2sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_2sdp</item>
+        <item name="android:layout_marginTop">@dimen/_2sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_2sdp</item>
     </style>
     <style name="Button.Number">
-        <item name="android:textSize">36sp</item>
-        <item name="android:autoSizeMaxTextSize">36sp</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:autoSizeMaxTextSize">26sp</item>
         <item name="android:autoSizeMinTextSize">1sp</item>
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:background">@drawable/background_button_number</item>
     </style>
     <style name="Button.Operator">
-        <item name="android:textSize">46sp</item>
-        <item name="android:autoSizeMaxTextSize">46sp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:autoSizeMaxTextSize">30sp</item>
         <item name="android:autoSizeMinTextSize">1sp</item>
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:background">@drawable/background_button_operator</item>
     </style>
     <style name="Button.Equals">
-        <item name="android:textSize">54sp</item>
-        <item name="android:autoSizeMaxTextSize">54sp</item>
+        <item name="android:textSize">44sp</item>
+        <item name="android:autoSizeMaxTextSize">44sp</item>
         <item name="android:autoSizeMinTextSize">1sp</item>
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
@@ -40,35 +40,20 @@
         <item name="android:text">@string/equals_button</item>
     </style>
     <style name="Button.ScientificFunction">
-        <item name="android:textSize">30sp</item>
-        <item name="android:autoSizeMaxTextSize">30sp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:autoSizeMaxTextSize">20sp</item>
         <item name="android:autoSizeMinTextSize">1sp</item>
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:background">@drawable/background_extra_button</item>
     </style>
-
-
-
-    <style name="ExtraButton" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">0dp</item>
-
-        <item name="android:background">@drawable/background_extra_button</item>
-        <item name="android:gravity">center</item>
-        <item name="android:fontFamily">sans-serif</item>
-        <item name="android:textColor">?attr/colorOnSurface</item>
-
-        <item name="android:layout_marginTop">@dimen/_6sdp</item>
-        <item name="android:layout_marginBottom">@dimen/_6sdp</item>
-        <item name="android:layout_marginStart">@dimen/_3sdp</item>
-        <item name="android:layout_marginEnd">@dimen/_3sdp</item>
-
-        <item name="android:textSize">32sp</item>
-        <item name="android:autoSizeMaxTextSize">32sp</item>
+    <style name="Button.ExtraButton">
+        <item name="android:textSize">22sp</item>
+        <item name="android:autoSizeMaxTextSize">22sp</item>
         <item name="android:autoSizeMinTextSize">1sp</item>
         <item name="android:autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:background">@drawable/background_extra_button</item>
     </style>
 
 
@@ -78,7 +63,7 @@
         <item name="android:layout_height">0dp</item>
 
         <item name="android:layout_marginStart">19dp</item>
-        <item name="android:layout_marginEnd">23dp</item>
+        <item name="android:layout_marginEnd">19dp</item>
         <item name="android:layout_marginTop">8dp</item>
 
         <item name="android:background">@android:color/transparent</item>
@@ -87,9 +72,9 @@
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textCursorDrawable">@drawable/cursor</item>
 
-        <item name="android:textSize">98sp</item>
-        <item name="android:autoSizeMaxTextSize">98sp</item>
-        <item name="android:autoSizeMinTextSize">52sp</item>
+        <item name="android:textSize">76sp</item>
+        <item name="android:autoSizeMaxTextSize">76sp</item>
+        <item name="android:autoSizeMinTextSize">42sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
     </style>
@@ -97,12 +82,11 @@
         <item name="android:layout_marginTop">0dp</item>
         <item name="android:layout_marginBottom">@dimen/_4sdp</item>
 
-        <item name="android:textSize">62sp</item>
-        <item name="android:autoSizeMaxTextSize">62sp</item>
+        <item name="android:textSize">48sp</item>
+        <item name="android:autoSizeMaxTextSize">48sp</item>
         <item name="android:autoSizeMinTextSize">8sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
-        <item name="android:maxLines">1</item>
 
         <item name="android:soundEffectsEnabled">false</item>
         <item name="android:textColor">?attr/colorOnSurfaceVariant</item>

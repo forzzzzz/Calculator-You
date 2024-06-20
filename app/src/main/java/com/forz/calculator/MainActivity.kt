@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             Configuration.SCREENLAYOUT_SIZE_LARGE -> {
                 when (resources.configuration.orientation) {
                     Configuration.ORIENTATION_LANDSCAPE -> {
-
+                        showFragment(MainLandFragment())
                     }
                     else -> {
                         showFragment(MainFragment())
