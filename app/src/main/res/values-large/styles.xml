@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:fontFamily">sans-serif</item>
+
+        <item name="android:layout_marginStart">@dimen/_3sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_3sdp</item>
+        <item name="android:layout_marginTop">@dimen/_3sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_3sdp</item>
+    </style>
+    <style name="Button.Number">
+        <item name="android:textSize">36sp</item>
+        <item name="android:autoSizeMaxTextSize">36sp</item>
+        <item name="android:autoSizeMinTextSize">1sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:background">@drawable/background_button_number</item>
+    </style>
+    <style name="Button.Operator">
+        <item name="android:textSize">46sp</item>
+        <item name="android:autoSizeMaxTextSize">46sp</item>
+        <item name="android:autoSizeMinTextSize">1sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:background">@drawable/background_button_operator</item>
+    </style>
+    <style name="Button.Equals">
+        <item name="android:textSize">54sp</item>
+        <item name="android:autoSizeMaxTextSize">54sp</item>
+        <item name="android:autoSizeMinTextSize">1sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:background">@drawable/background_button_equals</item>
+        <item name="android:text">@string/equals_button</item>
+    </style>
+    <style name="Button.ScientificFunction">
+        <item name="android:textSize">30sp</item>
+        <item name="android:autoSizeMaxTextSize">30sp</item>
+        <item name="android:autoSizeMinTextSize">1sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:background">@drawable/background_extra_button</item>
+    </style>
+
+
+
+    <style name="ExtraButton" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+
+        <item name="android:background">@drawable/background_extra_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+
+        <item name="android:layout_marginTop">@dimen/_6sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_6sdp</item>
+        <item name="android:layout_marginStart">@dimen/_3sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_3sdp</item>
+
+        <item name="android:textSize">32sp</item>
+        <item name="android:autoSizeMaxTextSize">32sp</item>
+        <item name="android:autoSizeMinTextSize">1sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+    </style>
+
+
+
+    <style name="Expression" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+
+        <item name="android:layout_marginStart">@dimen/_10sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+        <item name="android:layout_marginTop">@dimen/_6sdp</item>
+
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:gravity">bottom|end</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+
+        <item name="android:textSize">86sp</item>
+        <item name="android:autoSizeMaxTextSize">86sp</item>
+        <item name="android:autoSizeMinTextSize">46sp</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+    </style>
+    <style name="Expression.Result">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">@dimen/_4sdp</item>
+
+        <item name="android:textSize">56sp</item>
+        <item name="android:autoSizeMaxTextSize">56sp</item>
+        <item name="android:autoSizeMinTextSize">8sp</item>
+        <item name="autoSizeStepGranularity">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:maxLines">1</item>
+
+        <item name="android:soundEffectsEnabled">false</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+
+
+    <style name="OptionsButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">38dp</item>
+
+        <item name="android:layout_marginEnd">4dp</item>
+
+        <item name="android:tint">?attr/colorOnSurface</item>
+        <item name="android:background">@drawable/background_options_menu</item>
+        <item name="android:padding">6dp</item>
+
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+
+
+    <style name="NavigationTabs" parent="Widget.Material3.TabLayout">
+        <item name="android:layout_width">88dp</item>
+        <item name="android:layout_height">44dp</item>
+
+        <item name="background">@drawable/background_tab</item>
+        <item name="tabGravity">center</item>
+        <item name="tabIndicatorAnimationMode">linear</item>
+        <item name="tabIconTint">?attr/colorOnSurface</item>
+        <item name="tabIndicator">@drawable/tab_indicator</item>
+        <item name="tabIndicatorColor">?attr/colorPrimaryContainer</item>
+        <item name="tabIndicatorFullWidth">true</item>
+        <item name="tabIndicatorGravity">center</item>
+        <item name="tabIndicatorHeight">44dp</item>
+        <item name="tabMode">fixed</item>
+    </style>
+</resources>

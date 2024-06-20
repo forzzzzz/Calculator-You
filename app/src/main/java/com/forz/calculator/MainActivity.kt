@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
                     }
                     else -> {
-
+                        showFragment(MainFragment())
                     }
                 }
             }
