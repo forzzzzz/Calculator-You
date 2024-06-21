@@ -12,4 +12,7 @@ object StateViews{
     var recyclerViewHistoryIsRecreated = false
 
     var expressionEditTextIsRecreated = false
+
+    var chooseColorRecyclerViewIsRecreated = false
+    var colorIsSelected = false
 }

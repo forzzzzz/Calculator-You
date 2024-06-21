@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.os.Vibrator
 import android.util.TypedValue
 import android.view.View
+import android.view.ViewTreeObserver
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -18,6 +19,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.Preferences
 import com.forz.calculator.R
+import com.forz.calculator.StateViews.chooseColorRecyclerViewIsRecreated
+import com.forz.calculator.StateViews.colorIsSelected
 import com.forz.calculator.colorThemes.Color
 import com.forz.calculator.colorThemes.ColorActionListener
 import com.forz.calculator.colorThemes.ColorAdapter
@@ -102,6 +105,7 @@ class SettingsActivity : AppCompatActivity() {
 
             adapter = ColorAdapter(this, object : ColorActionListener{
                 override fun onSelectColor(color: Color) {
+                    colorIsSelected = true
                     adapter.selectColor(color)
                     recreate()
                 }
@@ -110,7 +114,26 @@ class SettingsActivity : AppCompatActivity() {
             val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
             binding.chooseColorRecyclerView.layoutManager = layoutManager
             binding.chooseColorRecyclerView.adapter = adapter
-            binding.chooseColorRecyclerView.scrollToPosition(adapter.getIdSelectedColor())
+
+            if (!colorIsSelected || !chooseColorRecyclerViewIsRecreated){
+                val selectedPosition = adapter.getIdSelectedColor()
+
+                val displayMetrics = resources.displayMetrics
+                val itemWidthInPixels = (72 * displayMetrics.density).toInt()
+                val paddingInPixels = (8 * displayMetrics.density).toInt()
+
+                binding.chooseColorRecyclerView.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+                    override fun onGlobalLayout() {
+                        binding.chooseColorRecyclerView.viewTreeObserver.removeOnGlobalLayoutListener(this)
+
+                        val recyclerViewWidth = binding.chooseColorRecyclerView.width
+
+                        val offset = (recyclerViewWidth / 2) - (itemWidthInPixels / 2) - paddingInPixels
+
+                        layoutManager.scrollToPositionWithOffset(selectedPosition, offset)
+                    }
+                })
+            }
         }
 
         if (!vibrator.hasVibrator()){
@@ -356,5 +379,11 @@ class SettingsActivity : AppCompatActivity() {
         )
 
         return text
+    }
+
+    override fun recreate() {
+        super.recreate()
+
+        chooseColorRecyclerViewIsRecreated = true
     }
 }
