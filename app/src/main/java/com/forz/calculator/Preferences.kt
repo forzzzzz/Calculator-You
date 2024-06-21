@@ -120,7 +120,7 @@ class Preferences(context: Context) {
     }
 
     fun getColor(): String{
-        return preferences.getString(KEY_COLOR, "com.marktka.calculatorYou:id/color_0").toString()
+        return preferences.getString(KEY_COLOR, "color_0").toString()
     }
 
     fun getNumberPrecision(): Int{
