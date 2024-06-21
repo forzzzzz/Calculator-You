@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
                         showFragment(XLargeLandFragment())
                     }
                     else -> {
-
+                        showFragment(MainFragment())
                     }
                 }
             }
