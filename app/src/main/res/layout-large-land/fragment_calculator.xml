@@ -62,14 +62,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/_6sdp" />
+        app:layout_constraintGuide_begin="@dimen/_4sdp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/paddingRightGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/_6sdp" />
+        app:layout_constraintGuide_end="@dimen/_4sdp" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/scienceModButton"
@@ -147,7 +147,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="@dimen/_3sdp" />
+        app:layout_constraintGuide_end="@dimen/_2sdp" />
 
 
     <TextView

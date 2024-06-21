@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".fragments.xLargeLand.XLargeLandFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/historyGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/historyFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="com.forz.calculator.fragments.HistoryFragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/historyGuideline" />
+
+    <View
+        android:id="@+id/background"
+        android:background="@drawable/foreground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toEndOf="@id/historyGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
+
+
+    <TextView
+        android:id="@+id/degreeTitleText"
+        style="@style/titleText"
+        android:text="@string/deg"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/degree_button_background"
+        android:visibility="gone"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
+        app:layout_constraintStart_toEndOf="@id/historyGuideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/optionsMenuButton"
+        style="@style/OptionsButton"
+        android:src="@drawable/baseline_more_vert"
+        android:tooltipText="@string/options_tool_tip"
+        app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/actionBarGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="44dp" />
+
+    <TextView
+        android:id="@+id/resultText"
+        style="@style/Expression.Result"
+        app:layout_constraintBottom_toBottomOf="@id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintTop_toBottomOf="@id/topResultGuideline" />
+
+    <com.forz.calculator.customViews.ExpressionEditText
+        android:id="@+id/expressionEditText"
+        style="@style/Expression"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintTop_toBottomOf="@id/actionBarGuideline" />
+
+    <TextView
+        android:id="@+id/expressionTextView"
+        style="@style/Expression"
+        android:visibility="invisible"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/background"
+        app:layout_constraintTop_toBottomOf="@id/actionBarGuideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topResultGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/pagerGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/calculatorFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:name="com.forz.calculator.fragments.xLargeLand.XLargeLandCalculatorFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/historyGuideline"
+        app:layout_constraintTop_toBottomOf="@id/pagerGuideline"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

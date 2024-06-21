@@ -1,4 +1,4 @@
-package com.forz.calculator.fragments.land
+package com.forz.calculator.fragments.xLargeLand
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -22,7 +22,7 @@ import com.forz.calculator.MainActivity
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.Preferences
 import com.forz.calculator.R
-import com.forz.calculator.databinding.FragmentLandBinding
+import com.forz.calculator.databinding.FragmentXLargeLandBinding
 import com.forz.calculator.history.HistoryService
 import com.forz.calculator.settings.SettingsActivity
 import com.forz.calculator.settings.SettingsState
@@ -31,9 +31,9 @@ import com.forz.calculator.viewModels.ExpressionViewModel
 import kotlin.properties.Delegates
 
 @Suppress("DEPRECATION")
-class MainLandFragment : Fragment() {
+class XLargeLandFragment : Fragment() {
 
-    private var binding: FragmentLandBinding by Delegates.notNull()
+    private var binding: FragmentXLargeLandBinding by Delegates.notNull()
     private var preferences: Preferences by Delegates.notNull()
     private var hapticAndSound: HapticAndSound by Delegates.notNull()
 
@@ -45,7 +45,7 @@ class MainLandFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentLandBinding.inflate(inflater, container, false)
+        binding = FragmentXLargeLandBinding.inflate(inflater, container, false)
         preferences = Preferences(requireContext())
 
         val views: Array<View> = arrayOf(
