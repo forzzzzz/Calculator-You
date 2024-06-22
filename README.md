@@ -1,5 +1,3 @@
-### In development(A lot is changing)
-
 #### Math Expressions Parser -> [Darkempire78/OpenCalc](https://github.com/Darkempire78/OpenCalc)
 
 ## :globe_with_meridians: Translation

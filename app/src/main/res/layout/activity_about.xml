@@ -54,39 +54,9 @@
                 android:text="@string/help_selection_text" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/translateLayout"
+                android:id="@+id/rateLayout"
                 style="@style/optionLayout"
                 android:layout_marginTop="8dp">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/translateImage"
-                    style="@style/optionImage"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/translate" />
-
-                <TextView
-                    android:id="@+id/translateTitleText"
-                    style="@style/optionTitleText"
-                    android:text="@string/title_translate"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/translateImage"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/shareText"
-                    style="@style/optionDescriptionText"
-                    android:text="@string/description_translate"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/translateImage"
-                    app:layout_constraintTop_toBottomOf="@id/translateTitleText" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/rateLayout"
-                style="@style/optionLayout">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/rateImage"
@@ -112,6 +82,36 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/rateImage"
                     app:layout_constraintTop_toBottomOf="@id/rateTitleText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/translateLayout"
+                style="@style/optionLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/translateImage"
+                    style="@style/optionImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/translate" />
+
+                <TextView
+                    android:id="@+id/translateTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_translate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/translateImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/shareText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_translate"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/translateImage"
+                    app:layout_constraintTop_toBottomOf="@id/translateTitleText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
