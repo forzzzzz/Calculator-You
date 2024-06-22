@@ -43,6 +43,50 @@ class HistoryService(context: Context) {
         notifyChanges()
     }
 
+    fun modifyHistoryData(oldGroupingSeparatorSymbol: String, newGroupingSeparatorSymbol: String,
+                          oldDecimalSeparatorSymbol: String, newDecimalSeparatorSymbol: String){
+
+        val modifiedList = historyDataList.map { historyData ->
+            val newExpression = updateSymbolsInText(
+                historyData.expression,
+                oldGroupingSeparatorSymbol, newGroupingSeparatorSymbol,
+                oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol
+            )
+            val newResult = updateSymbolsInText(
+                historyData.result,
+                oldGroupingSeparatorSymbol, newGroupingSeparatorSymbol,
+                oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol
+            )
+            HistoryData(historyData.id, newExpression, newResult, historyData.date)
+        }
+
+        historyDataList = ArrayList(historyDataList)
+        historyDataList = modifiedList.toMutableList()
+        dbHelper.modifyAllRecords(
+            modifyExpression = { expression ->  updateSymbolsInText(
+                expression,
+                oldGroupingSeparatorSymbol, newGroupingSeparatorSymbol,
+                oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol
+            )},
+            modifyResult = { result -> updateSymbolsInText(
+                result,
+                oldGroupingSeparatorSymbol, newGroupingSeparatorSymbol,
+                oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol
+            )}
+        )
+        notifyChanges()
+    }
+
+    private fun updateSymbolsInText(inputString: String,
+                            oldGroupingSeparatorSymbol: String, newGroupingSeparatorSymbol: String,
+                            oldDecimalSeparatorSymbol: String, newDecimalSeparatorSymbol: String): String{
+        var string = inputString
+        string = string.replace(oldGroupingSeparatorSymbol, "#")
+        string = string.replace(oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol)
+        string = string.replace("#", newGroupingSeparatorSymbol)
+        return string
+    }
+
 
     fun addListener(listener: HistoryDataListListener){
         listeners.add(listener)

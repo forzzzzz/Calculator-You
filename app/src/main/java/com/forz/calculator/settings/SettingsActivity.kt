@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.forz.calculator.App
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.Preferences
 import com.forz.calculator.R
@@ -25,6 +26,7 @@ import com.forz.calculator.colorThemes.Color
 import com.forz.calculator.colorThemes.ColorActionListener
 import com.forz.calculator.colorThemes.ColorAdapter
 import com.forz.calculator.databinding.ActivitySettingsBinding
+import com.forz.calculator.history.HistoryService
 import com.forz.calculator.viewModels.ExpressionViewModel
 import com.forz.calculator.settings.SettingsState.color
 import com.forz.calculator.settings.SettingsState.decimalSeparatorSymbol
@@ -49,6 +51,9 @@ class SettingsActivity : AppCompatActivity() {
     private var preferences: Preferences by notNull()
     private var vibrator: Vibrator by notNull()
     private var adapter: ColorAdapter by notNull()
+
+    private val historyService: HistoryService
+        get() = (this.applicationContext as App).historyService
 
 
     @SuppressLint("DiscouragedApi")
@@ -303,6 +308,13 @@ class SettingsActivity : AppCompatActivity() {
         preferences.setSwipeDigitsAndScientificFunctions(swipeDigitsAndScientificFunctions)
         preferences.setVibration(vibration)
         preferences.setSoundEffects(sound)
+
+        historyService.modifyHistoryData(
+            previousGroupingSeparatorSymbol,
+            groupingSeparatorSymbol,
+            previousDecimalSeparatorSymbol,
+            decimalSeparatorSymbol
+        )
     }
 
 

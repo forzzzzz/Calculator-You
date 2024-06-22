@@ -78,4 +78,33 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null
         db.execSQL("DELETE FROM $TABLE_NAME")
         db.close()
     }
+
+    fun modifyAllRecords(modifyExpression: (String) -> String, modifyResult: (String) -> String) {
+        val db = writableDatabase
+        val cursor = db.query(TABLE_NAME, null, null, null, null, null, null)
+
+        cursor?.use {
+            val idIndex = it.getColumnIndexOrThrow(COLUMN_ID)
+            val expressionIndex = it.getColumnIndexOrThrow(COLUMN_EXPRESSION)
+            val resultIndex = it.getColumnIndexOrThrow(COLUMN_RESULT)
+
+            while (it.moveToNext()) {
+                val id = it.getInt(idIndex)
+                val expression = it.getString(expressionIndex)
+                val result = it.getString(resultIndex)
+
+                val newExpression = modifyExpression(expression)
+                val newResult = modifyResult(result)
+
+                val contentValues = ContentValues().apply {
+                    put(COLUMN_EXPRESSION, newExpression)
+                    put(COLUMN_RESULT, newResult)
+                }
+
+                db.update(TABLE_NAME, contentValues, "$COLUMN_ID=?", arrayOf(id.toString()))
+            }
+        }
+
+        db.close()
+    }
 }
