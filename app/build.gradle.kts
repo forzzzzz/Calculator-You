@@ -11,15 +11,16 @@ android {
         applicationId = "com.marktka.calculatorYou"
         minSdk = 27
         targetSdk = 34
-        versionCode = 17
-        versionName = "2.2.0"
+        versionCode = 18
+        versionName = "2.2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isShrinkResources = true
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
