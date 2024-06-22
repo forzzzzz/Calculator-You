@@ -12,13 +12,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.37"/>
+        app:layout_constraintGuide_percent="0.38"/>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/historyFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:name="com.forz.calculator.fragments.HistoryFragment"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginStart="@dimen/_6sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +32,7 @@
         android:background="@drawable/foreground"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_6sdp"
         app:layout_constraintStart_toEndOf="@id/historyGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -63,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="44dp" />
+        app:layout_constraintGuide_end="64dp" />
 
     <TextView
         android:id="@+id/resultText"
@@ -109,6 +113,9 @@
         android:id="@+id/calculatorFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_6sdp"
         android:name="com.forz.calculator.fragments.CalculatorFragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

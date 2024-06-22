@@ -12,9 +12,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_3sdp"
-        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintHorizontal_weight="0.9"
         app:layout_constraintEnd_toStartOf="@id/block2"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <View
@@ -53,23 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_3sdp"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintEnd_toStartOf="@id/paddingRightGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/block4"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/paddingLeftGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/_4sdp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/paddingRightGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/_4sdp" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/scienceModButton"
@@ -87,8 +73,18 @@
         android:tint="?attr/colorOnSurface"
         app:layout_constraintBottom_toBottomOf="@id/divisionButton"
         app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/divisionButton" />
+
+    <View
+        android:id="@+id/backgroundExtraButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/foreground_extra_button"
+        app:layout_constraintBottom_toBottomOf="@id/equalsButton"
+        app:layout_constraintEnd_toEndOf="@id/block1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/multiplicationButton" />
 
     <TextView
         android:id="@+id/sqrtButton"
@@ -99,8 +95,8 @@
         android:layout_marginStart="0dp"
         android:text="@string/sqrt"
         app:layout_constraintBottom_toBottomOf="@id/multiplicationButton"
-        app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
         app:layout_constraintTop_toTopOf="@id/multiplicationButton" />
 
     <TextView
@@ -112,8 +108,8 @@
         android:layout_marginStart="0dp"
         android:text="@string/pi"
         app:layout_constraintBottom_toBottomOf="@id/minusButton"
-        app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
         app:layout_constraintTop_toTopOf="@id/minusButton" />
 
     <TextView
@@ -125,8 +121,8 @@
         android:layout_marginStart="0dp"
         android:text="@string/power"
         app:layout_constraintBottom_toBottomOf="@id/plusButton"
-        app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
         app:layout_constraintTop_toTopOf="@id/plusButton" />
 
     <TextView
@@ -138,17 +134,9 @@
         android:layout_marginStart="0dp"
         android:text="@string/factorial"
         app:layout_constraintBottom_toBottomOf="@id/equalsButton"
-        app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
         app:layout_constraintTop_toTopOf="@id/equalsButton" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/paddingBottomGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="@dimen/_2sdp" />
-
 
     <TextView
         android:id="@+id/clearButton"
@@ -194,11 +182,11 @@
     <TextView
         android:id="@+id/divisionButton"
         style="@style/Button.Operator"
-        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:text="@string/division_button"
         app:layout_constraintBottom_toTopOf="@id/multiplicationButton"
-        app:layout_constraintEnd_toStartOf="@id/paddingRightGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/percentageButton"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -244,7 +232,7 @@
         android:layout_height="0dp"
         android:overScrollMode="never"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@id/paddingBottomGuideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/percentageButton"
         app:layout_constraintStart_toStartOf="@id/block2"
         app:layout_constraintTop_toTopOf="@id/multiplicationButton"/>
@@ -257,7 +245,7 @@
         android:layout_marginBottom="0dp"
         android:layout_marginEnd="0dp"
         android:paddingBottom="@dimen/_1sdp"
-        app:layout_constraintBottom_toTopOf="@id/paddingBottomGuideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/divisionButton"
         app:layout_constraintStart_toStartOf="@id/divisionButton"
         app:layout_constraintTop_toBottomOf="@id/plusButton" />
@@ -272,7 +260,7 @@
         android:src="@drawable/baseline_backspace"
         android:tint="?attr/colorOnSurface"
         android:scaleType="center"
-        app:layout_constraintBottom_toTopOf="@id/paddingBottomGuideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/percentageButton"
         app:layout_constraintStart_toStartOf="@id/percentageButton"
         app:layout_constraintTop_toTopOf="@id/equalsButton" />

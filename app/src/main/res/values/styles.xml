@@ -47,9 +47,6 @@
         <item name="android:autoSizeTextType">uniform</item>
         <item name="android:background">@drawable/background_extra_button</item>
     </style>
-
-
-
     <style name="ExtraButton" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
@@ -59,8 +56,6 @@
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
 
-        <item name="android:layout_marginTop">@dimen/_6sdp</item>
-        <item name="android:layout_marginBottom">@dimen/_6sdp</item>
         <item name="android:layout_marginStart">@dimen/_3sdp</item>
         <item name="android:layout_marginEnd">@dimen/_3sdp</item>
 

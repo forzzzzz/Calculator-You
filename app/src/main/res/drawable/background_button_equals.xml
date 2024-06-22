@@ -6,7 +6,7 @@
             <solid android:color="@color/ripple" />
 
             <corners
-                android:radius="@dimen/_16sdp"/>
+                android:radius="@dimen/_24sdp"/>
         </shape>
     </item>
     <item android:id="@android:id/background">
@@ -14,7 +14,7 @@
             <solid android:color="?attr/colorPrimaryContainer" />
 
             <corners
-                android:radius="@dimen/_16sdp"/>
+                android:radius="@dimen/_24sdp"/>
         </shape>
     </item>
 </ripple>

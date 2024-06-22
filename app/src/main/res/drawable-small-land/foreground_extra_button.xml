@@ -5,7 +5,7 @@
             <solid android:color="?attr/colorSurfaceVariant" />
 
             <corners
-                android:radius="@dimen/_12sdp" />
+                android:radius="@dimen/_16sdp" />
         </shape>
     </item>
 </layer-list>

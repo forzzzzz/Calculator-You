@@ -6,7 +6,7 @@
             <solid android:color="@color/rippleWithoutBackground"/>
 
             <corners
-                android:radius="@dimen/_18sdp" />
+                android:radius="@dimen/_16sdp" />
         </shape>
     </item>
 </ripple>

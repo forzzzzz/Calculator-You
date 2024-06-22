@@ -5,8 +5,8 @@
             <solid android:color="?attr/colorSurfaceVariant" />
 
             <corners
-                android:bottomLeftRadius="@dimen/_20sdp"
-                android:bottomRightRadius="@dimen/_20sdp" />
+                android:bottomLeftRadius="@dimen/_18sdp"
+                android:bottomRightRadius="@dimen/_18sdp" />
         </shape>
     </item>
 </layer-list>

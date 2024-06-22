@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_3sdp"
-        app:layout_constraintHorizontal_weight="1.5"
+        app:layout_constraintHorizontal_weight="0.9"
         app:layout_constraintEnd_toStartOf="@id/block2"
         app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -90,6 +90,16 @@
         app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
         app:layout_constraintTop_toTopOf="@id/divisionButton" />
 
+    <View
+        android:id="@+id/backgroundExtraButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/foreground_extra_button"
+        app:layout_constraintBottom_toBottomOf="@id/equalsButton"
+        app:layout_constraintEnd_toEndOf="@id/block1"
+        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintTop_toTopOf="@id/multiplicationButton" />
+
     <TextView
         android:id="@+id/sqrtButton"
         style="@style/Button.ExtraButton"
@@ -99,8 +109,8 @@
         android:layout_marginStart="0dp"
         android:text="@string/sqrt"
         app:layout_constraintBottom_toBottomOf="@id/multiplicationButton"
-        app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
         app:layout_constraintTop_toTopOf="@id/multiplicationButton" />
 
     <TextView
@@ -112,8 +122,8 @@
         android:layout_marginStart="0dp"
         android:text="@string/pi"
         app:layout_constraintBottom_toBottomOf="@id/minusButton"
-        app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
         app:layout_constraintTop_toTopOf="@id/minusButton" />
 
     <TextView
@@ -125,8 +135,8 @@
         android:layout_marginStart="0dp"
         android:text="@string/power"
         app:layout_constraintBottom_toBottomOf="@id/plusButton"
-        app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
         app:layout_constraintTop_toTopOf="@id/plusButton" />
 
     <TextView
@@ -138,8 +148,8 @@
         android:layout_marginStart="0dp"
         android:text="@string/factorial"
         app:layout_constraintBottom_toBottomOf="@id/equalsButton"
-        app:layout_constraintEnd_toEndOf="@id/block1"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
         app:layout_constraintTop_toTopOf="@id/equalsButton" />
 
     <androidx.constraintlayout.widget.Guideline

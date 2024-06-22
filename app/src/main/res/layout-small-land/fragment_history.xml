@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:gravity="center"
-tools:context=".fragments.CalculatorFragment"
-android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".fragments.CalculatorFragment"
+    android:orientation="vertical">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -26,6 +26,6 @@ android:orientation="vertical">
         android:layout_height="wrap_content"
         android:text="@string/empty_history"
         android:textColor="?attr/colorOnSurface"
-        android:textSize="22sp"
+        android:textSize="19sp"
         android:visibility="gone"/>
 </LinearLayout>

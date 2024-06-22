@@ -14,7 +14,7 @@
         android:layout_marginEnd="@dimen/_3sdp"
         app:layout_constraintHorizontal_weight="1.5"
         app:layout_constraintEnd_toStartOf="@id/block2"
-        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <View
@@ -73,23 +73,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_3sdp"
         app:layout_constraintHorizontal_weight="2"
-        app:layout_constraintEnd_toStartOf="@id/paddingRightGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/block6"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/paddingLeftGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="@dimen/_4sdp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/paddingRightGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/_4sdp" />
+    <View
+        android:id="@+id/backgroundExtraButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/foreground_extra_button"
+        app:layout_constraintBottom_toBottomOf="@id/equalsButton"
+        app:layout_constraintEnd_toEndOf="@id/block3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/divisionButton" />
 
     <TextView
         android:id="@+id/degreeButton"
@@ -286,14 +282,6 @@
         app:layout_constraintStart_toStartOf="@id/block3"
         app:layout_constraintTop_toTopOf="@id/equalsButton" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/paddingBottomGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="@dimen/_2sdp" />
-
-
     <TextView
         android:id="@+id/clearButton"
         style="@style/Button.Operator"
@@ -338,11 +326,11 @@
     <TextView
         android:id="@+id/divisionButton"
         style="@style/Button.Operator"
-        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="0dp"
         android:text="@string/division_button"
         app:layout_constraintBottom_toTopOf="@id/multiplicationButton"
-        app:layout_constraintEnd_toStartOf="@id/paddingRightGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/percentageButton"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -386,7 +374,7 @@
         android:layout_marginBottom="0dp"
         android:layout_marginEnd="0dp"
         android:paddingBottom="@dimen/_2sdp"
-        app:layout_constraintBottom_toTopOf="@id/paddingBottomGuideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/divisionButton"
         app:layout_constraintStart_toStartOf="@id/divisionButton"
         app:layout_constraintTop_toBottomOf="@id/plusButton" />
@@ -401,7 +389,7 @@
         android:src="@drawable/baseline_backspace"
         android:tint="?attr/colorOnSurface"
         android:scaleType="center"
-        app:layout_constraintBottom_toTopOf="@id/paddingBottomGuideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/percentageButton"
         app:layout_constraintStart_toStartOf="@id/percentageButton"
         app:layout_constraintTop_toTopOf="@id/equalsButton" />

@@ -63,8 +63,7 @@
         <item name="android:layout_height">0dp</item>
 
         <item name="android:layout_marginStart">19dp</item>
-        <item name="android:layout_marginEnd">19dp</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">29dp</item>
 
         <item name="android:background">@android:color/transparent</item>
         <item name="android:fontFamily">sans-serif</item>
@@ -99,7 +98,7 @@
         <item name="android:layout_width">38dp</item>
         <item name="android:layout_height">38dp</item>
 
-        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
 
         <item name="android:tint">?attr/colorOnSurface</item>
         <item name="android:background">@drawable/background_options_menu</item>
