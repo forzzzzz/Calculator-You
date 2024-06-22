@@ -29,7 +29,7 @@ class AboutActivity : AppCompatActivity() {
 
     @SuppressLint("DiscouragedApi", "ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
-        preferences = Preferences(this@AboutActivity)
+        preferences = Preferences(this)
 
         if (!SettingsState.isDynamicColor){
             setTheme(resources.getIdentifier(preferences.getColor(), "style", packageName))
@@ -38,8 +38,8 @@ class AboutActivity : AppCompatActivity() {
         }
 
         val typedValue = TypedValue()
-        this@AboutActivity.theme.resolveAttribute(com.google.android.material.R.attr.colorSurface, typedValue, true)
-        window.statusBarColor = ContextCompat.getColor(this@AboutActivity, typedValue.resourceId)
+        this.theme.resolveAttribute(com.google.android.material.R.attr.colorSurface, typedValue, true)
+        window.statusBarColor = ContextCompat.getColor(this, typedValue.resourceId)
 
 
         super.onCreate(savedInstanceState)
@@ -84,7 +84,8 @@ class AboutActivity : AppCompatActivity() {
         }
 
         binding.licensesLayout.setOnClickListener {
-            Toast.makeText(this@AboutActivity, "Test", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LicensesActivity::class.java)
+            startActivity(intent)
         }
 
         binding.privacyPolicyLayout.setOnClickListener {
