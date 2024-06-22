@@ -58,7 +58,7 @@ class AboutActivity : AppCompatActivity() {
         }
 
         binding.donateLayout.setOnClickListener {
-            Toast.makeText(this@AboutActivity, "Test", Toast.LENGTH_SHORT).show()
+            url(getString(R.string.url_donate))
         }
 
         binding.telegramLayout.setOnClickListener {
