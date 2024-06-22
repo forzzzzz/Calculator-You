@@ -118,10 +118,11 @@
     <!--Url-->
     <string name="url_app" translatable="false">https://play.google.com/store/apps/details?id=com.marktka.calculatorYou</string>
     <string name="url_telegram" translatable="false">https://t.me/millioner_1OODollar</string>
-    <string name="url_privacy_policy" translatable="false">https://sites.google.com/view/privacy-policy-calculator-you/privacy-policy</string>
+    <string name="url_privacy_policy" translatable="false">https://github.com/forzzzzz/Calculator-You/blob/master/Privacy%20Policy.md</string>
     <string name="url_open_source" translatable="false">https://github.com/forzzzzz/Calculator-You</string>
     <string name="url_translate" translatable="false">https://hosted.weblate.org/engage/calculator-you/</string>
     <string name="url_donate" translatable="false">https://www.paypal.com/donate/?hosted_button_id=GKC26SLPUTQMU</string>
+    <string name="url_email" translatable="false">mailto:mark.tka.development@gmail.com</string>
 
     <!--Dialogs-->
     <string name="clear_history_title">Clear the history?</string>

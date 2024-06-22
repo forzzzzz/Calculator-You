@@ -70,6 +70,10 @@ class AboutActivity : AppCompatActivity() {
             true
         }
 
+        binding.emailLayout.setOnClickListener {
+            url(getString(R.string.url_email))
+        }
+
         binding.emailLayout.setOnLongClickListener {
             copy(getString(R.string.description_email))
             true
