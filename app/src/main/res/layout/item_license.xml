@@ -5,12 +5,11 @@
     android:layout_height="wrap_content"
     xmlns:tool="http://schemas.android.com/tools">
 
-    <View
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/background"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
-        android:background="@drawable/background_select_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
