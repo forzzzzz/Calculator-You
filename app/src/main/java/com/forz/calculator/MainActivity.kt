@@ -7,9 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import com.forz.calculator.StateViews.chooseColorRecyclerViewIsRecreated
-import com.forz.calculator.StateViews.colorIsSelected
 import com.forz.calculator.StateViews.expressionEditTextIsRecreated
+import com.forz.calculator.StateViews.firstCreatedSettingsActivity
 import com.forz.calculator.StateViews.pagerIsRecreated
 import com.forz.calculator.StateViews.recyclerViewHistoryIsRecreated
 import com.forz.calculator.databinding.ActivityMainBinding
@@ -130,8 +129,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == REQUEST_CODE_CHILD) {
-            colorIsSelected = false
-            chooseColorRecyclerViewIsRecreated = false
+            firstCreatedSettingsActivity = true
             recreate()
         }
     }

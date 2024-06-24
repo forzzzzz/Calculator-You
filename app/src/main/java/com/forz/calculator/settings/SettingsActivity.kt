@@ -20,8 +20,7 @@ import com.forz.calculator.App
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.Preferences
 import com.forz.calculator.R
-import com.forz.calculator.StateViews.chooseColorRecyclerViewIsRecreated
-import com.forz.calculator.StateViews.colorIsSelected
+import com.forz.calculator.StateViews.firstCreatedSettingsActivity
 import com.forz.calculator.colorThemes.Color
 import com.forz.calculator.colorThemes.ColorActionListener
 import com.forz.calculator.colorThemes.ColorAdapter
@@ -110,7 +109,6 @@ class SettingsActivity : AppCompatActivity() {
 
             adapter = ColorAdapter(this, object : ColorActionListener{
                 override fun onSelectColor(color: Color) {
-                    colorIsSelected = true
                     adapter.selectColor(color)
                     recreate()
                 }
@@ -120,7 +118,9 @@ class SettingsActivity : AppCompatActivity() {
             binding.chooseColorRecyclerView.layoutManager = layoutManager
             binding.chooseColorRecyclerView.adapter = adapter
 
-            if (!colorIsSelected || !chooseColorRecyclerViewIsRecreated){
+            if (firstCreatedSettingsActivity){
+                firstCreatedSettingsActivity = false
+
                 val selectedPosition = adapter.getIdSelectedColor()
 
                 val displayMetrics = resources.displayMetrics
@@ -391,11 +391,5 @@ class SettingsActivity : AppCompatActivity() {
         )
 
         return text
-    }
-
-    override fun recreate() {
-        super.recreate()
-
-        chooseColorRecyclerViewIsRecreated = true
     }
 }

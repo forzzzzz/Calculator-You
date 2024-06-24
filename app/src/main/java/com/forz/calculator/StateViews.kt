@@ -13,6 +13,5 @@ object StateViews{
 
     var expressionEditTextIsRecreated = false
 
-    var chooseColorRecyclerViewIsRecreated = false
-    var colorIsSelected = false
+    var firstCreatedSettingsActivity = true
 }
