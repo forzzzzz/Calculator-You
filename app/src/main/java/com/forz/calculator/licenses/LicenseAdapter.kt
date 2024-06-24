@@ -27,7 +27,8 @@ class LicenseAdapter(
          License(id = 7, name = "Scalable Size Unit", author = "Intuit", description = "An Android lib that provides a new size unit - sdp (scalable dp). This size unit scales with the screen size.", license = "MIT license", url = "https://github.com/intuit/sdp"),
          License(id = 8, name = "Scalable Size Unit for texts", author = "Intuit", description = "Variant of sdp project based on the sp size unit.", license = "MIT license", url = "https://github.com/intuit/ssp"),
          License(id = 9, name = "CircleView", author = "Lopez Mikhael", description = "Create circular view in android (change color, border & shadow).", license = "Apache-2.0", url = "https://github.com/lopspower/CircleView"),
-         License(id = 10, name = "Activity", author = "The Android Open Source Project", description = "Access composable APIs built on top of Activity.", license = "Apache-2.0", url = "https://developer.android.com/jetpack/androidx/releases/activity")
+         License(id = 10, name = "Activity", author = "The Android Open Source Project", description = "Access composable APIs built on top of Activity.", license = "Apache-2.0", url = "https://developer.android.com/jetpack/androidx/releases/activity"),
+         License(id = 11, name = "Math Expressions Parser", author = "Darkempire", description = "Classes that format and calculate a mathematical expression.", license = "GPL-3.0", url = "https://github.com/Darkempire78/OpenCalc")
     )
 
 
