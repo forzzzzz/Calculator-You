@@ -40,8 +40,8 @@ class SmallFragment : Fragment() {
 
 
         val adapter = ViewPageAdapter(childFragmentManager, lifecycle)
-        adapter.addFragment(HistoryFragment())
         adapter.addFragment(SmallCalculatorFragment())
+        adapter.addFragment(HistoryFragment())
         binding.pager.adapter = adapter
         binding.pager.setCurrentItem(StateViews.currentItemPager, false)
         binding.pager.offscreenPageLimit = 2

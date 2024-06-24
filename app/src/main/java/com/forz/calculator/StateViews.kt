@@ -1,7 +1,7 @@
 package com.forz.calculator
 
 object StateViews{
-    var currentItemPager = 1
+    var currentItemPager = 0
     var pagerIsRecreated = false
 
     var oldSizeRecyclerViewHistory = 0

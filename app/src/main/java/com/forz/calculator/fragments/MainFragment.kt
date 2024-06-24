@@ -68,16 +68,16 @@ class MainFragment : Fragment() {
 
 
         val adapter = ViewPageAdapter(childFragmentManager, lifecycle)
-        adapter.addFragment(HistoryFragment())
         adapter.addFragment(CalculatorFragment())
+        adapter.addFragment(HistoryFragment())
         binding.pager.adapter = adapter
         binding.pager.setCurrentItem(StateViews.currentItemPager, false)
         binding.pager.offscreenPageLimit = 2
         TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
             tab.setIcon(
                 when (position) {
-                    0 -> R.drawable.baseline_history
-                    1 -> R.drawable.baseline_calculate
+                    0 -> R.drawable.baseline_calculate
+                    1 -> R.drawable.baseline_history
                     else -> throw IllegalArgumentException("Invalid position")
                 }
             )
@@ -86,7 +86,9 @@ class MainFragment : Fragment() {
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
-        if (pagerIsRecreated && binding.pager.currentItem == 1){
+        if (binding.pager.currentItem == 1){
+            binding.historyTitleText.visibility = ImageView.VISIBLE
+
             pagerIsRecreated = false
         }
 
@@ -95,13 +97,8 @@ class MainFragment : Fragment() {
                 StateViews.currentItemPager = position
 
                 when (position) {
-                    0 -> {
-                        if (pagerIsRecreated){
-                            binding.degreeTitleText.visibility = ImageView.GONE
-                            binding.historyTitleText.visibility = ImageView.VISIBLE
-
-                            pagerIsRecreated = false
-                        }else if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
+                    1 -> {
+                        if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
                             binding.degreeTitleText.startAnimation(fadeOutAnimation200.apply {
                                 setAnimationListener(object : Animation.AnimationListener {
                                     override fun onAnimationStart(animation: Animation?) {
@@ -120,33 +117,37 @@ class MainFragment : Fragment() {
                             binding.historyTitleText.startAnimation(fadeInAnimation200)
                         }
                     }
-                    1 -> {
-                        if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
-                            binding.historyTitleText.startAnimation(fadeOutAnimation200.apply {
-                                setAnimationListener(object : Animation.AnimationListener {
-                                    override fun onAnimationStart(animation: Animation?) {
-                                    }
-                                    override fun onAnimationEnd(animation: Animation?) {
-                                        binding.historyTitleText.visibility = ImageView.GONE
-                                        binding.degreeTitleText.visibility = ImageView.VISIBLE
-                                        binding.degreeTitleText.startAnimation(fadeInAnimation200)
-                                    }
-                                    override fun onAnimationRepeat(animation: Animation?) {
-                                    }
+                    0 -> {
+                        if (!pagerIsRecreated){
+                            if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
+                                binding.historyTitleText.startAnimation(fadeOutAnimation200.apply {
+                                    setAnimationListener(object : Animation.AnimationListener {
+                                        override fun onAnimationStart(animation: Animation?) {
+                                        }
+                                        override fun onAnimationEnd(animation: Animation?) {
+                                            binding.historyTitleText.visibility = ImageView.GONE
+                                            binding.degreeTitleText.visibility = ImageView.VISIBLE
+                                            binding.degreeTitleText.startAnimation(fadeInAnimation200)
+                                        }
+                                        override fun onAnimationRepeat(animation: Animation?) {
+                                        }
+                                    })
                                 })
-                            })
-                        } else{
-                            binding.historyTitleText.startAnimation(fadeOutAnimation200.apply {
-                                setAnimationListener(object : Animation.AnimationListener {
-                                    override fun onAnimationStart(animation: Animation?) {
-                                    }
-                                    override fun onAnimationEnd(animation: Animation?) {
-                                        binding.historyTitleText.visibility = ImageView.GONE
-                                    }
-                                    override fun onAnimationRepeat(animation: Animation?) {
-                                    }
+                            } else{
+                                binding.historyTitleText.startAnimation(fadeOutAnimation200.apply {
+                                    setAnimationListener(object : Animation.AnimationListener {
+                                        override fun onAnimationStart(animation: Animation?) {
+                                        }
+                                        override fun onAnimationEnd(animation: Animation?) {
+                                            binding.historyTitleText.visibility = ImageView.GONE
+                                        }
+                                        override fun onAnimationRepeat(animation: Animation?) {
+                                        }
+                                    })
                                 })
-                            })
+                            }
+                        }else{
+                            pagerIsRecreated = false
                         }
                     }
                 }
@@ -158,7 +159,7 @@ class MainFragment : Fragment() {
 
         binding.optionsMenuButton.setOnClickListener { view ->
             val popupMenu = PopupMenu(requireContext(), view)
-            if (binding.pager.currentItem == 1){
+            if (binding.pager.currentItem == 0){
                 popupMenu.inflate(R.menu.options_menu)
             } else{
                 popupMenu.inflate(R.menu.history_options_menu)
@@ -166,7 +167,7 @@ class MainFragment : Fragment() {
             popupMenu.setOnMenuItemClickListener { menuItem ->
                 when(menuItem.itemId){
                     R.id.history -> {
-                        binding.pager.setCurrentItem(0, true)
+                        binding.pager.setCurrentItem(1, true)
                         true
                     }
                     R.id.settings -> {
@@ -185,7 +186,7 @@ class MainFragment : Fragment() {
                             .setMessage(getString(R.string.clear_history_title))
                             .setPositiveButton(getString(R.string.clear_history_clear)) { _, _ ->
                                 historyService.clearHistoryData()
-                                binding.pager.setCurrentItem(1, true)
+                                binding.pager.setCurrentItem(0, true)
                             }
                             .setNegativeButton(getString(R.string.clear_history_dismiss)) { _, _ ->
                             }
@@ -223,7 +224,7 @@ class MainFragment : Fragment() {
             binding.expressionEditText.text = NumberFormatter.changeColorOperators(expression, requireContext())
             binding.expressionEditText.setSelection(expressionCursorPositionStart, expressionCursorPositionEnd)
 
-            if (triggersIsDegreeModActivatedShowArray.any { expression.contains(it) } && binding.pager.currentItem == 1){
+            if (triggersIsDegreeModActivatedShowArray.any { expression.contains(it) } && binding.pager.currentItem == 0){
                 binding.degreeTitleText.visibility = ImageView.VISIBLE
             } else{
                 binding.degreeTitleText.visibility = ImageView.GONE
