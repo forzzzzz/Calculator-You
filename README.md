@@ -5,7 +5,7 @@
 
 # Calculator You
 
-### Calculator You is a beautiful calculator for solving simple tasks
+### Calculator You is a beautiful calculator for solving simple tasks.
 
 <a href="https://play.google.com/store/apps/details?id=com.marktka.calculatorYou">
       <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="100">
@@ -44,7 +44,7 @@ The app is designed so that all operations and actions can be performed with jus
 
 ## Support
 
-### Thank you very much for your help! :heart:
+### Thank you very much for your help :heart:
 
 Write a review about the app on [Google Play](https://play.google.com/store/apps/details?id=com.marktka.calculatorYou)
 
