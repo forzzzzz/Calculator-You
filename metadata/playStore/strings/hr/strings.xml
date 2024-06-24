@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="short_description">„Calculator You” je kalkulator za rješavanje jednostavnih zadataka.</string>
+    <string name="full_description">Prekrasan dizajn:
+\n
+\nKalkulator ima prekrasan i ugodan dizajn koji se razvijao dugo vremena. Aplikacija koristi Material 3 i dinamičke boje temeljene na vašoj pozadini. Osim svijetlih i tamnih tema, aplikacija nudi više od 60 šarenih tema koje odgovaraju vašem ukusu. Učinite ovaj kalkulator jedinstveno vašim!
+\n
+\nZnanstvene funkcije:
+\n
+\nOsim jednostavnih osnovnih operacija, postoje i druge funkcije. Na primjer, cos, sin, tan, log, itd.
+\n
+\nPovijest:
+\n
+\nKalkulator ima mogućnost spremanja vaših izračuna. Tada možete raditi s njima: ponovno poslati na izračun, prikladno kopirati, dijeliti i brisati.
+\n
+\nPogodnost:
+\n
+\nAplikacija je dizajnirana tako da se sve operacije i radnje mogu izvoditi samo jednom rukom. Povijest, kalkulator, znanstvene funkcije - sve pod jednim prstom. Brzo i praktično!
+\n
+\nOvo je moja prva aplikacija za Android. Nije napravljena s ljubavlju❤️, već iz ljubavi❤️.</string>
 </resources>
