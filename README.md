@@ -1,4 +1,4 @@
-[Feature graphic](metadata/playStore/image/feature-graphic-v1.png)
+![Feature graphic](metadata/playStore/image/feature-graphic-v1.png)
 
 
 
