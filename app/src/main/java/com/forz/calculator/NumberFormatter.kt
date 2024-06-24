@@ -17,6 +17,7 @@ object NumberFormatter {
         text = removeSeparators(text, ",")
         text = separateNumbers(text)
         text = replaceSeparators(text, groupingSeparatorSymbol, decimalSeparatorSymbol)
+        text = replaceOperators(text)
         return text
     }
 
@@ -90,6 +91,21 @@ object NumberFormatter {
         var text = inputString.replace(groupingSeparatorSymbol, "#")
         text = text.replace(decimalSeparatorSymbol, ".")
         text = text.replace("#", ",")
+        return text
+    }
+
+    private fun replaceOperators(inputString: String): String{
+        var text = inputString
+
+        text = text.replace("*10^", "E")
+        text = text.replace("*", "×")
+        text = text.replace("/", "÷")
+        text = text.replace("-", "–")
+        text = text.replace("arcco", "cos⁻¹")
+        text = text.replace("arcsi", "sin⁻¹")
+        text = text.replace("arcta", "tan⁻¹")
+        text = text.replace("xp", "exp")
+
         return text
     }
 
