@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="short_description">Calculator You ist ein schöner Taschenrechner zum Lösen einfacher Aufgaben.</string>
+    <string name="full_description">Schönes Design:
+\n
+\nDer Taschenrechner hat ein wunderschönes und angenehmes Design, das über einen langen Zeitraum hinweg entwickelt wurde. Die App verwendet Material 3 und dynamische Farben, die auf Ihrem Hintergrundbild basieren. Zusätzlich zu den hellen und dunklen Themen bietet die App auch über 60 farbenfrohe Themen, die Ihrem Geschmack entsprechen. Machen Sie diesen Taschenrechner zu Ihrem ganz persönlichen!
+\n
+\nWissenschaftliche Funktionen:
+\n
+\nNeben den einfachen Grundoperationen gibt es auch andere Funktionen. Zum Beispiel cos, sin, tan, log, usw.
+\n
+\nVerlauf:
+\n
+\nDer Taschenrechner hat die Fähigkeit, Ihre Berechnungen zu speichern. Sie können dann mit ihnen arbeiten: Zurück zum Berechnen senden, bequem kopieren, teilen und löschen.
+\n
+\nBequemlichkeit:
+\n
+\nDie App ist so gestaltet, dass alle Operationen und Aktionen mit nur einer Hand ausgeführt werden können. Verlauf, Taschenrechner, wissenschaftliche Funktionen - alles unter einem Finger. Schnell und bequem!
+\n
+\nDies ist meine erste App für Android. Nicht mit Liebe❤️ gemacht, sondern aus Liebe❤️.</string>
 </resources>
