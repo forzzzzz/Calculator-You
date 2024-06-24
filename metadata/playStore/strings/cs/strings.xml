@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="short_description">Calculator You je krásná kalkulačka pro vyřešení jednoduchých úloh.</string>
+    <string name="full_description">Krásný design:
+\n
+\nKalkulačka má krásný a příjemný design, který byl vyvíjen dlouhou dobu. Aplikace využívá Material 3 a dynamické barvy na základě vašeho tapety. Kromě světlých a tmavých témat nabízí aplikace také více než 60 barevných témat, které vyhovují vašemu vkusu. Udělejte si tuto kalkulačku jedinečně svou!
+\n
+\nVědecké funkce:
+\n
+\nKromě jednoduchých základních operací jsou zde i další funkce. Například cos, sin, tan, log, atd.
+\n
+\nHistorie:
+\n
+\nKalkulačka má schopnost uložit vaše výpočty. Pak s nimi můžete pracovat: znovu odeslat k výpočtu, pohodlně kopírovat, sdílet a mazat.
+\n
+\nPohodlí:
+\n
+\nAplikace je navržena tak, aby všechny operace a akce bylo možné provádět pouze jednou rukou. Historie, kalkulačka, vědecké funkce - vše pod jedním prstem. Rychlé a pohodlné!
+\n
+\nToto je moje první aplikace pro Android. Ne vytvořená s láskou❤️, ale z lásky❤️.</string>
 </resources>
