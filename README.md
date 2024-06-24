@@ -1,3 +1,10 @@
+[Feature graphic](metadata\playStore\image\feature-graphic-v1.png)
+
+
+
+
+
+
 #### Math Expressions Parser -> [Darkempire78/OpenCalc](https://github.com/Darkempire78/OpenCalc)
 
 ## :globe_with_meridians: Translation
