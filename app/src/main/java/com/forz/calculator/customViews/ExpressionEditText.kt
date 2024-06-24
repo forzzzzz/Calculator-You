@@ -5,6 +5,7 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatEditText
 import com.forz.calculator.StateViews.expressionEditTextIsRecreated
 import com.forz.calculator.viewModels.ExpressionViewModel
+import com.forz.calculator.viewModels.ExpressionViewModel.symbolAfterCursorIsGroupingSeparatorSymbol
 
 class ExpressionEditText(context: Context, attrs: AttributeSet) : AppCompatEditText(context, attrs) {
     private var counter = 0
@@ -19,7 +20,8 @@ class ExpressionEditText(context: Context, attrs: AttributeSet) : AppCompatEditT
             counter = 0
             expressionEditTextIsRecreated = false
 
-            if ((selStart != ExpressionViewModel.expressionCursorPositionStart.value!! || selEnd != ExpressionViewModel.expressionCursorPositionEnd.value!!) && !ExpressionViewModel.isExpressionInserted) {
+            if (((selStart != ExpressionViewModel.expressionCursorPositionStart.value!! || selEnd != ExpressionViewModel.expressionCursorPositionEnd.value!!) && !ExpressionViewModel.isExpressionInserted) || symbolAfterCursorIsGroupingSeparatorSymbol) {
+                symbolAfterCursorIsGroupingSeparatorSymbol = false
                 ExpressionViewModel.updateCursorPosition(selStart, selEnd)
             }
             if (selStart == ExpressionViewModel.numberOfCharactersOfInsertedText && ExpressionViewModel.isExpressionInserted) {

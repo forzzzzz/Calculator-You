@@ -28,6 +28,7 @@ import com.forz.calculator.settings.SettingsActivity
 import com.forz.calculator.settings.SettingsState
 import com.forz.calculator.viewModels.CalculatorViewModel
 import com.forz.calculator.viewModels.ExpressionViewModel
+import com.forz.calculator.viewModels.ExpressionViewModel.symbolAfterCursorIsGroupingSeparatorSymbol
 import kotlin.properties.Delegates
 
 @Suppress("DEPRECATION")
@@ -165,6 +166,7 @@ class XLargeLandFragment : Fragment() {
             } else if (InsertInExpression.stringAfterCursor(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expression.value!!).startsWith(
                     SettingsState.groupingSeparatorSymbol
                 )){
+                symbolAfterCursorIsGroupingSeparatorSymbol = true
                 binding.expressionEditText.setSelection(ExpressionViewModel.expressionCursorPositionStart.value!! + 1)
             }
         }
