@@ -84,4 +84,6 @@
     <string name="days_ago_5_date">5 дней назад</string>
     <string name="days_ago_6_date">6 дней назад</string>
     <string name="days_ago_7_date">7 дней назад</string>
+    <string name="expression_error">Ошибка</string>
+    <string name="expression_infinity">Значение слишком большое</string>
 </resources>
