@@ -5,6 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:importantForAccessibility="noHideDescendants"
     tools:context=".fragments.small.SmallCalculatorFragment">
 
     <View

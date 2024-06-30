@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
+    android:importantForAccessibility="noHideDescendants"
     tools:context=".fragments.MainFragment">
 
     <View
@@ -45,6 +46,7 @@
         style="@style/OptionsButton"
         android:src="@drawable/baseline_more_vert"
         android:tooltipText="@string/options_tool_tip"
+        android:contentDescription="@string/options_tool_tip"
         app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

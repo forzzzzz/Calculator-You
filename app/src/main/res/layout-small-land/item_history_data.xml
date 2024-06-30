@@ -67,6 +67,7 @@
         android:tooltipText="@string/options_tool_tip"
         app:layout_constraintBottom_toBottomOf="@id/resultText"
         app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/options_tool_tip"
         app:layout_constraintTop_toTopOf="@id/expressionText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

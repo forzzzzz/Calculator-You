@@ -17,6 +17,7 @@
 
         <item name="android:layout_marginStart">16dp</item>
 
+        <item name="android:contentDescription">@string/arrow_back_tool_tip</item>
         <item name="android:tint">?attr/colorOnSurface</item>
         <item name="android:src">@drawable/arrow_back</item>
         <item name="android:background">@drawable/background_options_menu</item>

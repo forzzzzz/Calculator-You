@@ -67,6 +67,7 @@
         android:layout_marginStart="4dp"
         android:src="@drawable/baseline_more_vert"
         android:tooltipText="@string/options_tool_tip"
+        android:contentDescription="@string/options_tool_tip"
         app:layout_constraintBottom_toBottomOf="@id/resultText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/expressionText" />

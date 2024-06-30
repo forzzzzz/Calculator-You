@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout="@layout/fragment_default" >
 
 
 
