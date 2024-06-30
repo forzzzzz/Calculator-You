@@ -315,6 +315,9 @@ class SettingsActivity : AppCompatActivity() {
             previousDecimalSeparatorSymbol,
             decimalSeparatorSymbol
         )
+
+        previousGroupingSeparatorSymbol = groupingSeparatorSymbol
+        previousDecimalSeparatorSymbol = decimalSeparatorSymbol
     }
 
 
