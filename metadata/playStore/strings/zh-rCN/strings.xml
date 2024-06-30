@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="short_description">Calculator You 是一款漂亮的计算器，用于解决简单的计算任务。</string>
+    <string name="full_description">精美的设计：
+\n
+\n计算器的设计精美宜人，经过长期开发。此程序采用了 Material 3 和基于您的壁纸的动态颜色。除了浅色和深色主题外，该程序还提供 60 多种多彩主题，以满足您的品味。使这款计算器独一无二！
+\n
+\n科学功能：
+\n
+\n除了简单的基本运算符外，还有其他功能。例如，cos、sin、tan、log 等。
+\n
+\n历史记录：
+\n
+\n计算器可以保存计算结果。然后，您可以对其进行处理：重新发送计算，方便地复制、共享和删除。
+\n
+\n方便：
+\n
+\n应用程序的设计使单手即可完成所有操作。历史记录、计算器、科学功能，一切尽在一指之间。快捷方便！
+\n
+\n这是我的第一个 Android 应用程序。Made not with love❤️, but by love❤️。</string>
+</resources>
