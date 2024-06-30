@@ -84,4 +84,6 @@
     <string name="days_ago_6_date">6 днів тому</string>
     <string name="days_ago_7_date">7 днів тому</string>
     <string name="love_text">Створено не з любов\'ю ❤️, а любов\'ю ❤️</string>
+    <string name="expression_infinity">Значення завелике</string>
+    <string name="expression_error">Помилка</string>
 </resources>
