@@ -24,6 +24,7 @@ import com.forz.calculator.InsertInExpression
 import com.forz.calculator.InsertInExpression.triggersIsDegreeModActivatedShowArray
 import com.forz.calculator.MainActivity
 import com.forz.calculator.NumberFormatter
+import com.forz.calculator.OnBackPressedListener
 import com.forz.calculator.Preferences
 import com.forz.calculator.R
 import com.forz.calculator.StateViews
@@ -39,7 +40,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import kotlin.properties.Delegates
 
 @Suppress("DEPRECATION")
-class MainFragment : Fragment() {
+class MainFragment : Fragment(), OnBackPressedListener {
 
     private var binding: FragmentDefaultBinding by Delegates.notNull()
     private var preferences: Preferences by Delegates.notNull()
@@ -309,6 +310,16 @@ class MainFragment : Fragment() {
         super.onStop()
 
         preferences.setDegreeMod(CalculatorViewModel.isDegreeModActivated.value!!)
+    }
+
+
+    override fun onBackPressed(): Boolean {
+        return if (binding.pager.currentItem == 1) {
+            binding.pager.setCurrentItem(0, true)
+            true
+        } else {
+            false
+        }
     }
 
 

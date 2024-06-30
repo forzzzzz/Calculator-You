@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.forz.calculator.InsertInExpression
 import com.forz.calculator.NumberFormatter
+import com.forz.calculator.OnBackPressedListener
 import com.forz.calculator.Preferences
 import com.forz.calculator.StateViews
 import com.forz.calculator.databinding.FragmentSmallLandBinding
@@ -23,7 +24,7 @@ import com.forz.calculator.viewModels.CalculatorViewModel
 import com.forz.calculator.viewModels.ExpressionViewModel
 import kotlin.properties.Delegates
 
-class SmallLandFragment : Fragment() {
+class SmallLandFragment : Fragment(), OnBackPressedListener {
 
 
     private var binding: FragmentSmallLandBinding by Delegates.notNull()
@@ -136,6 +137,16 @@ class SmallLandFragment : Fragment() {
         super.onStop()
 
         preferences.setDegreeMod(CalculatorViewModel.isDegreeModActivated.value!!)
+    }
+
+
+    override fun onBackPressed(): Boolean {
+        return if (binding.pager.currentItem == 1) {
+            binding.pager.setCurrentItem(0, true)
+            true
+        } else {
+            false
+        }
     }
 
 

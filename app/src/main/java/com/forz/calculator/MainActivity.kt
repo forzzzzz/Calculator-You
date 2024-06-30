@@ -19,6 +19,12 @@ import com.forz.calculator.fragments.smallLand.SmallLandFragment
 import com.forz.calculator.fragments.xLargeLand.XLargeLandFragment
 import kotlin.properties.Delegates.notNull
 
+
+interface OnBackPressedListener {
+    fun onBackPressed(): Boolean
+}
+
+@Suppress("DEPRECATION")
 @SuppressLint("DiscouragedApi")
 class MainActivity : AppCompatActivity() {
 
@@ -121,6 +127,20 @@ class MainActivity : AppCompatActivity() {
         expressionEditTextIsRecreated = true
         pagerIsRecreated = true
         recyclerViewHistoryIsRecreated = true
+    }
+
+
+
+    override fun onBackPressed() {
+        val fragment = supportFragmentManager.findFragmentById(R.id.main)
+        if (fragment is OnBackPressedListener) {
+            val handled = (fragment as OnBackPressedListener).onBackPressed()
+            if (!handled) {
+                super.onBackPressed()
+            }
+        } else {
+            super.onBackPressed()
+        }
     }
 
 
