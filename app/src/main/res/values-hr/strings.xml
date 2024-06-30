@@ -84,4 +84,6 @@
     <string name="month_12_date">prosinca</string>
     <string name="today_date">Danas</string>
     <string name="yesterday_date">Jučer</string>
+    <string name="expression_error">Greška</string>
+    <string name="expression_infinity">Vrijednost je previsoka</string>
 </resources>
