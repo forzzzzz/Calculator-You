@@ -84,4 +84,6 @@
     <string name="days_ago_2_date">hace 2 días</string>
     <string name="days_ago_4_date">hace 4 días</string>
     <string name="description_vibrations">Realimentación háptica al hacer clic en los botones del teclado</string>
+    <string name="expression_error">Error</string>
+    <string name="expression_infinity">Valor demasiado alto</string>
 </resources>
