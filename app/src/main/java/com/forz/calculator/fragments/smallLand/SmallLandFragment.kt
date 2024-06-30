@@ -59,7 +59,7 @@ class SmallLandFragment : Fragment(), OnBackPressedListener {
         })
 
         CalculatorViewModel.isDegreeModActivated.observe(requireActivity()) { _ ->
-            ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!)
+            ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!, requireContext())
         }
 
         ExpressionViewModel.expression.observe(requireActivity()){ expression ->
@@ -68,7 +68,7 @@ class SmallLandFragment : Fragment(), OnBackPressedListener {
             binding.expressionEditText.text = NumberFormatter.changeColorOperators(expression, requireContext())
             binding.expressionEditText.setSelection(expressionCursorPositionStart, expressionCursorPositionEnd)
 
-            ExpressionViewModel.updateResult(expression)
+            ExpressionViewModel.updateResult(expression, requireContext())
         }
 
         binding.expressionEditText.requestFocus()
@@ -100,9 +100,9 @@ class SmallLandFragment : Fragment(), OnBackPressedListener {
             if (isSelection){
                 ExpressionViewModel.updateResult(
                     ExpressionViewModel.expression.value!!.substring(
-                        ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expressionCursorPositionEnd.value!!))
+                        ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expressionCursorPositionEnd.value!!), requireContext())
             }else if (!isSelection && ExpressionViewModel.previousIsSelection){
-                ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!)
+                ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!, requireContext())
             } else if (InsertInExpression.stringAfterCursor(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expression.value!!).startsWith(
                     SettingsState.groupingSeparatorSymbol
                 )){

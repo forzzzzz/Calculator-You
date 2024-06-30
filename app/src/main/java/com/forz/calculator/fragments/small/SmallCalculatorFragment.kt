@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.darkempire78.opencalculator.division_by_0
+import com.darkempire78.opencalculator.is_infinity
+import com.darkempire78.opencalculator.require_real_number
 import com.forz.calculator.Anim
 import com.forz.calculator.App
 import com.forz.calculator.HapticAndSound
@@ -192,7 +195,7 @@ class SmallCalculatorFragment : Fragment() {
         binding.equalsButton.setOnClickListener {
             val expression: String
 
-            if (result.value!!.isNotEmpty()){
+            if (result.value!!.isNotEmpty() && !is_infinity && !division_by_0 && !require_real_number){
                 if (ExpressionViewModel.isSelection.value!!){
                     expression = ExpressionViewModel.expression.value!!.substring(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expressionCursorPositionEnd.value!!)
                     ExpressionViewModel.updateSaveExpression(expression)

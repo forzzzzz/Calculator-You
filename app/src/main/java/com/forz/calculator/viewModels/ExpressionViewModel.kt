@@ -1,5 +1,6 @@
 package com.forz.calculator.viewModels
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,6 +13,7 @@ import com.darkempire78.opencalculator.require_real_number
 import com.darkempire78.opencalculator.syntax_error
 import com.forz.calculator.InsertInExpression
 import com.forz.calculator.NumberFormatter
+import com.forz.calculator.R
 import com.forz.calculator.viewModels.CalculatorViewModel.isDegreeModActivated
 import com.forz.calculator.settings.SettingsState.decimalSeparatorSymbol
 import com.forz.calculator.settings.SettingsState.groupingSeparatorSymbol
@@ -82,8 +84,8 @@ object ExpressionViewModel : ViewModel() {
     fun updateSaveExpression(expression: String){
         this.saveExpression = expression
     }
-    fun updateResult(expression: String){
-        _result.value = result(expression)
+    fun updateResult(expression: String, context: Context){
+        _result.value = result(expression, context)
     }
 
     fun updateCursorPosition(start: Int, end: Int){
@@ -170,7 +172,7 @@ object ExpressionViewModel : ViewModel() {
         _expression.value = newText
     }
 
-    private fun result(inputString: String): String{
+    private fun result(inputString: String, context: Context): String{
         division_by_0 = false
         domain_error = false
         syntax_error = false
@@ -183,7 +185,13 @@ object ExpressionViewModel : ViewModel() {
         return if (!(division_by_0 || domain_error || syntax_error || is_infinity || require_real_number) && calculationTmp.toDoubleOrNull() == null) {
             val result = NumberFormatter.formatResult(calculationResult.toString(), numberPrecision, groupingSeparatorSymbol, decimalSeparatorSymbol)
             result
-        }else{
+        } else if (is_infinity){
+            context.getString(R.string.expression_infinity)
+        } else if (syntax_error){
+            ""
+        } else if (division_by_0 || require_real_number){
+            context.getString(R.string.expression_error)
+        } else{
             ""
         }
     }

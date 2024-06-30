@@ -37,6 +37,9 @@
     <string name="deg" translatable="false">DEG</string>
     <string name="rad" translatable="false">RAD</string>
 
+    <string name="expression_error">Error</string>
+    <string name="expression_infinity">Value is too high</string>
+
 
     <!--Settings-->
     <string name="theme_selection_text">Theme</string>
