@@ -65,6 +65,6 @@ Support this app with a [PayPal](https://www.paypal.com/donate/?hosted_button_id
 [![translation status](https://hosted.weblate.org/widget/calculator-you/multi-auto.svg)](https://hosted.weblate.org/engage/calculator-you/)
 
 
-### Made not with love :heart:, but by love :heart:
+#### *Made not with love :heart:, but by love :heart:*
 
 </div>
