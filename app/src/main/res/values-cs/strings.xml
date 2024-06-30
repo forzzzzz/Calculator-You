@@ -84,4 +84,6 @@
     <string name="month_11_date">Listopad</string>
     <string name="today_date">Dnes</string>
     <string name="month_12_date">Prosinec</string>
+    <string name="expression_error">Chyba</string>
+    <string name="expression_infinity">Hodnota je příliš vysoká</string>
 </resources>
