@@ -84,4 +84,6 @@
     <string name="month_7_date">七月</string>
     <string name="month_12_date">十二月</string>
     <string name="today_date">今天</string>
+    <string name="expression_error">错误</string>
+    <string name="expression_infinity">价值太高</string>
 </resources>
