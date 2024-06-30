@@ -29,7 +29,6 @@ object ExpressionViewModel : ViewModel() {
 
     private val _expressionCursorPositionEnd = MutableLiveData<Int>()
     val expressionCursorPositionEnd: LiveData<Int> get() = _expressionCursorPositionEnd
-    var symbolAfterCursorIsGroupingSeparatorSymbol: Boolean by notNull()
 
     private val _isSelection = MutableLiveData<Boolean>()
     val isSelection: LiveData<Boolean> get() = _isSelection
@@ -50,7 +49,6 @@ object ExpressionViewModel : ViewModel() {
         _expression.value = ""
         _expressionCursorPositionStart.value = 0
         _expressionCursorPositionEnd.value = 0
-        symbolAfterCursorIsGroupingSeparatorSymbol = false
         _isSelection.value = false
         previousIsSelection = false
         numberOfCharactersOfInsertedText = 0
