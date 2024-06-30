@@ -276,4 +276,5 @@
     <string name="digit_8_button" translatable="false"></string>
     <string name="unit_pound"></string>
     <string name="unit_gram"></string>
+    <string name="description_swipes2"></string>
 </resources>
