@@ -150,6 +150,7 @@
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:id="@+id/dynamicColorsSwitch"
                     style="@style/optionSwitch"
+                    android:contentDescription="@string/title_dynamic_colors"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -273,6 +274,7 @@
                     android:id="@+id/precisionSeekBar"
                     style="@style/optionSeekBar"
                     android:max="16"
+                    android:contentDescription="@string/title_precision"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/precisionImage"
@@ -495,6 +497,7 @@
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:id="@+id/vibrationSwitch"
                     style="@style/optionSwitch"
+                    android:contentDescription="@string/title_vibrations"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -535,6 +538,7 @@
                 <com.google.android.material.materialswitch.MaterialSwitch
                     android:id="@+id/soundEffectsSwitch"
                     style="@style/optionSwitch"
+                    android:contentDescription="@string/title_sound_effects"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

@@ -64,6 +64,7 @@ class LicenseAdapter(
                 (background.layoutParams as ViewGroup.MarginLayoutParams).topMargin = topMargin
             }
 
+            background.contentDescription = license.name
             name.text = license.name
             author.text = license.author
             description.text = license.description

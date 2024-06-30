@@ -159,6 +159,8 @@ class ColorAdapter(
             } else {
                 binding.selected.visibility = View.GONE
             }
+
+            binding.background.contentDescription = color.name
         }
     }
 
