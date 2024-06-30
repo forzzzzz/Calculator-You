@@ -84,4 +84,6 @@
     <string name="month_4_date">April</string>
     <string name="arrow_back_tool_tip">Zurück</string>
     <string name="help_selection_text">Hilfe</string>
+    <string name="expression_error">Fehler</string>
+    <string name="expression_infinity">Wert ist zu hoch</string>
 </resources>
