@@ -84,4 +84,6 @@
     <string name="yesterday_date">Dün</string>
     <string name="arrow_back_tool_tip">Geri</string>
     <string name="days_ago_7_date">7 gün önce</string>
+    <string name="expression_error">Hata</string>
+    <string name="expression_infinity">Değer çok yüksek</string>
 </resources>
