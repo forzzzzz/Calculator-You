@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.darkempire78.opencalculator.division_by_0
+import com.darkempire78.opencalculator.domain_error
 import com.darkempire78.opencalculator.is_infinity
 import com.darkempire78.opencalculator.require_real_number
 import com.forz.calculator.Anim
@@ -148,7 +149,7 @@ class XLargeLandCalculatorFragment : Fragment() {
         binding.equalsButton.setOnClickListener {
             val expression: String
 
-            if (result.value!!.isNotEmpty() && !is_infinity && !division_by_0 && !require_real_number){
+            if (result.value!!.isNotEmpty() && !is_infinity && !division_by_0 && !require_real_number && !domain_error){
                 if (ExpressionViewModel.isSelection.value!!){
                     expression = ExpressionViewModel.expression.value!!.substring(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expressionCursorPositionEnd.value!!)
                     ExpressionViewModel.updateSaveExpression(expression)

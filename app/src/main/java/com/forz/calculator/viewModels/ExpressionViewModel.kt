@@ -189,7 +189,7 @@ object ExpressionViewModel : ViewModel() {
             context.getString(R.string.expression_infinity)
         } else if (syntax_error){
             ""
-        } else if (division_by_0 || require_real_number){
+        } else if (division_by_0 || require_real_number || domain_error){
             context.getString(R.string.expression_error)
         } else{
             ""
