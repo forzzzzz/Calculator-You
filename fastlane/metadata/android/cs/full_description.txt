@@ -1,0 +1,17 @@
+Krásný design:
+
+Kalkulačka má krásný a příjemný design, který byl vyvíjen dlouhou dobu. Aplikace využívá Material 3 a dynamické barvy na základě vašeho tapety. Kromě světlých a tmavých témat nabízí aplikace také více než 60 barevných témat, které vyhovují vašemu vkusu. Udělejte si tuto kalkulačku jedinečně svou!
+
+Vědecké funkce:
+
+Kromě jednoduchých základních operací jsou zde i další funkce. Například cos, sin, tan, log, atd.
+
+Historie:
+
+Kalkulačka má schopnost uložit vaše výpočty. Pak s nimi můžete pracovat: znovu odeslat k výpočtu, pohodlně kopírovat, sdílet a mazat.
+
+Pohodlí:
+
+Aplikace je navržena tak, aby všechny operace a akce bylo možné provádět pouze jednou rukou. Historie, kalkulačka, vědecké funkce - vše pod jedním prstem. Rychlé a pohodlné!
+
+Toto je moje první aplikace pro Android. Ne vytvořená s láskou❤️, ale z lásky❤️.

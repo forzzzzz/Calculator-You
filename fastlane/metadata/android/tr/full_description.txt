@@ -1,0 +1,17 @@
+Güzel tasarım:
+
+Hesap makinesi, uzun süredir geliştirilen güzel ve hoş bir tasarıma sahiptir. Uygulama Material 3 ve duvar kağıdınıza göre belirlenen değişken renkler kullanır. Açık ve koyu temalara ek olarak, uygulama ayrıca zevkinize uygun 60\'tan fazla renkli tema sunar. Bu hesap makinesini benzersiz bir şekilde kendinize ait hale getirin!
+
+Bilimsel işlevler:
+
+Basit temel işlemlere ek olarak, başka işlevler de vardır. Örneğin, cos, sin, tan, log vb.
+
+Geçmiş:
+
+Hesap makinesi hesaplamalarınızı kaydetme özelliğine sahiptir. Daha sonra bunlarla çalışabilirsiniz: hesaplama için yeniden gönderin, rahatça kopyalayın, paylaşın ve silin.
+
+Kolaylık:
+
+Uygulama, tüm işlemlerin ve eylemlerin tek elle gerçekleştirilebileceği şekilde tasarlanmıştır. Geçmiş, hesap makinesi, bilimsel işlevler - hepsi tek parmağınızın altında. Hızlı ve kullanışlı!
+
+Bu benim Android için ilk uygulamam. Aşk❤️ ile değil, aşk❤️ tarafından yapıldı.

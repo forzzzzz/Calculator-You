@@ -1,0 +1,17 @@
+Schönes Design:
+
+Der Taschenrechner hat ein wunderschönes und angenehmes Design, das über einen langen Zeitraum hinweg entwickelt wurde. Die App verwendet Material 3 und dynamische Farben, die auf Ihrem Hintergrundbild basieren. Zusätzlich zu den hellen und dunklen Themen bietet die App auch über 60 farbenfrohe Themen, die Ihrem Geschmack entsprechen. Machen Sie diesen Taschenrechner zu Ihrem ganz persönlichen!
+
+Wissenschaftliche Funktionen:
+
+Neben den einfachen Grundoperationen gibt es auch andere Funktionen. Zum Beispiel cos, sin, tan, log, usw.
+
+Verlauf:
+
+Der Taschenrechner hat die Fähigkeit, Ihre Berechnungen zu speichern. Sie können dann mit ihnen arbeiten: Zurück zum Berechnen senden, bequem kopieren, teilen und löschen.
+
+Bequemlichkeit:
+
+Die App ist so gestaltet, dass alle Operationen und Aktionen mit nur einer Hand ausgeführt werden können. Verlauf, Taschenrechner, wissenschaftliche Funktionen - alles unter einem Finger. Schnell und bequem!
+
+Dies ist meine erste App für Android. Nicht mit Liebe❤️ gemacht, sondern aus Liebe❤️.

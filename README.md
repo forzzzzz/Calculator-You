@@ -1,7 +1,7 @@
 <div align="center">
 
 
-<img src="metadata/playStore/image/feature-graphic-v1.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
+<img src="fastlane/metadata/android/en-US/images/featureGraphicV2.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
 
 # Calculator You
 
@@ -37,12 +37,12 @@ The calculator has the ability to save your calculations. You can then work with
 The app is designed so that all operations and actions can be performed with just one hand. History, calculator, scientific functions - all under one finger. Fast and convenient!
 
 
-<img alt="Screenshot" src="metadata/playStore/screenshots/phone/phone-1.png" width="30%"/>
-<img alt="Screenshot" src="metadata/playStore/screenshots/phone/phone-2.png" width="30%"/>
-<img alt="Screenshot" src="metadata/playStore/screenshots/phone/phone-3.png" width="30%"/>
-<img alt="Screenshot" src="metadata/playStore/screenshots/phone/phone-4.png" width="30%"/>
-<img alt="Screenshot" src="metadata/playStore/screenshots/phone/phone-5.png" width="30%"/>
-<img alt="Screenshot" src="metadata/playStore/screenshots/phone/phone-6.png" width="30%"/>
+<img alt="Screenshot" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="30%"/>
+<img alt="Screenshot" src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="30%"/>
+<img alt="Screenshot" src="fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="30%"/>
+<img alt="Screenshot" src="fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" width="30%"/>
+<img alt="Screenshot" src="fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" width="30%"/>
+<img alt="Screenshot" src="fastlane/metadata/android/en-US/images/phoneScreenshots/6.png" width="30%"/>
 
 
 ## Support

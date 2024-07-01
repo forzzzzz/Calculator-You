@@ -1,0 +1,17 @@
+Hermoso diseño:
+
+La calculadora tiene un diseño hermoso y agradable que se ha desarrollado durante mucho tiempo. La aplicación utiliza Material 3 y colores dinámicos basados en tu fondo de pantalla. Además de temas claros y oscuros, la aplicación también ofrece más de 60 temas coloridos para adaptarse a tu gusto. ¡Haga de esta calculadora exclusivamente suya!
+
+Funciones científicas:
+
+Además de simples operadores básicos, también hay otras funciones. Por ejemplo, cos, pecado, bronceado, tronco, etc.
+
+Historia:
+
+La calculadora tiene la capacidad de guardar sus cálculos. A continuación, puede trabajar con ellos: volver a enviar para el cálculo, copiar, compartir y eliminar convenientemente.
+
+Conveniencia:
+
+La aplicación está diseñada para que todas las operaciones y acciones se puedan realizar con una sola mano. Historia, calculadora, funciones científicas... todo bajo un solo dedo. ¡Rápido y conveniente!
+
+Esta es mi primera aplicación para Android. Hecha sin amor❤️, pero por amor❤️.
