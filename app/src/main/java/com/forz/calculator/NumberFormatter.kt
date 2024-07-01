@@ -34,11 +34,6 @@ object NumberFormatter {
 
 
     private fun separateNumbers(inputString: String): String {
-
-        if (inputString.contains('E')){
-            return inputString
-        }
-
         var text = removeSeparators(inputString, ",")
         val regex = Regex(pattern = "(?<!\\.)\\b[0-9]+\\b", options = setOf(RegexOption.IGNORE_CASE))
         val matches = regex.findAll(text)
