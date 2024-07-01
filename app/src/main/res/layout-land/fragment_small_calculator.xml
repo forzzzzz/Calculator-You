@@ -82,7 +82,7 @@
         android:layout_marginBottom="0dp"
         android:layout_marginEnd="0dp"
         android:background="@drawable/science_mod_image_button_background"
-        android:padding="8dp"
+        android:padding="4dp"
         android:scaleType="fitCenter"
         android:src="@drawable/baseline_science"
         android:tint="?attr/colorOnSurface"

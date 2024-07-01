@@ -49,6 +49,7 @@
         android:background="@drawable/degree_button_background"
         android:visibility="gone"
         android:paddingHorizontal="12dp"
+        android:paddingVertical="9dp"
         app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
         app:layout_constraintStart_toEndOf="@id/historyGuideline"
         app:layout_constraintTop_toTopOf="parent" />

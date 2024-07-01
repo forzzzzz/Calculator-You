@@ -43,11 +43,12 @@
     <TextView
         android:id="@+id/degreeTitleText"
         style="@style/titleText"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:layout_marginStart="0dp"
         android:text="@string/deg"
         android:background="@drawable/degree_button_background"
         android:paddingHorizontal="12dp"
+        android:paddingVertical="9dp"
         android:rotation="90"
         app:layout_constraintStart_toEndOf="@id/actionBarGuideline"
         app:layout_constraintEnd_toEndOf="@id/background"

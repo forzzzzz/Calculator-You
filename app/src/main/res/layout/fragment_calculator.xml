@@ -25,10 +25,10 @@
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/scienceModButton"
         style="@style/ExtraButton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="@dimen/_12sdp"
-        android:padding="8dp"
+        android:padding="10dp"
         android:background="@drawable/science_mod_image_button_background"
         android:scaleType="fitCenter"
         android:src="@drawable/baseline_science"
@@ -93,7 +93,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12" />
+        app:layout_constraintGuide_percent="0.125" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/paddingBottomGuideline"
