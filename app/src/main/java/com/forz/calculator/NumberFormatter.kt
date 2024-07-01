@@ -61,7 +61,7 @@ object NumberFormatter {
         if (inputDecimal.toDouble() != 0.0){
             var newResult = inputDecimal.setScale(numberPrecision, RoundingMode.HALF_EVEN)
 
-            if (newResult >= BigDecimal(999999999999999) || newResult <= BigDecimal(0.1)) {
+            if (newResult >= BigDecimal(999999999999999)) {
                 val scientificString = String.format(Locale.US, "%.15g", inputDecimal)
                 newResult = BigDecimal(scientificString)
             }
