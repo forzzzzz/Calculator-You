@@ -75,8 +75,8 @@
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/scienceModButton"
         style="@style/Button.ExtraButton"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"

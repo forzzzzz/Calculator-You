@@ -84,7 +84,7 @@
 
         <item name="android:textSize">98sp</item>
         <item name="android:autoSizeMaxTextSize">98sp</item>
-        <item name="android:autoSizeMinTextSize">52sp</item>
+        <item name="android:autoSizeMinTextSize">50sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
     </style>
