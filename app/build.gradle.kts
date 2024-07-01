@@ -57,11 +57,11 @@ dependencies {
 //    androidTestImplementation("androidx.test.ext:junit:1.1.5")
 //    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.intuit.sdp:sdp-android:1.1.0")
-    implementation("com.intuit.ssp:ssp-android:1.1.0")
+//    implementation("com.intuit.ssp:ssp-android:1.1.0")
     implementation ("com.mikhaellopez:circleview:1.4.1")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
-    implementation("androidx.activity:activity-ktx:1.9.0")
+//    implementation("androidx.activity:activity-ktx:1.9.0")
 
 //    debugImplementation ("com.squareup.leakcanary:leakcanary-android:3.0-alpha-1")
 }

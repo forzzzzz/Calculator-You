@@ -25,10 +25,8 @@ class LicenseAdapter(
          License(id = 5, name = "ViewPager2", author = "The Android Open Source Project", description = "Display Views or Fragments in a swipeable format.", license = "Apache-2.0", url = "https://developer.android.com/jetpack/androidx/releases/viewpager2"),
          License(id = 6, name = "Lifecycle", author = "The Android Open Source Project", description = "Lifecycle-aware components perform actions in response to a change in the lifecycle status of another component, such as activities and fragments. These components help you produce better-organized, and often lighter-weight code, that is easier to maintain.", license = "Apache-2.0", url = "https://developer.android.com/jetpack/androidx/releases/lifecycle"),
          License(id = 7, name = "Scalable Size Unit", author = "Intuit", description = "An Android lib that provides a new size unit - sdp (scalable dp). This size unit scales with the screen size.", license = "MIT license", url = "https://github.com/intuit/sdp"),
-         License(id = 8, name = "Scalable Size Unit for texts", author = "Intuit", description = "Variant of sdp project based on the sp size unit.", license = "MIT license", url = "https://github.com/intuit/ssp"),
-         License(id = 9, name = "CircleView", author = "Lopez Mikhael", description = "Create circular view in android (change color, border & shadow).", license = "Apache-2.0", url = "https://github.com/lopspower/CircleView"),
-         License(id = 10, name = "Activity", author = "The Android Open Source Project", description = "Access composable APIs built on top of Activity.", license = "Apache-2.0", url = "https://developer.android.com/jetpack/androidx/releases/activity"),
-         License(id = 11, name = "Math Expressions Parser", author = "Darkempire", description = "Classes that format and calculate a mathematical expression.", license = "GPL-3.0", url = "https://github.com/Darkempire78/OpenCalc")
+         License(id = 8, name = "CircleView", author = "Lopez Mikhael", description = "Create circular view in android (change color, border & shadow).", license = "Apache-2.0", url = "https://github.com/lopspower/CircleView"),
+         License(id = 9, name = "Math Expressions Parser", author = "Darkempire", description = "Classes that format and calculate a mathematical expression.", license = "GPL-3.0", url = "https://github.com/Darkempire78/OpenCalc")
     )
 
 
