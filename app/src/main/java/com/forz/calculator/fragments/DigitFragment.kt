@@ -38,7 +38,6 @@ class DigitFragment : Fragment() {
         )
 
         hapticAndSound = HapticAndSound(requireContext(), views)
-        binding.dotButton.text = decimalSeparatorSymbol
 
         binding.digit0Button.setOnClickListener {
             ExpressionViewModel.enterDigit("0")
@@ -101,6 +100,8 @@ class DigitFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
+
+        binding.dotButton.text = decimalSeparatorSymbol
 
         hapticAndSound.setHapticFeedback()
         hapticAndSound.setSoundEffects()
