@@ -17,6 +17,8 @@ import com.forz.calculator.fragments.land.MainLandFragment
 import com.forz.calculator.fragments.small.SmallFragment
 import com.forz.calculator.fragments.smallLand.SmallLandFragment
 import com.forz.calculator.fragments.xLargeLand.XLargeLandFragment
+import com.forz.calculator.settings.SettingsState
+import com.forz.calculator.viewModels.CalculatorViewModel
 import kotlin.properties.Delegates.notNull
 
 
@@ -35,6 +37,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         preferences = Preferences(this)
 
+
+        SettingsState.init(
+            preferences.getTheme(),
+            preferences.getColor(),
+            preferences.getDynamicColor(),
+            preferences.getGroupingSeparatorSymbol(),
+            preferences.getDecimalSeparatorSymbol(),
+            preferences.getNumberPrecision(),
+            preferences.getSwipeHistoryAndCalculator(),
+            preferences.getSwipeDigitsAndScientificFunctions(),
+            preferences.getVibration(),
+            preferences.getSoundEffects()
+        )
+        CalculatorViewModel.init(preferences.getDegreeMod())
 
 
         if (!preferences.getDynamicColor()){
@@ -119,6 +135,12 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.main, fragment)
                 .commit()
         }
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        preferences.setDegreeMod(CalculatorViewModel.isDegreeModActivated.value!!)
     }
 
     override fun onDestroy() {

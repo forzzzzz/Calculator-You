@@ -20,7 +20,6 @@ import com.forz.calculator.InsertInExpression
 import com.forz.calculator.InsertInExpression.triggersIsDegreeModActivatedShowArray
 import com.forz.calculator.MainActivity
 import com.forz.calculator.NumberFormatter
-import com.forz.calculator.Preferences
 import com.forz.calculator.R
 import com.forz.calculator.databinding.FragmentXLargeLandBinding
 import com.forz.calculator.history.HistoryService
@@ -34,7 +33,6 @@ import kotlin.properties.Delegates
 class XLargeLandFragment : Fragment() {
 
     private var binding: FragmentXLargeLandBinding by Delegates.notNull()
-    private var preferences: Preferences by Delegates.notNull()
     private var hapticAndSound: HapticAndSound by Delegates.notNull()
 
     private val historyService: HistoryService
@@ -46,7 +44,6 @@ class XLargeLandFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentXLargeLandBinding.inflate(inflater, container, false)
-        preferences = Preferences(requireContext())
 
         val views: Array<View> = arrayOf(
             binding.degreeTitleText
@@ -175,28 +172,8 @@ class XLargeLandFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        SettingsState.init(
-            preferences.getTheme(),
-            preferences.getColor(),
-            preferences.getDynamicColor(),
-            preferences.getGroupingSeparatorSymbol(),
-            preferences.getDecimalSeparatorSymbol(),
-            preferences.getNumberPrecision(),
-            preferences.getSwipeHistoryAndCalculator(),
-            preferences.getSwipeDigitsAndScientificFunctions(),
-            preferences.getVibration(),
-            preferences.getSoundEffects()
-        )
-        CalculatorViewModel.init(preferences.getDegreeMod())
-
         hapticAndSound.setHapticFeedback()
         hapticAndSound.setSoundEffects()
-    }
-
-    override fun onStop() {
-        super.onStop()
-
-        preferences.setDegreeMod(CalculatorViewModel.isDegreeModActivated.value!!)
     }
 
 

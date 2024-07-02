@@ -23,6 +23,8 @@ class DigitFragment : Fragment() {
     ): View {
         binding = FragmentDigitBinding.inflate(inflater, container, false)
 
+        binding.dotButton.text = decimalSeparatorSymbol
+
         val views: Array<View> = arrayOf(
             binding.digit0Button,
             binding.digit1Button,
@@ -100,8 +102,6 @@ class DigitFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-
-        binding.dotButton.text = decimalSeparatorSymbol
 
         hapticAndSound.setHapticFeedback()
         hapticAndSound.setSoundEffects()

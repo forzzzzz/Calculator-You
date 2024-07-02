@@ -13,7 +13,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.forz.calculator.InsertInExpression
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.OnBackPressedListener
-import com.forz.calculator.Preferences
 import com.forz.calculator.StateViews
 import com.forz.calculator.databinding.FragmentSmallLandBinding
 import com.forz.calculator.fragments.HistoryFragment
@@ -28,14 +27,12 @@ class SmallLandFragment : Fragment(), OnBackPressedListener {
 
 
     private var binding: FragmentSmallLandBinding by Delegates.notNull()
-    private var preferences: Preferences by Delegates.notNull()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentSmallLandBinding.inflate(inflater, container, false)
-        preferences = Preferences(requireContext())
 
         binding.expressionEditText.showSoftInputOnFocus = false
 
@@ -116,27 +113,7 @@ class SmallLandFragment : Fragment(), OnBackPressedListener {
     override fun onStart() {
         super.onStart()
 
-        SettingsState.init(
-            preferences.getTheme(),
-            preferences.getColor(),
-            preferences.getDynamicColor(),
-            preferences.getGroupingSeparatorSymbol(),
-            preferences.getDecimalSeparatorSymbol(),
-            preferences.getNumberPrecision(),
-            preferences.getSwipeHistoryAndCalculator(),
-            preferences.getSwipeDigitsAndScientificFunctions(),
-            preferences.getVibration(),
-            preferences.getSoundEffects()
-        )
-        CalculatorViewModel.init(preferences.getDegreeMod())
-
         binding.pager.isUserInputEnabled = SettingsState.swipeHistoryAndCalculator
-    }
-
-    override fun onStop() {
-        super.onStop()
-
-        preferences.setDegreeMod(CalculatorViewModel.isDegreeModActivated.value!!)
     }
 
 

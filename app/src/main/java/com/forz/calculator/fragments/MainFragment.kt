@@ -25,7 +25,6 @@ import com.forz.calculator.InsertInExpression.triggersIsDegreeModActivatedShowAr
 import com.forz.calculator.MainActivity
 import com.forz.calculator.NumberFormatter
 import com.forz.calculator.OnBackPressedListener
-import com.forz.calculator.Preferences
 import com.forz.calculator.R
 import com.forz.calculator.StateViews
 import com.forz.calculator.StateViews.pagerIsRecreated
@@ -43,7 +42,6 @@ import kotlin.properties.Delegates
 class MainFragment : Fragment(), OnBackPressedListener {
 
     private var binding: FragmentDefaultBinding by Delegates.notNull()
-    private var preferences: Preferences by Delegates.notNull()
     private var hapticAndSound: HapticAndSound by Delegates.notNull()
 
     private val historyService: HistoryService
@@ -55,7 +53,6 @@ class MainFragment : Fragment(), OnBackPressedListener {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentDefaultBinding.inflate(inflater, container, false)
-        preferences = Preferences(requireContext())
 
         val views: Array<View> = arrayOf(
             binding.degreeTitleText
@@ -287,29 +284,9 @@ class MainFragment : Fragment(), OnBackPressedListener {
     override fun onStart() {
         super.onStart()
 
-        SettingsState.init(
-            preferences.getTheme(),
-            preferences.getColor(),
-            preferences.getDynamicColor(),
-            preferences.getGroupingSeparatorSymbol(),
-            preferences.getDecimalSeparatorSymbol(),
-            preferences.getNumberPrecision(),
-            preferences.getSwipeHistoryAndCalculator(),
-            preferences.getSwipeDigitsAndScientificFunctions(),
-            preferences.getVibration(),
-            preferences.getSoundEffects()
-        )
-        CalculatorViewModel.init(preferences.getDegreeMod())
-
         hapticAndSound.setHapticFeedback()
         hapticAndSound.setSoundEffects()
         binding.pager.isUserInputEnabled = SettingsState.swipeHistoryAndCalculator
-    }
-
-    override fun onStop() {
-        super.onStop()
-
-        preferences.setDegreeMod(CalculatorViewModel.isDegreeModActivated.value!!)
     }
 
 
