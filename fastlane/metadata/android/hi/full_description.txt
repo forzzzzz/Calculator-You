@@ -14,4 +14,4 @@ Convenience:
 
 The app is designed so that all operations and actions can be performed with just one hand. History, calculator, scientific functions - all under one finger. Fast and convenient!
 
-This is my first app for Android. Made not with love❤️, but by love❤️।
+This is my first app for Android. Made not with love❤️, but by love❤️.
