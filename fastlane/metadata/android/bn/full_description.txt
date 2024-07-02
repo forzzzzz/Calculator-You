@@ -4,14 +4,14 @@ The calculator has a beautiful and pleasant design that has been developed for a
 
 Scientific functions:
 
-In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc.
+In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc।
 
 History:
 
-The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete.
+The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete।
 
 Convenience:
 
 The app is designed so that all operations and actions can be performed with just one hand. History, calculator, scientific functions - all under one finger. Fast and convenient!
 
-This is my first app for Android. Made not with love❤️, but by love❤️.
+This is my first app for Android. Made not with love❤️, but by love❤️।
