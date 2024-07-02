@@ -4,11 +4,11 @@ The calculator has a beautiful and pleasant design that has been developed for a
 
 Scientific functions:
 
-In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc।
+In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc.
 
 History:
 
-The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete।
+The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete.
 
 Convenience:
 
