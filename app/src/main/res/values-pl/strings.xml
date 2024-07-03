@@ -276,4 +276,5 @@
     <string name="digit_7_button" translatable="false"></string>
     <string name="unit_square_meter"></string>
     <string name="digit_9_button" translatable="false"></string>
+    <string name="description_swipes2"></string>
 </resources>
