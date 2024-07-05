@@ -1,17 +1,17 @@
-Beautiful design:
+Conception magnfique :
 
 The calculator has a beautiful and pleasant design that has been developed for a long time. The app utilizes Material 3 and dynamic colors based on your wallpaper. In addition to light and dark themes, the app also offers over 60 colorful themes to suit your taste. Make this calculator uniquely yours!
 
-Scientific functions:
+Fonctions scientifiques :
 
-In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc.
+En plus des opérateurs basiques, il y a d'autres fonctions. Par exemple, cos, sin, tan, log, etc.
 
-History:
+Historique :
 
-The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete.
+La calculatrice a la capacité de sauvegarder vos calculs. Vous pouvez alors travailler avec eux : recalculer, copier, partager et supprimer.
 
-Convenience:
+Praticité :
 
-The app is designed so that all operations and actions can be performed with just one hand. History, calculator, scientific functions - all under one finger. Fast and convenient!
+L'application est conçue pour que toutes les opérations et les actions puissent être réalisées avec une seule main. Historique, calculatrice, fonctions scientifiques - tout à portée de main. Rapide et pratique !
 
-This is my first app for Android. Made not with love❤️, but by love❤️.
+Il s'agit de ma première application Android. Non pas fait avec amour, mais par amour.
