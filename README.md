@@ -18,6 +18,7 @@
       <img alt="Releases" src="https://img.shields.io/badge/Android-8.1+-blue?color=8E4A4B&style=for-the-badge">
 </a>
 
+## Download
 
 <a href="https://github.com/forzzzzz/Calculator-You/releases/latest">
       <img alt="Get it on GitHub" src="https://raw.githubusercontent.com/deckerst/common/main/assets/get-it-on-github.png" height="80">
