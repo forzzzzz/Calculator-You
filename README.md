@@ -1,7 +1,7 @@
 <div align="center">
 
 
-<img src="fastlane/metadata/android/en-US/images/featureGraphicV2.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
+<img src="fastlane/metadata/android/en-US/images/featureGraphic.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
 
 # Calculator You
 
