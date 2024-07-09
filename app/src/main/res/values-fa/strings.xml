@@ -243,4 +243,5 @@
     <string name="physical_quantity_temperature"></string>
     <string name="unit_pebibyte"></string>
     <string name="physical_quantity_light"></string>
+    <string name="description_swipes2"></string>
 </resources>
