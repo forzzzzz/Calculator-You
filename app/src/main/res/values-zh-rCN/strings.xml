@@ -10,14 +10,14 @@
     <string name="title_sound_effects">声音</string>
     <string name="title_dynamic_colors">动态色彩</string>
     <string name="title_precision">精确度</string>
-    <string name="title_separator">分隔符</string>
+    <string name="title_separator">千位分隔符</string>
     <string name="title_decimal_separator">小数分隔符</string>
     <string name="description_vibrations">点击键盘按钮时的触觉反馈</string>
     <string name="title_swipes">轻扫</string>
     <string name="description_select_theme">浅色或深色的应用程序主题</string>
-    <string name="description_select_color">60 多种颜色可满足您</string>
+    <string name="description_select_color">60 多种色彩可满足您</string>
     <string name="description_separator">千位分隔符</string>
-    <string name="description_swipes2">历史记录与计算器</string>
+    <string name="description_swipes2">在历史记录与计算器中切换</string>
     <string name="title_rate">评价</string>
     <string name="title_donate">捐赠</string>
     <string name="title_telegram">Telegram</string>
@@ -37,7 +37,7 @@
     <string name="swipes_ok">好的</string>
     <string name="options_tool_tip">更多选项</string>
     <string name="arrow_back_tool_tip">返回</string>
-    <string name="empty_history">没有历史记录</string>
+    <string name="empty_history">无历史记录</string>
     <string name="month_3_date">三月</string>
     <string name="month_5_date">五月</string>
     <string name="month_6_date">六月</string>
@@ -57,7 +57,7 @@
     <string name="other_selection_text">其它</string>
     <string name="history_data_menu_share">分享</string>
     <string name="history_data_menu_delete">删除</string>
-    <string name="title_select_color">选择颜色</string>
+    <string name="title_select_color">选择色彩</string>
     <string name="description_sound_effects">点击键盘按钮时的声音效果</string>
     <string name="description_dynamic_colors">来自您的壁纸的动态色彩</string>
     <string name="description_precision">小数位数</string>
@@ -66,8 +66,8 @@
     <string name="theme_element_2">浅色</string>
     <string name="theme_element_3">暗色</string>
     <string name="title_open_source">开放源代码</string>
-    <string name="description_swipes">轻扫屏幕</string>
-    <string name="description_swipes3">数字与科学函数</string>
+    <string name="description_swipes">轻扫屏幕产生的效果</string>
+    <string name="description_swipes3">在数字键盘与科学功能中切换</string>
     <string name="separator_element_1">逗号</string>
     <string name="title_licenses">许可证</string>
     <string name="separator_element_2">点</string>
@@ -85,5 +85,5 @@
     <string name="month_12_date">十二月</string>
     <string name="today_date">今天</string>
     <string name="expression_error">错误</string>
-    <string name="expression_infinity">价值太高</string>
+    <string name="expression_infinity">数值过大</string>
 </resources>
