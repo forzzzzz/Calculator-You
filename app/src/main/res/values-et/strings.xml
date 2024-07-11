@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="expression_infinity">Väärtus on liiga suur</string>
+    <string name="theme_selection_text">Kujundus</string>
+    <string name="other_selection_text">Muud eelistused</string>
+    <string name="history_options_menu">Tühjenda ajalugu</string>
+    <string name="history_data_menu_share">Jaga</string>
+    <string name="history_data_menu_delete">Kustuta</string>
+    <string name="title_settings">Seadistused</string>
+    <string name="title_about">Rakenduse teave</string>
+    <string name="title_select_theme">Vali teema</string>
+    <string name="expression_error">Viga</string>
+    <string name="formatting_selection_text">Vormindus</string>
+    <string name="history_data_menu_copy">Kopeeri</string>
+    <string name="title_history">Ajalugu</string>
+</resources>
