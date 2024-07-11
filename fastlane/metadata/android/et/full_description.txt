@@ -1,17 +1,17 @@
-Beautiful design:
+Ilus kujundus:
 
-The calculator has a beautiful and pleasant design that has been developed for a long time. The app utilizes Material 3 and dynamic colors based on your wallpaper. In addition to light and dark themes, the app also offers over 60 colorful themes to suit your taste. Make this calculator uniquely yours!
+Sel taskuarvutil on pika aja jooksul arendatud ilus ja meeldiv kujundus. Kasutusel on Material 3 kujunduspõhimõtted ja võimalus laadida värve töölaua taustapildist. Lisaks tavalisele heledale ja tumedale kujundusele on ka üle 60 värvilise teema igale maitsele. Sa saad seda taskuarvutit muuta just selliseks, nagu soovid!
 
-Scientific functions:
+Teadusarvutused:
 
-In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc.
+Lisaks tavalistele tehetele leidub ka palju muid funktsioone ja võimalusi. Näiteks: cos, sin, tan, log jne.
 
-History:
+Ajalugu:
 
-The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete.
+See taskuarvuti salvestab sinu arvutused ning sa võid neid edaspidi kasutada: kasuta järgnevatel arvutustel või kopeeri, jaga ja kustuta mugavalt.
 
-Convenience:
+Käepärasus:
 
-The app is designed so that all operations and actions can be performed with just one hand. History, calculator, scientific functions - all under one finger. Fast and convenient!
+See rakendus on loodud nii, et kõiki toiminguid ja tegevusi saad teha ühe käega. Taskuarvuti, teadusarvutused, ajalugu - kõik ühe sõrme all. Kiire ja käepärane!
 
-This is my first app for Android. Made not with love❤️, but by love❤️.
+See on minu esimene Androidi rakendus. Pole tehtud armastusega❤️, vaid armsama poolt❤️.
