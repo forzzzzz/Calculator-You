@@ -1,6 +1,6 @@
 Conception magnfique :
 
-The calculator has a beautiful and pleasant design that has been developed for a long time. The app utilizes Material 3 and dynamic colors based on your wallpaper. In addition to light and dark themes, the app also offers over 60 colorful themes to suit your taste. Make this calculator uniquely yours!
+La calculatrice a un joli et plaisant design qui a été développé durant longtemps. L'application utilise Material 3 et les couleurs dynamiques basées sur votre fond d'écran. En plus des thèmes clair et sombre, l'application propose également plus de 60 thèmes colorés pour correspondre à votre goût. Faites de cette calculatrice la vôtre !
 
 Fonctions scientifiques :
 
