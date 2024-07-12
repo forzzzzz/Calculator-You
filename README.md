@@ -12,13 +12,13 @@
       <img alt="Latest release" src="https://img.shields.io/github/v/release/forzzzzz/Calculator-You?color=8E4A4B&style=for-the-badge">
 </a>
 <a href="https://github.com/forzzzzz/Calculator-You/releases/latest">
-      <img alt="Releases" src="https://img.shields.io/github/downloads/forzzzzz/Calculator-You/total?color=8E4A4B&label=downloads&style=for-the-badge">
+      <img alt="Releases" src="https://img.shields.io/github/downloads/forzzzzz/Calculator-You/total?color=8E4A4B&label=GitGub downloads&style=for-the-badge">
 </a>
 <a href="https://github.com/forzzzzz/Calculator-You/releases/latest">
       <img alt="Releases" src="https://img.shields.io/badge/Android-8.1+-blue?color=8E4A4B&style=for-the-badge">
 </a>
 
-## Download
+## ⬇️ Download ⬇️
 
 <a href="https://github.com/forzzzzz/Calculator-You/releases/latest">
       <img alt="Get it on GitHub" src="https://raw.githubusercontent.com/deckerst/common/main/assets/get-it-on-github.png" height="80">
@@ -71,9 +71,9 @@ The app is designed so that all operations and actions can be performed with jus
 
 </div>
 
-## Support me
+## :heart: Support Me
 
-### Thank you very much for your help :heart:
+### ***Thank you very much for your help*** :heart:
 
 Write a review about the app on [Google Play](https://play.google.com/store/apps/details?id=com.marktka.calculatorYou)
 
@@ -91,13 +91,13 @@ Support this app with a [PayPal](https://www.paypal.com/donate/?hosted_button_id
 alt="Donate with PayPal"
 height="40">](https://www.paypal.com/donate/?hosted_button_id=GKC26SLPUTQMU)
 
-## Math Expressions Parser
+## 🔢 Math Expressions Parser
 
 ### [Darkempire78 (OpenCalc)](https://github.com/Darkempire78/OpenCalc)
 
 
 
-## Translation status
+## 🌐 Translation status
 [![translation status](https://hosted.weblate.org/widget/calculator-you/multi-auto.svg)](https://hosted.weblate.org/engage/calculator-you/)
 
 
