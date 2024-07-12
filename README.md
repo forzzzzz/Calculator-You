@@ -23,6 +23,9 @@
 <a href="https://github.com/forzzzzz/Calculator-You/releases/latest">
       <img alt="Get it on GitHub" src="https://raw.githubusercontent.com/deckerst/common/main/assets/get-it-on-github.png" height="80">
 </a>
+<a href="https://apt.izzysoft.de/fdroid/index/apk/com.marktka.calculatorYou">
+      <img alt="Get it on IzzyOnDroid" src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="80">
+</a>
 
 ### Coming soon to Play Store and F-Droid
 
