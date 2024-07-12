@@ -1,1 +1,1 @@
-Calculator You is a beautiful calculator for solving simple tasks.
+Calculator You 是一款用於解決簡單任務的漂亮計算器。
