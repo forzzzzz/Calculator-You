@@ -26,12 +26,12 @@
 <a href="https://apt.izzysoft.de/fdroid/index/apk/com.marktka.calculatorYou">
       <img alt="Get it on IzzyOnDroid" src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" height="80">
 </a>
-
-### Coming soon to Play Store and F-Droid
-
 <a href="https://play.google.com/store/apps/details?id=com.marktka.calculatorYou">
       <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="80">
 </a>
+
+### Coming soon to F-Droid
+
 <a href="">
       <img alt="Get it on F-Droid" src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="80">
 </a>
