@@ -28,7 +28,7 @@ import com.forz.calculator.OnBackPressedListener
 import com.forz.calculator.R
 import com.forz.calculator.StateViews
 import com.forz.calculator.StateViews.pagerIsRecreated
-import com.forz.calculator.databinding.FragmentDefaultBinding
+import com.forz.calculator.databinding.FragmentMainBinding
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
 import com.forz.calculator.history.HistoryService
 import com.forz.calculator.settings.SettingsActivity
@@ -41,7 +41,7 @@ import kotlin.properties.Delegates
 @Suppress("DEPRECATION")
 class MainFragment : Fragment(), OnBackPressedListener {
 
-    private var binding: FragmentDefaultBinding by Delegates.notNull()
+    private var binding: FragmentMainBinding by Delegates.notNull()
     private var hapticAndSound: HapticAndSound by Delegates.notNull()
 
     private val historyService: HistoryService
@@ -52,7 +52,7 @@ class MainFragment : Fragment(), OnBackPressedListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentDefaultBinding.inflate(inflater, container, false)
+        binding = FragmentMainBinding.inflate(inflater, container, false)
 
         val views: Array<View> = arrayOf(
             binding.degreeTitleText

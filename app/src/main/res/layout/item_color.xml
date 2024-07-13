@@ -31,7 +31,7 @@
         android:id="@+id/selected"
         android:layout_height="26dp"
         android:layout_width="26dp"
-        android:src="@drawable/done"
+        android:src="@drawable/baseline_done"
         android:tint="@color/done"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/background"

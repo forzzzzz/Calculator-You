@@ -327,18 +327,18 @@ class SettingsActivity : AppCompatActivity() {
             AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM -> {
                 when (this@SettingsActivity.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
                     Configuration.UI_MODE_NIGHT_YES -> {
-                        binding.chooseThemeImage.setImageResource(R.drawable.dark_mode)
+                        binding.chooseThemeImage.setImageResource(R.drawable.baseline_dark_mode)
                     }
                     Configuration.UI_MODE_NIGHT_NO -> {
-                        binding.chooseThemeImage.setImageResource(R.drawable.light_mode)
+                        binding.chooseThemeImage.setImageResource(R.drawable.baseline_light_mode)
                     }
                 }
             }
             AppCompatDelegate.MODE_NIGHT_NO -> {
-                binding.chooseThemeImage.setImageResource(R.drawable.light_mode)
+                binding.chooseThemeImage.setImageResource(R.drawable.baseline_light_mode)
             }
             else -> {
-                binding.chooseThemeImage.setImageResource(R.drawable.dark_mode)
+                binding.chooseThemeImage.setImageResource(R.drawable.baseline_dark_mode)
             }
         }
     }

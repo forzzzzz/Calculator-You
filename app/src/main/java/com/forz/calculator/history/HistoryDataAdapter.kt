@@ -2,6 +2,7 @@ package com.forz.calculator.history
 
 import android.content.Context
 import android.view.ContextMenu
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -203,6 +204,9 @@ class HistoryDataAdapter(
 
     private var lastDate: LocalDate? = null
     override fun onBindViewHolder(holder: HistoryDataViewHolder, position: Int) {
+        val locale = context.resources.configuration.locale
+        val isRTL = TextUtilsCompat.getLayoutDirectionFromLocale(locale) == ViewCompat.LAYOUT_DIRECTION_RTL
+
         val historyData = historyDataList[position]
         with(holder.binding) {
             holder.itemView.tag = historyData
@@ -229,6 +233,11 @@ class HistoryDataAdapter(
 
                 dateText.visibility = View.VISIBLE
                 dateText.text = formatDate(historyData.date)
+            }
+
+            if (isRTL){
+                expressionText.gravity = Gravity.BOTTOM or Gravity.END
+                resultText.gravity = Gravity.BOTTOM or Gravity.END
             }
 
             expressionText.text = historyData.expression
@@ -271,9 +280,6 @@ class HistoryDataAdapter(
                 }
             }
         } else{
-            val locale = context.resources.configuration.locale
-            val isLTR = TextUtilsCompat.getLayoutDirectionFromLocale(locale) == ViewCompat.LAYOUT_DIRECTION_LTR
-
             val day = date.dayOfMonth.toString()
             val month: String
 
@@ -323,11 +329,7 @@ class HistoryDataAdapter(
             }
 
 
-            outputDate = if (isLTR){
-                "$day $month $year"
-            }else{
-                "$year $month $day"
-            }
+            outputDate = "$day $month $year"
         }
 
         return outputDate

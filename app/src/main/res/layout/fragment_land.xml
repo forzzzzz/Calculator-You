@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     android:background="?attr/colorSurface"
     android:importantForAccessibility="noHideDescendants"
     tools:context=".fragments.land.MainLandFragment">
@@ -31,7 +32,7 @@
 
     <View
         android:id="@+id/background"
-        android:background="@drawable/foreground"
+        android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="@dimen/_6sdp"
@@ -50,6 +51,8 @@
         android:paddingHorizontal="12dp"
         android:paddingVertical="9dp"
         android:rotation="90"
+        android:visibility="gone"
+        android:layoutDirection="locale"
         app:layout_constraintStart_toEndOf="@id/actionBarGuideline"
         app:layout_constraintEnd_toEndOf="@id/background"
         app:layout_constraintTop_toBottomOf="@id/optionsMenuButton" />
@@ -58,32 +61,38 @@
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/optionsMenuButton"
         style="@style/OptionsButton"
-        android:src="@drawable/baseline_more_vert"
-        android:tooltipText="@string/options_tool_tip"
-        android:contentDescription="@string/options_tool_tip"
+        android:layoutDirection="locale"
         app:layout_constraintStart_toEndOf="@id/actionBarGuideline"
         app:layout_constraintEnd_toEndOf="@id/background"
         app:layout_constraintTop_toTopOf="@id/background" />
 
 
-    <androidx.constraintlayout.widget.Guideline
+    <View
         android:id="@+id/actionBarGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="64dp" />
+        android:layout_marginEnd="64dp"
+        android:layoutDirection="locale"
+        app:layout_constraintEnd_toEndOf="@id/background"
+        app:layout_constraintTop_toTopOf="@id/background"
+        app:layout_constraintBottom_toBottomOf="@id/background"/>
 
     <TextView
         android:id="@+id/resultText"
         style="@style/Expression.Result"
+        android:layoutDirection="locale"
+        android:textDirection="ltr"
         app:layout_constraintBottom_toBottomOf="@id/background"
-        app:layout_constraintEnd_toStartOf="@id/actionBarGuideline"
+        app:layout_constraintEnd_toEndOf="@id/actionBarGuideline"
         app:layout_constraintStart_toStartOf="@id/background"
         app:layout_constraintTop_toBottomOf="@id/topResultGuideline" />
 
     <com.forz.calculator.customViews.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
+        android:layoutDirection="locale"
+        android:textDirection="ltr"
         app:layout_constraintBottom_toTopOf="@+id/resultText"
         app:layout_constraintEnd_toStartOf="@id/actionBarGuideline"
         app:layout_constraintStart_toStartOf="@id/background"
@@ -94,8 +103,10 @@
         style="@style/Expression"
         android:visibility="invisible"
         android:maxLines="1"
+        android:layoutDirection="locale"
+        android:textDirection="ltr"
         app:layout_constraintBottom_toTopOf="@+id/resultText"
-        app:layout_constraintEnd_toStartOf="@id/actionBarGuideline"
+        app:layout_constraintEnd_toEndOf="@id/actionBarGuideline"
         app:layout_constraintStart_toStartOf="@id/background"
         app:layout_constraintTop_toTopOf="@id/background" />
 

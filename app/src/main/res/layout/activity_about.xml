@@ -63,7 +63,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/star" />
+                    app:srcCompat="@drawable/baseline_star" />
 
                 <TextView
                     android:id="@+id/rateTitleText"
@@ -93,7 +93,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/translate" />
+                    app:srcCompat="@drawable/baseline_translate" />
 
                 <TextView
                     android:id="@+id/translateTitleText"
@@ -159,7 +159,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/telegram" />
+                    app:srcCompat="@drawable/baseline_telegram" />
 
                 <TextView
                     android:id="@+id/telegramTitleText"
@@ -189,7 +189,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/email" />
+                    app:srcCompat="@drawable/baseline_email" />
 
                 <TextView
                     android:id="@+id/emailTitleText"
@@ -225,7 +225,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/coding" />
+                    app:srcCompat="@drawable/baseline_coding" />
 
                 <TextView
                     android:id="@+id/openSourceTitleText"
@@ -255,7 +255,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/license" />
+                    app:srcCompat="@drawable/baseline_license" />
 
                 <TextView
                     android:id="@+id/licensesTitleText"
@@ -285,7 +285,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/privacy" />
+                    app:srcCompat="@drawable/baseline_privacy" />
 
                 <TextView
                     android:id="@+id/privacyPolicyTitleText"
@@ -316,7 +316,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/info" />
+                    app:srcCompat="@drawable/baseline_info" />
 
                 <TextView
                     android:id="@+id/versionTitleText"

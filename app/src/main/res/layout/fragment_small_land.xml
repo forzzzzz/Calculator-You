@@ -10,7 +10,7 @@
 
     <View
         android:id="@+id/background"
-        android:background="@drawable/foreground"
+        android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"

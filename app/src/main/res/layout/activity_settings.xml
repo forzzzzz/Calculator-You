@@ -54,7 +54,7 @@
                     app:layout_constraintBottom_toTopOf="@id/chooseThemeHorizontalScroll"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/light_mode" />
+                    app:srcCompat="@drawable/baseline_light_mode" />
 
                 <TextView
                     android:id="@+id/chooseThemeTitleText"
@@ -128,7 +128,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/colorize" />
+                    app:srcCompat="@drawable/baseline_colorize" />
 
                 <TextView
                     android:id="@+id/dynamicColorsTitleText"
@@ -168,7 +168,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/chooseColorRecyclerView"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/palette" />
+                    app:srcCompat="@drawable/baseline_palette" />
 
                 <TextView
                     android:id="@+id/chooseColorTitleText"
@@ -245,7 +245,7 @@
                     app:layout_constraintBottom_toBottomOf="@id/precisionText"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/architecture" />
+                    app:srcCompat="@drawable/baseline_architecture" />
 
                 <TextView
                     android:id="@+id/precisionTitleText"
@@ -371,7 +371,7 @@
                     app:layout_constraintBottom_toTopOf="@id/decimalSeparatorSymbolHorizontalScroll"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/decimalminor" />
+                    app:srcCompat="@drawable/baseline_decimalminor" />
 
                 <TextView
                     android:id="@+id/decimalSeparatorSymbolTitleText"
@@ -475,7 +475,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/vibration" />
+                    app:srcCompat="@drawable/baseline_vibration" />
 
                 <TextView
                     android:id="@+id/vibrationTitleText"
@@ -516,7 +516,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/volume" />
+                    app:srcCompat="@drawable/baseline_volume" />
 
                 <TextView
                     android:id="@+id/soundEffectsTitleText"

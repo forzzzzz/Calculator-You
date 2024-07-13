@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
+    android:layoutDirection="ltr"
     android:importantForAccessibility="noHideDescendants"
     tools:context=".fragments.xLargeLand.XLargeLandFragment">
 
@@ -31,7 +32,7 @@
 
     <View
         android:id="@+id/background"
-        android:background="@drawable/foreground"
+        android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="@dimen/_12sdp"
@@ -49,6 +50,7 @@
         android:background="@drawable/degree_button_background"
         android:visibility="gone"
         android:paddingHorizontal="12dp"
+        android:layoutDirection="locale"
         app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
         app:layout_constraintStart_toEndOf="@id/historyGuideline"
         app:layout_constraintTop_toTopOf="parent" />
@@ -56,9 +58,7 @@
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/optionsMenuButton"
         style="@style/OptionsButton"
-        android:src="@drawable/baseline_more_vert"
-        android:tooltipText="@string/options_tool_tip"
-        android:contentDescription="@string/options_tool_tip"
+        android:layoutDirection="locale"
         app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
         app:layout_constraintEnd_toEndOf="@id/background"
         app:layout_constraintTop_toTopOf="parent" />

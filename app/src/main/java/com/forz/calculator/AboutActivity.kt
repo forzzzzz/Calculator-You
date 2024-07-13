@@ -107,7 +107,7 @@ class AboutActivity : AppCompatActivity() {
                     val sizeInPixels = (sizeInDp * resources.displayMetrics.density + 0.5f).toInt()
 
                     val imageView = ImageView(this).apply {
-                        setImageResource(R.drawable.hearts_anim)
+                        setImageResource(R.drawable.anim_hearts)
                         layoutParams = ConstraintLayout.LayoutParams(sizeInPixels, sizeInPixels)
                     }
 

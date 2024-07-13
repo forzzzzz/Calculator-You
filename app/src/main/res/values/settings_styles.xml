@@ -19,7 +19,7 @@
 
         <item name="android:contentDescription">@string/arrow_back_tool_tip</item>
         <item name="android:tint">?attr/colorOnSurface</item>
-        <item name="android:src">@drawable/arrow_back</item>
+        <item name="android:src">@drawable/baseline_arrow_back</item>
         <item name="android:background">@drawable/background_options_menu</item>
         <item name="android:tooltipText">@string/arrow_back_tool_tip</item>
         <item name="android:onClick">onClickBack</item>
@@ -157,7 +157,7 @@
 
         <item name="android:layout_gravity">center</item>
         <item name="android:visibility">invisible</item>
-        <item name="android:src">@drawable/done</item>
+        <item name="android:src">@drawable/baseline_done</item>
     </style>
 
     <style name="optionSeekBar">

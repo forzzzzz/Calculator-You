@@ -5,6 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     android:importantForAccessibility="noHideDescendants"
     tools:context=".fragments.CalculatorFragment">
 
@@ -27,27 +28,27 @@
         style="@style/ExtraButton"
         android:layout_width="54dp"
         android:layout_height="54dp"
-        android:layout_marginStart="@dimen/_12sdp"
-        android:padding="10dp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:padding="11dp"
         android:background="@drawable/science_mod_image_button_background"
         android:scaleType="fitCenter"
         android:src="@drawable/baseline_science"
         android:tint="?attr/colorOnSurface"
         app:layout_constraintBottom_toTopOf="@id/bottomExtraButtonsGuideline"
-        app:layout_constraintStart_toStartOf="@id/paddingLeftGuideline"
+        app:layout_constraintEnd_toStartOf="@id/paddingRightGuideline"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/backgroundExtraButtons"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
         android:layout_marginTop="@dimen/_6sdp"
         android:layout_marginBottom="@dimen/_6sdp"
-        android:background="@drawable/foreground_extra_button"
+        android:background="@drawable/background_extra_buttons"
         app:layout_constraintBottom_toTopOf="@id/bottomExtraButtonsGuideline"
-        app:layout_constraintEnd_toEndOf="@id/paddingRightGuideline"
-        app:layout_constraintStart_toEndOf="@id/scienceModButton"
+        app:layout_constraintEnd_toStartOf="@id/scienceModButton"
+        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

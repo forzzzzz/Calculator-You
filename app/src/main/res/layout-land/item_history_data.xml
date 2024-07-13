@@ -16,11 +16,7 @@
 
     <TextView
         android:id="@+id/dateText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:textColor="?attr/colorOnSurfaceVariant"
-        android:textSize="19sp"
+        style="@style/DateText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/dividingLine"
@@ -28,46 +24,24 @@
 
     <TextView
         android:id="@+id/expressionText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginStart="12dp"
-        android:textColor="?attr/colorOnSurface"
-        android:textSize="26sp"
-        android:background="?android:selectableItemBackground"
-        android:gravity="bottom|end"
+        style="@style/ExpressionText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/optionsMenuButton"
         app:layout_constraintTop_toBottomOf="@id/dateText"
         tool:text="(2400+3^2+100)-20%2323232424242" />
 
     <TextView
         android:id="@+id/resultText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginStart="12dp"
-        android:textColor="?attr/colorOnSurfaceVariant"
-        android:textSize="29sp"
-        android:background="?android:selectableItemBackground"
-        android:gravity="bottom|end"
+        style="@style/ExpressionText.ResultText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@id/optionsMenuButton"
         app:layout_constraintTop_toBottomOf="@id/expressionText"
         tool:text="493.128543424242424324242423432423424" />
 
     <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/optionsMenuButton"
-        style="@style/OptionsButton"
-        android:layout_marginStart="4dp"
-        android:src="@drawable/baseline_more_vert"
-        android:tooltipText="@string/options_tool_tip"
-        android:contentDescription="@string/options_tool_tip"
+        style="@style/OptionsButton.History"
         app:layout_constraintBottom_toBottomOf="@id/resultText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/expressionText" />

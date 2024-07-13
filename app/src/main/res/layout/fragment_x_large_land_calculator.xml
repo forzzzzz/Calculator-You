@@ -5,6 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layoutDirection="ltr"
     android:importantForAccessibility="noHideDescendants"
     tools:context=".fragments.xLargeLand.XLargeLandCalculatorFragment">
 
@@ -82,7 +83,7 @@
         android:id="@+id/backgroundExtraButtons"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@drawable/foreground_extra_button"
+        android:background="@drawable/background_extra_buttons"
         app:layout_constraintBottom_toBottomOf="@id/equalsButton"
         app:layout_constraintEnd_toEndOf="@id/block3"
         app:layout_constraintStart_toStartOf="parent"

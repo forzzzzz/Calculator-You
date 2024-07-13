@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DateText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginTop">12dp</item>
+
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ExpressionText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:textDirection">ltr</item>
+    </style>
+
+    <style name="ExpressionText.ResultText">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">14dp</item>
+
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textSize">27sp</item>
+    </style>
+
+    <style name="OptionsButton.History">
+
+    </style>
+
+    <style name="RecyclerViewHistory">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:verticalScrollbarPosition">left</item>
+    </style>
+
+    <style name="ImageViewNoHistory">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:tint">?attr/colorOnSurface</item>
+        <item name="android:src">@drawable/baseline_history</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="TextViewNoHistory" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:text">@string/empty_history</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>
