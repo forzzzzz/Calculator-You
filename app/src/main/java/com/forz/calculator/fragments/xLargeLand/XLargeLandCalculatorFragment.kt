@@ -5,10 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.darkempire78.opencalculator.division_by_0
-import com.darkempire78.opencalculator.domain_error
-import com.darkempire78.opencalculator.is_infinity
-import com.darkempire78.opencalculator.require_real_number
+import com.forz.calculator.calculator.division_by_0
+import com.forz.calculator.calculator.domain_error
+import com.forz.calculator.calculator.is_infinity
+import com.forz.calculator.calculator.require_real_number
 import com.forz.calculator.Anim
 import com.forz.calculator.App
 import com.forz.calculator.HapticAndSound
