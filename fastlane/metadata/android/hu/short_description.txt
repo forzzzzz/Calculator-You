@@ -1,1 +1,1 @@
-Calculator You is a beautiful calculator for solving simple tasks.
+A Calculator You egy gyönyörű számológép egyszerű feladatok megoldására.
