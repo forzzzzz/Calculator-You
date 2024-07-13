@@ -276,4 +276,5 @@
     <string name="unit_kilohertz"></string>
     <string name="unit_lumen"></string>
     <string name="asin" translatable="false"></string>
+    <string name="description_swipes2"></string>
 </resources>
