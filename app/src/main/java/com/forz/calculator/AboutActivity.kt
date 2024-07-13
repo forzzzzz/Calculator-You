@@ -99,36 +99,39 @@ class AboutActivity : AppCompatActivity() {
 
 
 
-        val background: ConstraintLayout = findViewById(R.id.background)
         binding.loveLayout.setOnTouchListener { _, event ->
-            when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    val sizeInDp = 256
-                    val sizeInPixels = (sizeInDp * resources.displayMetrics.density + 0.5f).toInt()
+            if (event.action == MotionEvent.ACTION_DOWN) {
+                val sizeInDp = 256
+                val sizeInPixels = (sizeInDp * resources.displayMetrics.density + 0.5f).toInt()
 
-                    val imageView = ImageView(this).apply {
-                        setImageResource(R.drawable.anim_hearts)
-                        layoutParams = ConstraintLayout.LayoutParams(sizeInPixels, sizeInPixels)
-                    }
-
-                    val animatedVectorDrawable = imageView.drawable as? AnimatedVectorDrawable
-                    animatedVectorDrawable?.start()
-
-                    val layoutParams = ConstraintLayout.LayoutParams(sizeInPixels, sizeInPixels).apply {
-                        leftToLeft = background.id
-                        topToTop = background.id
-                        marginStart = event.rawX.toInt() - sizeInPixels / 2
-                        topMargin = event.rawY.toInt() - sizeInPixels / 2
-                    }
-
-                    imageView.layoutParams = layoutParams
-                    background.addView(imageView)
-
-                    return@setOnTouchListener true
+                val imageView = ImageView(this).apply {
+                    setImageResource(R.drawable.anim_hearts)
+                    layoutParams = ConstraintLayout.LayoutParams(sizeInPixels, sizeInPixels)
                 }
+
+                val animatedVectorDrawable = imageView.drawable as? AnimatedVectorDrawable
+                animatedVectorDrawable?.start()
+
+                val layoutParams = ConstraintLayout.LayoutParams(sizeInPixels, sizeInPixels).apply {
+                    leftToLeft = binding.background.id
+                    topToTop = binding.background.id
+                    marginStart = event.rawX.toInt() - sizeInPixels / 2
+                    topMargin = event.rawY.toInt() - sizeInPixels / 2
+                }
+
+                imageView.layoutParams = layoutParams
+                binding.background.addView(imageView)
+
+                val animationDuration = 1600L
+                imageView.postDelayed({
+                    binding.background.removeView(imageView)
+                }, animationDuration)
+
+                return@setOnTouchListener true
             }
             false
         }
+
 
         binding.arrowBack.setOnClickListener {
             finish()
