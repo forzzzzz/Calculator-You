@@ -1,17 +1,17 @@
-Conception magnfique :
+Une superbe conception :
 
-La calculatrice a un joli et plaisant design qui a été développé durant longtemps. L'application utilise Material 3 et les couleurs dynamiques basées sur votre fond d'écran. En plus des thèmes clair et sombre, l'application propose également plus de 60 thèmes colorés pour correspondre à votre goût. Faites de cette calculatrice la vôtre !
+La calculatrice a un superbe design très plaisant qui a été développé pendant longtemps. L'application utilise Material 3 et les couleurs dynamiques basées sur votre fond d'écran. En plus des thèmes clair et sombre, l'application propose également plus de 60 thèmes colorés pour correspondre à votre goût. Faites de cette calculatrice la vôtre !
 
-Fonctions scientifiques :
+Des fonctions scientifiques :
 
 En plus des opérateurs basiques, il y a d'autres fonctions. Par exemple, cos, sin, tan, log, etc.
 
-Historique :
+Un historique :
 
-La calculatrice a la capacité de sauvegarder vos calculs. Vous pouvez alors travailler avec eux : recalculer, copier, partager et supprimer.
+La calculatrice a la capacité de sauvegarder vos calculs. Vous pouvez alors les manipuler : recalculer, copier, partager et supprimer.
 
-Praticité :
+Une utilisation facile :
 
 L'application est conçue pour que toutes les opérations et les actions puissent être réalisées avec une seule main. Historique, calculatrice, fonctions scientifiques - tout à portée de main. Rapide et pratique !
 
-Il s'agit de ma première application Android. Non pas fait avec amour, mais par amour.
+Il s'agit de ma première application Android. Pas seulement fabriqué avec amour ❤️ mais par amour ❤️.
