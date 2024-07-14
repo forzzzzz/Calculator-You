@@ -127,4 +127,9 @@
     <string name="url_privacy_policy" translatable="false"></string>
     <string name="multiplication_button" translatable="false"></string>
     <string name="cos1" translatable="false"></string>
+    <string name="title_decimal_separator"></string>
+    <string name="description_separator"></string>
+    <string name="love_text"></string>
+    <string name="description_swipes3"></string>
+    <string name="description_decimal_separator"></string>
 </resources>
