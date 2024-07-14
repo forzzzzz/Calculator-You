@@ -1,17 +1,17 @@
-Beautiful design:
+Smukt design:
 
-The calculator has a beautiful and pleasant design that has been developed for a long time. The app utilizes Material 3 and dynamic colors based on your wallpaper. In addition to light and dark themes, the app also offers over 60 colorful themes to suit your taste. Make this calculator uniquely yours!
+Lommeregneren har et smukt og behageligt design, som er blevet udviklet over lang tid. Appen bruger Material 3 og dynamiske farver baseret på din baggrund. Ud over lyse og mørke temaer tilbyder appen også over 60 farverige temaer, der passer til din smag. Gør denne lommeregner til din helt egen!
 
-Scientific functions:
+Videnskabelige funktioner:
 
-In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc.
+Ud over simple basisoperatorer findes der også andre funktioner. For eksempel cos, sin, tan, log osv.
 
-History:
+Historik:
 
-The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete.
+Lommeregneren kan gemme dine udregninger. Du kan derefter arbejde med dem: sende dem videre til beregning, kopiere, dele og slette dem.
 
-Convenience:
+Brugervenlighed:
 
-The app is designed so that all operations and actions can be performed with just one hand. History, calculator, scientific functions - all under one finger. Fast and convenient!
+Appen er designet, så alle operationer og handlinger kan udføres med kun én hånd. Historik, lommeregner, videnskabelige funktioner - alt under én finger. Hurtigt og belejligt!
 
-This is my first app for Android. Made not with love❤️, but by love❤️.
+Dette er min første app til Android. Den er ikke lavet med kærlighed ❤️, men af kærlighed ❤️.
