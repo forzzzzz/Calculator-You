@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="theme_selection_text">Thème</string>
-    <string name="formatting_selection_text">Formatage</string>
+    <string name="formatting_selection_text">Mise en forme</string>
     <string name="history_data_menu_share">Partager</string>
     <string name="title_history">L\'histoire</string>
     <string name="title_settings">Paramètres</string>
