@@ -1,17 +1,17 @@
-Beautiful design:
+Thiết kế đẹp:
 
-The calculator has a beautiful and pleasant design that has been developed for a long time. The app utilizes Material 3 and dynamic colors based on your wallpaper. In addition to light and dark themes, the app also offers over 60 colorful themes to suit your taste. Make this calculator uniquely yours!
+Máy tính có thiết kế đẹp và dễ chịu đã được phát triển từ lâu. Ứng dụng sử dụng Material 3 và màu sắc động dựa trên hình nền của bạn. Ngoài các chủ đề sáng và tối, ứng dụng còn cung cấp hơn 60 chủ đề đầy màu sắc để phù hợp với sở thích của bạn. Hãy biến chiếc máy tính này thành của riêng bạn!
 
-Scientific functions:
+Chức năng khoa học:
 
-In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc.
+Ngoài các toán tử cơ bản đơn giản, còn có các hàm khác. Ví dụ: cos, sin, tan, log, v.v.
 
-History:
+Lịch sử:
 
-The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete.
+Máy tính có khả năng lưu các phép tính của bạn. Sau đó, bạn có thể làm việc với chúng: gửi lại để tính toán, sao chép, chia sẻ và xóa một cách thuận tiện.
 
-Convenience:
+Tiện lợi:
 
-The app is designed so that all operations and actions can be performed with just one hand. History, calculator, scientific functions - all under one finger. Fast and convenient!
+Ứng dụng được thiết kế sao cho có thể thực hiện mọi thao tác và thao tác chỉ bằng một tay. Lịch sử, máy tính, chức năng khoa học - tất cả chỉ dưới một ngón tay. Nhanh chóng và thuận tiện!
 
-This is my first app for Android. Made not with love❤️, but by love❤️.
+Đây là ứng dụng đầu tiên của tôi dành cho Android. Được tạo ra không phải với tình yêu❤️ mà bằng tình yêu❤️.
