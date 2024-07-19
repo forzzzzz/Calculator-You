@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="expression_error">Eraro</string>
+    <string name="separator_element_2">Punkto</string>
+    <string name="separator_element_3">Spaceto</string>
+    <string name="expression_infinity">Valoro tro granda</string>
+    <string name="theme_selection_text">Etoso</string>
+    <string name="formatting_selection_text">Nombroprezento</string>
+    <string name="history_data_menu_copy">Kopii</string>
+    <string name="other_selection_text">Aliaj</string>
+    <string name="history_options_menu">Forviŝi historion</string>
+    <string name="history_data_menu_delete">Forviŝi</string>
+    <string name="title_separator">Apartigilo</string>
+    <string name="history_data_menu_share">Sendi</string>
+    <string name="title_history">Historio</string>
+    <string name="title_settings">Agordoj</string>
+    <string name="title_about">Pri</string>
+    <string name="title_vibrations">Vibrado</string>
+    <string name="theme_element_3">Malhela</string>
+    <string name="title_select_theme">Elektu etoson</string>
+    <string name="title_sound_effects">Sonoj</string>
+    <string name="title_select_color">Elektu koloron</string>
+    <string name="separator_element_1">Komo</string>
+    <string name="title_dynamic_colors">Dinamikaj koloroj</string>
+    <string name="theme_element_2">Hela</string>
 </resources>
