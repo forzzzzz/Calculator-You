@@ -12,4 +12,5 @@
     <string name="formatting_selection_text">Formatlama</string>
     <string name="history_data_menu_share">Paylaş</string>
     <string name="history_data_menu_delete">Sil</string>
+    <string name="title_select_theme">Tema seç</string>
 </resources>
