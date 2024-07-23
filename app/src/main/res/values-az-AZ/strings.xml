@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="history_options_menu">Tarixçəni təmizlə</string>
+    <string name="title_history">Tarixçə</string>
+    <string name="title_settings">Tənzimləmələr</string>
+    <string name="title_about">Haqqında</string>
+    <string name="other_selection_text">Digər</string>
+    <string name="history_data_menu_copy">Köçür</string>
+    <string name="expression_error">Xəta</string>
+    <string name="expression_infinity">Dəyər çox yüksəkdir</string>
+    <string name="theme_selection_text">Tema</string>
+    <string name="formatting_selection_text">Formatlama</string>
+    <string name="history_data_menu_share">Paylaş</string>
+    <string name="history_data_menu_delete">Sil</string>
+</resources>
