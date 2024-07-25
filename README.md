@@ -1,6 +1,6 @@
 <div align="center">
 
-#### I only develop in my free time
+#### I only develop in my free time. I'm currently refactoring.
 
 <img src="fastlane/metadata/android/en-US/images/featureGraphic.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
 
