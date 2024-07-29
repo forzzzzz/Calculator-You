@@ -1,0 +1,17 @@
+Bela dezajno:
+
+La kalkulilo havas belan kaj agrablan dezajnon evoluigitan delonge. La programo uzas Material 3 kaj dinamikajn kolorojn laŭ via ekranfono. Krom helan kaj malhelan etosojn, la programo ankaŭ ofertas pli ol 60 kolorajn etosojn por via gusto. Vie tajlu ĉi tiun kalkulilon!
+
+Sciencaj funkcioj:
+
+Krom simplaj bazaj operatoroj, ekzistas ankaŭ aliaj funkcioj. Ekzemple, kosinuso, sinuso, tangento, logaritmo ktp.
+
+Historio:
+
+La kalkulilo povas konservi viajn kalkulojn. Vi povas poste pritrakti ilin: rekalkuli, facile kopii, sendi, forviŝi.
+
+Facileco:
+
+La programo estas dezajnita tiel, ke ĉiuj operacioj kaj agoj estas farebla unumane. Historio, kalkulilo, sciencaj funkcioj – ĉiuj sub unu fingro. Rapide kaj facile!
+
+Jen mia unua programo por Android. Farita ne kun amo❤️, sed per amo❤️.
