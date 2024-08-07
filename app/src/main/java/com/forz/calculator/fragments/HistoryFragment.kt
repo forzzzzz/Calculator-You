@@ -1,10 +1,6 @@
 package com.forz.calculator.fragments
 
-import android.content.ClipData
-import android.content.ClipboardManager
 import android.content.Context
-import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,32 +8,51 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.forz.calculator.App
 import com.forz.calculator.R
-import com.forz.calculator.StateViews.currentPositionRecyclerViewHistory
 import com.forz.calculator.databinding.FragmentHistoryBinding
 import com.forz.calculator.history.HistoryData
 import com.forz.calculator.history.HistoryDataActionListener
 import com.forz.calculator.history.HistoryDataAdapter
 import com.forz.calculator.history.HistoryDataListListener
 import com.forz.calculator.history.HistoryService
-import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.StateViews.newSizeRecyclerViewHistory
-import com.forz.calculator.StateViews.oldSizeRecyclerViewHistory
-import com.forz.calculator.StateViews.recyclerViewHistoryElementIsAdded
-import com.forz.calculator.StateViews.recyclerViewHistoryElementIsDeleted
-import com.forz.calculator.StateViews.recyclerViewHistoryIsRecreated
+import com.forz.calculator.utils.InteractionAndroid
 import kotlin.properties.Delegates.notNull
 
 class HistoryFragment : Fragment() {
 
+    companion object{
+        private var oldSizeRecyclerViewHistory = 0
+        private var newSizeRecyclerViewHistory = 0
+        private var currentPositionRecyclerViewHistory = 0
+        private var recyclerViewHistoryElementIsAdded = false
+        private var recyclerViewHistoryElementIsDeleted = false
+
+        var recyclerViewHistoryIsRecreated = false
+    }
+
     private var binding: FragmentHistoryBinding by notNull()
     private var adapter: HistoryDataAdapter by notNull()
+    private var callback: OnButtonClickListener? = null
 
     private val historyService: HistoryService
         get() = (requireContext().applicationContext as App).historyService
+
+
+    interface OnButtonClickListener {
+        fun onExpressionTextClick(expression: String)
+        fun onResultTextClick(result: String)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        try {
+            callback = parentFragment as OnButtonClickListener
+        } catch (e: ClassCastException) {
+            throw ClassCastException("$context must implement OnButtonClickListener")
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,37 +61,31 @@ class HistoryFragment : Fragment() {
         binding = FragmentHistoryBinding.inflate(inflater, container, false)
 
         adapter = HistoryDataAdapter(requireContext(), object : HistoryDataActionListener {
-            override fun insertExpression(historyData: HistoryData) {
-                ExpressionViewModel.insertExpression(historyData.expression)
+            override fun onExpressionTextClick(expression: String) {
+                callback?.onExpressionTextClick(expression)
             }
 
-            override fun insertResult(historyData: HistoryData) {
-                ExpressionViewModel.insertResult(historyData.result)
+            override fun onResultTextClick(result: String) {
+                callback?.onResultTextClick(result)
             }
 
-            override fun copyExpression(historyData: HistoryData) {
-                copy(historyData.expression)
+            override fun onExpressionTextLongClick(expression: String) {
+                InteractionAndroid.copyToClipboard(expression, requireContext())
             }
 
-            override fun copyResult(historyData: HistoryData) {
-                copy(historyData.result)
+            override fun onResultTextLongClick(result: String) {
+                InteractionAndroid.copyToClipboard(result, requireContext())
             }
 
-            override fun copy(historyData: HistoryData) {
-                copy(combineExpressionAndResult(historyData.expression, historyData.result))
+            override fun onCopyButtonClick(string: String) {
+                InteractionAndroid.copyToClipboard(string, requireContext())
             }
 
-            override fun share(historyData: HistoryData) {
-                val sendIntent: Intent = Intent().apply {
-                    action = Intent.ACTION_SEND
-                    putExtra(Intent.EXTRA_TEXT, combineExpressionAndResult(historyData.expression, historyData.result))
-                    type = "text/plain"
-                }
-                val shareIntent = Intent.createChooser(sendIntent, null)
-                startActivity(shareIntent)
+            override fun onShareButtonClick(string: String) {
+                InteractionAndroid.share(string, requireContext())
             }
 
-            override fun deleteItem(historyData: HistoryData) {
+            override fun onDeleteItemButtonClick(historyData: HistoryData) {
                 adapter.deleteHistoryData(historyData)
             }
         })
@@ -140,19 +149,5 @@ class HistoryFragment : Fragment() {
             binding.emptyHistoryImageView.visibility = View.GONE
             binding.emptyHistoryText.visibility = View.GONE
         }
-    }
-
-    private fun copy(string: String){
-        val clipboardManager = requireContext().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clipData = ClipData.newPlainText(null, string)
-        clipboardManager.setPrimaryClip(clipData)
-
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU){
-            Toast.makeText(requireContext(), string, Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun combineExpressionAndResult(expression: String, result: String): String{
-        return "$expression = $result"
     }
 }

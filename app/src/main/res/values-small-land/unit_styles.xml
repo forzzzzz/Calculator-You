@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="UnitText" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="UnitText.ResultText">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="UnitTextInputLayout" parent="Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:layout_marginTop">@dimen/_4sdp</item>
+
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+    <style name="UnitTextInputLayout.Left">
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+    </style>
+    <style name="UnitTextInputLayout.Right">
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:layout_marginStart">6dp</item>
+    </style>
+
+    <style name="UnitRecyclerView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+
+        <item name="android:layout_marginTop">@dimen/_4sdp</item>
+    </style>
+</resources>

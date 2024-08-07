@@ -1,23 +1,38 @@
 package com.forz.calculator.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.forz.calculator.HapticAndSound
-import com.forz.calculator.R
+import com.forz.calculator.utils.HapticAndSound
 import com.forz.calculator.databinding.FragmentScientificFunctionBinding
-import com.forz.calculator.viewModels.CalculatorViewModel.isDegreeModActivated
-import com.forz.calculator.viewModels.CalculatorViewModel.updateDegreeModActivated
-import com.forz.calculator.viewModels.CalculatorViewModel.updateScienceModActivated
-import com.forz.calculator.viewModels.ExpressionViewModel
+import com.forz.calculator.calculator.CalculatorViewModel.updateScienceModActivated
+import com.forz.calculator.calculator.Constant
+import com.forz.calculator.calculator.ScientificFunction
+import com.forz.calculator.calculator.TrigonometricFunction
 import kotlin.properties.Delegates
 
 class ScientificFunctionFragment : Fragment() {
 
     private var binding: FragmentScientificFunctionBinding by Delegates.notNull()
     private var hapticAndSound: HapticAndSound by Delegates.notNull()
+    private var callback: OnButtonClickListener? = null
+
+    interface OnButtonClickListener {
+        fun onScienceFunctionButtonClick(scienceFunction: String)
+        fun onConstantButtonClick(constant: String)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        callback = parentFragment as? OnButtonClickListener
+        if (callback == null) {
+            throw ClassCastException("$context must implement OnButtonClickListener")
+        }
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,86 +41,76 @@ class ScientificFunctionFragment : Fragment() {
         binding = FragmentScientificFunctionBinding.inflate(inflater, container, false)
 
         val views: Array<View> = arrayOf(
-            binding.degreeButton,
+            binding.absButton,
             binding.lnButton,
             binding.logButton,
             binding.sinButton,
             binding.cosButton,
             binding.tanButton,
-            binding.sin1Button,
-            binding.cos1Button,
-            binding.tan1Button,
+            binding.asinButton,
+            binding.acosButton,
+            binding.atanButton,
             binding.eButton,
             binding.expButton
         )
 
         hapticAndSound = HapticAndSound(requireContext(), views)
 
-        binding.degreeButton.setOnClickListener {
-            updateDegreeModActivated()
+        binding.absButton.setOnClickListener {
+            callback?.onScienceFunctionButtonClick(ScientificFunction.Absolute.text)
+            updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
         binding.lnButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("ln(")
+            callback?.onScienceFunctionButtonClick(ScientificFunction.Ln.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
         binding.logButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("log(")
+            callback?.onScienceFunctionButtonClick(ScientificFunction.Log.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
         binding.sinButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("sin(")
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.Sin.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
         binding.cosButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("cos(")
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.Cos.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
         binding.tanButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("tan(")
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.Tan.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
-        binding.sin1Button.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("sin⁻¹(")
+        binding.asinButton.setOnClickListener {
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.ASin.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
-        binding.cos1Button.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("cos⁻¹(")
+        binding.acosButton.setOnClickListener {
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.ACos.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
-        binding.tan1Button.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("tan⁻¹(")
+        binding.atanButton.setOnClickListener {
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.ATan.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
         binding.eButton.setOnClickListener {
-            ExpressionViewModel.enterConstant("e")
+            callback?.onConstantButtonClick(Constant.E.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
         binding.expButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("exp(")
+            callback?.onScienceFunctionButtonClick(ScientificFunction.PowerE.text)
             updateScienceModActivated()
             hapticAndSound.vibrateEffectClick()
         }
-
-
-        isDegreeModActivated.observe(viewLifecycleOwner){ isDegreeModActivated ->
-            if (isDegreeModActivated) {
-                binding.degreeButton.text = getString(R.string.deg)
-            } else {
-                binding.degreeButton.text = getString(R.string.rad)
-            }
-        }
-
-
 
         return binding.root
     }

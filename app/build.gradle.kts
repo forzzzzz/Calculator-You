@@ -11,8 +11,8 @@ android {
         applicationId = "com.marktka.calculatorYou"
         minSdk = 27
         targetSdk = 34
-        versionCode = 28
-        versionName = "2.2.5"
+        versionCode = 29
+        versionName = "3.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -57,7 +57,6 @@ dependencies {
 //    androidTestImplementation("androidx.test.ext:junit:1.1.5")
 //    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("com.intuit.sdp:sdp-android:1.1.1")
-//    implementation("com.intuit.ssp:ssp-android:1.1.0")
     implementation ("com.mikhaellopez:circleview:1.4.1")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")

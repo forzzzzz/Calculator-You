@@ -3,46 +3,53 @@ package com.forz.calculator.fragments
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.util.TypedValue
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import android.widget.ImageView
-import android.widget.PopupMenu
 import androidx.appcompat.app.AlertDialog
-import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.forz.calculator.AboutActivity
 import com.forz.calculator.App
-import com.forz.calculator.HapticAndSound
-import com.forz.calculator.InsertInExpression
-import com.forz.calculator.InsertInExpression.triggersIsDegreeModActivatedShowArray
+import com.forz.calculator.utils.HapticAndSound
+import com.forz.calculator.utils.InsertInExpression
 import com.forz.calculator.MainActivity
-import com.forz.calculator.NumberFormatter
 import com.forz.calculator.OnBackPressedListener
 import com.forz.calculator.R
-import com.forz.calculator.StateViews
-import com.forz.calculator.StateViews.pagerIsRecreated
 import com.forz.calculator.databinding.FragmentMainBinding
+import com.forz.calculator.fragments.Fragments.CALCULATOR_FRAGMENT
+import com.forz.calculator.fragments.Fragments.HISTORY_FRAGMENT
+import com.forz.calculator.fragments.Fragments.UNIT_CONVERTER_FRAGMENT
+import com.forz.calculator.fragments.Fragments.currentItemMainPager
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
 import com.forz.calculator.history.HistoryService
 import com.forz.calculator.settings.SettingsActivity
-import com.forz.calculator.settings.SettingsState
-import com.forz.calculator.viewModels.CalculatorViewModel
-import com.forz.calculator.viewModels.ExpressionViewModel
+import com.forz.calculator.settings.Config
+import com.forz.calculator.calculator.CalculatorViewModel
+import com.forz.calculator.expression.ExpressionViewModel
+import com.forz.calculator.expression.ExpressionViewModel.cursorPositionStart
+import com.forz.calculator.expression.ExpressionViewModel.expression
+import com.forz.calculator.expression.ExpressionViewModel.oldExpression
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlin.properties.Delegates
+import com.forz.calculator.calculator.Evaluator
+import com.forz.calculator.calculator.TrigonometricFunction
+import kotlin.properties.Delegates.notNull
 
 @Suppress("DEPRECATION")
-class MainFragment : Fragment(), OnBackPressedListener {
+class MainFragment : Fragment(),
+    OnBackPressedListener,
+    CalculatorFragment.OnButtonClickListener,
+    HistoryFragment.OnButtonClickListener,
+    UnitConverterFragment.OnButtonClickListener
+{
 
-    private var binding: FragmentMainBinding by Delegates.notNull()
-    private var hapticAndSound: HapticAndSound by Delegates.notNull()
+    private var binding: FragmentMainBinding by notNull()
+    private var hapticAndSound: HapticAndSound by notNull()
 
     private val historyService: HistoryService
         get() = (requireContext().applicationContext as App).historyService
@@ -58,146 +65,128 @@ class MainFragment : Fragment(), OnBackPressedListener {
             binding.degreeTitleText
         )
         hapticAndSound = HapticAndSound(requireContext(), views)
+
         binding.expressionEditText.showSoftInputOnFocus = false
-
-
-        val fadeOutAnimation200: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_out_200)
-        val fadeInAnimation200: Animation = AnimationUtils.loadAnimation(requireContext(), R.anim.fade_in_200)
+        binding.expressionEditText.requestFocus()
 
 
         val adapter = ViewPageAdapter(childFragmentManager, lifecycle)
+
+        adapter.addFragment(UnitConverterFragment())
         adapter.addFragment(CalculatorFragment())
         adapter.addFragment(HistoryFragment())
+
         binding.pager.adapter = adapter
-        binding.pager.setCurrentItem(StateViews.currentItemPager, false)
-        binding.pager.offscreenPageLimit = 2
+        binding.pager.setCurrentItem(currentItemMainPager, false)
+        binding.pager.offscreenPageLimit = 3
+
         TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
             tab.setIcon(
                 when (position) {
-                    0 -> R.drawable.baseline_calculate
-                    1 -> R.drawable.baseline_history
+                    UNIT_CONVERTER_FRAGMENT -> R.drawable.baseline_autorenew
+                    CALCULATOR_FRAGMENT -> R.drawable.baseline_calculate
+                    HISTORY_FRAGMENT -> R.drawable.baseline_history
                     else -> throw IllegalArgumentException("Invalid position")
                 }
             )
         }.attach()
+
         binding.pager.apply {
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
-        if (binding.pager.currentItem == 1){
-            binding.historyTitleText.visibility = ImageView.VISIBLE
-
-            pagerIsRecreated = false
+        binding.toolbar.let { toolbar ->
+            if (currentItemMainPager == HISTORY_FRAGMENT) {
+                toolbar.menu.clear()
+                toolbar.inflateMenu(R.menu.history_options_menu)
+            } else {
+                toolbar.menu.clear()
+                toolbar.inflateMenu(R.menu.options_menu)
+            }
         }
 
         binding.pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
-                StateViews.currentItemPager = position
+                currentItemMainPager = position
 
-                when (position) {
-                    1 -> {
-                        if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
-                            binding.degreeTitleText.startAnimation(fadeOutAnimation200.apply {
-                                setAnimationListener(object : Animation.AnimationListener {
-                                    override fun onAnimationStart(animation: Animation?) {
-                                    }
-                                    override fun onAnimationEnd(animation: Animation?) {
-                                        binding.degreeTitleText.visibility = ImageView.GONE
-                                        binding.historyTitleText.visibility = ImageView.VISIBLE
-                                        binding.historyTitleText.startAnimation(fadeInAnimation200)
-                                    }
-                                    override fun onAnimationRepeat(animation: Animation?) {
-                                    }
-                                })
-                            })
-                        } else{
-                            binding.historyTitleText.visibility = ImageView.VISIBLE
-                            binding.historyTitleText.startAnimation(fadeInAnimation200)
-                        }
-                    }
-                    0 -> {
-                        if (!pagerIsRecreated){
-                            if (triggersIsDegreeModActivatedShowArray.any { ExpressionViewModel.expression.value!!.contains(it) }){
-                                binding.historyTitleText.startAnimation(fadeOutAnimation200.apply {
-                                    setAnimationListener(object : Animation.AnimationListener {
-                                        override fun onAnimationStart(animation: Animation?) {
-                                        }
-                                        override fun onAnimationEnd(animation: Animation?) {
-                                            binding.historyTitleText.visibility = ImageView.GONE
-                                            binding.degreeTitleText.visibility = ImageView.VISIBLE
-                                            binding.degreeTitleText.startAnimation(fadeInAnimation200)
-                                        }
-                                        override fun onAnimationRepeat(animation: Animation?) {
-                                        }
-                                    })
-                                })
-                            } else{
-                                binding.historyTitleText.startAnimation(fadeOutAnimation200.apply {
-                                    setAnimationListener(object : Animation.AnimationListener {
-                                        override fun onAnimationStart(animation: Animation?) {
-                                        }
-                                        override fun onAnimationEnd(animation: Animation?) {
-                                            binding.historyTitleText.visibility = ImageView.GONE
-                                        }
-                                        override fun onAnimationRepeat(animation: Animation?) {
-                                        }
-                                    })
-                                })
-                            }
-                        }else{
-                            pagerIsRecreated = false
-                        }
+                binding.toolbar.let { toolbar ->
+                    if (currentItemMainPager == HISTORY_FRAGMENT) {
+                        toolbar.menu.clear()
+                        toolbar.inflateMenu(R.menu.history_options_menu)
+                    } else {
+                        toolbar.menu.clear()
+                        toolbar.inflateMenu(R.menu.options_menu)
                     }
                 }
             }
         })
 
+        binding.toolbar.setOnMenuItemClickListener { menuItem ->
+            when(menuItem.itemId) {
+                R.id.history -> {
+                    binding.pager.setCurrentItem(HISTORY_FRAGMENT, true)
+                    true
+                }
+                R.id.settings -> {
+                    val intent = Intent(requireActivity(), SettingsActivity::class.java)
+                    startActivityForResult(intent, MainActivity.REQUEST_CODE_CHILD)
+                    true
+                }
+                R.id.about -> {
+                    val intent = Intent(requireContext(), AboutActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.clearHistory -> {
+                    val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+                    builder
+                        .setMessage(getString(R.string.clear_history_title))
+                        .setPositiveButton(getString(R.string.clear_history_clear)) { _, _ ->
+                            historyService.clearHistoryData()
+                            binding.pager.setCurrentItem(CALCULATOR_FRAGMENT, true)
+                        }.setNegativeButton(getString(R.string.clear_history_dismiss)) { _, _ ->
+                        }
 
-
-
-        binding.optionsMenuButton.setOnClickListener { view ->
-            val popupMenu = PopupMenu(requireContext(), view)
-            if (binding.pager.currentItem == 0){
-                popupMenu.inflate(R.menu.options_menu)
-            } else{
-                popupMenu.inflate(R.menu.history_options_menu)
+                    val dialog: AlertDialog = builder.create()
+                    dialog.show()
+                    true
+                }
+                else -> false
             }
-            popupMenu.setOnMenuItemClickListener { menuItem ->
-                when(menuItem.itemId){
-                    R.id.history -> {
-                        binding.pager.setCurrentItem(1, true)
-                        true
-                    }
-                    R.id.settings -> {
-                        val intent = Intent(requireActivity(), SettingsActivity::class.java)
-                        startActivityForResult(intent, MainActivity.REQUEST_CODE_CHILD)
-                        true
-                    }
-                    R.id.about -> {
-                        val intent = Intent(requireContext(), AboutActivity::class.java)
-                        startActivity(intent)
-                        true
-                    }
-                    R.id.clearHistory -> {
-                        val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
-                        builder
-                            .setMessage(getString(R.string.clear_history_title))
-                            .setPositiveButton(getString(R.string.clear_history_clear)) { _, _ ->
-                                historyService.clearHistoryData()
-                                binding.pager.setCurrentItem(0, true)
-                            }
-                            .setNegativeButton(getString(R.string.clear_history_dismiss)) { _, _ ->
-                            }
+        }
 
-                        val dialog: AlertDialog = builder.create()
-                        dialog.show()
+        binding.expressionEditText.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
+            if (!hasFocus) {
+                view.requestFocus()
+            }
+        }
 
-                        true
-                    }
-                    else ->  false
+        binding.expressionEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+            override fun afterTextChanged(p0: Editable?) {
+                Evaluator.setResultTextView(binding.expressionEditText, binding.resultText, ExpressionViewModel.isSelected.value ?: false, requireContext())
+                binding.expressionEditText.autoSizeTextExpressionEditText(binding.expressionTextView)
+
+                if (TrigonometricFunction.entries.any { binding.expressionEditText.text!!.contains(it.text) }){
+                    binding.degreeTitleText.visibility = ImageView.VISIBLE
+                } else{
+                    binding.degreeTitleText.visibility = ImageView.GONE
                 }
             }
-            popupMenu.show()
+        })
+
+        binding.root.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                binding.expressionEditText.autoSizeTextExpressionEditText(binding.expressionTextView)
+                binding.root.viewTreeObserver.removeOnGlobalLayoutListener(this)
+            }
+        })
+
+        ExpressionViewModel.isSelected.observe(requireActivity()){ isSelected ->
+            Evaluator.setResultTextView(binding.expressionEditText, binding.resultText, isSelected, requireContext())
         }
 
         binding.degreeTitleText.setOnClickListener {
@@ -212,70 +201,7 @@ class MainFragment : Fragment(), OnBackPressedListener {
                 binding.degreeTitleText.text = getString(R.string.rad)
             }
 
-            ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!, requireContext())
-        }
-
-
-        ExpressionViewModel.expression.observe(requireActivity()){ expression ->
-            val expressionCursorPositionStart = ExpressionViewModel.expressionCursorPositionStart.value!!
-            val expressionCursorPositionEnd = ExpressionViewModel.expressionCursorPositionEnd.value!!
-            binding.expressionEditText.text = NumberFormatter.changeColorOperators(expression, requireContext())
-            binding.expressionEditText.setSelection(expressionCursorPositionStart, expressionCursorPositionEnd)
-
-            if (triggersIsDegreeModActivatedShowArray.any { expression.contains(it) } && binding.pager.currentItem == 0){
-                binding.degreeTitleText.visibility = ImageView.VISIBLE
-            } else{
-                binding.degreeTitleText.visibility = ImageView.GONE
-            }
-
-            ExpressionViewModel.updateResult(expression, requireContext())
-        }
-
-        ExpressionViewModel.result.observe(requireActivity()){ result ->
-            if (result != ExpressionViewModel.expression.value!!){
-                binding.resultText.text = result
-            }else{
-                binding.resultText.text = ""
-            }
-        }
-
-        binding.expressionEditText.requestFocus()
-        binding.expressionEditText.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
-            if (!hasFocus) {
-                view.requestFocus()
-            }
-        }
-
-
-        binding.expressionEditText.addTextChangedListener{
-            if (ExpressionViewModel.expression.value!! != binding.expressionEditText.text.toString()){
-                ExpressionViewModel.updateNumberOfCharactersOfInsertedText(binding.expressionEditText.text!!.length)
-                ExpressionViewModel.updateExpression(binding.expressionEditText.text.toString(), binding.expressionEditText.selectionStart)
-            }
-
-            autoSizeTextExpressionEditText()
-        }
-
-        binding.root.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                autoSizeTextExpressionEditText()
-                binding.root.viewTreeObserver.removeOnGlobalLayoutListener(this)
-            }
-        })
-
-
-        ExpressionViewModel.isSelection.observe(requireActivity()){ isSelection ->
-            if (isSelection){
-                ExpressionViewModel.updateResult(
-                    ExpressionViewModel.expression.value!!.substring(
-                        ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expressionCursorPositionEnd.value!!), requireContext())
-            }else if (!isSelection && ExpressionViewModel.previousIsSelection){
-                ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!, requireContext())
-            } else if (InsertInExpression.stringAfterCursor(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expression.value!!).startsWith(
-                    SettingsState.groupingSeparatorSymbol
-                )){
-                binding.expressionEditText.setSelection(ExpressionViewModel.expressionCursorPositionStart.value!! + 1)
-            }
+            Evaluator.setResultTextView(binding.expressionEditText, binding.resultText, ExpressionViewModel.isSelected.value ?: false, requireContext())
         }
 
         return binding.root
@@ -286,22 +212,102 @@ class MainFragment : Fragment(), OnBackPressedListener {
 
         hapticAndSound.setHapticFeedback()
         hapticAndSound.setSoundEffects()
-        binding.pager.isUserInputEnabled = SettingsState.swipeHistoryAndCalculator
+        binding.pager.isUserInputEnabled = Config.swipeMain
+        binding.expressionEditText.setText(expression)
+        binding.expressionEditText.setSelection(cursorPositionStart)
     }
 
+    override fun onStop() {
+        super.onStop()
+
+        expression = binding.expressionEditText.text.toString()
+        cursorPositionStart = binding.expressionEditText.selectionStart
+    }
 
     override fun onBackPressed(): Boolean {
-        return if (binding.pager.currentItem == 1) {
-            binding.pager.setCurrentItem(0, true)
+        return if (currentItemMainPager != CALCULATOR_FRAGMENT) {
+            binding.pager.setCurrentItem(CALCULATOR_FRAGMENT, true)
             true
         } else {
             false
         }
     }
 
+    override fun onDigitButtonClick(digit: String) {
+        InsertInExpression.enterDigit(digit, binding.expressionEditText)
+    }
 
-    private fun autoSizeTextExpressionEditText(){
-        binding.expressionTextView.text = binding.expressionEditText.text
-        binding.expressionEditText.setTextSize(TypedValue.COMPLEX_UNIT_PX, binding.expressionTextView.textSize)
+    override fun onDotButtonClick() {
+        InsertInExpression.enterDot(binding.expressionEditText)
+    }
+
+    override fun onBackspaceButtonClick() {
+        InsertInExpression.enterBackspace(binding.expressionEditText)
+    }
+
+    override fun onClearExpressionButtonClick() {
+        InsertInExpression.clearExpression(binding.expressionEditText)
+    }
+
+    override fun onOperatorButtonClick(operator: String) {
+        InsertInExpression.enterOperator(operator, binding.expressionEditText)
+    }
+
+    override fun onScienceFunctionButtonClick(scienceFunction: String) {
+        InsertInExpression.enterScienceFunction(scienceFunction, binding.expressionEditText)
+    }
+
+    override fun onAdditionalOperatorButtonClick(operator: String) {
+        InsertInExpression.enterAdditionalOperator(operator, binding.expressionEditText)
+    }
+
+    override fun onConstantButtonClick(constant: String) {
+        InsertInExpression.enterConstant(constant, binding.expressionEditText)
+    }
+
+    override fun onBracketButtonClick() {
+        InsertInExpression.enterBracket(binding.expressionEditText)
+    }
+
+    override fun onDoubleBracketsButtonClick() {
+        InsertInExpression.enterDoubleBrackets(binding.expressionEditText)
+    }
+
+    override fun onEqualsButtonClick() {
+        if (Evaluator.isCalculated){
+            val result = binding.resultText.text.toString()
+
+            val expression: String = if (ExpressionViewModel.isSelected.value == true){
+                binding.expressionEditText.text
+                    .toString()
+                    .substring(
+                        binding.expressionEditText.selectionStart, binding.expressionEditText.selectionEnd
+                    )
+            } else {
+                binding.expressionEditText.text.toString()
+            }
+
+            oldExpression = expression
+            InsertInExpression.setExpression(result, binding.expressionEditText)
+            historyService.addHistoryData(expression, result)
+        }
+    }
+
+    override fun onEqualsButtonLongClick() {
+        if (oldExpression.isNotEmpty()){
+            InsertInExpression.setExpression(oldExpression, binding.expressionEditText)
+        }
+    }
+
+    override fun onExpressionTextClick(expression: String) {
+        InsertInExpression.insertHistoryExpression(expression, binding.expressionEditText)
+    }
+
+    override fun onResultTextClick(result: String) {
+        InsertInExpression.insertHistoryResult(result, binding.expressionEditText)
+    }
+
+    override fun onUnitResultTextClick(result: String) {
+        InsertInExpression.setExpression(result, binding.expressionEditText)
     }
 }

@@ -16,7 +16,7 @@
         <item name="android:layout_height">wrap_content</item>
 
         <item name="android:layout_marginTop">18dp</item>
-        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginStart">21dp</item>
         <item name="android:layout_marginEnd">12dp</item>
 
         <item name="android:textColor">?attr/colorOnSurface</item>
@@ -33,16 +33,20 @@
         <item name="android:textSize">31sp</item>
     </style>
 
-    <style name="OptionsButton.History">
+    <style name="HistoryToolbar" parent="Widget.Material3.Toolbar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
 
+        <item name="menu">@menu/history_data_menu</item>
     </style>
+
 
     <style name="RecyclerViewHistory">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
 
         <item name="android:scrollbars">vertical</item>
-        <item name="android:verticalScrollbarPosition">left</item>
+        <item name="android:verticalScrollbarPosition">right</item>
     </style>
     
     <style name="ImageViewNoHistory">

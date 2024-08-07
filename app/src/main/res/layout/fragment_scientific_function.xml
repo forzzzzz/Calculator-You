@@ -8,11 +8,11 @@
     tools:context=".fragments.ScientificFunctionFragment">
 
     <TextView
-        android:id="@+id/degreeButton"
+        android:id="@+id/absButton"
         style="@style/Button.ScientificFunction"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp"
-        android:text="@string/deg"
+        android:text="@string/absolute"
         app:layout_constraintBottom_toTopOf="@id/sinButton"
         app:layout_constraintEnd_toStartOf="@id/lnButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         android:text="@string/ln"
         app:layout_constraintBottom_toTopOf="@id/cosButton"
         app:layout_constraintEnd_toStartOf="@id/logButton"
-        app:layout_constraintStart_toEndOf="@id/degreeButton"
+        app:layout_constraintStart_toEndOf="@id/absButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -44,16 +44,16 @@
         style="@style/Button.ScientificFunction"
         android:layout_marginStart="0dp"
         android:text="@string/sin"
-        app:layout_constraintBottom_toTopOf="@id/sin1Button"
+        app:layout_constraintBottom_toTopOf="@id/asinButton"
         app:layout_constraintEnd_toStartOf="@id/cosButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/degreeButton" />
+        app:layout_constraintTop_toBottomOf="@id/absButton" />
 
     <TextView
         android:id="@+id/cosButton"
         style="@style/Button.ScientificFunction"
         android:text="@string/cos"
-        app:layout_constraintBottom_toTopOf="@id/cos1Button"
+        app:layout_constraintBottom_toTopOf="@id/acosButton"
         app:layout_constraintEnd_toStartOf="@id/tanButton"
         app:layout_constraintStart_toEndOf="@id/sinButton"
         app:layout_constraintTop_toBottomOf="@id/lnButton" />
@@ -63,39 +63,39 @@
         style="@style/Button.ScientificFunction"
         android:layout_marginEnd="0dp"
         android:text="@string/tan"
-        app:layout_constraintBottom_toTopOf="@id/tan1Button"
+        app:layout_constraintBottom_toTopOf="@id/atanButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/cosButton"
         app:layout_constraintTop_toBottomOf="@id/logButton" />
 
     <TextView
-        android:id="@+id/sin1Button"
+        android:id="@+id/asinButton"
         style="@style/Button.ScientificFunction"
         android:layout_marginStart="0dp"
-        android:text="@string/sin1"
+        android:text="@string/asin"
         app:layout_constraintBottom_toTopOf="@id/eButton"
-        app:layout_constraintEnd_toStartOf="@id/cos1Button"
+        app:layout_constraintEnd_toStartOf="@id/acosButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sinButton" />
 
     <TextView
-        android:id="@+id/cos1Button"
+        android:id="@+id/acosButton"
         style="@style/Button.ScientificFunction"
-        android:text="@string/cos1"
+        android:text="@string/acos"
         app:layout_constraintBottom_toTopOf="@id/expButton"
-        app:layout_constraintEnd_toStartOf="@id/tan1Button"
-        app:layout_constraintStart_toEndOf="@id/sin1Button"
+        app:layout_constraintEnd_toStartOf="@id/atanButton"
+        app:layout_constraintStart_toEndOf="@id/asinButton"
         app:layout_constraintTop_toBottomOf="@id/cosButton" />
 
     <TextView
-        android:id="@+id/tan1Button"
+        android:id="@+id/atanButton"
         style="@style/Button.ScientificFunction"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="0dp"
-        android:text="@string/tan1"
-        app:layout_constraintBottom_toBottomOf="@id/cos1Button"
+        android:text="@string/atan"
+        app:layout_constraintBottom_toBottomOf="@id/acosButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/cos1Button"
+        app:layout_constraintStart_toEndOf="@id/acosButton"
         app:layout_constraintTop_toBottomOf="@id/tanButton" />
 
     <TextView
@@ -107,7 +107,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/expButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sin1Button" />
+        app:layout_constraintTop_toBottomOf="@id/asinButton" />
 
     <TextView
         android:id="@+id/expButton"
@@ -116,8 +116,8 @@
         android:layout_marginEnd="0dp"
         android:text="@string/exp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/cos1Button"
+        app:layout_constraintEnd_toEndOf="@id/acosButton"
         app:layout_constraintStart_toEndOf="@id/eButton"
-        app:layout_constraintTop_toBottomOf="@id/cos1Button" />
+        app:layout_constraintTop_toBottomOf="@id/acosButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

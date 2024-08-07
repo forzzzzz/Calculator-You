@@ -31,8 +31,8 @@
         tools:layout="@layout/fragment_history" />
 
     <View
-        android:id="@+id/background"
-        android:background="@drawable/foreground"
+        android:id="@+id/background_expression"
+        android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="@dimen/_6sdp"
@@ -41,62 +41,45 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
 
-    <TextView
-        android:id="@+id/degreeTitleText"
-        style="@style/titleText"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="0dp"
-        android:text="@string/deg"
-        android:background="@drawable/degree_button_background"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="9dp"
-        android:rotation="90"
-        android:visibility="gone"
-        android:layoutDirection="locale"
-        app:layout_constraintStart_toEndOf="@id/actionBarGuideline"
-        app:layout_constraintEnd_toEndOf="@id/background"
-        app:layout_constraintTop_toBottomOf="@id/optionsMenuButton" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appBarConstraintLayout"
+        style="@style/AppBarConstraintLayoutCalculator"
+        app:layout_constraintTop_toTopOf="@id/background_expression"
+        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintEnd_toEndOf="@id/background_expression">
 
+        <TextView
+            android:id="@+id/degreeTitleText"
+            style="@style/DegreeTitleText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/optionsMenuButton"
-        style="@style/OptionsButton"
-        android:layoutDirection="locale"
-        app:layout_constraintStart_toEndOf="@id/actionBarGuideline"
-        app:layout_constraintEnd_toEndOf="@id/background"
-        app:layout_constraintTop_toTopOf="@id/background" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/NavigationTabs"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <View
-        android:id="@+id/actionBarGuideline"
-        android:layout_width="1dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_marginEnd="64dp"
-        android:layoutDirection="locale"
-        app:layout_constraintEnd_toEndOf="@id/background"
-        app:layout_constraintTop_toTopOf="@id/background"
-        app:layout_constraintBottom_toBottomOf="@id/background"/>
-
-    <TextView
-        android:id="@+id/resultText"
-        style="@style/Expression.Result"
-        android:layoutDirection="locale"
-        android:textDirection="ltr"
-        app:layout_constraintBottom_toBottomOf="@id/background"
-        app:layout_constraintEnd_toEndOf="@id/actionBarGuideline"
-        app:layout_constraintStart_toStartOf="@id/background"
-        app:layout_constraintTop_toBottomOf="@id/topResultGuideline" />
-
-    <com.forz.calculator.customViews.ExpressionEditText
+    <com.forz.calculator.expression.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
         android:layoutDirection="locale"
         android:textDirection="ltr"
-        app:layout_constraintBottom_toTopOf="@+id/resultText"
-        app:layout_constraintEnd_toStartOf="@id/actionBarGuideline"
-        app:layout_constraintStart_toStartOf="@id/background"
-        app:layout_constraintTop_toTopOf="@id/background" />
+        app:layout_constraintBottom_toBottomOf="@+id/background_expression"
+        app:layout_constraintEnd_toEndOf="@id/background_expression"
+        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <TextView
         android:id="@+id/expressionTextView"
@@ -105,17 +88,10 @@
         android:maxLines="1"
         android:layoutDirection="locale"
         android:textDirection="ltr"
-        app:layout_constraintBottom_toTopOf="@+id/resultText"
-        app:layout_constraintEnd_toEndOf="@id/actionBarGuideline"
-        app:layout_constraintStart_toStartOf="@id/background"
-        app:layout_constraintTop_toTopOf="@id/background" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/topResultGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.22"/>
+        app:layout_constraintBottom_toBottomOf="@+id/background_expression"
+        app:layout_constraintEnd_toEndOf="@id/background_expression"
+        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/pagerGuideline"
@@ -124,18 +100,17 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.36" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/calculatorFragment"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/calculatorViewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="@dimen/_6sdp"
         android:layout_marginBottom="@dimen/_4sdp"
         android:layout_marginTop="@dimen/_6sdp"
-        android:name="com.forz.calculator.fragments.CalculatorFragment"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/historyGuideline"
-        app:layout_constraintTop_toBottomOf="@id/pagerGuideline"
-        tools:layout="@layout/fragment_calculator"/>
+        app:layout_constraintTop_toBottomOf="@id/pagerGuideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

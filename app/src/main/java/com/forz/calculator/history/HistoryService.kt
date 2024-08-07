@@ -1,6 +1,7 @@
 package com.forz.calculator.history
 
 import android.content.Context
+import com.forz.calculator.utils.NumberFormatter.changeSeparatorsExpression
 import java.time.LocalDate
 
 typealias HistoryDataListListener = (historyDataList: List<HistoryData>) -> Unit
@@ -47,12 +48,12 @@ class HistoryService(context: Context) {
                           oldDecimalSeparatorSymbol: String, newDecimalSeparatorSymbol: String){
 
         val modifiedList = historyDataList.map { historyData ->
-            val newExpression = updateSymbolsInText(
+            val newExpression = changeSeparatorsExpression(
                 historyData.expression,
                 oldGroupingSeparatorSymbol, newGroupingSeparatorSymbol,
                 oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol
             )
-            val newResult = updateSymbolsInText(
+            val newResult = changeSeparatorsExpression(
                 historyData.result,
                 oldGroupingSeparatorSymbol, newGroupingSeparatorSymbol,
                 oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol
@@ -63,28 +64,18 @@ class HistoryService(context: Context) {
         historyDataList = ArrayList(historyDataList)
         historyDataList = modifiedList.toMutableList()
         dbHelper.modifyAllRecords(
-            modifyExpression = { expression ->  updateSymbolsInText(
+            modifyExpression = { expression ->  changeSeparatorsExpression(
                 expression,
                 oldGroupingSeparatorSymbol, newGroupingSeparatorSymbol,
                 oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol
             )},
-            modifyResult = { result -> updateSymbolsInText(
+            modifyResult = { result -> changeSeparatorsExpression(
                 result,
                 oldGroupingSeparatorSymbol, newGroupingSeparatorSymbol,
                 oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol
             )}
         )
         notifyChanges()
-    }
-
-    private fun updateSymbolsInText(inputString: String,
-                            oldGroupingSeparatorSymbol: String, newGroupingSeparatorSymbol: String,
-                            oldDecimalSeparatorSymbol: String, newDecimalSeparatorSymbol: String): String{
-        var string = inputString
-        string = string.replace(oldGroupingSeparatorSymbol, "#")
-        string = string.replace(oldDecimalSeparatorSymbol, newDecimalSeparatorSymbol)
-        string = string.replace("#", newGroupingSeparatorSymbol)
-        return string
     }
 
 

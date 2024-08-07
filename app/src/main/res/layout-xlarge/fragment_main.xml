@@ -9,8 +9,8 @@
     tools:context=".fragments.MainFragment">
 
     <View
-        android:id="@+id/background"
-        android:background="@drawable/foreground"
+        android:id="@+id/background_expression"
+        android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,70 +18,51 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
 
-    <TextView
-        android:id="@+id/degreeTitleText"
-        style="@style/titleText"
-        android:text="@string/deg"
-        android:layout_marginStart="12dp"
-        android:background="@drawable/degree_button_background"
-        android:visibility="gone"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="9dp"
-        app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appBarConstraintLayout"
+        style="@style/AppBarConstraintLayoutCalculator"
+        app:layout_constraintTop_toTopOf="@id/background_expression"
+        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintEnd_toEndOf="@id/background_expression">
 
-    <TextView
-        android:id="@+id/historyTitleText"
-        style="@style/titleText"
-        android:layout_marginStart="24dp"
-        android:text="@string/title_history"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
-        app:layout_constraintStart_toEndOf="@id/degreeTitleText"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/degreeTitleText"
+            style="@style/DegreeTitleText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/NavigationTabs"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/optionsMenuButton"
-        style="@style/OptionsButton"
-        app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        style="@style/NavigationTabs"
-        android:background="@drawable/background_tab"
-        app:layout_constraintBottom_toTopOf="@id/actionBarGuideline"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/actionBarGuideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="48dp" />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/resultText"
         style="@style/Expression.Result"
-        app:layout_constraintBottom_toBottomOf="@id/background"
+        app:layout_constraintBottom_toBottomOf="@id/background_expression"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topResultGuideline" />
 
-    <com.forz.calculator.customViews.ExpressionEditText
+    <com.forz.calculator.expression.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
         app:layout_constraintBottom_toTopOf="@+id/resultText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/actionBarGuideline" />
+        app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <TextView
         android:id="@+id/expressionTextView"
@@ -91,7 +72,7 @@
         app:layout_constraintBottom_toTopOf="@+id/resultText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/actionBarGuideline" />
+        app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topResultGuideline"

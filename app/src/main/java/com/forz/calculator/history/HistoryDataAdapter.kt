@@ -1,20 +1,16 @@
 package com.forz.calculator.history
 
 import android.content.Context
-import android.view.ContextMenu
 import android.view.Gravity
 import android.view.LayoutInflater
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.PopupMenu
 import androidx.core.text.TextUtilsCompat
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.forz.calculator.App
-import com.forz.calculator.HapticAndSound
+import com.forz.calculator.utils.HapticAndSound
 import com.forz.calculator.R
 import com.forz.calculator.databinding.ItemHistoryDataBinding
 import java.time.LocalDate
@@ -23,13 +19,13 @@ import java.time.temporal.ChronoUnit
 import kotlin.properties.Delegates.notNull
 
 interface HistoryDataActionListener {
-    fun insertExpression(historyData: HistoryData)
-    fun insertResult(historyData: HistoryData)
-    fun copyExpression(historyData: HistoryData)
-    fun copyResult(historyData: HistoryData)
-    fun copy(historyData: HistoryData)
-    fun share(historyData: HistoryData)
-    fun deleteItem(historyData: HistoryData)
+    fun onExpressionTextClick(expression: String)
+    fun onResultTextClick(result: String)
+    fun onExpressionTextLongClick(expression: String)
+    fun onResultTextLongClick(result: String)
+    fun onCopyButtonClick(string: String)
+    fun onShareButtonClick(string: String)
+    fun onDeleteItemButtonClick(historyData: HistoryData)
 }
 
 class HistoryDataDiffCallback(
@@ -63,7 +59,10 @@ class HistoryDataDiffCallback(
 class HistoryDataAdapter(
     private val context: Context,
     private val actionListener: HistoryDataActionListener
-) : RecyclerView.Adapter<HistoryDataAdapter.HistoryDataViewHolder>(), View.OnClickListener, View.OnLongClickListener, View.OnCreateContextMenuListener {
+) : RecyclerView.Adapter<HistoryDataAdapter.HistoryDataViewHolder>(),
+    View.OnClickListener,
+    View.OnLongClickListener
+{
 
     private var hapticAndSound: HapticAndSound by notNull()
 
@@ -96,15 +95,12 @@ class HistoryDataAdapter(
         val historyData = v.tag as HistoryData
         when (v.id){
             R.id.expressionText -> {
-                actionListener.insertExpression(historyData)
+                actionListener.onExpressionTextClick(historyData.expression)
                 hapticAndSound.vibrateEffectClick()
             }
             R.id.resultText -> {
-                actionListener.insertResult(historyData)
+                actionListener.onResultTextClick(historyData.result)
                 hapticAndSound.vibrateEffectClick()
-            }
-            else -> {
-                showPopupMenu(v)
             }
         }
     }
@@ -112,68 +108,13 @@ class HistoryDataAdapter(
         val historyData = v.tag as HistoryData
         when (v.id){
             R.id.expressionText -> {
-                actionListener.copyExpression(historyData)
+                actionListener.onExpressionTextLongClick(historyData.expression)
             }
             R.id.resultText -> {
-                actionListener.copyResult(historyData)
+                actionListener.onResultTextLongClick(historyData.result)
             }
         }
         return true
-    }
-
-    override fun onCreateContextMenu(
-        menu: ContextMenu?,
-        v: View,
-        menuInfo: ContextMenu.ContextMenuInfo?
-    ) {
-        v.tag as HistoryData
-
-        val inflater = MenuInflater(v.context)
-        inflater.inflate(R.menu.history_data_menu, menu)
-
-        for (i in 0 until menu!!.size()) {
-            menu.getItem(i).setOnMenuItemClickListener { item ->
-                onContextItemSelected(item, v)
-                true
-            }
-        }
-    }
-
-    private fun onContextItemSelected(item: MenuItem, view: View){
-        val historyData = view.tag as HistoryData
-        when (item.itemId) {
-            R.id.copy -> {
-                actionListener.copy(historyData)
-            }
-            R.id.share -> {
-                actionListener.share(historyData)
-            }
-            R.id.delete -> {
-                actionListener.deleteItem(historyData)
-            }
-        }
-    }
-
-    private fun showPopupMenu(view: View){
-        val popupMenu = PopupMenu(context, view)
-        popupMenu.inflate(R.menu.history_data_menu)
-        val historyData = view.tag as HistoryData
-
-        popupMenu.setOnMenuItemClickListener { menuItem ->
-            when(menuItem.itemId){
-                R.id.copy -> {
-                    actionListener.copy(historyData)
-                }
-                R.id.share -> {
-                    actionListener.share(historyData)
-                }
-                R.id.delete -> {
-                    actionListener.deleteItem(historyData)
-                }
-            }
-            return@setOnMenuItemClickListener true
-        }
-        popupMenu.show()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryDataViewHolder {
@@ -188,12 +129,10 @@ class HistoryDataAdapter(
         hapticAndSound = HapticAndSound(parent.context, views)
         hapticAndSound.setSoundEffects()
 
-        binding.root.setOnCreateContextMenuListener(this)
         binding.expressionText.setOnClickListener(this)
         binding.resultText.setOnClickListener(this)
         binding.expressionText.setOnLongClickListener(this)
         binding.resultText.setOnLongClickListener(this)
-        binding.optionsMenuButton.setOnClickListener(this)
 
         return HistoryDataViewHolder(binding)
     }
@@ -212,7 +151,24 @@ class HistoryDataAdapter(
             holder.itemView.tag = historyData
             expressionText.tag = historyData
             resultText.tag = historyData
-            optionsMenuButton.tag = historyData
+
+            toolbar.setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.copy -> {
+                        actionListener.onCopyButtonClick(combineExpressionAndResult(historyData.expression, historyData.result))
+                        true
+                    }
+                    R.id.share -> {
+                        actionListener.onShareButtonClick(combineExpressionAndResult(historyData.expression, historyData.result))
+                        true
+                    }
+                    R.id.delete -> {
+                        actionListener.onDeleteItemButtonClick(historyData)
+                        true
+                    }
+                    else -> false
+                }
+            }
 
             lastDate = if (position > 0) {
                 historyDataList[position - 1].date
@@ -338,4 +294,8 @@ class HistoryDataAdapter(
     class HistoryDataViewHolder(
         val binding: ItemHistoryDataBinding
     ) : RecyclerView.ViewHolder(binding.root)
+
+    private fun combineExpressionAndResult(expression: String, result: String): String{
+        return "$expression = $result"
+    }
 }

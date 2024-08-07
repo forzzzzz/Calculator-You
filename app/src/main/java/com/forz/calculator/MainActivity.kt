@@ -7,18 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
-import com.forz.calculator.StateViews.expressionEditTextIsRecreated
-import com.forz.calculator.StateViews.firstCreatedSettingsActivity
-import com.forz.calculator.StateViews.pagerIsRecreated
-import com.forz.calculator.StateViews.recyclerViewHistoryIsRecreated
 import com.forz.calculator.databinding.ActivityMainBinding
+import com.forz.calculator.fragments.HistoryFragment.Companion.recyclerViewHistoryIsRecreated
 import com.forz.calculator.fragments.MainFragment
 import com.forz.calculator.fragments.land.MainLandFragment
 import com.forz.calculator.fragments.small.SmallFragment
 import com.forz.calculator.fragments.smallLand.SmallLandFragment
 import com.forz.calculator.fragments.xLargeLand.XLargeLandFragment
-import com.forz.calculator.settings.SettingsState
-import com.forz.calculator.viewModels.CalculatorViewModel
+import com.forz.calculator.settings.SettingsActivity.Companion.firstCreatedSettingsActivity
+import com.forz.calculator.settings.Config
+import com.forz.calculator.settings.Preferences
+import com.forz.calculator.calculator.CalculatorViewModel
+import com.forz.calculator.fragments.UnitConverterFragment
+import com.forz.calculator.fragments.largeLand.LargeLandFragment
 import kotlin.properties.Delegates.notNull
 
 
@@ -38,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         preferences = Preferences(this)
 
 
-        SettingsState.init(
+        Config.init(
             preferences.getTheme(),
             preferences.getColor(),
             preferences.getDynamicColor(),
@@ -51,6 +52,8 @@ class MainActivity : AppCompatActivity() {
             preferences.getSoundEffects()
         )
         CalculatorViewModel.init(preferences.getDegreeMod())
+        UnitConverterFragment.physicalQuantity = preferences.getPhysicalQuantity()
+        UnitConverterFragment.unit = preferences.getUnit()
 
 
         if (!preferences.getDynamicColor()){
@@ -91,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             Configuration.SCREENLAYOUT_SIZE_LARGE -> {
                 when (resources.configuration.orientation) {
                     Configuration.ORIENTATION_LANDSCAPE -> {
-                        showFragment(MainLandFragment())
+                        showFragment(LargeLandFragment())
                     }
                     else -> {
                         showFragment(MainFragment())
@@ -141,13 +144,13 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
 
         preferences.setDegreeMod(CalculatorViewModel.isDegreeModActivated.value!!)
+        preferences.setPhysicalQuantity(UnitConverterFragment.physicalQuantity)
+        preferences.setUnit(UnitConverterFragment.unit)
     }
 
     override fun onDestroy() {
         super.onDestroy()
 
-        expressionEditTextIsRecreated = true
-        pagerIsRecreated = true
         recyclerViewHistoryIsRecreated = true
     }
 

@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.forz.calculator.R
 import com.forz.calculator.databinding.ItemColorBinding
-import com.forz.calculator.settings.SettingsState
+import com.forz.calculator.settings.Config
 
 interface ColorActionListener {
     fun onSelectColor(color: Color)
@@ -87,7 +87,7 @@ class ColorAdapter(
 
     init {
         colors.forEach { color ->
-            if (color.name == SettingsState.color) {
+            if (color.name == Config.color) {
                 color.isSelected = true
             }
         }
@@ -100,7 +100,7 @@ class ColorAdapter(
         }
 
         color.isSelected = true
-        SettingsState.color = color.name
+        Config.color = color.name
     }
 
     fun getIdSelectedColor(): Int {

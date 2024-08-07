@@ -1,8 +1,6 @@
 package com.forz.calculator
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.TypedValue
 import androidx.appcompat.app.AppCompatActivity
@@ -12,7 +10,9 @@ import com.forz.calculator.databinding.ActivityLicensesBinding
 import com.forz.calculator.licenses.License
 import com.forz.calculator.licenses.LicenseActionListener
 import com.forz.calculator.licenses.LicenseAdapter
-import com.forz.calculator.settings.SettingsState
+import com.forz.calculator.settings.Config
+import com.forz.calculator.settings.Preferences
+import com.forz.calculator.utils.InteractionAndroid
 import kotlin.properties.Delegates.notNull
 
 class LicensesActivity : AppCompatActivity() {
@@ -25,7 +25,7 @@ class LicensesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         preferences = Preferences(this)
 
-        if (!SettingsState.isDynamicColor){
+        if (!Config.isDynamicColor){
             setTheme(resources.getIdentifier(preferences.getColor(), "style", packageName))
         }else{
             setTheme(R.style.dynamicColors)
@@ -42,7 +42,7 @@ class LicensesActivity : AppCompatActivity() {
 
         adapter = LicenseAdapter(this, object : LicenseActionListener {
             override fun onSelectLicense(license: License) {
-                url(license.url)
+                InteractionAndroid.openUrl(license.url, this@LicensesActivity)
             }
         })
 
@@ -51,13 +51,8 @@ class LicensesActivity : AppCompatActivity() {
         binding.recyclerView.adapter = adapter
 
 
-        binding.arrowBack.setOnClickListener {
+        binding.topAppBar.setNavigationOnClickListener {
             finish()
         }
-    }
-
-    private fun url(string: String){
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(string))
-        startActivity(intent)
     }
 }

@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools">
 
@@ -26,7 +27,7 @@
         android:id="@+id/expressionText"
         style="@style/ExpressionText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/optionsMenuButton"
+        app:layout_constraintStart_toEndOf="@id/toolbar"
         app:layout_constraintTop_toBottomOf="@id/dateText"
         tool:text="(2400+3^2+100)-20%2323232424242" />
 
@@ -35,13 +36,13 @@
         style="@style/ExpressionText.ResultText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/optionsMenuButton"
+        app:layout_constraintStart_toEndOf="@id/toolbar"
         app:layout_constraintTop_toBottomOf="@id/expressionText"
         tool:text="493.128543424242424324242423432423424" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/optionsMenuButton"
-        style="@style/OptionsButton.History"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/HistoryToolbar"
         app:layout_constraintBottom_toBottomOf="@id/resultText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/expressionText" />

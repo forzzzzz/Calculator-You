@@ -9,8 +9,8 @@
     tools:context=".fragments.smallLand.SmallLandFragment">
 
     <View
-        android:id="@+id/background"
-        android:background="@drawable/foreground"
+        android:id="@+id/background_expression"
+        android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,23 +19,23 @@
         app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
 
 
-    <com.forz.calculator.customViews.ExpressionEditText
+    <com.forz.calculator.expression.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
-        app:layout_constraintBottom_toBottomOf="@id/background"
+        app:layout_constraintBottom_toBottomOf="@id/background_expression"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/background"
-        app:layout_constraintTop_toTopOf="@id/background" />
+        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintTop_toTopOf="@id/background_expression" />
 
     <TextView
         android:id="@+id/expressionTextView"
         style="@style/Expression"
         android:visibility="invisible"
         android:maxLines="1"
-        app:layout_constraintBottom_toBottomOf="@id/background"
+        app:layout_constraintBottom_toBottomOf="@id/background_expression"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/background"
-        app:layout_constraintTop_toTopOf="@id/background" />
+        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintTop_toTopOf="@id/background_expression" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topResultGuideline"

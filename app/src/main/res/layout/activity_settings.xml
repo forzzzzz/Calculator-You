@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/background"
@@ -9,26 +9,32 @@
     android:layout_height="match_parent"
     tools:context=".settings.SettingsActivity">
 
-
-    <LinearLayout
-        android:id="@+id/actionBar"
-        style="@style/actionBar">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/arrowBack"
-            style="@style/ArrowBack" />
-
-        <TextView
-            android:id="@+id/titleText"
-            style="@style/titleText"
-            android:text="@string/title_settings" />
-    </LinearLayout>
-
-
-    <ScrollView
-        android:id="@+id/backgroundScrollView"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="?attr/collapsingToolbarLayoutLargeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+            app:contentScrim="?attr/colorSurface"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleCollapseMode="scale">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                style="@style/appBar_settings"
+                app:title="@string/title_settings" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:orientation="vertical"
@@ -251,7 +257,7 @@
                     android:id="@+id/precisionTitleText"
                     style="@style/optionTitleText"
                     android:text="@string/title_precision"
-                    app:layout_constraintEnd_toStartOf="@id/precisionValueText"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@id/precisionImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -263,22 +269,19 @@
                     app:layout_constraintStart_toEndOf="@id/precisionImage"
                     app:layout_constraintTop_toBottomOf="@id/precisionTitleText" />
 
-                <TextView
-                    android:id="@+id/precisionValueText"
-                    style="@style/optionSeekBarValueText"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/precisionTitleText"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <SeekBar
-                    android:id="@+id/precisionSeekBar"
-                    style="@style/optionSeekBar"
-                    android:max="16"
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/precisionSlider"
+                    style="@style/optionSlider"
                     android:contentDescription="@string/title_precision"
+                    android:stepSize="1"
+                    android:valueFrom="0"
+                    android:valueTo="16"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@id/precisionImage"
-                    app:layout_constraintTop_toBottomOf="@id/precisionText" />
+                    app:layout_constraintTop_toBottomOf="@id/precisionText"
+                    app:layout_constraintVertical_bias="0.0" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -543,9 +546,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

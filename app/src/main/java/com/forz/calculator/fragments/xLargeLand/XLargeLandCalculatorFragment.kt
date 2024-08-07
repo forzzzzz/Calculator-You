@@ -1,41 +1,59 @@
 package com.forz.calculator.fragments.xLargeLand
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.forz.calculator.calculator.division_by_0
-import com.forz.calculator.calculator.domain_error
-import com.forz.calculator.calculator.is_infinity
-import com.forz.calculator.calculator.require_real_number
-import com.forz.calculator.Anim
-import com.forz.calculator.App
-import com.forz.calculator.HapticAndSound
-import com.forz.calculator.R
+import com.forz.calculator.utils.Anim
+import com.forz.calculator.calculator.AdditionalOperator
+import com.forz.calculator.utils.HapticAndSound
 import com.forz.calculator.databinding.FragmentXLargeLandCalculatorBinding
-import com.forz.calculator.history.HistoryService
-import com.forz.calculator.settings.SettingsState.decimalSeparatorSymbol
-import com.forz.calculator.viewModels.CalculatorViewModel.isDegreeModActivated
-import com.forz.calculator.viewModels.CalculatorViewModel.updateDegreeModActivated
-import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.viewModels.ExpressionViewModel.result
-import com.forz.calculator.viewModels.ExpressionViewModel.saveExpression
+import com.forz.calculator.settings.Config.decimalSeparatorSymbol
+import com.forz.calculator.calculator.Constant
+import com.forz.calculator.calculator.DefaultOperator
+import com.forz.calculator.calculator.ScientificFunction
+import com.forz.calculator.calculator.TrigonometricFunction
 import kotlin.properties.Delegates.notNull
 
 class XLargeLandCalculatorFragment : Fragment() {
 
     private var binding: FragmentXLargeLandCalculatorBinding by notNull()
     private var hapticAndSound: HapticAndSound by notNull()
+    private var callback: OnButtonClickListener? = null
 
-    private val historyService: HistoryService
-        get() = (requireContext().applicationContext as App).historyService
+    interface OnButtonClickListener {
+        fun onDigitButtonClick(digit: String)
+        fun onDotButtonClick()
+        fun onBackspaceButtonClick()
+        fun onClearExpressionButtonClick()
+        fun onOperatorButtonClick(operator: String)
+        fun onScienceFunctionButtonClick(scienceFunction: String)
+        fun onAdditionalOperatorButtonClick(operator: String)
+        fun onConstantButtonClick(constant: String)
+        fun onBracketButtonClick()
+        fun onDoubleBracketsButtonClick()
+        fun onEqualsButtonClick()
+        fun onEqualsButtonLongClick()
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        try {
+            callback = parentFragment as OnButtonClickListener
+        } catch (e: ClassCastException) {
+            throw ClassCastException("$context must implement OnButtonClickListener")
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentXLargeLandCalculatorBinding.inflate(inflater, container, false)
+
+        binding.dotButton.text = decimalSeparatorSymbol
 
         val views: Array<View> = arrayOf(
             binding.sqrtButton,
@@ -62,15 +80,15 @@ class XLargeLandCalculatorFragment : Fragment() {
             binding.digit8Button,
             binding.digit9Button,
             binding.dotButton,
-            binding.degreeButton,
+            binding.absButton,
             binding.lnButton,
             binding.logButton,
             binding.sinButton,
-            binding.sin1Button,
+            binding.asinButton,
             binding.cosButton,
-            binding.cos1Button,
+            binding.acosButton,
             binding.tanButton,
-            binding.tan1Button,
+            binding.atanButton,
             binding.eButton,
             binding.expButton
         )
@@ -79,209 +97,183 @@ class XLargeLandCalculatorFragment : Fragment() {
 
 
         binding.backspaceButton.setOnClickListener {
-            ExpressionViewModel.enterBackspace()
+            callback?.onBackspaceButtonClick()
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.backspaceButton, requireContext())
         }
         binding.backspaceButton.setOnLongClickListener {
-            ExpressionViewModel.clearExpression()
+            callback?.onClearExpressionButtonClick()
             hapticAndSound.vibrateEffectHeavyClick()
             Anim.buttonAnim(binding.backspaceButton, requireContext())
             true
         }
         binding.powerButton.setOnClickListener {
-            ExpressionViewModel.enterOperator("^(")
+            callback?.onOperatorButtonClick(DefaultOperator.Power.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.divisionButton.setOnClickListener {
-            ExpressionViewModel.enterOperator("÷")
+            callback?.onOperatorButtonClick(DefaultOperator.Divide.text)
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.divisionButton, requireContext())
         }
         binding.multiplicationButton.setOnClickListener {
-            ExpressionViewModel.enterOperator("×")
+            callback?.onOperatorButtonClick(DefaultOperator.Multiply.text)
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.multiplicationButton, requireContext())
         }
         binding.minusButton.setOnClickListener {
-            ExpressionViewModel.enterOperator("–")
+            callback?.onOperatorButtonClick(DefaultOperator.Minus.text)
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.minusButton, requireContext())
         }
         binding.plusButton.setOnClickListener {
-            ExpressionViewModel.enterOperator("+")
+            callback?.onOperatorButtonClick(DefaultOperator.Plus.text)
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.plusButton, requireContext())
         }
         binding.sqrtButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("√(")
+            callback?.onScienceFunctionButtonClick(ScientificFunction.SquareRoot.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.percentageButton.setOnClickListener {
-            ExpressionViewModel.enterOperator2("%")
+            callback?.onAdditionalOperatorButtonClick(AdditionalOperator.Percent.text)
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.percentageButton, requireContext())
         }
         binding.factorialButton.setOnClickListener {
-            ExpressionViewModel.enterOperator2("!")
+            callback?.onAdditionalOperatorButtonClick(AdditionalOperator.Factorial.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.piButton.setOnClickListener {
-            ExpressionViewModel.enterConstant("π")
+            callback?.onConstantButtonClick(Constant.PI.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.bracketsButton.setOnClickListener {
-            ExpressionViewModel.enterBracket()
+            callback?.onBracketButtonClick()
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.bracketsButton, requireContext())
         }
         binding.bracketsButton.setOnLongClickListener {
-            ExpressionViewModel.enterDoubleBrackets()
+            callback?.onDoubleBracketsButtonClick()
             hapticAndSound.vibrateEffectHeavyClick()
             Anim.buttonAnim(binding.bracketsButton, requireContext())
             true
         }
         binding.clearButton.setOnClickListener {
-            ExpressionViewModel.clearExpression()
+            callback?.onClearExpressionButtonClick()
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.clearButton, requireContext())
         }
         binding.equalsButton.setOnClickListener {
-            val expression: String
-
-            if (result.value!!.isNotEmpty() && !is_infinity && !division_by_0 && !require_real_number && !domain_error){
-                if (ExpressionViewModel.isSelection.value!!){
-                    expression = ExpressionViewModel.expression.value!!.substring(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expressionCursorPositionEnd.value!!)
-                    ExpressionViewModel.updateSaveExpression(expression)
-                }else{
-                    expression = ExpressionViewModel.expression.value!!
-                    ExpressionViewModel.updateSaveExpression(expression)
-                }
-
-                historyService.addHistoryData(expression, result.value!!)
-                ExpressionViewModel.updateExpression(result.value!!, result.value!!.length)
-            }
-
+            callback?.onEqualsButtonClick()
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.equalsButton, requireContext())
         }
         binding.equalsButton.setOnLongClickListener {
-            if (saveExpression.isNotEmpty()){
-                ExpressionViewModel.updateExpression(saveExpression, saveExpression.length)
-            }
+            callback?.onEqualsButtonLongClick()
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.equalsButton, requireContext())
             true
         }
-
         binding.digit0Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("0")
+            callback?.onDigitButtonClick("0")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit0Button, requireContext())
         }
         binding.digit1Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("1")
+            callback?.onDigitButtonClick("1")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit1Button, requireContext())
         }
         binding.digit2Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("2")
+            callback?.onDigitButtonClick("2")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit2Button, requireContext())
         }
         binding.digit3Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("3")
+            callback?.onDigitButtonClick("3")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit3Button, requireContext())
         }
         binding.digit4Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("4")
+            callback?.onDigitButtonClick("4")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit4Button, requireContext())
         }
         binding.digit5Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("5")
+            callback?.onDigitButtonClick("5")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit5Button, requireContext())
         }
         binding.digit6Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("6")
+            callback?.onDigitButtonClick("6")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit6Button, requireContext())
         }
         binding.digit7Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("7")
+            callback?.onDigitButtonClick("7")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit7Button, requireContext())
         }
         binding.digit8Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("8")
+            callback?.onDigitButtonClick("8")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit8Button, requireContext())
         }
         binding.digit9Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("9")
+            callback?.onDigitButtonClick("9")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit9Button, requireContext())
         }
         binding.dotButton.setOnClickListener {
-            ExpressionViewModel.enterDot()
+            callback?.onDotButtonClick()
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.dotButton, requireContext())
         }
 
-        binding.degreeButton.setOnClickListener {
-            updateDegreeModActivated()
+        binding.absButton.setOnClickListener {
+            callback?.onScienceFunctionButtonClick(ScientificFunction.Absolute.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.lnButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("ln(")
+            callback?.onScienceFunctionButtonClick(ScientificFunction.Ln.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.logButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("log(")
+            callback?.onScienceFunctionButtonClick(ScientificFunction.Log.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.sinButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("sin(")
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.Sin.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.cosButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("cos(")
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.Cos.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.tanButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("tan(")
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.Tan.text)
             hapticAndSound.vibrateEffectClick()
         }
-        binding.sin1Button.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("sin⁻¹(")
+        binding.asinButton.setOnClickListener {
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.ASin.text)
             hapticAndSound.vibrateEffectClick()
         }
-        binding.cos1Button.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("cos⁻¹(")
+        binding.acosButton.setOnClickListener {
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.ACos.text)
             hapticAndSound.vibrateEffectClick()
         }
-        binding.tan1Button.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("tan⁻¹(")
+        binding.atanButton.setOnClickListener {
+            callback?.onScienceFunctionButtonClick(TrigonometricFunction.ATan.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.eButton.setOnClickListener {
-            ExpressionViewModel.enterConstant("e")
+            callback?.onConstantButtonClick(Constant.E.text)
             hapticAndSound.vibrateEffectClick()
         }
         binding.expButton.setOnClickListener {
-            ExpressionViewModel.enterScienceFunction("exp(")
+            callback?.onScienceFunctionButtonClick(ScientificFunction.PowerE.text)
             hapticAndSound.vibrateEffectClick()
-        }
-
-
-        isDegreeModActivated.observe(viewLifecycleOwner){ isDegreeModActivated ->
-            if (isDegreeModActivated) {
-                binding.degreeButton.text = getString(R.string.deg)
-            } else {
-                binding.degreeButton.text = getString(R.string.rad)
-            }
         }
 
         return binding.root
@@ -289,7 +281,6 @@ class XLargeLandCalculatorFragment : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        binding.dotButton.text = decimalSeparatorSymbol
 
         hapticAndSound.setHapticFeedback()
         hapticAndSound.setSoundEffects()

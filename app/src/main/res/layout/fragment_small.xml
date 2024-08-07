@@ -9,8 +9,8 @@
     tools:context=".fragments.MainFragment">
 
     <View
-        android:id="@+id/background"
-        android:background="@drawable/foreground"
+        android:id="@+id/background_expression"
+        android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,39 +18,61 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/appBarConstraintLayout"
+        style="@style/AppBarConstraintLayoutCalculator"
+        app:layout_constraintTop_toTopOf="@id/background_expression"
+        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintEnd_toEndOf="@id/background_expression">
 
-    <TextView
-        android:id="@+id/resultText"
-        style="@style/Expression.Result"
-        app:layout_constraintBottom_toBottomOf="@id/background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topResultGuideline" />
+        <TextView
+            android:id="@+id/degreeTitleText"
+            style="@style/DegreeTitleText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-    <com.forz.calculator.customViews.ExpressionEditText
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/NavigationTabs"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.forz.calculator.expression.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
-        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintBottom_toBottomOf="@id/background_expression"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <TextView
         android:id="@+id/expressionTextView"
         style="@style/Expression"
         android:visibility="invisible"
         android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/resultText"
+        app:layout_constraintBottom_toBottomOf="@id/background_expression"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/topResultGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.24"/>
+        app:layout_constraintGuide_percent="0.26"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/pagerGuideline"

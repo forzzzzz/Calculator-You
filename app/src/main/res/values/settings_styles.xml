@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="actionBar">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">64dp</item>
-
-        <item name="android:orientation">horizontal</item>
-        <item name="android:gravity">center|start</item>
-    </style>
-
-    <style name="ArrowBack">
-        <item name="android:layout_width">48dp</item>
-        <item name="android:layout_height">48dp</item>
-
-        <item name="android:padding">11dp</item>
-
-        <item name="android:layout_marginStart">12dp</item>
-
-        <item name="android:contentDescription">@string/arrow_back_tool_tip</item>
-        <item name="android:tint">?attr/colorOnSurface</item>
-        <item name="android:src">@drawable/baseline_arrow_back</item>
-        <item name="android:background">@drawable/background_options_menu</item>
-        <item name="android:tooltipText">@string/arrow_back_tool_tip</item>
-        <item name="android:onClick">onClickBack</item>
-    </style>
-
     <style name="titleText">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -36,10 +12,21 @@
         <item name="android:textColor">?attr/colorOnSurface</item>
     </style>
 
+    <style name="appBar_settings">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+
+        <item name="layout_collapseMode">pin</item>
+        <item name="titleTextColor">?attr/colorOnSurface</item>
+        <item name="navigationIcon">@drawable/baseline_arrow_back</item>
+        <item name="navigationIconTint">?attr/colorOnSurface</item>
+        <item name="navigationContentDescription">@string/arrow_back_tool_tip</item>
+    </style>
 
 
 
-    <style name="sectionText">
+
+    <style name="sectionText" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
 
@@ -68,7 +55,7 @@
         <item name="android:tint">?attr/colorOnSurface</item>
     </style>
 
-    <style name="optionTitleText">
+    <style name="optionTitleText" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
 
@@ -81,19 +68,7 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <style name="optionSpinner">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">40dp</item>
-
-        <item name="android:layout_marginStart">20dp</item>
-        <item name="android:layout_marginEnd">16dp</item>
-        <item name="android:layout_marginTop">4dp</item>
-        <item name="android:layout_marginBottom">16dp</item>
-
-        <item name="android:spinnerMode">dropdown</item>
-    </style>
-
-    <style name="optionDescriptionText">
+    <style name="optionDescriptionText" parent="Widget.AppCompat.TextView">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
 
@@ -107,7 +82,7 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <style name="optionSwitch">
+    <style name="optionSwitch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
 
@@ -160,7 +135,7 @@
         <item name="android:src">@drawable/baseline_done</item>
     </style>
 
-    <style name="optionSeekBar">
+    <style name="optionSlider" parent="Widget.Material3.Slider">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
 
@@ -168,16 +143,5 @@
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:layout_marginBottom">12dp</item>
-    </style>
-
-    <style name="optionSeekBarValueText">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-
-        <item name="android:layout_marginEnd">24dp</item>
-        <item name="android:layout_marginTop">12dp</item>
-
-        <item name="android:textColor">?attr/colorOnSurface</item>
-        <item name="android:textSize">18sp</item>
     </style>
 </resources>

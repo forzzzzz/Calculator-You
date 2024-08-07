@@ -1,21 +1,36 @@
 package com.forz.calculator.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.forz.calculator.Anim
-import com.forz.calculator.HapticAndSound
+import com.forz.calculator.utils.Anim
+import com.forz.calculator.utils.HapticAndSound
 import com.forz.calculator.databinding.FragmentDigitBinding
-import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.settings.SettingsState.decimalSeparatorSymbol
+import com.forz.calculator.settings.Config.decimalSeparatorSymbol
 import kotlin.properties.Delegates
 
 class DigitFragment : Fragment() {
 
     private var binding: FragmentDigitBinding by Delegates.notNull()
     private var hapticAndSound: HapticAndSound by Delegates.notNull()
+    private var callback: OnButtonClickListener? = null
+
+    interface OnButtonClickListener {
+        fun onDigitButtonClick(digit: String)
+        fun onDotButtonClick()
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        callback = parentFragment as? OnButtonClickListener
+        if (callback == null) {
+            throw ClassCastException("$context must implement OnButtonClickListener")
+        }
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,57 +57,57 @@ class DigitFragment : Fragment() {
         hapticAndSound = HapticAndSound(requireContext(), views)
 
         binding.digit0Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("0")
+            callback?.onDigitButtonClick("0")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit0Button, requireContext())
         }
         binding.digit1Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("1")
+            callback?.onDigitButtonClick("1")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit1Button, requireContext())
         }
         binding.digit2Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("2")
+            callback?.onDigitButtonClick("2")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit2Button, requireContext())
         }
         binding.digit3Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("3")
+            callback?.onDigitButtonClick("3")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit3Button, requireContext())
         }
         binding.digit4Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("4")
+            callback?.onDigitButtonClick("4")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit4Button, requireContext())
         }
         binding.digit5Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("5")
+            callback?.onDigitButtonClick("5")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit5Button, requireContext())
         }
         binding.digit6Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("6")
+            callback?.onDigitButtonClick("6")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit6Button, requireContext())
         }
         binding.digit7Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("7")
+            callback?.onDigitButtonClick("7")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit7Button, requireContext())
         }
         binding.digit8Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("8")
+            callback?.onDigitButtonClick("8")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit8Button, requireContext())
         }
         binding.digit9Button.setOnClickListener {
-            ExpressionViewModel.enterDigit("9")
+            callback?.onDigitButtonClick("9")
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.digit9Button, requireContext())
         }
         binding.dotButton.setOnClickListener {
-            ExpressionViewModel.enterDot()
+            callback?.onDotButtonClick()
             hapticAndSound.vibrateEffectClick()
             Anim.buttonAnim(binding.dotButton, requireContext())
         }

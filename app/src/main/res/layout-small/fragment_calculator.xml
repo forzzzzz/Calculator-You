@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:importantForAccessibility="noHideDescendants"
+    tools:context=".fragments.CalculatorFragment">
+
+    <View
+        android:id="@+id/block1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="1.2"
+        app:layout_constraintEnd_toStartOf="@id/block2"
+        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/block2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintEnd_toStartOf="@id/block3"
+        app:layout_constraintStart_toEndOf="@id/block1"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/block3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintEnd_toStartOf="@id/block4"
+        app:layout_constraintStart_toEndOf="@id/block2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/block4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintEnd_toStartOf="@id/block5"
+        app:layout_constraintStart_toEndOf="@id/block3"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/block5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintEnd_toStartOf="@id/paddingRightGuideline"
+        app:layout_constraintStart_toEndOf="@id/block4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/paddingLeftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_4sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/paddingRightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_4sdp" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/scienceModButton"
+        style="@style/Button.ExtraButton"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/science_mod_image_button_background"
+        android:padding="7dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/baseline_science"
+        android:tint="?attr/colorOnSurface"
+        app:layout_constraintBottom_toBottomOf="@id/equalsButton"
+        app:layout_constraintEnd_toEndOf="@id/block1"
+        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintTop_toTopOf="@id/equalsButton" />
+
+    <View
+        android:id="@+id/backgroundExtraButtons"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/background_extra_buttons"
+        app:layout_constraintBottom_toBottomOf="@id/plusButton"
+        app:layout_constraintEnd_toEndOf="@id/block1"
+        app:layout_constraintStart_toEndOf="@id/paddingLeftGuideline"
+        app:layout_constraintTop_toTopOf="@id/divisionButton" />
+
+    <TextView
+        android:id="@+id/sqrtButton"
+        style="@style/Button.ExtraButton"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="0dp"
+        android:text="@string/sqrt"
+        app:layout_constraintBottom_toBottomOf="@id/divisionButton"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
+        app:layout_constraintTop_toTopOf="@id/divisionButton" />
+
+    <TextView
+        android:id="@+id/piButton"
+        style="@style/Button.ExtraButton"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="0dp"
+        android:text="@string/pi"
+        app:layout_constraintBottom_toBottomOf="@id/multiplicationButton"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
+        app:layout_constraintTop_toTopOf="@id/multiplicationButton" />
+
+    <TextView
+        android:id="@+id/powerButton"
+        style="@style/Button.ExtraButton"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="0dp"
+        android:text="@string/power"
+        app:layout_constraintBottom_toBottomOf="@id/minusButton"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
+        app:layout_constraintTop_toTopOf="@id/minusButton" />
+
+    <TextView
+        android:id="@+id/factorialButton"
+        style="@style/Button.ExtraButton"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="0dp"
+        android:text="@string/factorial"
+        app:layout_constraintBottom_toBottomOf="@id/plusButton"
+        app:layout_constraintEnd_toEndOf="@id/backgroundExtraButtons"
+        app:layout_constraintStart_toStartOf="@id/backgroundExtraButtons"
+        app:layout_constraintTop_toTopOf="@id/plusButton" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/paddingBottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/_2sdp" />
+
+
+    <TextView
+        android:id="@+id/clearButton"
+        style="@style/Button.Operator"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/clear_button"
+        android:textSize="24sp"
+        android:autoSizeMaxTextSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@id/divisionButton"
+        app:layout_constraintEnd_toStartOf="@id/bracketsButton"
+        app:layout_constraintStart_toStartOf="@id/block2"
+        app:layout_constraintTop_toTopOf="@id/divisionButton" />
+
+    <TextView
+        android:id="@+id/bracketsButton"
+        style="@style/Button.Operator"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:paddingBottom="@dimen/_2sdp"
+        android:textSize="24sp"
+        android:autoSizeMaxTextSize="24sp"
+        android:text="@string/brackets_button"
+        app:layout_constraintBottom_toBottomOf="@id/divisionButton"
+        app:layout_constraintEnd_toStartOf="@id/percentageButton"
+        app:layout_constraintStart_toEndOf="@id/clearButton"
+        app:layout_constraintTop_toTopOf="@id/divisionButton" />
+
+    <TextView
+        android:id="@+id/percentageButton"
+        style="@style/Button.Operator"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/percentage_button"
+        android:textSize="26sp"
+        android:autoSizeMaxTextSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@id/divisionButton"
+        app:layout_constraintEnd_toStartOf="@id/divisionButton"
+        app:layout_constraintStart_toEndOf="@id/bracketsButton"
+        app:layout_constraintTop_toTopOf="@id/divisionButton" />
+
+    <TextView
+        android:id="@+id/divisionButton"
+        style="@style/Button.Operator"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/division_button"
+        app:layout_constraintBottom_toTopOf="@id/multiplicationButton"
+        app:layout_constraintEnd_toStartOf="@id/paddingRightGuideline"
+        app:layout_constraintStart_toEndOf="@id/percentageButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/multiplicationButton"
+        style="@style/Button.Operator"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/multiplication_button"
+        app:layout_constraintBottom_toTopOf="@id/minusButton"
+        app:layout_constraintEnd_toEndOf="@id/divisionButton"
+        app:layout_constraintStart_toStartOf="@id/divisionButton"
+        app:layout_constraintTop_toBottomOf="@id/divisionButton" />
+
+    <TextView
+        android:id="@+id/minusButton"
+        style="@style/Button.Operator"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/minus_button"
+        app:layout_constraintBottom_toTopOf="@id/plusButton"
+        app:layout_constraintEnd_toEndOf="@id/divisionButton"
+        app:layout_constraintStart_toStartOf="@id/divisionButton"
+        app:layout_constraintTop_toBottomOf="@id/multiplicationButton" />
+
+    <TextView
+        android:id="@+id/plusButton"
+        style="@style/Button.Operator"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:text="@string/plus_button"
+        app:layout_constraintBottom_toTopOf="@id/equalsButton"
+        app:layout_constraintEnd_toEndOf="@id/divisionButton"
+        app:layout_constraintStart_toStartOf="@id/divisionButton"
+        app:layout_constraintTop_toBottomOf="@id/minusButton" />
+
+
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/paddingBottomGuideline"
+        app:layout_constraintEnd_toEndOf="@id/percentageButton"
+        app:layout_constraintStart_toStartOf="@id/block2"
+        app:layout_constraintTop_toTopOf="@id/multiplicationButton"/>
+
+
+    <TextView
+        android:id="@+id/equalsButton"
+        style="@style/Button.Equals"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:paddingBottom="@dimen/_3sdp"
+        app:layout_constraintBottom_toTopOf="@id/paddingBottomGuideline"
+        app:layout_constraintEnd_toEndOf="@id/divisionButton"
+        app:layout_constraintStart_toStartOf="@id/divisionButton"
+        app:layout_constraintTop_toBottomOf="@id/plusButton" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/backspaceButton"
+        style="@style/Button.Equals"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/baseline_backspace"
+        android:tint="?attr/colorOnSurface"
+        android:scaleType="center"
+        app:layout_constraintBottom_toTopOf="@id/paddingBottomGuideline"
+        app:layout_constraintEnd_toEndOf="@id/percentageButton"
+        app:layout_constraintStart_toStartOf="@id/percentageButton"
+        app:layout_constraintTop_toTopOf="@id/equalsButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

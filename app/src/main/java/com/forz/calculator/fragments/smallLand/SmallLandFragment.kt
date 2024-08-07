@@ -1,32 +1,48 @@
 package com.forz.calculator.fragments.smallLand
 
 import android.os.Bundle
-import android.util.TypedValue
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
-import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.forz.calculator.InsertInExpression
-import com.forz.calculator.NumberFormatter
+import com.forz.calculator.App
 import com.forz.calculator.OnBackPressedListener
-import com.forz.calculator.StateViews
 import com.forz.calculator.databinding.FragmentSmallLandBinding
 import com.forz.calculator.fragments.HistoryFragment
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
-import com.forz.calculator.fragments.small.SmallCalculatorFragment
-import com.forz.calculator.settings.SettingsState
-import com.forz.calculator.viewModels.CalculatorViewModel
-import com.forz.calculator.viewModels.ExpressionViewModel
-import kotlin.properties.Delegates
+import com.forz.calculator.settings.Config
+import com.forz.calculator.calculator.CalculatorViewModel
+import com.forz.calculator.calculator.Evaluator
+import com.forz.calculator.expression.ExpressionViewModel
+import com.forz.calculator.expression.ExpressionViewModel.cursorPositionStart
+import com.forz.calculator.expression.ExpressionViewModel.expression
+import com.forz.calculator.expression.ExpressionViewModel.oldExpression
+import com.forz.calculator.fragments.CalculatorFragment
+import com.forz.calculator.fragments.Fragments.CALCULATOR_FRAGMENT
+import com.forz.calculator.fragments.Fragments.currentItemMainPager
+import com.forz.calculator.fragments.UnitConverterFragment
+import com.forz.calculator.history.HistoryService
+import com.forz.calculator.utils.InsertInExpression
+import kotlin.properties.Delegates.notNull
 
-class SmallLandFragment : Fragment(), OnBackPressedListener {
+class SmallLandFragment : Fragment(),
+    OnBackPressedListener,
+    CalculatorFragment.OnButtonClickListener,
+    HistoryFragment.OnButtonClickListener,
+    UnitConverterFragment.OnButtonClickListener
+{
+
+    private var result: String by notNull()
+    private var binding: FragmentSmallLandBinding by notNull()
 
 
-    private var binding: FragmentSmallLandBinding by Delegates.notNull()
+    private val historyService: HistoryService
+        get() = (requireContext().applicationContext as App).historyService
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,76 +51,59 @@ class SmallLandFragment : Fragment(), OnBackPressedListener {
         binding = FragmentSmallLandBinding.inflate(inflater, container, false)
 
         binding.expressionEditText.showSoftInputOnFocus = false
+        binding.expressionEditText.requestFocus()
 
 
         val adapter = ViewPageAdapter(childFragmentManager, lifecycle)
-        adapter.addFragment(SmallCalculatorFragment())
+
+        adapter.addFragment(UnitConverterFragment())
+        adapter.addFragment(CalculatorFragment())
         adapter.addFragment(HistoryFragment())
+
         binding.pager.adapter = adapter
-        binding.pager.setCurrentItem(StateViews.currentItemPager, false)
-        binding.pager.offscreenPageLimit = 2
+        binding.pager.setCurrentItem(currentItemMainPager, false)
+        binding.pager.offscreenPageLimit = 3
 
         binding.pager.apply {
             (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
         }
 
-
         binding.pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
-                StateViews.currentItemPager = position
+                currentItemMainPager = position
             }
         })
 
-        CalculatorViewModel.isDegreeModActivated.observe(requireActivity()) { _ ->
-            ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!, requireContext())
-        }
-
-        ExpressionViewModel.expression.observe(requireActivity()){ expression ->
-            val expressionCursorPositionStart = ExpressionViewModel.expressionCursorPositionStart.value!!
-            val expressionCursorPositionEnd = ExpressionViewModel.expressionCursorPositionEnd.value!!
-            binding.expressionEditText.text = NumberFormatter.changeColorOperators(expression, requireContext())
-            binding.expressionEditText.setSelection(expressionCursorPositionStart, expressionCursorPositionEnd)
-
-            ExpressionViewModel.updateResult(expression, requireContext())
-        }
-
-        binding.expressionEditText.requestFocus()
         binding.expressionEditText.onFocusChangeListener = View.OnFocusChangeListener { view, hasFocus ->
             if (!hasFocus) {
                 view.requestFocus()
             }
         }
 
-
-        binding.expressionEditText.addTextChangedListener{
-            if (ExpressionViewModel.expression.value!! != binding.expressionEditText.text.toString()){
-                ExpressionViewModel.updateNumberOfCharactersOfInsertedText(binding.expressionEditText.text!!.length)
-                ExpressionViewModel.updateExpression(binding.expressionEditText.text.toString(), binding.expressionEditText.selectionStart)
+        binding.expressionEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
             }
-
-            autoSizeTextExpressionEditText()
-        }
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            }
+            override fun afterTextChanged(p0: Editable?) {
+                result = Evaluator.getResult(binding.expressionEditText, ExpressionViewModel.isSelected.value ?: false, requireContext())
+                binding.expressionEditText.autoSizeTextExpressionEditText(binding.expressionTextView)
+            }
+        })
 
         binding.root.viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
-                autoSizeTextExpressionEditText()
+                binding.expressionEditText.autoSizeTextExpressionEditText(binding.expressionTextView)
                 binding.root.viewTreeObserver.removeOnGlobalLayoutListener(this)
             }
         })
 
+        ExpressionViewModel.isSelected.observe(requireActivity()){ isSelected ->
+            result = Evaluator.getResult(binding.expressionEditText, isSelected, requireContext())
+        }
 
-        ExpressionViewModel.isSelection.observe(requireActivity()){ isSelection ->
-            if (isSelection){
-                ExpressionViewModel.updateResult(
-                    ExpressionViewModel.expression.value!!.substring(
-                        ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expressionCursorPositionEnd.value!!), requireContext())
-            }else if (!isSelection && ExpressionViewModel.previousIsSelection){
-                ExpressionViewModel.updateResult(ExpressionViewModel.expression.value!!, requireContext())
-            } else if (InsertInExpression.stringAfterCursor(ExpressionViewModel.expressionCursorPositionStart.value!!, ExpressionViewModel.expression.value!!).startsWith(
-                    SettingsState.groupingSeparatorSymbol
-                )){
-                binding.expressionEditText.setSelection(ExpressionViewModel.expressionCursorPositionStart.value!! + 1)
-            }
+        CalculatorViewModel.isDegreeModActivated.observe(requireActivity()) { _ ->
+            result = Evaluator.getResult(binding.expressionEditText, ExpressionViewModel.isSelected.value ?: false, requireContext())
         }
 
         return binding.root
@@ -113,22 +112,102 @@ class SmallLandFragment : Fragment(), OnBackPressedListener {
     override fun onStart() {
         super.onStart()
 
-        binding.pager.isUserInputEnabled = SettingsState.swipeHistoryAndCalculator
+        binding.pager.isUserInputEnabled = Config.swipeMain
+        binding.expressionEditText.setText(expression)
+        binding.expressionEditText.setSelection(cursorPositionStart)
     }
 
+    override fun onStop() {
+        super.onStop()
+
+        expression = binding.expressionEditText.text.toString()
+        cursorPositionStart = binding.expressionEditText.selectionStart
+    }
 
     override fun onBackPressed(): Boolean {
-        return if (binding.pager.currentItem == 1) {
-            binding.pager.setCurrentItem(0, true)
+        return if (currentItemMainPager != CALCULATOR_FRAGMENT) {
+            binding.pager.setCurrentItem(CALCULATOR_FRAGMENT, true)
             true
         } else {
             false
         }
     }
 
+    override fun onDigitButtonClick(digit: String) {
+        InsertInExpression.enterDigit(digit, binding.expressionEditText)
+    }
 
-    private fun autoSizeTextExpressionEditText(){
-        binding.expressionTextView.text = binding.expressionEditText.text
-        binding.expressionEditText.setTextSize(TypedValue.COMPLEX_UNIT_PX, binding.expressionTextView.textSize)
+    override fun onDotButtonClick() {
+        InsertInExpression.enterDot(binding.expressionEditText)
+    }
+
+    override fun onBackspaceButtonClick() {
+        InsertInExpression.enterBackspace(binding.expressionEditText)
+    }
+
+    override fun onClearExpressionButtonClick() {
+        InsertInExpression.clearExpression(binding.expressionEditText)
+    }
+
+    override fun onOperatorButtonClick(operator: String) {
+        InsertInExpression.enterOperator(operator, binding.expressionEditText)
+    }
+
+    override fun onScienceFunctionButtonClick(scienceFunction: String) {
+        InsertInExpression.enterScienceFunction(scienceFunction, binding.expressionEditText)
+    }
+
+    override fun onAdditionalOperatorButtonClick(operator: String) {
+        InsertInExpression.enterAdditionalOperator(operator, binding.expressionEditText)
+    }
+
+    override fun onConstantButtonClick(constant: String) {
+        InsertInExpression.enterConstant(constant, binding.expressionEditText)
+    }
+
+    override fun onBracketButtonClick() {
+        InsertInExpression.enterBracket(binding.expressionEditText)
+    }
+
+    override fun onDoubleBracketsButtonClick() {
+        InsertInExpression.enterDoubleBrackets(binding.expressionEditText)
+    }
+
+    override fun onEqualsButtonClick() {
+        if (Evaluator.isCalculated){
+            val result = result
+
+            val expression: String = if (ExpressionViewModel.isSelected.value == true){
+                binding.expressionEditText.text
+                    .toString()
+                    .substring(
+                        binding.expressionEditText.selectionStart, binding.expressionEditText.selectionEnd
+                    )
+            } else {
+                binding.expressionEditText.text.toString()
+            }
+
+            oldExpression = expression
+            InsertInExpression.setExpression(result, binding.expressionEditText)
+            historyService.addHistoryData(expression, result)
+        }
+    }
+
+    override fun onEqualsButtonLongClick() {
+        if (oldExpression.isNotEmpty()){
+            InsertInExpression.setExpression(oldExpression, binding.expressionEditText)
+        }
+    }
+
+    override fun onExpressionTextClick(expression: String) {
+        InsertInExpression.insertHistoryExpression(expression, binding.expressionEditText)
+    }
+
+    override fun onResultTextClick(result: String) {
+        InsertInExpression.insertHistoryResult(result, binding.expressionEditText)
+    }
+
+    override fun onUnitResultTextClick(result: String) {
+        InsertInExpression.setExpression(result, binding.expressionEditText)
     }
 }

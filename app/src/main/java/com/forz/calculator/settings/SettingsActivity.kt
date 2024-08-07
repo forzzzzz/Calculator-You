@@ -10,41 +10,42 @@ import android.os.Vibrator
 import android.util.TypedValue
 import android.view.View
 import android.view.ViewTreeObserver
-import android.widget.SeekBar
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.forz.calculator.App
-import com.forz.calculator.NumberFormatter
-import com.forz.calculator.Preferences
+import com.forz.calculator.utils.NumberFormatter
 import com.forz.calculator.R
-import com.forz.calculator.StateViews.firstCreatedSettingsActivity
 import com.forz.calculator.colorThemes.Color
 import com.forz.calculator.colorThemes.ColorActionListener
 import com.forz.calculator.colorThemes.ColorAdapter
 import com.forz.calculator.databinding.ActivitySettingsBinding
 import com.forz.calculator.history.HistoryService
-import com.forz.calculator.viewModels.ExpressionViewModel
-import com.forz.calculator.settings.SettingsState.color
-import com.forz.calculator.settings.SettingsState.decimalSeparatorSymbol
-import com.forz.calculator.settings.SettingsState.groupingSeparatorSymbol
-import com.forz.calculator.settings.SettingsState.isDynamicColor
-import com.forz.calculator.settings.SettingsState.numberPrecision
-import com.forz.calculator.settings.SettingsState.previousDecimalSeparatorSymbol
-import com.forz.calculator.settings.SettingsState.previousGroupingSeparatorSymbol
-import com.forz.calculator.settings.SettingsState.sound
-import com.forz.calculator.settings.SettingsState.swipeDigitsAndScientificFunctions
-import com.forz.calculator.settings.SettingsState.swipeHistoryAndCalculator
-import com.forz.calculator.settings.SettingsState.vibration
+import com.forz.calculator.settings.Config.color
+import com.forz.calculator.settings.Config.decimalSeparatorSymbol
+import com.forz.calculator.settings.Config.groupingSeparatorSymbol
+import com.forz.calculator.settings.Config.isDynamicColor
+import com.forz.calculator.settings.Config.numberPrecision
+import com.forz.calculator.settings.Config.oldDecimalSeparatorSymbol
+import com.forz.calculator.settings.Config.oldGroupingSeparatorSymbol
+import com.forz.calculator.settings.Config.sound
+import com.forz.calculator.settings.Config.swipeDigitsAndScientificFunctions
+import com.forz.calculator.settings.Config.swipeMain
+import com.forz.calculator.settings.Config.vibration
+import com.forz.calculator.expression.ExpressionViewModel
 import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.materialswitch.MaterialSwitch
+import com.google.android.material.slider.Slider
 import kotlin.properties.Delegates.notNull
 
 
 @Suppress("DEPRECATION")
 class SettingsActivity : AppCompatActivity() {
+
+    companion object{
+        var firstCreatedSettingsActivity = true
+    }
 
     private var binding: ActivitySettingsBinding by notNull()
     private var preferences: Preferences by notNull()
@@ -83,20 +84,17 @@ class SettingsActivity : AppCompatActivity() {
 
 
 
-
         loadChooseThemeImage()
-        loadButtonToggleGroupInt(binding.chooseThemeButtonToggleGroup, themeMap, SettingsState.theme)
+        loadButtonToggleGroupInt(binding.chooseThemeButtonToggleGroup, themeMap, Config.theme)
         loadDynamicColorSwitch()
 
-        loadSeekBar(binding.precisionSeekBar, binding.precisionValueText, numberPrecision)
+        loadSlider(binding.precisionSlider, numberPrecision)
         binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, groupingSeparatorSymbol, decimalSeparatorSymbol)
         loadButtonToggleGroupString(binding.groupingSeparatorSymbolButtonToggleGroup, groupingSeparatorMap, groupingSeparatorSymbol)
         loadButtonToggleGroupString(binding.decimalSeparatorSymbolButtonToggleGroup, decimalSeparatorMap, decimalSeparatorSymbol)
 
         loadSwitch(binding.vibrationSwitch, vibration)
         loadSwitch(binding.soundEffectsSwitch, sound)
-
-
 
 
 
@@ -160,11 +158,11 @@ class SettingsActivity : AppCompatActivity() {
                 }
 
                 val currentNightMode = preferences.getTheme()
-                SettingsState.theme = currentNightMode
+                Config.theme = currentNightMode
                 if (currentNightMode != newNightMode) {
-                    SettingsState.theme = newNightMode
-                    preferences.setTheme(SettingsState.theme)
-                    AppCompatDelegate.setDefaultNightMode(SettingsState.theme)
+                    Config.theme = newNightMode
+                    preferences.setTheme(Config.theme)
+                    AppCompatDelegate.setDefaultNightMode(Config.theme)
                 }
             }
         }
@@ -183,19 +181,21 @@ class SettingsActivity : AppCompatActivity() {
 
 
 
+        binding.precisionSlider.addOnChangeListener { _, value, _ ->
+            val progress = value.toInt()
+            binding.previewFormatText.text = updatePreviewText(
+                getString(R.string.preview_format_text),
+                progress,
+                preferences.getGroupingSeparatorSymbol(),
+                preferences.getDecimalSeparatorSymbol()
+            )
+        }
 
-
-
-
-        binding.precisionSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-                binding.precisionValueText.text = binding.precisionSeekBar.progress.toString()
-                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), binding.precisionSeekBar.progress, preferences.getGroupingSeparatorSymbol(), preferences.getDecimalSeparatorSymbol())
+        binding.precisionSlider.addOnSliderTouchListener(object : Slider.OnSliderTouchListener {
+            override fun onStartTrackingTouch(slider: Slider) {
             }
-            override fun onStartTrackingTouch(seekBar: SeekBar?) {
-            }
-            override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                numberPrecision = binding.precisionSeekBar.progress
+            override fun onStopTrackingTouch(slider: Slider) {
+                numberPrecision = slider.value.toInt()
             }
         })
 
@@ -242,14 +242,13 @@ class SettingsActivity : AppCompatActivity() {
 
 
 
-
         binding.swipesLayout.setOnClickListener {
-            val selectedItems = booleanArrayOf(swipeHistoryAndCalculator, swipeDigitsAndScientificFunctions)
+            val selectedItems = booleanArrayOf(swipeMain, swipeDigitsAndScientificFunctions)
             val builder: AlertDialog.Builder = AlertDialog.Builder(this)
             builder
                 .setTitle(getString(R.string.title_swipes))
                 .setPositiveButton(getString(R.string.swipes_ok)) { _, _ ->
-                    swipeHistoryAndCalculator = selectedItems[0]
+                    swipeMain = selectedItems[0]
                     swipeDigitsAndScientificFunctions = selectedItems[1]
                 }
                 .setNegativeButton(getString(R.string.swipes_cancel)) { _, _ ->
@@ -282,9 +281,7 @@ class SettingsActivity : AppCompatActivity() {
 
 
 
-
-
-        binding.arrowBack.setOnClickListener {
+        binding.topAppBar.setNavigationOnClickListener {
             finish()
         }
     }
@@ -292,32 +289,36 @@ class SettingsActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
 
-        ExpressionViewModel.updateSymbolsInExpression(
-            previousGroupingSeparatorSymbol,
-            groupingSeparatorSymbol,
-            previousDecimalSeparatorSymbol,
-            decimalSeparatorSymbol
-        )
+        if (oldGroupingSeparatorSymbol != groupingSeparatorSymbol || oldDecimalSeparatorSymbol != decimalSeparatorSymbol){
+            ExpressionViewModel.expression = NumberFormatter.changeSeparatorsExpression(
+                ExpressionViewModel.expression,
+                oldGroupingSeparatorSymbol,
+                groupingSeparatorSymbol,
+                oldDecimalSeparatorSymbol,
+                decimalSeparatorSymbol
+            )
+
+            historyService.modifyHistoryData(
+                oldGroupingSeparatorSymbol,
+                groupingSeparatorSymbol,
+                oldDecimalSeparatorSymbol,
+                decimalSeparatorSymbol
+            )
+
+            oldGroupingSeparatorSymbol = groupingSeparatorSymbol
+            oldDecimalSeparatorSymbol = decimalSeparatorSymbol
+        }
+
 
         preferences.setDynamicColor(isDynamicColor)
         preferences.setColor(color)
         preferences.setGroupingSeparatorSymbol(groupingSeparatorSymbol)
         preferences.setDecimalSeparatorSymbol(decimalSeparatorSymbol)
         preferences.setNumberPrecision(numberPrecision)
-        preferences.setSwipeHistoryAndCalculator(swipeHistoryAndCalculator)
+        preferences.setSwipeHistoryAndCalculator(swipeMain)
         preferences.setSwipeDigitsAndScientificFunctions(swipeDigitsAndScientificFunctions)
         preferences.setVibration(vibration)
         preferences.setSoundEffects(sound)
-
-        historyService.modifyHistoryData(
-            previousGroupingSeparatorSymbol,
-            groupingSeparatorSymbol,
-            previousDecimalSeparatorSymbol,
-            decimalSeparatorSymbol
-        )
-
-        previousGroupingSeparatorSymbol = groupingSeparatorSymbol
-        previousDecimalSeparatorSymbol = decimalSeparatorSymbol
     }
 
 
@@ -371,9 +372,8 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadSeekBar(seekBar: SeekBar, textView: TextView, value: Int){
-        seekBar.progress = value
-        textView.text = value.toString()
+    private fun loadSlider(slider: Slider, value: Int) {
+        slider.value = value.toFloat()
     }
 
     private fun loadButtonToggleGroupInt(buttonToggleGroup: MaterialButtonToggleGroup, map: Map<Int, Int>, value: Int) {

@@ -62,8 +62,10 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
 
-        <item name="android:layout_marginStart">16dp</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">21dp</item>
+        <item name="android:layout_marginEnd">21dp</item>
+        <item name="android:layout_marginTop">@dimen/_4sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_14sdp</item>
 
         <item name="android:layoutDirection">ltr</item>
         <item name="android:background">@android:color/transparent</item>
@@ -71,10 +73,11 @@
         <item name="android:gravity">bottom|end</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:inputType">textMultiLine|textNoSuggestions</item>
 
         <item name="android:textSize">64sp</item>
         <item name="android:autoSizeMaxTextSize">64sp</item>
-        <item name="android:autoSizeMinTextSize">36sp</item>
+        <item name="android:autoSizeMinTextSize">30sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
     </style>
@@ -87,6 +90,8 @@
         <item name="android:autoSizeMinTextSize">8sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">none</item>
 
         <item name="android:soundEffectsEnabled">false</item>
         <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
@@ -95,29 +100,12 @@
 
 
 
-    <style name="OptionsButton" parent="Widget.AppCompat.ImageButton">
-        <item name="android:layout_width">48dp</item>
-        <item name="android:layout_height">48dp</item>
-
-        <item name="android:layout_marginTop">4dp</item>
-
-        <item name="android:src">@drawable/baseline_more_vert</item>
-        <item name="android:tooltipText">@string/options_tool_tip</item>
-        <item name="android:contentDescription">@string/options_tool_tip</item>
-        <item name="android:tint">?attr/colorOnSurface</item>
-        <item name="android:background">@drawable/background_options_menu</item>
-        <item name="android:padding">10dp</item>
-
-        <item name="android:scaleType">centerCrop</item>
-    </style>
-
-
-
     <style name="NavigationTabs" parent="Widget.Material3.TabLayout">
         <item name="android:layout_width">96dp</item>
-        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_height">0dp</item>
 
-        <item name="background">@drawable/background_tab</item>
+        <item name="android:background">@drawable/background_tab</item>
+        <item name="android:layout_gravity">center</item>
         <item name="tabGravity">center</item>
         <item name="tabIndicatorAnimationMode">linear</item>
         <item name="tabIconTint">?attr/colorOnSurface</item>

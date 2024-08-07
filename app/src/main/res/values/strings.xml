@@ -5,19 +5,19 @@
     <string name="brackets_button" translatable="false">(&#160;&#160;)</string>
     <string name="percentage_button" translatable="false">%</string>
     <string name="division_button" translatable="false">÷</string>
-    <string name="number_7_button" translatable="false">7</string>
-    <string name="number_8_button" translatable="false">8</string>
-    <string name="number_9_button" translatable="false">9</string>
+    <string name="digit_7_button" translatable="false">7</string>
+    <string name="digit_8_button" translatable="false">8</string>
+    <string name="digit_9_button" translatable="false">9</string>
     <string name="multiplication_button" translatable="false">×</string>
-    <string name="number_4_button" translatable="false">4</string>
-    <string name="number_5_button" translatable="false">5</string>
-    <string name="number_6_button" translatable="false">6</string>
+    <string name="digit_4_button" translatable="false">4</string>
+    <string name="digit_5_button" translatable="false">5</string>
+    <string name="digit_6_button" translatable="false">6</string>
     <string name="minus_button" translatable="false">–</string>
-    <string name="number_1_button" translatable="false">1</string>
-    <string name="number_2_button" translatable="false">2</string>
-    <string name="number_3_button" translatable="false">3</string>
+    <string name="digit_1_button" translatable="false">1</string>
+    <string name="digit_2_button" translatable="false">2</string>
+    <string name="digit_3_button" translatable="false">3</string>
     <string name="plus_button" translatable="false">+</string>
-    <string name="number_0_button" translatable="false">0</string>
+    <string name="digit_0_button" translatable="false">0</string>
     <string name="dot_button" translatable="false">.</string>
     <string name="equals_button" translatable="false">=</string>
     <string name="sqrt" translatable="false">√</string>
@@ -29,13 +29,14 @@
     <string name="sin" translatable="false">sin</string>
     <string name="cos" translatable="false">cos</string>
     <string name="tan" translatable="false">tan</string>
-    <string name="sin1" translatable="false">sin<sup><small>-1</small></sup></string>
-    <string name="cos1" translatable="false">cos<sup><small>-1</small></sup></string>
-    <string name="tan1" translatable="false">tan<sup><small>-1</small></sup></string>
+    <string name="asin" translatable="false">sin<sup><small>-1</small></sup></string>
+    <string name="acos" translatable="false">cos<sup><small>-1</small></sup></string>
+    <string name="atan" translatable="false">tan<sup><small>-1</small></sup></string>
     <string name="e" translatable="false">e</string>
     <string name="exp" translatable="false">e<sup><small>x</small></sup></string>
     <string name="deg" translatable="false">DEG</string>
     <string name="rad" translatable="false">RAD</string>
+    <string name="absolute" translatable="false">|x|</string>
 
     <string name="expression_error">Error</string>
     <string name="expression_infinity">Value is too high</string>
@@ -74,7 +75,7 @@
     <string name="description_separator">Group separator symbol</string>
     <string name="description_decimal_separator">Decimal separator symbol</string>
     <string name="description_swipes">Swipes across the screen</string>
-    <string name="description_swipes2">History and calculator</string>
+    <string name="description_swipes2">Main tabs</string>
     <string name="description_swipes3">Digits and scientific functions</string>
 
 
@@ -138,6 +139,7 @@
     <!--Tool tips-->
     <string name="options_tool_tip">More options</string>
     <string name="arrow_back_tool_tip">Back</string>
+    <string name="copy_text_tool_tip">Copy text</string>
 
 
     <!--Other-->
@@ -165,4 +167,190 @@
     <string name="days_ago_5_date">5 days ago</string>
     <string name="days_ago_6_date">6 days ago</string>
     <string name="days_ago_7_date">7 days ago</string>
+
+
+    <!--Converter-->
+    <string name="title_physical_quantity">Physical quantity</string>
+    <string name="title_unit">Unit</string>
+
+    <string name="physical_quantity_length">Length</string>
+    <string name="physical_quantity_time">Time</string>
+    <string name="physical_quantity_mass">Mass</string>
+    <string name="physical_quantity_temperature">Temperature</string>
+    <string name="physical_quantity_speed">Speed</string>
+    <string name="physical_quantity_force">Force</string>
+    <string name="physical_quantity_energy">Energy</string>
+    <string name="physical_quantity_power">Power</string>
+    <string name="physical_quantity_pressure">Pressure</string>
+    <string name="physical_quantity_volume">Volume</string>
+    <string name="physical_quantity_area">Area</string>
+    <string name="physical_quantity_density">Density</string>
+    <string name="physical_quantity_frequency">Frequency</string>
+    <string name="physical_quantity_torque">Torque</string>
+    <string name="physical_quantity_light">Light</string>
+    <string name="physical_quantity_storage">Storage</string>
+    <string name="physical_quantity_viscosity">Viscosity</string>
+    <string name="physical_quantity_angle">Angle</string>
+    <string name="physical_quantity_fuel">Fuel</string>
+
+
+
+    <string name="unit_meter">Meter</string>
+    <string name="unit_kilometer">Kilometer</string>
+    <string name="unit_centimeter">Centimeter</string>
+    <string name="unit_millimeter">Millimeter</string>
+    <string name="unit_mile">Mile</string>
+    <string name="unit_yard">Yard</string>
+    <string name="unit_foot">Foot</string>
+    <string name="unit_inch">Inch</string>
+    <string name="unit_nautical_mile">Nautical Mile</string>
+
+
+    <string name="unit_second">Second</string>
+    <string name="unit_minute">Minute</string>
+    <string name="unit_hour">Hour</string>
+    <string name="unit_day">Day</string>
+    <string name="unit_week">Week</string>
+
+
+    <string name="unit_kilogram">Kilogram</string>
+    <string name="unit_gram">Gram</string>
+    <string name="unit_milligram">Milligram</string>
+    <string name="unit_tonne">Tonne</string>
+    <string name="unit_pound">Pound</string>
+    <string name="unit_ounce">Ounce</string>
+
+
+    <string name="unit_celsius">Celsius</string>
+    <string name="unit_fahrenheit">Fahrenheit</string>
+    <string name="unit_kelvin">Kelvin</string>
+
+
+    <string name="unit_meter_per_second">Meters per second</string>
+    <string name="unit_kilometer_per_hour">Kilometers per hour</string>
+    <string name="unit_mile_per_hour">Miles per hour</string>
+    <string name="unit_knot">Knot</string>
+    <string name="unit_feet_per_second">Feet per second</string>
+
+
+    <string name="unit_newton">Newton</string>
+    <string name="unit_kilonewton">Kilonewton</string>
+    <string name="unit_dyne">Dyne</string>
+    <string name="unit_pound_force">Pound-force</string>
+    <string name="unit_ounce_force">Ounce-force</string>
+
+
+    <string name="unit_joule">Joule</string>
+    <string name="unit_kilojoule">Kilojoule</string>
+    <string name="unit_megajoule">Megajoule</string>
+    <string name="unit_calorie">Calorie</string>
+    <string name="unit_kilocalorie">Kilocalorie</string>
+    <string name="unit_grams_of_carbohydrate">Grams of Carbohydrate</string>
+    <string name="unit_grams_of_fat">Grams of Fat</string>
+    <string name="unit_grams_of_protein">Grams of Protein</string>
+
+
+    <string name="unit_watt">Watt</string>
+    <string name="unit_kilowatt">Kilowatt</string>
+    <string name="unit_megawatt">Megawatt</string>
+    <string name="unit_horsepower">Horsepower</string>
+    <string name="unit_btu_per_hour">BTU per hour</string>
+
+
+    <string name="unit_pascal">Pascal</string>
+    <string name="unit_kilopascal">KiloPascal</string>
+    <string name="unit_megapascal">MegaPascal</string>
+    <string name="unit_gigapascal">GigaPascal</string>
+    <string name="unit_bar">Bar</string>
+    <string name="unit_millibar">Millibar</string>
+    <string name="unit_atmosphere">Atmosphere</string>
+    <string name="unit_psi">PSI</string>
+    <string name="unit_h2o">H2O (Inches of water)</string>
+
+
+    <string name="unit_milliliter">Milliliter</string>
+    <string name="unit_liter">Liter</string>
+    <string name="unit_kiloliter">Kiloliter</string>
+    <string name="unit_cubic_meter">Cubic meter</string>
+    <string name="unit_cubic_centimeter">Cubic centimeter</string>
+    <string name="unit_cubic_decimeter">Cubic decimeter</string>
+    <string name="unit_gallon">Gallon</string>
+    <string name="unit_quart">Quart</string>
+    <string name="unit_pint">Pint</string>
+    <string name="unit_fluid_ounce">Fluid ounce</string>
+    <string name="unit_tablespoon">Tablespoon</string>
+    <string name="unit_teaspoon">Teaspoon</string>
+
+
+    <string name="unit_square_meter">Square meter</string>
+    <string name="unit_square_kilometer">Square kilometer</string>
+    <string name="unit_square_centimeter">Square centimeter</string>
+    <string name="unit_square_millimeter">Square millimeter</string>
+    <string name="unit_hectare">Hectare</string>
+    <string name="unit_acre">Acre</string>
+    <string name="unit_square_yard">Square yard</string>
+    <string name="unit_square_foot">Square foot</string>
+
+
+    <string name="unit_kilogram_per_cubic_meter">Kilogram per cubic meter</string>
+    <string name="unit_gram_per_cubic_centimeter">Gram per cubic centimeter</string>
+    <string name="unit_pound_per_cubic_foot">Pound per cubic foot</string>
+    <string name="unit_pound_per_gallon">Pound per gallon</string>
+
+
+    <string name="unit_hertz">Hertz</string>
+    <string name="unit_kilohertz">Kilohertz</string>
+    <string name="unit_megahertz">Megahertz</string>
+    <string name="unit_gigahertz">Gigahertz</string>
+
+
+    <string name="unit_newton_meter">Newton-meter</string>
+    <string name="unit_kilonewton_meter">Kilonewton-meter</string>
+    <string name="unit_pound_foot">Pound-foot</string>
+    <string name="unit_ounce_inch">Ounce-inch</string>
+
+
+    <string name="unit_lumen">Lumen</string>
+    <string name="unit_candela">Candela</string>
+    <string name="unit_lux">Lux</string>
+    <string name="unit_footcandle">Footcandle</string>
+
+
+    <string name="unit_bit">Bit</string>
+    <string name="unit__byte">Byte</string>
+    <string name="unit_kilobit">Kilobit</string>
+    <string name="unit_kilobyte">Kilobyte</string>
+    <string name="unit_kibibyte">KibiByte</string>
+    <string name="unit_megabit">Megabit</string>
+    <string name="unit_mebibyte">MebiByte</string>
+    <string name="unit_megabyte">Megabyte</string>
+    <string name="unit_gigabit">Gigabit</string>
+    <string name="unit_gigabyte">Gigabyte</string>
+    <string name="unit_gigibyte">GigiByte</string>
+    <string name="unit_terabit">Terabit</string>
+    <string name="unit_terabyte">Terabyte</string>
+    <string name="unit_tebibyte">TebiByte</string>
+    <string name="unit_petabit">Petabit</string>
+    <string name="unit_petabyte">Petabyte</string>
+    <string name="unit_pebibyte">PebiByte</string>
+    <string name="unit_exabit">Exabit</string>
+    <string name="unit_exabyte">Exabyte</string>
+    <string name="unit_exbibyte">ExbiByte</string>
+
+
+    <string name="unit_pascal_second">Pascal-second</string>
+    <string name="unit_centipoise">Centipoise</string>
+    <string name="unit_stoke">Stoke</string>
+    <string name="unit_poiseuille">Poiseuille</string>
+
+
+    <string name="unit_degree">Degree</string>
+    <string name="unit_radian">Radian</string>
+    <string name="unit_gradian">Gradian</string>
+    <string name="unit_turn">Turn</string>
+
+
+    <string name="unit_gallon_us">Gallon (US)</string>
+    <string name="unit_gallon_uk">Gallon (UK)</string>
+    <string name="unit_barrel">Barrel</string>
 </resources>

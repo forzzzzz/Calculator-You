@@ -24,7 +24,6 @@
     <string name="description_precision">Anzahl der Dezimalstellen</string>
     <string name="description_select_theme">Helles oder dunkles Thema für deine App</string>
     <string name="description_swipes">Über den Bildschirm wischen</string>
-    <string name="description_swipes2">Verlauf und Taschenrechner</string>
     <string name="description_swipes3">Ziffern und wissenschaftliche Funktionen</string>
     <string name="theme_element_1">Systemvorgabe</string>
     <string name="theme_element_2">Hell</string>

@@ -1,24 +1,20 @@
 package com.forz.calculator
 
 import android.annotation.SuppressLint
-import android.content.ClipData
-import android.content.ClipboardManager
-import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.drawable.AnimatedVectorDrawable
-import android.net.Uri
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.forz.calculator.databinding.ActivityAboutBinding
-import com.forz.calculator.settings.SettingsState
+import com.forz.calculator.settings.Config
+import com.forz.calculator.settings.Preferences
+import com.forz.calculator.utils.InteractionAndroid
 import kotlin.properties.Delegates
 
 class AboutActivity : AppCompatActivity() {
@@ -31,7 +27,7 @@ class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         preferences = Preferences(this)
 
-        if (!SettingsState.isDynamicColor){
+        if (!Config.isDynamicColor){
             setTheme(resources.getIdentifier(preferences.getColor(), "style", packageName))
         }else{
             setTheme(R.style.dynamicColors)
@@ -50,37 +46,37 @@ class AboutActivity : AppCompatActivity() {
 
 
         binding.translateLayout.setOnClickListener {
-            url(getString(R.string.url_translate))
+            InteractionAndroid.openUrl(getString(R.string.url_translate), this)
         }
 
         binding.rateLayout.setOnClickListener {
-            url(getString(R.string.url_app))
+            InteractionAndroid.openUrl(getString(R.string.url_app), this)
         }
 
         binding.donateLayout.setOnClickListener {
-            url(getString(R.string.url_donate))
+            InteractionAndroid.openUrl(getString(R.string.url_donate), this)
         }
 
         binding.telegramLayout.setOnClickListener {
-            url(getString(R.string.url_telegram))
+            InteractionAndroid.openUrl(getString(R.string.url_telegram), this)
         }
 
         binding.telegramLayout.setOnLongClickListener {
-            copy(getString(R.string.description_telegram))
+            InteractionAndroid.copyToClipboard(getString(R.string.description_telegram), this)
             true
         }
 
         binding.emailLayout.setOnClickListener {
-            url(getString(R.string.url_email))
+            InteractionAndroid.openUrl(getString(R.string.url_email), this)
         }
 
         binding.emailLayout.setOnLongClickListener {
-            copy(getString(R.string.description_email))
+            InteractionAndroid.copyToClipboard(getString(R.string.description_email), this)
             true
         }
 
         binding.openSourceLayout.setOnClickListener {
-            url(getString(R.string.url_open_source))
+            InteractionAndroid.openUrl(getString(R.string.url_open_source), this)
         }
 
         binding.licensesLayout.setOnClickListener {
@@ -89,11 +85,11 @@ class AboutActivity : AppCompatActivity() {
         }
 
         binding.privacyPolicyLayout.setOnClickListener {
-            url(getString(R.string.url_privacy_policy))
+            InteractionAndroid.openUrl(getString(R.string.url_privacy_policy), this)
         }
 
         binding.versionLayout.setOnLongClickListener {
-            copy(getAppVersionName())
+            InteractionAndroid.copyToClipboard(getAppVersionName(), this)
             true
         }
 
@@ -133,25 +129,9 @@ class AboutActivity : AppCompatActivity() {
         }
 
 
-        binding.arrowBack.setOnClickListener {
+        binding.topAppBar.setNavigationOnClickListener {
             finish()
         }
-    }
-
-
-    private fun copy(string: String){
-        val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-        val clipData = ClipData.newPlainText(null, string)
-        clipboardManager.setPrimaryClip(clipData)
-
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU){
-            Toast.makeText(this, string, Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun url(string: String){
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(string))
-        startActivity(intent)
     }
 
     private fun getAppVersionName(): String {
