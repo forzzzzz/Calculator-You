@@ -94,7 +94,7 @@ height="40">](https://www.paypal.com/donate/?hosted_button_id=GKC26SLPUTQMU)
 
 ## 🔢 Math Expressions Parser
 
-### [Darkempire78 (OpenCalc)](https://github.com/Darkempire78/OpenCalc)
+### [Mihai Preda/arithmetic](https://github.com/preda/arithmetic)
 
 
 
