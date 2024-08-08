@@ -1,7 +1,5 @@
 <div align="center">
 
-#### I only develop in my free time. I'm currently refactoring.
-
 <img src="fastlane/metadata/android/en-US/images/featureGraphic.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
 
 # Calculator You
@@ -94,7 +92,7 @@ height="40">](https://www.paypal.com/donate/?hosted_button_id=GKC26SLPUTQMU)
 
 ## 🔢 Math Expressions Parser
 
-### [Mihai Preda/arithmetic](https://github.com/preda/arithmetic)
+### [Mihai Preda / arithmetic](https://github.com/preda/arithmetic)
 
 
 
