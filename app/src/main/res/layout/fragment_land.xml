@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layoutDirection="ltr"
     android:background="?attr/colorSurface"
     android:importantForAccessibility="noHideDescendants"
-    tools:context=".fragments.land.MainLandFragment">
+    tools:context=".fragments.land.MainLandFragment"
+    tools:ignore="RtlHardcoded">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/historyGuideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layoutDirection="ltr"
         app:layout_constraintGuide_percent="0.38"/>
 
     <androidx.fragment.app.FragmentContainerView
@@ -22,12 +23,12 @@
         android:layout_height="0dp"
         android:name="com.forz.calculator.fragments.HistoryFragment"
         android:layout_marginBottom="@dimen/_4sdp"
-        android:layout_marginEnd="@dimen/_6sdp"
-        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_6sdp"
+        android:layout_marginLeft="@dimen/_6sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/historyGuideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/historyGuideline"
         tools:layout="@layout/fragment_history" />
 
     <View
@@ -35,9 +36,9 @@
         android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="@dimen/_6sdp"
-        app:layout_constraintStart_toEndOf="@id/historyGuideline"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="@dimen/_6sdp"
+        app:layout_constraintLeft_toRightOf="@id/historyGuideline"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
 
@@ -45,8 +46,8 @@
         android:id="@+id/appBarConstraintLayout"
         style="@style/AppBarConstraintLayoutCalculator"
         app:layout_constraintTop_toTopOf="@id/background_expression"
-        app:layout_constraintStart_toStartOf="@id/background_expression"
-        app:layout_constraintEnd_toEndOf="@id/background_expression">
+        app:layout_constraintLeft_toLeftOf="@id/background_expression"
+        app:layout_constraintRight_toRightOf="@id/background_expression">
 
         <TextView
             android:id="@+id/degreeTitleText"
@@ -77,8 +78,8 @@
         android:layoutDirection="locale"
         android:textDirection="ltr"
         app:layout_constraintBottom_toBottomOf="@+id/background_expression"
-        app:layout_constraintEnd_toEndOf="@id/background_expression"
-        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintRight_toRightOf="@id/background_expression"
+        app:layout_constraintLeft_toLeftOf="@id/background_expression"
         app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <TextView
@@ -89,8 +90,8 @@
         android:layoutDirection="locale"
         android:textDirection="ltr"
         app:layout_constraintBottom_toBottomOf="@+id/background_expression"
-        app:layout_constraintEnd_toEndOf="@id/background_expression"
-        app:layout_constraintStart_toStartOf="@id/background_expression"
+        app:layout_constraintRight_toRightOf="@id/background_expression"
+        app:layout_constraintLeft_toLeftOf="@id/background_expression"
         app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -104,13 +105,13 @@
         android:id="@+id/calculatorViewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_6sdp"
         android:layout_marginBottom="@dimen/_4sdp"
         android:layout_marginTop="@dimen/_6sdp"
         android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/historyGuideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/historyGuideline"
         app:layout_constraintTop_toBottomOf="@id/pagerGuideline" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -136,17 +136,20 @@ class UnitConverterFragment : Fragment() {
         val initialQuantity = physicalQuantities.find { it.second.id == physicalQuantity }
         if (initialQuantity != null) {
             binding.physicalQuantityAutoCompleteTextView.setText(initialQuantity.first, false)
+            binding.physicalQuantityAutoCompleteTextView.contentDescription = binding.physicalQuantityAutoCompleteTextView.text
             updateUnitAutoComplete(initialQuantity.second)
         }
 
 
         binding.physicalQuantityAutoCompleteTextView.setOnItemClickListener { _, _, position, _ ->
+            binding.physicalQuantityAutoCompleteTextView.contentDescription = binding.physicalQuantityAutoCompleteTextView.text
             val selectedQuantity = physicalQuantities[position]
             physicalQuantity = selectedQuantity.second.id
             updateUnitAutoComplete(selectedQuantity.second)
         }
 
         binding.unitAutoCompleteTextView.setOnItemClickListener { _, _, position, _ ->
+            binding.unitAutoCompleteTextView.contentDescription = binding.unitAutoCompleteTextView.text
             unit = physicalQuantities.find { it.second.id == physicalQuantity }!!.second.units[position].id
             updateUnitPager(Evaluator.converterResult.value, physicalQuantities.find { it.second.id == physicalQuantity }!!.second, unit)
         }
@@ -168,6 +171,7 @@ class UnitConverterFragment : Fragment() {
             if (selectedUnit != null) {
                 unit = selectedUnit.id
                 binding.unitAutoCompleteTextView.setText(getString(selectedUnit.name), false)
+                binding.unitAutoCompleteTextView.contentDescription = binding.unitAutoCompleteTextView.text
             } else {
                 unit =  units[0].id
                 binding.unitAutoCompleteTextView.setText(getString(units[0].name), false)

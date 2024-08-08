@@ -6,15 +6,16 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
     android:importantForAccessibility="noHideDescendants"
-    tools:context=".fragments.MainFragment">
+    tools:context=".fragments.MainFragment"
+    tools:ignore="RtlHardcoded">
 
     <View
         android:id="@+id/background_expression"
         android:background="@drawable/background_expression"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
 
@@ -22,8 +23,8 @@
         android:id="@+id/appBarConstraintLayout"
         style="@style/AppBarConstraintLayoutCalculator"
         app:layout_constraintTop_toTopOf="@id/background_expression"
-        app:layout_constraintStart_toStartOf="@id/background_expression"
-        app:layout_constraintEnd_toEndOf="@id/background_expression">
+        app:layout_constraintLeft_toLeftOf="@id/background_expression"
+        app:layout_constraintRight_toRightOf="@id/background_expression">
 
         <TextView
             android:id="@+id/degreeTitleText"
@@ -52,16 +53,16 @@
         android:id="@+id/resultText"
         style="@style/Expression.Result"
         app:layout_constraintBottom_toBottomOf="@id/background_expression"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topResultGuideline" />
 
     <com.forz.calculator.expression.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
         app:layout_constraintBottom_toTopOf="@+id/resultText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <TextView
@@ -70,8 +71,8 @@
         android:visibility="invisible"
         android:maxLines="1"
         app:layout_constraintBottom_toTopOf="@+id/resultText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appBarConstraintLayout" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -94,8 +95,8 @@
         android:layout_height="0dp"
         android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pagerGuideline"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

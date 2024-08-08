@@ -69,7 +69,7 @@
         <item name="android:layoutDirection">ltr</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:fontFamily">sans-serif</item>
-        <item name="android:gravity">bottom|end</item>
+        <item name="android:gravity">bottom|right</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textCursorDrawable">@drawable/cursor</item>
         <item name="android:inputType">textMultiLine|textNoSuggestions</item>
@@ -89,9 +89,9 @@
         <item name="android:autoSizeMinTextSize">8sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
+
         <item name="android:maxLines">1</item>
         <item name="android:inputType">none</item>
-
         <item name="android:soundEffectsEnabled">false</item>
         <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
         <item name="android:textIsSelectable">true</item>

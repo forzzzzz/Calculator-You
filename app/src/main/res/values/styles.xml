@@ -79,7 +79,7 @@
         <item name="android:layoutDirection">ltr</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:fontFamily">sans-serif</item>
-        <item name="android:gravity">bottom|end</item>
+        <item name="android:gravity">bottom|right</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="android:textCursorDrawable">@drawable/cursor</item>
         <item name="android:inputType">textMultiLine|textNoSuggestions</item>
@@ -99,31 +99,13 @@
         <item name="android:autoSizeMinTextSize">8sp</item>
         <item name="autoSizeStepGranularity">1sp</item>
         <item name="android:autoSizeTextType">uniform</item>
+
         <item name="android:maxLines">1</item>
         <item name="android:inputType">none</item>
-
         <item name="android:soundEffectsEnabled">false</item>
         <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
         <item name="android:textIsSelectable">true</item>
     </style>
-
-
-
-    <style name="ImageButton" parent="Widget.AppCompat.ImageButton">
-        <item name="android:layout_width">48dp</item>
-        <item name="android:layout_height">48dp</item>
-
-        <item name="android:tint">?attr/colorOnSurface</item>
-        <item name="android:background">@drawable/background_image_button</item>
-        <item name="android:padding">12dp</item>
-        <item name="android:scaleType">centerCrop</item>
-    </style>
-    <style name="ImageButton.ContentCopyButton">
-        <item name="android:src">@drawable/baseline_content_copy</item>
-        <item name="android:tooltipText">@string/copy_text_tool_tip</item>
-        <item name="android:contentDescription">@string/copy_text_tool_tip</item>
-    </style>
-
 
 
     <style name="NavigationTabs" parent="Widget.Material3.TabLayout">
@@ -171,5 +153,7 @@
         <item name="android:layout_height">48dp</item>
 
         <item name="android:layout_marginTop">@dimen/_4sdp</item>
+
+        <item name="android:layoutDirection">locale</item>
     </style>
 </resources>
