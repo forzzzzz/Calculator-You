@@ -85,4 +85,16 @@
     <string name="help_selection_text">Hilfe</string>
     <string name="expression_error">Fehler</string>
     <string name="expression_infinity">Wert ist zu hoch</string>
+    <string name="physical_quantity_mass">Masse</string>
+    <string name="title_unit">Einheit</string>
+    <string name="copy_text_tool_tip">Text kopieren</string>
+    <string name="physical_quantity_speed">Geschwindigkeit</string>
+    <string name="physical_quantity_temperature">Temperatur</string>
+    <string name="physical_quantity_length">Länge</string>
+    <string name="physical_quantity_time">Zeit</string>
+    <string name="physical_quantity_force">Kraft</string>
+    <string name="physical_quantity_energy">Energie</string>
+    <string name="physical_quantity_power">Strom</string>
+    <string name="physical_quantity_pressure">Druck</string>
+    <string name="physical_quantity_volume">Volumen</string>
 </resources>
