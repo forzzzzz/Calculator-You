@@ -43,21 +43,15 @@
 
 </div>
 
-#### Beautiful design:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-The calculator has a beautiful and pleasant design that has been developed for a long time. The app utilizes Material 3 and dynamic colors based on your wallpaper. In addition to light and dark themes, the app also offers over 60 colorful themes to suit your taste. Make this calculator uniquely yours!
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-#### Scientific functions:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-#### History:
-
-The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete.
-
-#### Convenience:
-
-The app is designed so that all operations and actions can be performed with just one hand. History, calculator, scientific functions - all under one finger. Fast and convenient!
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
 <div align="center">
 
