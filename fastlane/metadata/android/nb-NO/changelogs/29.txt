@@ -1,0 +1,7 @@
+- Added a unit converter.
+- Changed the math parser.
+- Improved decimal separator behavior.
+- Updated translation.
+- Fixed all known calculation errors.
+- Fixed all other known bugs.
+- Made many other changes and improvements.

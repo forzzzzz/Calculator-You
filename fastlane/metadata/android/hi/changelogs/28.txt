@@ -1,0 +1,4 @@
+- Fixed interface display for right-to-left languages.
+- Moved the trigonometry button to the right.
+- Fully added the following languages: Hungarian, Traditional Chinese, Persian, French, Estonian.
+- Partially added the following languages: Norwegian (Bokmål), Polish।
