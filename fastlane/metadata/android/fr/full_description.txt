@@ -1,17 +1,17 @@
-Une superbe conception :
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-La calculatrice a un superbe design très plaisant qui a été développé pendant longtemps. L'application utilise Material 3 et les couleurs dynamiques basées sur votre fond d'écran. En plus des thèmes clair et sombre, l'application propose également plus de 60 thèmes colorés pour correspondre à votre goût. Faites de cette calculatrice la vôtre !
+Key Features:
 
-Des fonctions scientifiques :
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-En plus des opérateurs basiques, il y a d'autres fonctions. Par exemple, cos, sin, tan, log, etc.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-Un historique :
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-La calculatrice a la capacité de sauvegarder vos calculs. Vous pouvez alors les manipuler : recalculer, copier, partager et supprimer.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Une utilisation facile :
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-L'application est conçue pour que toutes les opérations et les actions puissent être réalisées avec une seule main. Historique, calculatrice, fonctions scientifiques - tout à portée de main. Rapide et pratique !
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-Il s'agit de ma première application Android. Pas seulement fabriqué avec amour ❤️ mais par amour ❤️.
+Made not with love❤️, but by love❤️.

@@ -1,17 +1,17 @@
-Красивый дизайн:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-Калькулятор имеет красивый и приятный дизайн, который разрабатывался длительное время. Приложение использует Material 3 и динамические цвета на основе ваших обоев. Помимо светлой темы и темной также приложение предлагает более 60 цветных тем на ваш вкус. Сделайте этот калькулятор лично вашим!
+Key Features:
 
-Научные функции:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-Помимо простых банальных операторов существуют еще и другие функции. Например, cos, sin, tan, log и т.д.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-История:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-Калькулятор имеет возможность сохранять ваши вычисления. Далее вы можете работать с ними: отправить снова на вычисление, удобно копировать, делиться и удалять.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Удобство:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-Приложение спроектировано так, чтобы лишь одной рукой можно было выполнять все операции и действия. История, калькулятор, научные функции - все под одним пальцем. Быстро и удобно!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-Это мое первое приложение под Android. Сделано не с любовью❤️, а любовью❤️.
+Made not with love❤️, but by love❤️.

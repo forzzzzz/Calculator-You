@@ -1,17 +1,17 @@
-Thiết kế đẹp:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-Máy tính có thiết kế đẹp và dễ chịu đã được phát triển từ lâu. Ứng dụng sử dụng Material 3 và màu sắc động dựa trên hình nền của bạn. Ngoài các chủ đề sáng và tối, ứng dụng còn cung cấp hơn 60 chủ đề đầy màu sắc để phù hợp với sở thích của bạn. Hãy biến chiếc máy tính này thành của riêng bạn!
+Key Features:
 
-Chức năng khoa học:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-Ngoài các toán tử cơ bản đơn giản, còn có các hàm khác. Ví dụ: cos, sin, tan, log, v.v.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-Lịch sử:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-Máy tính có khả năng lưu các phép tính của bạn. Sau đó, bạn có thể làm việc với chúng: gửi lại để tính toán, sao chép, chia sẻ và xóa một cách thuận tiện.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Tiện lợi:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-Ứng dụng được thiết kế sao cho có thể thực hiện mọi thao tác và thao tác chỉ bằng một tay. Lịch sử, máy tính, chức năng khoa học - tất cả chỉ dưới một ngón tay. Nhanh chóng và thuận tiện!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-Đây là ứng dụng đầu tiên của tôi dành cho Android. Được tạo ra không phải với tình yêu❤️ mà bằng tình yêu❤️.
+Made not with love❤️, but by love❤️.

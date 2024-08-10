@@ -1,17 +1,17 @@
-Gyönyörű design:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-A számológép gyönyörű és kellemes dizájnnal rendelkezik, amelyet hosszú időn keresztül fejlesztettek ki. Az alkalmazás a Material 3-at és a háttérkép alapján dinamikus színeket használ. A világos és sötét témák mellett az alkalmazás több mint 60 színes témát is kínál, hogy ízlése szerint válogathasson. Tedd egyedivé ezt a számológépet!
+Key Features:
 
-Tudományos funkciók:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-Az egyszerű alapoperátorok mellett más funkciók is léteznek. Például cos, sin, tan, log, stb.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-Előzmények:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-A számológép képes elmenteni a számításokat. Ezután dolgozhat velük: újraküldheti számításhoz, kényelmesen másolhatja, megoszthatja és törölheti.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Kényelem:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-Az alkalmazást úgy tervezték, hogy minden számolás és művelet egy kézzel is elvégezhető legyen. Előzmények, számológép, tudományos funkciók - mindez egy ujj alatt. Gyors és kényelmes!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-Ez az első alkalmazásom Androidra. Nem a szeretet❤️ segítségével készült, hanem a szeretettel❤️.
+Made not with love❤️, but by love❤️.

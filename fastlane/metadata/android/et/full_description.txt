@@ -1,17 +1,17 @@
-Ilus kujundus:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-Sel taskuarvutil on pika aja jooksul arendatud ilus ja meeldiv kujundus. Kasutusel on Material 3 kujunduspõhimõtted ja võimalus laadida värve töölaua taustapildist. Lisaks tavalisele heledale ja tumedale kujundusele on ka üle 60 värvilise teema igale maitsele. Sa saad seda taskuarvutit muuta just selliseks, nagu soovid!
+Key Features:
 
-Teadusarvutused:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-Lisaks tavalistele tehetele leidub ka palju muid funktsioone ja võimalusi. Näiteks: cos, sin, tan, log jne.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-Ajalugu:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-See taskuarvuti salvestab sinu arvutused ning sa võid neid edaspidi kasutada: kasuta järgnevatel arvutustel või kopeeri, jaga ja kustuta mugavalt.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Käepärasus:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-See rakendus on loodud nii, et kõiki toiminguid ja tegevusi saad teha ühe käega. Taskuarvuti, teadusarvutused, ajalugu - kõik ühe sõrme all. Kiire ja käepärane!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-See on minu esimene Androidi rakendus. Pole tehtud armastusega❤️, vaid armsama poolt❤️.
+Made not with love❤️, but by love❤️.

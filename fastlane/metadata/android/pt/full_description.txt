@@ -1,17 +1,17 @@
-Desenho bonito:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-The calculator has a beautiful and pleasant design that has been developed for a long time. The app utilizes Material 3 and dynamic colors based on your wallpaper. In addition to light and dark themes, the app also offers over 60 colorful themes to suit your taste. Make this calculator uniquely yours!
+Key Features:
 
-Funções Científicas:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-In addition to simple basic operators, there are also other functions. For example, cos, sin, tan, log, etc.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-Histórico:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-The calculator has the ability to save your calculations. You can then work with them: resend for calculation, conveniently copy, share, and delete.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Conveniência:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-A app é projetada para que todas as operações e ações possam ser realizadas com apenas uma mão. Histórico, calculadora, funções científicas - tudo sob um dedo. Rápido e conveniente!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-Esta é a minha primeira app para Android. Não feito com amor❤️, mas por amor❤️.
+Made not with love❤️, but by love❤️.

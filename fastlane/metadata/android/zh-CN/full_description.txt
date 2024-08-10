@@ -1,17 +1,17 @@
-精美的设计：
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-计算器的设计精美宜人，经过长期开发。此程序采用了 Material 3 和基于您的壁纸的动态颜色。除了浅色和深色主题外，该程序还提供 60 多种多彩主题，以满足您的品味。使这款计算器独一无二！
+Key Features:
 
-科学功能：
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-除了简单的基本运算符外，还有其他功能。例如，cos、sin、tan、log 等。
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-历史记录：
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-计算器可以保存计算结果。然后，您可以对其进行处理：重新发送计算，方便地复制、共享和删除。
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-方便：
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-应用程序的设计使单手即可完成所有操作。历史记录、计算器、科学功能，一切尽在一指之间。快捷方便！
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-这是我的第一个 Android 应用程序。Made not with love❤️, but by love❤️。
+Made not with love❤️, but by love❤️.

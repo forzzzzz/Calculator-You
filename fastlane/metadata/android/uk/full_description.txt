@@ -1,17 +1,17 @@
-Гарний дизайн:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-Калькулятор має прекрасний та приємний дизайн, над яким працювали довгий час. Додаток використовує Material 3 та динамічні кольори, що змінюються в залежності від вашого шпалерного зображення. Окрім світлої та темної тем, в додатку також доступно понад 60 кольорових тем, щоб задовольнити ваш смак. Зробіть цей калькулятор по-своєму унікальним!
+Key Features:
 
-Наукові функції:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-Окрім простих основних операторів, також доступні інші функції. Наприклад, cos, sin, tan, log тощо.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-Історія:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-Калькулятор має можливість зберігати ваші обчислення. Після цього ви можете працювати з ними: відправляти для перерахунку, зручно копіювати, ділитися та видаляти.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Зручність:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-Додаток розроблено так, щоб всі операції та дії можна було виконати однією рукою. Історія, калькулятор, наукові функції - все під одним пальцем. Швидко та зручно!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-Це мій перший додаток для Android. Зроблено не з любов'ю❤️, а любов'ю❤️.
+Made not with love❤️, but by love❤️.

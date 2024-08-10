@@ -1,17 +1,17 @@
-Prekrasan dizajn:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-Kalkulator ima prekrasan i ugodan dizajn koji se razvijao dugo vremena. Aplikacija koristi Material 3 i dinamičke boje temeljene na vašoj pozadini. Osim svijetlih i tamnih tema, aplikacija nudi više od 60 šarenih tema koje odgovaraju vašem ukusu. Učinite ovaj kalkulator jedinstveno vašim!
+Key Features:
 
-Znanstvene funkcije:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-Osim jednostavnih osnovnih operacija, postoje i druge funkcije. Na primjer, cos, sin, tan, log, itd.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-Povijest:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-Kalkulator ima mogućnost spremanja vaših izračuna. Tada možete raditi s njima: ponovno poslati na izračun, prikladno kopirati, dijeliti i brisati.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Pogodnost:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-Aplikacija je dizajnirana tako da se sve operacije i radnje mogu izvoditi samo jednom rukom. Povijest, kalkulator, znanstvene funkcije - sve pod jednim prstom. Brzo i praktično!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-Ovo je moja prva aplikacija za Android. Nije napravljena s ljubavlju❤️, već iz ljubavi❤️.
+Made not with love❤️, but by love❤️.

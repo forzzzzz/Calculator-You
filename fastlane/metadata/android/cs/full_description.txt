@@ -1,17 +1,17 @@
-Krásný design:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-Kalkulačka má krásný a příjemný design, který byl vyvíjen dlouhou dobu. Aplikace využívá Material 3 a dynamické barvy na základě vašeho tapety. Kromě světlých a tmavých témat nabízí aplikace také více než 60 barevných témat, které vyhovují vašemu vkusu. Udělejte si tuto kalkulačku jedinečně svou!
+Key Features:
 
-Vědecké funkce:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-Kromě jednoduchých základních operací jsou zde i další funkce. Například cos, sin, tan, log, atd.
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-Historie:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-Kalkulačka má schopnost uložit vaše výpočty. Pak s nimi můžete pracovat: znovu odeslat k výpočtu, pohodlně kopírovat, sdílet a mazat.
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-Pohodlí:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-Aplikace je navržena tak, aby všechny operace a akce bylo možné provádět pouze jednou rukou. Historie, kalkulačka, vědecké funkce - vše pod jedním prstem. Rychlé a pohodlné!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-Toto je moje první aplikace pro Android. Ne vytvořená s láskou❤️, ale z lásky❤️.
+Made not with love❤️, but by love❤️.

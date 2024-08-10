@@ -1,17 +1,17 @@
-सुंदर डिजाइन:
+Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
 
-कैलकुलेटर का डिज़ाइन बहुत ही सुंदर और आकर्षक है जिसे लंबे समय से विकसित किया जा रहा है। ऐप आपके वॉलपेपर के आधार पर मटीरियल 3 और गतिशील रंगों का उपयोग करता है। लाइट और डार्क थीम के अलावा, ऐप आपके स्वाद के अनुरूप 60 से अधिक रंगीन थीम भी प्रदान करता है। इस कैलकुलेटर को अपना अनूठा बनाएं!
+Key Features:
 
-वैज्ञानिक कार्य:
+🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
 
-सरल बुनियादी ऑपरेटरों के अलावा, अन्य फ़ंक्शन भी हैं। उदाहरण के लिए, cos, sin, tan, log, आदि।
+🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
 
-इतिहास:
+🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
 
-कैलकुलेटर में आपकी गणनाओं को सहेजने की क्षमता है। फिर आप उनके साथ काम कर सकते हैं: गणना के लिए पुनः भेजें, सुविधाजनक रूप से कॉपी करें, साझा करें और हटाएं।
+📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
 
-सुविधा:
+👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
 
-ऐप को इस तरह से डिज़ाइन किया गया है कि सभी ऑपरेशन और क्रियाएँ सिर्फ़ एक हाथ से की जा सकती हैं। इतिहास, कैलकुलेटर, वैज्ञानिक कार्य - सभी एक उंगली के नीचे। तेज़ और सुविधाजनक!
+Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
 
-यह एंड्रॉइड के लिए मेरा पहला ऐप है। प्यार❤️ से नहीं, बल्कि प्यार❤️ से बनाया गया।
+Made not with love❤️, but by love❤️.
