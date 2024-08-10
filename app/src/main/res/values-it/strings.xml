@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="theme_selection_text">Tema</string>
-    <string name="title_select_theme">Scegli il tema</string>
+    <string name="title_select_theme">Scegli un tema</string>
     <string name="history_data_menu_delete">Elimina</string>
     <string name="title_settings">Impostazioni</string>
     <string name="title_about">Info</string>
