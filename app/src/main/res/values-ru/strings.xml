@@ -223,4 +223,7 @@
     <string name="unit_gradian">Градиан</string>
     <string name="unit_gallon_us">Галлон (США)</string>
     <string name="unit_degree">Градус</string>
+    <string name="unit_grams_of_protein">Грамм белка</string>
+    <string name="unit_grams_of_fat">Грамм жиров</string>
+    <string name="unit_grams_of_carbohydrate">Грамм углеводов</string>
 </resources>
