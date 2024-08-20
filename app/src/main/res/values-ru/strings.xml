@@ -226,4 +226,5 @@
     <string name="unit_grams_of_protein">Грамм белка</string>
     <string name="unit_grams_of_fat">Грамм жиров</string>
     <string name="unit_grams_of_carbohydrate">Грамм углеводов</string>
+    <string name="unit_gigibyte">Гигибайт</string>
 </resources>
