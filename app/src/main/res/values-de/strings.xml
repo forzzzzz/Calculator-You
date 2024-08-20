@@ -97,4 +97,24 @@
     <string name="physical_quantity_power">Strom</string>
     <string name="physical_quantity_pressure">Druck</string>
     <string name="physical_quantity_volume">Volumen</string>
+    <string name="unit_hour">Stunde</string>
+    <string name="unit_square_centimeter">Quadratzentimeter</string>
+    <string name="unit_meter">Meter</string>
+    <string name="unit_pound">Pfund</string>
+    <string name="unit_kilometer_per_hour">Kilometer pro Stunde</string>
+    <string name="unit_meter_per_second">Meter pro Sekunde</string>
+    <string name="unit_gram">Gramm</string>
+    <string name="physical_quantity_storage">Speicher</string>
+    <string name="unit_mile">Meile</string>
+    <string name="unit_inch">Zoll</string>
+    <string name="unit_week">Woche</string>
+    <string name="unit_mile_per_hour">Meilen pro Stunde</string>
+    <string name="unit_square_meter">Quadratmeter</string>
+    <string name="unit_second">Sekunde</string>
+    <string name="unit_milligram">Milligramm</string>
+    <string name="unit_minute">Minute</string>
+    <string name="unit_day">Tag</string>
+    <string name="unit_kilogram">Kilogramm</string>
+    <string name="unit_square_kilometer">Quadratkilometer</string>
+    <string name="unit_square_millimeter">Quadratmillimeter</string>
 </resources>
