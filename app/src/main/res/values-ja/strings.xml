@@ -1,3 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <string name="history_options_menu">履歴を消去</string>
+    <string name="expression_infinity">値が高すぎます</string>
+    <string name="other_selection_text">その他</string>
+    <string name="title_history">履歴</string>
+    <string name="theme_selection_text">テーマ</string>
+    <string name="formatting_selection_text">書式設定</string>
+    <string name="history_data_menu_copy">コピー</string>
+    <string name="history_data_menu_delete">消去</string>
+    <string name="title_settings">設定</string>
+    <string name="title_about">アプリについて</string>
+    <string name="title_select_theme">テーマを選択してください</string>
+    <string name="title_vibrations">バイブレーション</string>
+    <string name="title_sound_effects">音</string>
+    <string name="title_decimal_separator">小数点区切り文字</string>
+    <string name="title_swipes">スワイプ</string>
+    <string name="description_vibrations">キーボードのボタンをクリックしたときの触覚フィードバック</string>
+    <string name="expression_error">エラー</string>
+    <string name="description_sound_effects">キーボードのボタンをクリックしたときの効果音</string>
+    <string name="description_select_theme">アプリのライトテーマまたはダークテーマ</string>
+    <string name="description_dynamic_colors">壁紙からダイナミックカラーを選択</string>
+    <string name="title_separator">セパレータ</string>
+    <string name="history_data_menu_share">共有</string>
+    <string name="title_dynamic_colors">ダイナミックカラー</string>
+    <string name="title_select_color">色を選んでください</string>
+    <string name="title_precision">精度</string>
+</resources>
