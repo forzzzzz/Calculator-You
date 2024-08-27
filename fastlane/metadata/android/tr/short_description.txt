@@ -1,1 +1,1 @@
-Calculator You is a beautiful calculator for solving simple tasks.
+Calculator You, basit görevleri çözmek için güzel bir hesap makinesidir.
