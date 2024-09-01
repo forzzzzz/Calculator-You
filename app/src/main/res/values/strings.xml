@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Calculator You</string>
+    <string name="app_name">Calculator</string>
 
     <string name="clear_button" translatable="false">AC</string>
     <string name="brackets_button" translatable="false">(&#160;&#160;)</string>
