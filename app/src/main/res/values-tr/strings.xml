@@ -130,9 +130,9 @@
     <string name="unit_square_millimeter">Milimetrekare</string>
     <string name="unit_watt">Watt</string>
     <string name="unit_petabit">Petabit</string>
-    <string name="unit_gigapascal">GigaPaskal</string>
+    <string name="unit_gigapascal">Gigapaskal</string>
     <string name="unit_bar">Bar</string>
-    <string name="unit_megapascal">MegaPaskal</string>
+    <string name="unit_megapascal">Megapaskal</string>
     <string name="unit_millibar">Milibar</string>
     <string name="unit_kiloliter">Kilolitre</string>
     <string name="unit_square_yard">Yarda kare</string>
@@ -146,8 +146,8 @@
     <string name="unit_square_centimeter">Santimetrekare</string>
     <string name="unit_acre">Dönüm</string>
     <string name="unit_gigahertz">Gigahertz</string>
-    <string name="unit_mebibyte">MebiBayt</string>
-    <string name="unit_pebibyte">PebiBayt</string>
+    <string name="unit_mebibyte">Mebibayt</string>
+    <string name="unit_pebibyte">Pebibayt</string>
     <string name="unit_lumen">Lümen</string>
     <string name="unit_candela">Kandela</string>
     <string name="unit_kilobyte">Kilobayt</string>
@@ -195,7 +195,7 @@
     <string name="unit_horsepower">Beygir gücü</string>
     <string name="unit_btu_per_hour">BTU/saat</string>
     <string name="unit_pascal">Paskal</string>
-    <string name="unit_kilopascal">KiloPaskal</string>
+    <string name="unit_kilopascal">Kilopaskal</string>
     <string name="unit_psi">PSI</string>
     <string name="unit_h2o">H2O (İnç su)</string>
     <string name="unit_milliliter">Mililitre</string>
@@ -216,13 +216,13 @@
     <string name="unit_pound_foot">Paunt-fit</string>
     <string name="unit_lux">Lüks</string>
     <string name="unit_footcandle">Foot-kandela</string>
-    <string name="unit_kibibyte">KibiBayt</string>
-    <string name="unit_gigibyte">GigiBayt</string>
+    <string name="unit_kibibyte">Kibibayt</string>
+    <string name="unit_gigibyte">Gigibayt</string>
     <string name="unit_terabit">Terabit</string>
     <string name="unit_terabyte">Terabayt</string>
-    <string name="unit_tebibyte">TebiBayt</string>
+    <string name="unit_tebibyte">Tebibayt</string>
     <string name="unit_exabyte">Exabayt</string>
-    <string name="unit_exbibyte">ExbiBayt</string>
+    <string name="unit_exbibyte">Exbibayt</string>
     <string name="unit_pascal_second">Paskal-saniye</string>
     <string name="unit_centipoise">Santipuaz</string>
     <string name="unit_stoke">Stoke</string>
@@ -230,4 +230,5 @@
     <string name="unit_gradian">Gradyan</string>
     <string name="unit_turn">Dönüş</string>
     <string name="unit_gallon_us">Galon (ABD)</string>
+    <string name="app_name">Hesap Makinesi</string>
 </resources>
