@@ -258,9 +258,9 @@
 
 
     <string name="unit_pascal">Pascal</string>
-    <string name="unit_kilopascal">KiloPascal</string>
-    <string name="unit_megapascal">MegaPascal</string>
-    <string name="unit_gigapascal">GigaPascal</string>
+    <string name="unit_kilopascal">Kilopascal</string>
+    <string name="unit_megapascal">Megapascal</string>
+    <string name="unit_gigapascal">Gigapascal</string>
     <string name="unit_bar">Bar</string>
     <string name="unit_millibar">Millibar</string>
     <string name="unit_atmosphere">Atmosphere</string>
