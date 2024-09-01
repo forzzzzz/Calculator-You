@@ -8,7 +8,7 @@
     <string name="description_swipes3">Dígitos y funciones científicas</string>
     <string name="theme_element_2">Claro</string>
     <string name="theme_element_3">Oscuro</string>
-    <string name="theme_element_1">Predeterminado del sistema</string>
+    <string name="theme_element_1">Sistema</string>
     <string name="separator_element_1">Coma</string>
     <string name="title_open_source">Código fuente abierto</string>
     <string name="love_text">Hecha sin amor❤️, pero por amor❤️</string>
@@ -230,4 +230,5 @@
     <string name="unit_exbibyte">Exbibyte</string>
     <string name="unit_gradian">Grado centesimal</string>
     <string name="unit_gallon_uk">Galón (Reino Unido)</string>
+    <string name="app_name">Calculadora</string>
 </resources>
