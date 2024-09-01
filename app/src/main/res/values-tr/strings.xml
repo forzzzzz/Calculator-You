@@ -50,7 +50,7 @@
     <string name="description_select_color">Zevkinize uygun 60\'tan fazla renk</string>
     <string name="description_swipes">Ekran boyunca kaydırmalar</string>
     <string name="description_swipes3">Rakamlar ve bilimsel işlevler</string>
-    <string name="theme_element_1">Sistem öntanımlı değeri</string>
+    <string name="theme_element_1">Sistem</string>
     <string name="support_selection_text">Destek</string>
     <string name="info_selection_text">Uygulama bilgisi</string>
     <string name="description_precision">Ondalık basamak sayısı</string>
