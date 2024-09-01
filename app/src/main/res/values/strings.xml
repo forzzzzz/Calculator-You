@@ -313,7 +313,7 @@
     <string name="unit_lumen">Lumen</string>
     <string name="unit_candela">Candela</string>
     <string name="unit_lux">Lux</string>
-    <string name="unit_footcandle">Footcandle</string>
+    <string name="unit_footcandle">Foot-candle</string>
 
 
     <string name="unit_bit">Bit</string>
