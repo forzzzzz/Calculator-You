@@ -230,4 +230,5 @@
     <string name="physical_quantity_area">Площадь</string>
     <string name="physical_quantity_light">Свет</string>
     <string name="physical_quantity_storage">Хранилище</string>
+    <string name="app_name">Калькулятор</string>
 </resources>
