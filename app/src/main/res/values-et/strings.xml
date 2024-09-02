@@ -230,4 +230,5 @@
     <string name="unit_h2o">H2O (veekõrgus tollides)</string>
     <string name="unit_lumen">Luumen</string>
     <string name="unit_megawatt">Megavatt</string>
+    <string name="app_name">Kalkulaator</string>
 </resources>
