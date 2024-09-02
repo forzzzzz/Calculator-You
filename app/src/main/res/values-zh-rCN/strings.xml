@@ -61,7 +61,7 @@
     <string name="description_dynamic_colors">来自您的壁纸的动态色彩</string>
     <string name="description_precision">小数位数</string>
     <string name="description_decimal_separator">小数分隔符号</string>
-    <string name="theme_element_1">系统默认</string>
+    <string name="theme_element_1">系统</string>
     <string name="theme_element_2">浅色</string>
     <string name="theme_element_3">暗色</string>
     <string name="title_open_source">开放源代码</string>
@@ -230,4 +230,5 @@
     <string name="unit_gallon_uk">加仑（英）</string>
     <string name="unit_barrel">桶</string>
     <string name="description_swipes2">主界面</string>
+    <string name="app_name">计算器</string>
 </resources>
