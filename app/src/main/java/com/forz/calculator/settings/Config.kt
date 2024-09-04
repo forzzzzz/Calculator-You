@@ -12,7 +12,7 @@ object Config {
     var decimalSeparatorSymbol: String by notNull()
     var oldDecimalSeparatorSymbol: String by notNull()
     var numberPrecision: Int by notNull()
-    var maxIntegerDigits: Int by notNull()
+    var maxScientificNotationDigits: Int by notNull()
 
     var swipeMain: Boolean by notNull()
     var swipeDigitsAndScientificFunctions: Boolean by notNull()
@@ -44,7 +44,7 @@ object Config {
         this.decimalSeparatorSymbol = decimalSeparatorSymbol
         oldDecimalSeparatorSymbol = decimalSeparatorSymbol
         this.numberPrecision = numberPrecision
-        this.maxIntegerDigits = maxIntegerDigits
+        this.maxScientificNotationDigits = maxIntegerDigits
 
         this.swipeMain = swipeHistoryAndCalculator
         this.swipeDigitsAndScientificFunctions = swipeDigitsAndScientificFunctions

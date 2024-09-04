@@ -61,6 +61,7 @@
     <string name="title_dynamic_colors">Dynamic colors</string>
     <string name="title_select_color">Choose color</string>
     <string name="title_precision">Precision</string>
+    <string name="title_max_scientific_notation_digits">Scientific notation</string>
     <string name="title_separator">Separator</string>
     <string name="title_decimal_separator">Decimal separator</string>
     <string name="title_swipes">Swipes</string>
@@ -72,6 +73,7 @@
     <string name="description_dynamic_colors">Dynamic colors from your wallpaper</string>
     <string name="description_select_color">60+ colors to suit your taste</string>
     <string name="description_precision">Number of decimal places</string>
+    <string name="description_max_scientific_notation_digits">Max scientific notation digits</string>
     <string name="description_separator">Group separator symbol</string>
     <string name="description_decimal_separator">Decimal separator symbol</string>
     <string name="description_swipes">Swipes across the screen</string>

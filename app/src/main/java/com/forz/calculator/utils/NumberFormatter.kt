@@ -12,11 +12,9 @@ import com.forz.calculator.calculator.DefaultOperator
 import com.forz.calculator.calculator.ScientificFunction
 import com.forz.calculator.calculator.TrigonometricFunction
 import java.math.BigDecimal
-import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.Locale
-import kotlin.math.abs
 import kotlin.math.pow
 
 object NumberFormatter {
@@ -32,19 +30,19 @@ object NumberFormatter {
         return exp
     }
 
-    fun formatResult(result: Double, numberPrecision: Int, maxIntegerDigits: Int, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String {
-        var res = doubleToString(result, numberPrecision, maxIntegerDigits)
+    fun formatResult(result: BigDecimal, numberPrecision: Int, maxIntegerDigits: Int, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String {
+        var res = bigDecimalToString(result, numberPrecision, maxIntegerDigits)
         res = replaceSeparators(separateNumbers(res), groupingSeparatorSymbol, decimalSeparatorSymbol)
         res = res.replace(DefaultOperator.Minus.value, DefaultOperator.Minus.text)
 
         return res
     }
 
-    private fun doubleToString(number: Double, decimalPlaces: Int, maxIntegerDigits: Int): String {
+    private fun bigDecimalToString(number: BigDecimal, decimalPlaces: Int, maxIntegerDigits: Int): String {
         val scientificFormatter = DecimalFormat("0.${"0".repeat(decimalPlaces)}E0", DecimalFormatSymbols(Locale.US))
         val standardFormatter = DecimalFormat("0.${"0".repeat(decimalPlaces)}", DecimalFormatSymbols(Locale.US))
 
-        val absNumber = abs(number)
+        val absNumber = number.abs()
 
         var standardFormatted = standardFormatter.format(number)
 
@@ -53,7 +51,7 @@ object NumberFormatter {
             standardFormatted = standardFormatted.dropLast(1)
         }
 
-        if (absNumber >= 10.0.pow(maxIntegerDigits.toDouble()) || absNumber < 10.0.pow(-decimalPlaces.toDouble())) {
+        if (absNumber >= BigDecimal(10.0.pow(maxIntegerDigits.toDouble())) || absNumber < BigDecimal(10.0.pow(-decimalPlaces.toDouble()))) {
             var scientificFormatted = scientificFormatter.format(number)
 
             scientificFormatted = scientificFormatted.replace(Regex("0+E"), "E")
@@ -61,7 +59,7 @@ object NumberFormatter {
             return scientificFormatted
         }
 
-        if (absNumber < 10.0.pow(-decimalPlaces.toDouble())) {
+        if (absNumber < BigDecimal(10.0.pow(-decimalPlaces.toDouble()))) {
             return "0"
         }
 

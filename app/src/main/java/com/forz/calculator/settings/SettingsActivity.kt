@@ -34,10 +34,11 @@ import com.forz.calculator.settings.Config.swipeDigitsAndScientificFunctions
 import com.forz.calculator.settings.Config.swipeMain
 import com.forz.calculator.settings.Config.vibration
 import com.forz.calculator.expression.ExpressionViewModel
-import com.forz.calculator.settings.Config.maxIntegerDigits
+import com.forz.calculator.settings.Config.maxScientificNotationDigits
 import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.slider.Slider
+import java.math.BigDecimal
 import kotlin.properties.Delegates.notNull
 
 
@@ -90,7 +91,8 @@ class SettingsActivity : AppCompatActivity() {
         loadDynamicColorSwitch()
 
         loadSlider(binding.precisionSlider, numberPrecision)
-        binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, maxIntegerDigits, groupingSeparatorSymbol, decimalSeparatorSymbol)
+        loadSlider(binding.maxScientificNotationDigitsSlider, maxScientificNotationDigits)
+        binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, maxScientificNotationDigits, groupingSeparatorSymbol, decimalSeparatorSymbol)
         loadButtonToggleGroupString(binding.groupingSeparatorSymbolButtonToggleGroup, groupingSeparatorMap, groupingSeparatorSymbol)
         loadButtonToggleGroupString(binding.decimalSeparatorSymbolButtonToggleGroup, decimalSeparatorMap, decimalSeparatorSymbol)
 
@@ -187,7 +189,7 @@ class SettingsActivity : AppCompatActivity() {
             binding.previewFormatText.text = updatePreviewText(
                 getString(R.string.preview_format_text),
                 progress,
-                maxIntegerDigits,
+                maxScientificNotationDigits,
                 groupingSeparatorSymbol,
                 decimalSeparatorSymbol
             )
@@ -202,6 +204,26 @@ class SettingsActivity : AppCompatActivity() {
         })
 
 
+        binding.maxScientificNotationDigitsSlider.addOnChangeListener { _, value, _ ->
+            val progress = value.toInt()
+            binding.previewFormatText.text = updatePreviewText(
+                getString(R.string.preview_format_text),
+                numberPrecision,
+                progress,
+                groupingSeparatorSymbol,
+                decimalSeparatorSymbol
+            )
+        }
+
+        binding.maxScientificNotationDigitsSlider.addOnSliderTouchListener(object : Slider.OnSliderTouchListener {
+            override fun onStartTrackingTouch(slider: Slider) {
+            }
+            override fun onStopTrackingTouch(slider: Slider) {
+                maxScientificNotationDigits = slider.value.toInt()
+            }
+        })
+
+
         val invertedGroupingSeparatorMap = groupingSeparatorMap.entries.associateBy({ it.value }, { it.key })
         val invertedDecimalSeparatorMap = decimalSeparatorMap.entries.associateBy({ it.value }, { it.key })
 
@@ -210,7 +232,7 @@ class SettingsActivity : AppCompatActivity() {
             if (isChecked) {
                 val separator = invertedGroupingSeparatorMap[checkedId]
                 groupingSeparatorSymbol = separator!!
-                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, maxIntegerDigits, groupingSeparatorSymbol, decimalSeparatorSymbol)
+                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, maxScientificNotationDigits, groupingSeparatorSymbol, decimalSeparatorSymbol)
 
                 if (separator == "."){
                     binding.decimalSeparatorSymbolButtonToggleGroup.check(R.id.decimalSeparatorSymbolCommaButton)
@@ -226,7 +248,7 @@ class SettingsActivity : AppCompatActivity() {
             if (isChecked) {
                 val separator = invertedDecimalSeparatorMap[checkedId]
                 decimalSeparatorSymbol = separator!!
-                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, maxIntegerDigits, groupingSeparatorSymbol, decimalSeparatorSymbol)
+                binding.previewFormatText.text = updatePreviewText(getString(R.string.preview_format_text), numberPrecision, maxScientificNotationDigits, groupingSeparatorSymbol, decimalSeparatorSymbol)
 
                 if (binding.groupingSeparatorSymbolButtonToggleGroup.checkedButtonId != R.id.groupingSeparatorSymbolSpaceButton){
                     if (separator == ","){
@@ -317,6 +339,7 @@ class SettingsActivity : AppCompatActivity() {
         preferences.setGroupingSeparatorSymbol(groupingSeparatorSymbol)
         preferences.setDecimalSeparatorSymbol(decimalSeparatorSymbol)
         preferences.setNumberPrecision(numberPrecision)
+        preferences.setMaxScientificNotationDigits(maxScientificNotationDigits)
         preferences.setSwipeHistoryAndCalculator(swipeMain)
         preferences.setSwipeDigitsAndScientificFunctions(swipeDigitsAndScientificFunctions)
         preferences.setVibration(vibration)
@@ -389,7 +412,7 @@ class SettingsActivity : AppCompatActivity() {
         var text = inputString
         text = NumberFormatter.removeSeparators(text, ",")
         text = NumberFormatter.formatResult(
-            text.toDouble(),
+            BigDecimal(text),
             numberPrecision,
             maxIntegerDigits,
             groupingSeparatorSymbol,

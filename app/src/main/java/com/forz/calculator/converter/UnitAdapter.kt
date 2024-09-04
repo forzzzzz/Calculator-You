@@ -11,10 +11,11 @@ import com.forz.calculator.converter.data.ConverterUnit
 import com.forz.calculator.databinding.ItemUnitBinding
 import com.forz.calculator.settings.Config.decimalSeparatorSymbol
 import com.forz.calculator.settings.Config.groupingSeparatorSymbol
-import com.forz.calculator.settings.Config.maxIntegerDigits
+import com.forz.calculator.settings.Config.maxScientificNotationDigits
 import com.forz.calculator.settings.Config.numberPrecision
 import com.forz.calculator.utils.HapticAndSound
 import com.forz.calculator.utils.NumberFormatter
+import java.math.BigDecimal
 import kotlin.properties.Delegates.notNull
 
 interface UnitActionListener {
@@ -39,9 +40,9 @@ class UnitAdapter(
                 id = pair.first.id,
                 unit = context.getString(pair.first.name),
                 result = NumberFormatter.formatResult(
-                    pair.second,
+                    BigDecimal(pair.second),
                     numberPrecision,
-                    maxIntegerDigits,
+                    maxScientificNotationDigits,
                     groupingSeparatorSymbol,
                     decimalSeparatorSymbol
                 )

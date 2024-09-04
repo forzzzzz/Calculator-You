@@ -278,11 +278,52 @@
                     android:valueTo="16"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@id/precisionImage"
-                    app:layout_constraintTop_toBottomOf="@id/precisionText"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toBottomOf="@id/precisionText" />
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/maxScientificNotationDigitsLayout"
+                style="@style/optionLayout">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/maxScientificNotationDigitsImage"
+                    style="@style/optionImage"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintBottom_toBottomOf="@id/maxScientificNotationDigitsText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_science" />
+
+                <TextView
+                    android:id="@+id/maxScientificNotationDigitsTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_max_scientific_notation_digits"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/maxScientificNotationDigitsImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/maxScientificNotationDigitsText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_max_scientific_notation_digits"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/maxScientificNotationDigitsImage"
+                    app:layout_constraintTop_toBottomOf="@id/maxScientificNotationDigitsTitleText" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/maxScientificNotationDigitsSlider"
+                    style="@style/optionSlider"
+                    android:contentDescription="@string/title_max_scientific_notation_digits"
+                    android:stepSize="1"
+                    android:valueFrom="7"
+                    android:valueTo="15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/maxScientificNotationDigitsImage"
+                    app:layout_constraintTop_toBottomOf="@id/maxScientificNotationDigitsText" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
