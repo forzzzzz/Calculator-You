@@ -28,6 +28,7 @@
     <color name="colorOnSurface_0">#EBDFDE</color>
     <color name="colorSurfaceVariant_0">#3B2D2D</color>
     <color name="colorOnSurfaceVariant_0">#D6C0C0</color>
+    <color name="colorSurfaceContainer_0">#271d1d</color>
 
     <color name="colorOutline_0">#9F8B8B</color>
 
@@ -60,6 +61,7 @@
     <color name="colorOnSurface_Black_And_White">#e6e6e6</color>
     <color name="colorSurfaceVariant_Black_And_White">#333333</color>
     <color name="colorOnSurfaceVariant_Black_And_White">#cccccc</color>
+    <color name="colorSurfaceContainer_Black_And_White">#1b2122</color>
 
     <color name="colorOutline_Black_And_White">#999999</color>
 
@@ -95,6 +97,7 @@
     <color name="colorOnSurface_1">#EADFE0</color>
     <color name="colorSurfaceVariant_1">#3A2D30</color>
     <color name="colorOnSurfaceVariant_1">#D4C1C5</color>
+    <color name="colorSurfaceContainer_1">#261d20</color>
 
     <color name="colorOutline_1">#9D8B8F</color>
 
@@ -126,6 +129,7 @@
     <color name="colorOnSurface_2">#EBDFDF</color>
     <color name="colorSurfaceVariant_2">#3A2D2F</color>
     <color name="colorOnSurfaceVariant_2">#D5C1C3</color>
+    <color name="colorSurfaceContainer_2">#261d1f</color>
 
     <color name="colorOutline_2">#9E8B8E</color>
 
@@ -157,6 +161,7 @@
     <color name="colorOnSurface_3">#EBDFDF</color>
     <color name="colorSurfaceVariant_3">#3B2D2E</color>
     <color name="colorOnSurfaceVariant_3">#D6C0C1</color>
+    <color name="colorSurfaceContainer_3">#271d1e</color>
 
     <color name="colorOutline_3">#9E8B8C</color>
 
@@ -188,6 +193,7 @@
     <color name="colorOnSurface_4">#EBDFDE</color>
     <color name="colorSurfaceVariant_4">#3B2D2D</color>
     <color name="colorOnSurfaceVariant_4">#D6C0C0</color>
+    <color name="colorSurfaceContainer_4">#271d1d</color>
 
     <color name="colorOutline_4">#9F8B8A</color>
 
@@ -219,6 +225,7 @@
     <color name="colorOnSurface_5">#ECDFDD</color>
     <color name="colorSurfaceVariant_5">#3B2D2C</color>
     <color name="colorOnSurfaceVariant_5">#D7C1BE</color>
+    <color name="colorSurfaceContainer_5">#271d1c</color>
 
     <color name="colorOutline_5">#9F8B89</color>
 
@@ -250,6 +257,7 @@
     <color name="colorOnSurface_6">#ECDFDC</color>
     <color name="colorSurfaceVariant_6">#3B2D2A</color>
     <color name="colorOnSurfaceVariant_6">#D7C1BC</color>
+    <color name="colorSurfaceContainer_6">#271d1b</color>
 
     <color name="colorOutline_6">#9F8B87</color>
 
@@ -281,6 +289,7 @@
     <color name="colorOnSurface_7">#ECDFDB</color>
     <color name="colorSurfaceVariant_7">#3B2D29</color>
     <color name="colorOnSurfaceVariant_7">#D7C1BB</color>
+    <color name="colorSurfaceContainer_7">#271d1b</color>
 
     <color name="colorOutline_7">#9F8B86</color>
 
@@ -312,6 +321,7 @@
     <color name="colorOnSurface_8">#ECDFDB</color>
     <color name="colorSurfaceVariant_8">#3B2D28</color>
     <color name="colorOnSurfaceVariant_8">#D7C1B9</color>
+    <color name="colorSurfaceContainer_8">#271e1a</color>
 
     <color name="colorOutline_8">#9F8C84</color>
 
@@ -343,6 +353,7 @@
     <color name="colorOnSurface_9">#EBDFDA</color>
     <color name="colorSurfaceVariant_9">#3B2E27</color>
     <color name="colorOnSurfaceVariant_9">#D6C1B8</color>
+    <color name="colorSurfaceContainer_9">#271e19</color>
 
     <color name="colorOutline_9">#9E8C83</color>
 
@@ -374,6 +385,7 @@
     <color name="colorOnSurface_10">#EBDFD9</color>
     <color name="colorSurfaceVariant_10">#3A2E26</color>
     <color name="colorOnSurfaceVariant_10">#D6C2B6</color>
+    <color name="colorSurfaceContainer_10">#261e19</color>
 
     <color name="colorOutline_10">#9E8C82</color>
 
@@ -405,6 +417,7 @@
     <color name="colorOnSurface_11">#EBDFD9</color>
     <color name="colorSurfaceVariant_11">#3A2E25</color>
     <color name="colorOnSurfaceVariant_11">#D5C2B5</color>
+    <color name="colorSurfaceContainer_11">#261e18</color>
 
     <color name="colorOutline_11">#9D8D81</color>
 
@@ -436,6 +449,7 @@
     <color name="colorOnSurface_12">#EAE0D8</color>
     <color name="colorSurfaceVariant_12">#392E25</color>
     <color name="colorOnSurfaceVariant_12">#D4C2B4</color>
+    <color name="colorSurfaceContainer_12">#251e17</color>
 
     <color name="colorOutline_12">#9C8D80</color>
 
@@ -467,6 +481,7 @@
     <color name="colorOnSurface_13">#EAE0D8</color>
     <color name="colorSurfaceVariant_13">#382F24</color>
     <color name="colorOnSurfaceVariant_13">#D2C3B3</color>
+    <color name="colorSurfaceContainer_13">#251e17</color>
 
     <color name="colorOutline_13">#9B8D7F</color>
 
@@ -498,6 +513,7 @@
     <color name="colorOnSurface_14">#E9E0D8</color>
     <color name="colorSurfaceVariant_14">#372F24</color>
     <color name="colorOnSurfaceVariant_14">#D1C3B3</color>
+    <color name="colorSurfaceContainer_14">#241f17</color>
 
     <color name="colorOutline_14">#9A8E7F</color>
 
@@ -529,6 +545,7 @@
     <color name="colorOnSurface_15">#E8E0D8</color>
     <color name="colorSurfaceVariant_15">#363024</color>
     <color name="colorOnSurfaceVariant_15">#D0C4B3</color>
+    <color name="colorSurfaceContainer_15">#241f17</color>
 
     <color name="colorOutline_15">#988E7F</color>
 
@@ -560,6 +577,7 @@
     <color name="colorOnSurface_16">#E7E0D8</color>
     <color name="colorSurfaceVariant_16">#353024</color>
     <color name="colorOnSurfaceVariant_16">#CEC4B3</color>
+    <color name="colorSurfaceContainer_16">#231f17</color>
 
     <color name="colorOutline_16">#978F7F</color>
 
@@ -591,6 +609,7 @@
     <color name="colorOnSurface_17">#E7E1D8</color>
     <color name="colorSurfaceVariant_17">#343024</color>
     <color name="colorOnSurfaceVariant_17">#CCC5B3</color>
+    <color name="colorSurfaceContainer_17">#221f17</color>
 
     <color name="colorOutline_17">#968F7F</color>
 
@@ -622,6 +641,7 @@
     <color name="colorOnSurface_18">#E6E1D8</color>
     <color name="colorSurfaceVariant_18">#333024</color>
     <color name="colorOnSurfaceVariant_18">#CBC5B4</color>
+    <color name="colorSurfaceContainer_18">#212017</color>
 
     <color name="colorOutline_18">#949080</color>
 
@@ -653,6 +673,7 @@
     <color name="colorOnSurface_19">#E5E1D8</color>
     <color name="colorSurfaceVariant_19">#323125</color>
     <color name="colorOnSurfaceVariant_19">#C9C6B4</color>
+    <color name="colorSurfaceContainer_19">#212018</color>
 
     <color name="colorOutline_19">#939080</color>
 
@@ -684,6 +705,7 @@
     <color name="colorOnSurface_20">#E4E1D9</color>
     <color name="colorSurfaceVariant_20">#313125</color>
     <color name="colorOnSurfaceVariant_20">#C8C6B5</color>
+    <color name="colorSurfaceContainer_20">#202018</color>
 
     <color name="colorOutline_20">#929081</color>
 
@@ -715,6 +737,7 @@
     <color name="colorOnSurface_21">#E4E1D9</color>
     <color name="colorSurfaceVariant_21">#303126</color>
     <color name="colorOnSurfaceVariant_21">#C6C6B6</color>
+    <color name="colorSurfaceContainer_21">#1f2018</color>
 
     <color name="colorOutline_21">#909182</color>
 
@@ -746,6 +769,7 @@
     <color name="colorOnSurface_22">#E3E2DA</color>
     <color name="colorSurfaceVariant_22">#2F3227</color>
     <color name="colorOnSurfaceVariant_22">#C5C7B7</color>
+    <color name="colorSurfaceContainer_22">#1f2019</color>
 
     <color name="colorOutline_22">#8F9183</color>
 
@@ -777,6 +801,7 @@
     <color name="colorOnSurface_23">#E2E2DA</color>
     <color name="colorSurfaceVariant_23">#2E3228</color>
     <color name="colorOnSurfaceVariant_23">#C4C7B9</color>
+    <color name="colorSurfaceContainer_23">#1e201a</color>
 
     <color name="colorOutline_23">#8D9184</color>
 
@@ -808,6 +833,7 @@
     <color name="colorOnSurface_24">#E2E2DB</color>
     <color name="colorSurfaceVariant_24">#2D3229</color>
     <color name="colorOnSurfaceVariant_24">#C2C7BA</color>
+    <color name="colorSurfaceContainer_24">#1d211a</color>
 
     <color name="colorOutline_24">#8C9185</color>
 
@@ -839,6 +865,7 @@
     <color name="colorOnSurface_25">#E1E2DC</color>
     <color name="colorSurfaceVariant_25">#2C322A</color>
     <color name="colorOnSurfaceVariant_25">#C1C7BB</color>
+    <color name="colorSurfaceContainer_25">#1d211b</color>
 
     <color name="colorOutline_25">#8B9287</color>
 
@@ -870,6 +897,7 @@
     <color name="colorOnSurface_26">#E1E2DC</color>
     <color name="colorSurfaceVariant_26">#2B322B</color>
     <color name="colorOnSurfaceVariant_26">#C0C8BD</color>
+    <color name="colorSurfaceContainer_26">#1c211c</color>
 
     <color name="colorOutline_26">#8A9288</color>
 
@@ -901,6 +929,7 @@
     <color name="colorOnSurface_27">#E0E2DD</color>
     <color name="colorSurfaceVariant_27">#2B322C</color>
     <color name="colorOnSurfaceVariant_27">#C0C8BE</color>
+    <color name="colorSurfaceContainer_27">#1c211c</color>
 
     <color name="colorOutline_27">#8A9289</color>
 
@@ -932,6 +961,7 @@
     <color name="colorOnSurface_28">#E0E2DE</color>
     <color name="colorSurfaceVariant_28">#2A322D</color>
     <color name="colorOnSurfaceVariant_28">#BFC8BF</color>
+    <color name="colorSurfaceContainer_28">#1b211d</color>
 
     <color name="colorOutline_28">#89928A</color>
 
@@ -963,6 +993,7 @@
     <color name="colorOnSurface_29">#E0E2DE</color>
     <color name="colorSurfaceVariant_29">#2A322E</color>
     <color name="colorOnSurfaceVariant_29">#BEC8C1</color>
+    <color name="colorSurfaceContainer_29">#1b211e</color>
 
     <color name="colorOutline_29">#88928C</color>
 
@@ -994,6 +1025,7 @@
     <color name="colorOnSurface_30">#E0E2DF</color>
     <color name="colorSurfaceVariant_30">#29322F</color>
     <color name="colorOnSurfaceVariant_30">#BEC8C2</color>
+    <color name="colorSurfaceContainer_30">#1b211e</color>
 
     <color name="colorOutline_30">#88928D</color>
 
@@ -1025,6 +1057,7 @@
     <color name="colorOnSurface_31">#DFE2E0</color>
     <color name="colorSurfaceVariant_31">#29322F</color>
     <color name="colorOnSurfaceVariant_31">#BEC8C3</color>
+    <color name="colorSurfaceContainer_31">#1b211f</color>
 
     <color name="colorOutline_31">#88928E</color>
 
@@ -1056,6 +1089,7 @@
     <color name="colorOnSurface_32">#DFE2E0</color>
     <color name="colorSurfaceVariant_32">#293230</color>
     <color name="colorOnSurfaceVariant_32">#BDC8C5</color>
+    <color name="colorSurfaceContainer_32">#1a2120</color>
 
     <color name="colorOutline_32">#88928F</color>
 
@@ -1087,6 +1121,7 @@
     <color name="colorOnSurface_33">#DFE2E1</color>
     <color name="colorSurfaceVariant_33">#293231</color>
     <color name="colorOnSurfaceVariant_33">#BDC8C6</color>
+    <color name="colorSurfaceContainer_33">#1a2120</color>
 
     <color name="colorOutline_33">#879290</color>
 
@@ -1118,6 +1153,7 @@
     <color name="colorOnSurface_34">#DFE2E1</color>
     <color name="colorSurfaceVariant_34">#293232</color>
     <color name="colorOnSurfaceVariant_34">#BDC7C7</color>
+    <color name="colorSurfaceContainer_34">#1a2121</color>
 
     <color name="colorOutline_34">#889291</color>
 
@@ -1149,6 +1185,7 @@
     <color name="colorOnSurface_35">#DFE2E2</color>
     <color name="colorSurfaceVariant_35">#293233</color>
     <color name="colorOnSurfaceVariant_35">#BDC7C8</color>
+    <color name="colorSurfaceContainer_35">#1a2121</color>
 
     <color name="colorOutline_35">#889292</color>
 
@@ -1180,6 +1217,7 @@
     <color name="colorOnSurface_36">#E0E2E2</color>
     <color name="colorSurfaceVariant_36">#293234</color>
     <color name="colorOnSurfaceVariant_36">#BEC7C9</color>
+    <color name="colorSurfaceContainer_36">#1b2122</color>
 
     <color name="colorOutline_36">#889193</color>
 
@@ -1211,6 +1249,7 @@
     <color name="colorOnSurface_37">#E0E2E3</color>
     <color name="colorSurfaceVariant_37">#293234</color>
     <color name="colorOnSurfaceVariant_37">#BEC7CA</color>
+    <color name="colorSurfaceContainer_37">#1b2122</color>
 
     <color name="colorOutline_37">#889194</color>
 
@@ -1242,6 +1281,7 @@
     <color name="colorOnSurface_38">#E0E2E3</color>
     <color name="colorSurfaceVariant_38">#293235</color>
     <color name="colorOnSurfaceVariant_38">#BEC7CB</color>
+    <color name="colorSurfaceContainer_38">#1b2023</color>
 
     <color name="colorOutline_38">#889195</color>
 
@@ -1273,6 +1313,7 @@
     <color name="colorOnSurface_39">#E0E1E3</color>
     <color name="colorSurfaceVariant_39">#2A3236</color>
     <color name="colorOnSurfaceVariant_39">#BFC7CC</color>
+    <color name="colorSurfaceContainer_39">#1b2023</color>
 
     <color name="colorOutline_39">#899196</color>
 
@@ -1304,6 +1345,7 @@
     <color name="colorOnSurface_40">#E0E1E4</color>
     <color name="colorSurfaceVariant_40">#2A3136</color>
     <color name="colorOnSurfaceVariant_40">#BFC6CC</color>
+    <color name="colorSurfaceContainer_40">#1c2023</color>
 
     <color name="colorOutline_40">#899196</color>
 
@@ -1335,6 +1377,7 @@
     <color name="colorOnSurface_41">#E1E1E4</color>
     <color name="colorSurfaceVariant_41">#2B3136</color>
     <color name="colorOnSurfaceVariant_41">#C0C6CD</color>
+    <color name="colorSurfaceContainer_41">#1c2024</color>
 
     <color name="colorOutline_41">#8A9097</color>
 
@@ -1366,6 +1409,7 @@
     <color name="colorOnSurface_42">#E1E1E4</color>
     <color name="colorSurfaceVariant_42">#2B3137</color>
     <color name="colorOnSurfaceVariant_42">#C1C6CD</color>
+    <color name="colorSurfaceContainer_42">#1c2024</color>
 
     <color name="colorOutline_42">#8B9097</color>
 
@@ -1397,6 +1441,7 @@
     <color name="colorOnSurface_43">#E1E1E5</color>
     <color name="colorSurfaceVariant_43">#2C3137</color>
     <color name="colorOnSurfaceVariant_43">#C1C6CE</color>
+    <color name="colorSurfaceContainer_43">#1d2024</color>
 
     <color name="colorOutline_43">#8B9098</color>
 
@@ -1428,6 +1473,7 @@
     <color name="colorOnSurface_44">#E2E1E5</color>
     <color name="colorSurfaceVariant_44">#2D3137</color>
     <color name="colorOnSurfaceVariant_44">#C2C5CE</color>
+    <color name="colorSurfaceContainer_44">#1d2024</color>
 
     <color name="colorOutline_44">#8C9098</color>
 
@@ -1459,6 +1505,7 @@
     <color name="colorOnSurface_45">#E2E1E5</color>
     <color name="colorSurfaceVariant_45">#2D3038</color>
     <color name="colorOnSurfaceVariant_45">#C3C5CF</color>
+    <color name="colorSurfaceContainer_45">#1e2025</color>
 
     <color name="colorOutline_45">#8D8F98</color>
 
@@ -1490,6 +1537,7 @@
     <color name="colorOnSurface_46">#E3E1E5</color>
     <color name="colorSurfaceVariant_46">#2E3038</color>
     <color name="colorOnSurfaceVariant_46">#C4C5CF</color>
+    <color name="colorSurfaceContainer_46">#1e1f25</color>
 
     <color name="colorOutline_46">#8E8F99</color>
 
@@ -1521,6 +1569,7 @@
     <color name="colorOnSurface_47">#E3E0E5</color>
     <color name="colorSurfaceVariant_47">#2F3038</color>
     <color name="colorOnSurfaceVariant_47">#C5C4CF</color>
+    <color name="colorSurfaceContainer_47">#1f1f25</color>
 
     <color name="colorOutline_47">#8F8F99</color>
 
@@ -1552,6 +1601,7 @@
     <color name="colorOnSurface_48">#E3E0E5</color>
     <color name="colorSurfaceVariant_48">#303038</color>
     <color name="colorOnSurfaceVariant_48">#C6C4CF</color>
+    <color name="colorSurfaceContainer_48">#1f1f25</color>
 
     <color name="colorOutline_48">#908F99</color>
 
@@ -1583,6 +1633,7 @@
     <color name="colorOnSurface_49">#E4E0E5</color>
     <color name="colorSurfaceVariant_49">#302F38</color>
     <color name="colorOnSurfaceVariant_49">#C7C4CF</color>
+    <color name="colorSurfaceContainer_49">#201f25</color>
 
     <color name="colorOutline_49">#918E98</color>
 
@@ -1614,6 +1665,7 @@
     <color name="colorOnSurface_50">#E5E0E5</color>
     <color name="colorSurfaceVariant_50">#312F38</color>
     <color name="colorOnSurfaceVariant_50">#C8C3CF</color>
+    <color name="colorSurfaceContainer_50">#201f24</color>
 
     <color name="colorOutline_50">#928E98</color>
 
@@ -1645,6 +1697,7 @@
     <color name="colorOnSurface_51">#E5E0E5</color>
     <color name="colorSurfaceVariant_51">#322F37</color>
     <color name="colorOnSurfaceVariant_51">#C9C3CE</color>
+    <color name="colorSurfaceContainer_51">#211f24</color>
 
     <color name="colorOutline_51">#938E98</color>
 
@@ -1676,6 +1729,7 @@
     <color name="colorOnSurface_52">#E6E0E5</color>
     <color name="colorSurfaceVariant_52">#332F37</color>
     <color name="colorOnSurfaceVariant_52">#CBC3CE</color>
+    <color name="colorSurfaceContainer_52">#211e24</color>
 
     <color name="colorOutline_52">#948D98</color>
 
@@ -1707,6 +1761,7 @@
     <color name="colorOnSurface_53">#E6E0E4</color>
     <color name="colorSurfaceVariant_53">#342E37</color>
     <color name="colorOnSurfaceVariant_53">#CCC3CD</color>
+    <color name="colorSurfaceContainer_53">#221e24</color>
 
     <color name="colorOutline_53">#958D97</color>
 
@@ -1738,6 +1793,7 @@
     <color name="colorOnSurface_54">#E7DFE4</color>
     <color name="colorSurfaceVariant_54">#352E36</color>
     <color name="colorOnSurfaceVariant_54">#CDC2CD</color>
+    <color name="colorSurfaceContainer_54">#221e24</color>
 
     <color name="colorOutline_54">#968D97</color>
 
@@ -1769,6 +1825,7 @@
     <color name="colorOnSurface_55">#E7DFE4</color>
     <color name="colorSurfaceVariant_55">#352E36</color>
     <color name="colorOnSurfaceVariant_55">#CEC2CC</color>
+    <color name="colorSurfaceContainer_55">#231e23</color>
 
     <color name="colorOutline_55">#978D96</color>
 
@@ -1800,6 +1857,7 @@
     <color name="colorOnSurface_56">#E8DFE3</color>
     <color name="colorSurfaceVariant_56">#362E35</color>
     <color name="colorOnSurfaceVariant_56">#CFC2CB</color>
+    <color name="colorSurfaceContainer_56">#241e23</color>
 
     <color name="colorOutline_56">#988C95</color>
 
@@ -1831,6 +1889,7 @@
     <color name="colorOnSurface_57">#E8DFE3</color>
     <color name="colorSurfaceVariant_57">#372E34</color>
     <color name="colorOnSurfaceVariant_57">#D0C1CA</color>
+    <color name="colorSurfaceContainer_57">#241e22</color>
 
     <color name="colorOutline_57">#998C94</color>
 
@@ -1862,6 +1921,7 @@
     <color name="colorOnSurface_58">#E9DFE2</color>
     <color name="colorSurfaceVariant_58">#382D33</color>
     <color name="colorOnSurfaceVariant_58">#D2C1C9</color>
+    <color name="colorSurfaceContainer_58">#251e22</color>
 
     <color name="colorOutline_58">#9A8C93</color>
 
@@ -1893,6 +1953,7 @@
     <color name="colorOnSurface_59">#EADFE1</color>
     <color name="colorSurfaceVariant_59">#382D32</color>
     <color name="colorOnSurfaceVariant_59">#D2C1C8</color>
+    <color name="colorSurfaceContainer_59">#251e21</color>
 
     <color name="colorOutline_59">#9B8C92</color>
 
@@ -1924,6 +1985,7 @@
     <color name="colorOnSurface_60">#EADFE1</color>
     <color name="colorSurfaceVariant_60">#392D31</color>
     <color name="colorOnSurfaceVariant_60">#D3C1C6</color>
+    <color name="colorSurfaceContainer_60">#261d20</color>
 
     <color name="colorOutline_60">#9C8B90</color>
 

@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Base.Theme.Calculator" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Base.Theme.Calculator" parent="Theme.Material3.DynamicColors.Dark.NoActionBar">
         <item name="android:windowLightStatusBar">false</item>
         <item name="android:statusBarColor">?attr/colorSurface</item>
         <item name="android:colorControlActivated">?attr/colorPrimary</item>
@@ -67,6 +67,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_0</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_0</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_0</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_0</item>
 
         <item name="colorOutline">@color/colorOutline_0</item>
 
@@ -97,6 +98,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_Black_And_White</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_Black_And_White</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_Black_And_White</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_Black_And_White</item>
 
         <item name="colorOutline">@color/colorOutline_5</item>
 
@@ -130,6 +132,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_1</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_1</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_1</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_1</item>
 
         <item name="colorOutline">@color/colorOutline_1</item>
 
@@ -159,6 +162,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_2</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_2</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_2</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_2</item>
 
         <item name="colorOutline">@color/colorOutline_2</item>
 
@@ -188,6 +192,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_3</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_3</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_3</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_3</item>
 
         <item name="colorOutline">@color/colorOutline_3</item>
 
@@ -217,6 +222,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_4</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_4</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_4</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_4</item>
 
         <item name="colorOutline">@color/colorOutline_4</item>
 
@@ -246,6 +252,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_5</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_5</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_5</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_5</item>
 
         <item name="colorOutline">@color/colorOutline_5</item>
 
@@ -275,6 +282,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_6</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_6</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_6</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_6</item>
 
         <item name="colorOutline">@color/colorOutline_6</item>
 
@@ -304,6 +312,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_7</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_7</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_7</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_7</item>
 
         <item name="colorOutline">@color/colorOutline_7</item>
 
@@ -333,6 +342,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_8</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_8</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_8</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_8</item>
 
         <item name="colorOutline">@color/colorOutline_8</item>
 
@@ -362,6 +372,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_9</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_9</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_9</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_9</item>
 
         <item name="colorOutline">@color/colorOutline_9</item>
 
@@ -391,6 +402,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_10</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_10</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_10</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_10</item>
 
         <item name="colorOutline">@color/colorOutline_10</item>
 
@@ -420,6 +432,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_11</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_11</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_11</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_11</item>
 
         <item name="colorOutline">@color/colorOutline_11</item>
 
@@ -449,6 +462,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_12</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_12</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_12</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_12</item>
 
         <item name="colorOutline">@color/colorOutline_12</item>
 
@@ -478,6 +492,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_13</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_13</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_13</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_13</item>
 
         <item name="colorOutline">@color/colorOutline_13</item>
 
@@ -507,6 +522,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_14</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_14</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_14</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_14</item>
 
         <item name="colorOutline">@color/colorOutline_14</item>
 
@@ -536,6 +552,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_15</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_15</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_15</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_15</item>
 
         <item name="colorOutline">@color/colorOutline_15</item>
 
@@ -565,6 +582,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_16</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_16</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_16</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_16</item>
 
         <item name="colorOutline">@color/colorOutline_16</item>
 
@@ -594,6 +612,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_17</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_17</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_17</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_17</item>
 
         <item name="colorOutline">@color/colorOutline_17</item>
 
@@ -623,6 +642,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_18</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_18</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_18</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_18</item>
 
         <item name="colorOutline">@color/colorOutline_18</item>
 
@@ -652,6 +672,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_19</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_19</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_19</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_19</item>
 
         <item name="colorOutline">@color/colorOutline_19</item>
 
@@ -681,6 +702,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_20</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_20</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_20</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_20</item>
 
         <item name="colorOutline">@color/colorOutline_20</item>
 
@@ -710,6 +732,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_21</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_21</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_21</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_21</item>
 
         <item name="colorOutline">@color/colorOutline_21</item>
 
@@ -739,6 +762,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_22</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_22</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_22</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_22</item>
 
         <item name="colorOutline">@color/colorOutline_22</item>
 
@@ -768,6 +792,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_23</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_23</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_23</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_23</item>
 
         <item name="colorOutline">@color/colorOutline_23</item>
 
@@ -797,6 +822,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_24</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_24</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_24</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_24</item>
 
         <item name="colorOutline">@color/colorOutline_24</item>
 
@@ -826,6 +852,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_25</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_25</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_25</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_25</item>
 
         <item name="colorOutline">@color/colorOutline_25</item>
 
@@ -855,6 +882,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_26</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_26</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_26</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_26</item>
 
         <item name="colorOutline">@color/colorOutline_26</item>
 
@@ -884,6 +912,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_27</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_27</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_27</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_27</item>
 
         <item name="colorOutline">@color/colorOutline_27</item>
 
@@ -913,6 +942,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_28</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_28</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_28</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_28</item>
 
         <item name="colorOutline">@color/colorOutline_28</item>
 
@@ -942,6 +972,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_29</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_29</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_29</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_29</item>
 
         <item name="colorOutline">@color/colorOutline_29</item>
 
@@ -971,6 +1002,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_30</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_30</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_30</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_30</item>
 
         <item name="colorOutline">@color/colorOutline_30</item>
 
@@ -1000,6 +1032,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_31</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_31</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_31</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_31</item>
 
         <item name="colorOutline">@color/colorOutline_31</item>
 
@@ -1029,6 +1062,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_32</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_32</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_32</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_32</item>
 
         <item name="colorOutline">@color/colorOutline_32</item>
 
@@ -1058,6 +1092,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_33</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_33</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_33</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_33</item>
 
         <item name="colorOutline">@color/colorOutline_33</item>
 
@@ -1087,6 +1122,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_34</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_34</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_34</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_34</item>
 
         <item name="colorOutline">@color/colorOutline_34</item>
 
@@ -1116,6 +1152,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_35</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_35</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_35</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_35</item>
 
         <item name="colorOutline">@color/colorOutline_35</item>
 
@@ -1145,6 +1182,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_36</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_36</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_36</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_36</item>
 
         <item name="colorOutline">@color/colorOutline_36</item>
 
@@ -1174,6 +1212,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_37</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_37</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_37</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_37</item>
 
         <item name="colorOutline">@color/colorOutline_37</item>
 
@@ -1203,6 +1242,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_38</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_38</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_38</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_38</item>
 
         <item name="colorOutline">@color/colorOutline_38</item>
 
@@ -1232,6 +1272,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_39</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_39</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_39</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_39</item>
 
         <item name="colorOutline">@color/colorOutline_39</item>
 
@@ -1261,6 +1302,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_40</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_40</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_40</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_40</item>
 
         <item name="colorOutline">@color/colorOutline_40</item>
 
@@ -1290,6 +1332,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_41</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_41</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_41</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_41</item>
 
         <item name="colorOutline">@color/colorOutline_41</item>
 
@@ -1319,6 +1362,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_42</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_42</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_42</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_42</item>
 
         <item name="colorOutline">@color/colorOutline_42</item>
 
@@ -1348,6 +1392,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_43</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_43</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_43</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_43</item>
 
         <item name="colorOutline">@color/colorOutline_43</item>
 
@@ -1377,6 +1422,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_44</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_44</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_44</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_44</item>
 
         <item name="colorOutline">@color/colorOutline_44</item>
 
@@ -1406,6 +1452,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_45</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_45</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_45</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_45</item>
 
         <item name="colorOutline">@color/colorOutline_45</item>
 
@@ -1435,6 +1482,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_46</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_46</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_46</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_46</item>
 
         <item name="colorOutline">@color/colorOutline_46</item>
 
@@ -1464,6 +1512,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_47</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_47</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_47</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_47</item>
 
         <item name="colorOutline">@color/colorOutline_47</item>
 
@@ -1493,6 +1542,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_48</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_48</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_48</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_48</item>
 
         <item name="colorOutline">@color/colorOutline_48</item>
 
@@ -1522,6 +1572,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_49</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_49</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_49</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_49</item>
 
         <item name="colorOutline">@color/colorOutline_49</item>
 
@@ -1551,6 +1602,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_50</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_50</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_50</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_50</item>
 
         <item name="colorOutline">@color/colorOutline_50</item>
 
@@ -1580,6 +1632,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_51</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_51</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_51</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_51</item>
 
         <item name="colorOutline">@color/colorOutline_51</item>
 
@@ -1609,6 +1662,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_52</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_52</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_52</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_52</item>
 
         <item name="colorOutline">@color/colorOutline_52</item>
 
@@ -1638,6 +1692,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_53</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_53</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_53</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_53</item>
 
         <item name="colorOutline">@color/colorOutline_53</item>
 
@@ -1667,6 +1722,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_54</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_54</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_54</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_54</item>
 
         <item name="colorOutline">@color/colorOutline_54</item>
 
@@ -1696,6 +1752,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_55</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_55</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_55</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_55</item>
 
         <item name="colorOutline">@color/colorOutline_55</item>
 
@@ -1725,6 +1782,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_56</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_56</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_56</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_56</item>
 
         <item name="colorOutline">@color/colorOutline_56</item>
 
@@ -1754,6 +1812,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_57</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_57</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_57</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_57</item>
 
         <item name="colorOutline">@color/colorOutline_57</item>
 
@@ -1783,6 +1842,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_58</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_58</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_58</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_58</item>
 
         <item name="colorOutline">@color/colorOutline_58</item>
 
@@ -1812,6 +1872,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_59</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_59</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_59</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_59</item>
 
         <item name="colorOutline">@color/colorOutline_59</item>
 
@@ -1841,6 +1902,7 @@
         <item name="colorOnSurface">@color/colorOnSurface_60</item>
         <item name="colorSurfaceVariant">@color/colorSurfaceVariant_60</item>
         <item name="colorOnSurfaceVariant">@color/colorOnSurfaceVariant_60</item>
+        <item name="colorSurfaceContainer">@color/colorSurfaceContainer_60</item>
 
         <item name="colorOutline">@color/colorOutline_60</item>
 
