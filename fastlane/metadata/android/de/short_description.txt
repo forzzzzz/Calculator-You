@@ -1,1 +1,1 @@
-Calculator You is a beautiful calculator for solving simple tasks.
+Calculator You ist ein schöner Rechner zum Lösen einfacher Aufgaben.
