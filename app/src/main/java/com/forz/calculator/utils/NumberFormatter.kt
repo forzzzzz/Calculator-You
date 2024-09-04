@@ -142,10 +142,10 @@ object NumberFormatter {
     }
 
     private fun limitFractionalPart(number: BigDecimal, numberPrecision: Int): BigDecimal{
-        if (number.toDouble() != 0.0){
+        if (number != BigDecimal(0)){
             var newResult = number.setScale(numberPrecision, RoundingMode.HALF_EVEN)
 
-            if (newResult >= BigDecimal(999999999999999)) {
+            if (newResult >= BigDecimal(999999999999999) || newResult <= BigDecimal(0)) {
                 val scientificString = String.format(Locale.US, "%.15g", number)
                 newResult = BigDecimal(scientificString)
             }
