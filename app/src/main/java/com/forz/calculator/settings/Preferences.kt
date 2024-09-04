@@ -15,6 +15,7 @@ class Preferences(context: Context) {
         private const val KEY_COLOR = "marktka.calculatorYou.COLOR"
 
         private const val KEY_NUMBER_PRECISION = "marktka.calculatorYou.NUMBER_PRECISION"
+        private const val KEY_MAX_INTEGER_DIGITS = "marktka.calculatorYou.MAX_INTEGER_DIGITS"
         private const val KEY_GROUPING_SEPARATOR_SYMBOL = "marktka.calculatorYou.GROUPING_SEPARATOR_SYMBOL"
         private const val KEY_DECIMAL_SEPARATOR_SYMBOL = "marktka.calculatorYou.DECIMAL_SEPARATOR_SYMBOL"
 
@@ -64,6 +65,12 @@ class Preferences(context: Context) {
     fun setNumberPrecision(input: Int){
         val editor = preferences.edit()
         editor.putInt(KEY_NUMBER_PRECISION, input)
+        editor.apply()
+    }
+
+    fun setMaxIntegerDigits(input: Int){
+        val editor = preferences.edit()
+        editor.putInt(KEY_MAX_INTEGER_DIGITS, input)
         editor.apply()
     }
 
@@ -140,6 +147,10 @@ class Preferences(context: Context) {
 
     fun getNumberPrecision(): Int{
         return preferences.getInt(KEY_NUMBER_PRECISION, 10)
+    }
+
+    fun getMaxIntegerDigits(): Int{
+        return preferences.getInt(KEY_MAX_INTEGER_DIGITS, 15)
     }
 
     fun getGroupingSeparatorSymbol(): String{

@@ -13,7 +13,11 @@ import com.forz.calculator.calculator.ScientificFunction
 import com.forz.calculator.calculator.TrigonometricFunction
 import java.math.BigDecimal
 import java.math.RoundingMode
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 import java.util.Locale
+import kotlin.math.abs
+import kotlin.math.pow
 
 object NumberFormatter {
 
@@ -28,14 +32,40 @@ object NumberFormatter {
         return exp
     }
 
-    fun formatResult(result: String, numberPrecision: Int, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String {
-        var res = result
-
-        res = limitFractionalPart(res.toBigDecimal(), numberPrecision).toString()
+    fun formatResult(result: Double, numberPrecision: Int, maxIntegerDigits: Int, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String {
+        var res = doubleToString(result, numberPrecision, maxIntegerDigits)
         res = replaceSeparators(separateNumbers(res), groupingSeparatorSymbol, decimalSeparatorSymbol)
         res = res.replace(DefaultOperator.Minus.value, DefaultOperator.Minus.text)
 
         return res
+    }
+
+    private fun doubleToString(number: Double, decimalPlaces: Int, maxIntegerDigits: Int): String {
+        val scientificFormatter = DecimalFormat("0.${"0".repeat(decimalPlaces)}E0", DecimalFormatSymbols(Locale.US))
+        val standardFormatter = DecimalFormat("0.${"0".repeat(decimalPlaces)}", DecimalFormatSymbols(Locale.US))
+
+        val absNumber = abs(number)
+
+        var standardFormatted = standardFormatter.format(number)
+
+        standardFormatted = standardFormatted.trimEnd('0')
+        if (standardFormatted.endsWith('.')) {
+            standardFormatted = standardFormatted.dropLast(1)
+        }
+
+        if (absNumber >= 10.0.pow(maxIntegerDigits.toDouble()) || absNumber < 10.0.pow(-decimalPlaces.toDouble())) {
+            var scientificFormatted = scientificFormatter.format(number)
+
+            scientificFormatted = scientificFormatted.replace(Regex("0+E"), "E")
+            scientificFormatted = scientificFormatted.replace(Regex("\\.E"), "E")
+            return scientificFormatted
+        }
+
+        if (absNumber < 10.0.pow(-decimalPlaces.toDouble())) {
+            return "0"
+        }
+
+        return standardFormatted
     }
 
     fun clearExpression(expression: String, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String {
@@ -139,25 +169,6 @@ object NumberFormatter {
 
     fun removeSeparators(expression: String, groupingSeparatorSymbol: String): String {
         return expression.replace(groupingSeparatorSymbol, "")
-    }
-
-    private fun limitFractionalPart(number: BigDecimal, numberPrecision: Int): BigDecimal{
-        if (number != BigDecimal(0)){
-            var newResult = number.setScale(numberPrecision, RoundingMode.HALF_EVEN)
-
-            if (newResult >= BigDecimal(999999999999999) || newResult <= BigDecimal(0)) {
-                val scientificString = String.format(Locale.US, "%.15g", number)
-                newResult = BigDecimal(scientificString)
-            }
-
-            if (!newResult.toString().contains('E')){
-                newResult = newResult.toString().trimEnd('0').trimEnd('.').toBigDecimal()
-            }
-
-            return newResult
-        }else{
-            return BigDecimal(0)
-        }
     }
 
     private fun replaceSeparators(expression: String, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String{

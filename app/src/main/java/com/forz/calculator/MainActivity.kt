@@ -46,6 +46,7 @@ class MainActivity : AppCompatActivity() {
             preferences.getGroupingSeparatorSymbol(),
             preferences.getDecimalSeparatorSymbol(),
             preferences.getNumberPrecision(),
+            preferences.getMaxIntegerDigits(),
             preferences.getSwipeHistoryAndCalculator(),
             preferences.getSwipeDigitsAndScientificFunctions(),
             preferences.getVibration(),

@@ -10,6 +10,7 @@ import com.forz.calculator.R
 import com.forz.calculator.expression.ExpressionEditText
 import com.forz.calculator.settings.Config.decimalSeparatorSymbol
 import com.forz.calculator.settings.Config.groupingSeparatorSymbol
+import com.forz.calculator.settings.Config.maxIntegerDigits
 import com.forz.calculator.settings.Config.numberPrecision
 import org.javia.arity.Symbols
 
@@ -55,7 +56,7 @@ object Evaluator: ViewModel() {
             }else{
                 _converterResult.value = result
                 isCalculated = true
-                return NumberFormatter.formatResult(result.toString(), numberPrecision, groupingSeparatorSymbol, decimalSeparatorSymbol)
+                return NumberFormatter.formatResult(result, numberPrecision, maxIntegerDigits, groupingSeparatorSymbol, decimalSeparatorSymbol)
             }
         } catch (e: Exception) {
             _converterResult.value = null
