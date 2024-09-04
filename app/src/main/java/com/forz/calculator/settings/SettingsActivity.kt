@@ -188,8 +188,8 @@ class SettingsActivity : AppCompatActivity() {
                 getString(R.string.preview_format_text),
                 progress,
                 maxIntegerDigits,
-                preferences.getGroupingSeparatorSymbol(),
-                preferences.getDecimalSeparatorSymbol()
+                groupingSeparatorSymbol,
+                decimalSeparatorSymbol
             )
         }
 
