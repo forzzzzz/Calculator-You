@@ -231,4 +231,6 @@
     <string name="unit_gradian">Grado centesimal</string>
     <string name="unit_gallon_uk">Galón (Reino Unido)</string>
     <string name="app_name">Calculadora</string>
+    <string name="title_max_scientific_notation_digits">Anotación científica</string>
+    <string name="description_max_scientific_notation_digits">Máximo de dígitos en la anotación científica</string>
 </resources>
