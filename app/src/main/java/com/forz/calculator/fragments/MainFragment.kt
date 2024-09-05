@@ -143,10 +143,6 @@ class MainFragment : Fragment(),
 
         binding.toolbar.setOnMenuItemClickListener { menuItem ->
             when(menuItem.itemId) {
-                R.id.history -> {
-                    binding.pager.setCurrentItem(HISTORY_FRAGMENT, true)
-                    true
-                }
                 R.id.settings -> {
                     val intent = Intent(requireActivity(), SettingsActivity::class.java)
                     startActivityForResult(intent, MainActivity.REQUEST_CODE_CHILD)
