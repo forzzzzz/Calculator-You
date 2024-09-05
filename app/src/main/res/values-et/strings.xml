@@ -231,4 +231,8 @@
     <string name="unit_lumen">Luumen</string>
     <string name="unit_megawatt">Megavatt</string>
     <string name="app_name">Kalkulaator</string>
+    <string name="title_max_scientific_notation_digits">Teadusarvutused</string>
+    <string name="title_saving_intermediate_results">Salvesta tulemused automaatselt</string>
+    <string name="description_max_scientific_notation_digits">Numbrite arv teadusarvutuse puhul</string>
+    <string name="description_saving_intermediate_results">Tulemused salvestatakse ajalukku automaatselt. Võrdusmärgi kasutamine pole kohustuslik</string>
 </resources>
