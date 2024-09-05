@@ -111,7 +111,7 @@
     <string name="unit_cubic_decimeter">Décimètre cube</string>
     <string name="unit_square_millimeter">Millimètre carré</string>
     <string name="unit_hectare">Hectare</string>
-    <string name="unit_gigibyte">GigiByte</string>
+    <string name="unit_gigibyte">Gigibyte</string>
     <string name="unit_kilonewton">Kilonewton</string>
     <string name="unit_liter">Litre</string>
     <string name="unit_gradian">Grade</string>
@@ -119,9 +119,9 @@
     <string name="unit_hour">Heure</string>
     <string name="unit_joule">Joule</string>
     <string name="physical_quantity_mass">Masse</string>
-    <string name="unit_gigapascal">GigaPascal</string>
+    <string name="unit_gigapascal">Gigapascal</string>
     <string name="unit_kilowatt">Kilowatt</string>
-    <string name="unit_pebibyte">PebiByte</string>
+    <string name="unit_pebibyte">Pebibyte</string>
     <string name="unit_dyne">Dyne</string>
     <string name="unit_turn">Tour</string>
     <string name="unit__byte">Byte</string>
@@ -134,7 +134,7 @@
     <string name="unit_psi">PSI</string>
     <string name="unit_radian">Radian</string>
     <string name="unit_ounce_force">Once-force</string>
-    <string name="unit_kilopascal">KiloPascal</string>
+    <string name="unit_kilopascal">Kilopascal</string>
     <string name="title_physical_quantity">Grandeur physique</string>
     <string name="unit_tonne">Tonne</string>
     <string name="physical_quantity_pressure">Pression</string>
@@ -155,7 +155,7 @@
     <string name="unit_square_foot">Pied carré</string>
     <string name="unit_petabyte">Petabyte</string>
     <string name="unit_kilonewton_meter">Kilonewton-mètre</string>
-    <string name="unit_kibibyte">KibiByte</string>
+    <string name="unit_kibibyte">Kibibyte</string>
     <string name="unit_pint">Pinte</string>
     <string name="unit_kilometer">Kilomètre</string>
     <string name="title_unit">Unité</string>
@@ -187,7 +187,7 @@
     <string name="unit_megajoule">Megajoule</string>
     <string name="unit_megawatt">Megawatt</string>
     <string name="unit_btu_per_hour">BTU par heure</string>
-    <string name="unit_megapascal">MegaPascal</string>
+    <string name="unit_megapascal">Megapascal</string>
     <string name="unit_bar">Bar</string>
     <string name="unit_atmosphere">Atmosphère</string>
     <string name="unit_h2o">H2O (Pouces d\'eau)</string>
@@ -207,22 +207,22 @@
     <string name="unit_lumen">Lumen</string>
     <string name="unit_candela">Candela</string>
     <string name="unit_lux">Lux</string>
-    <string name="unit_footcandle">Footcandle</string>
+    <string name="unit_footcandle">Foot-candle</string>
     <string name="unit_bit">Bit</string>
     <string name="unit_kilobit">Kilobit</string>
     <string name="unit_kilobyte">Kilobyte</string>
     <string name="unit_megabit">Megabit</string>
-    <string name="unit_mebibyte">MebiByte</string>
+    <string name="unit_mebibyte">Mebibyte</string>
     <string name="unit_megabyte">Megabyte</string>
     <string name="unit_gigabit">Gigabit</string>
     <string name="unit_gigabyte">Gigabyte</string>
     <string name="unit_terabit">Terabit</string>
     <string name="unit_terabyte">Terabyte</string>
-    <string name="unit_tebibyte">TebiByte</string>
+    <string name="unit_tebibyte">Tebibyte</string>
     <string name="unit_petabit">Petabit</string>
     <string name="unit_exabit">Exabit</string>
     <string name="unit_exabyte">Exabyte</string>
-    <string name="unit_exbibyte">ExbiByte</string>
+    <string name="unit_exbibyte">Exbibyte</string>
     <string name="unit_pascal_second">Pascal-seconde</string>
     <string name="unit_centipoise">Centipoise</string>
     <string name="unit_poiseuille">Poiseuille</string>
@@ -230,4 +230,7 @@
     <string name="unit_gallon_us">Gallon (US)</string>
     <string name="unit_gallon_uk">Gallon (UK)</string>
     <string name="description_swipes2">Onglets principaux</string>
+    <string name="title_max_scientific_notation_digits">Notation scientifique</string>
+    <string name="description_max_scientific_notation_digits">Nombre maximal de chiffres de la notation scientifique</string>
+    <string name="app_name">Calculatrice</string>
 </resources>
