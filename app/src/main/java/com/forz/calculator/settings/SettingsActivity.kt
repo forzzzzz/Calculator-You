@@ -35,6 +35,7 @@ import com.forz.calculator.settings.Config.swipeMain
 import com.forz.calculator.settings.Config.vibration
 import com.forz.calculator.expression.ExpressionViewModel
 import com.forz.calculator.settings.Config.maxScientificNotationDigits
+import com.forz.calculator.settings.Config.autoSavingResults
 import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.slider.Slider
@@ -96,6 +97,7 @@ class SettingsActivity : AppCompatActivity() {
         loadButtonToggleGroupString(binding.groupingSeparatorSymbolButtonToggleGroup, groupingSeparatorMap, groupingSeparatorSymbol)
         loadButtonToggleGroupString(binding.decimalSeparatorSymbolButtonToggleGroup, decimalSeparatorMap, decimalSeparatorSymbol)
 
+        loadSwitch(binding.savingIntermediateResultsSwitch, autoSavingResults)
         loadSwitch(binding.vibrationSwitch, vibration)
         loadSwitch(binding.soundEffectsSwitch, sound)
 
@@ -289,6 +291,13 @@ class SettingsActivity : AppCompatActivity() {
             dialog.show()
         }
 
+        binding.savingIntermediateResultsLayout.setOnClickListener {
+            autoSavingResults = switchSwitch(binding.savingIntermediateResultsSwitch)
+        }
+        binding.savingIntermediateResultsSwitch.setOnCheckedChangeListener { _, isChecked ->
+            autoSavingResults = isChecked
+        }
+
         binding.vibrationLayout.setOnClickListener {
             vibration = switchSwitch(binding.vibrationSwitch)
         }
@@ -342,6 +351,7 @@ class SettingsActivity : AppCompatActivity() {
         preferences.setMaxScientificNotationDigits(maxScientificNotationDigits)
         preferences.setSwipeHistoryAndCalculator(swipeMain)
         preferences.setSwipeDigitsAndScientificFunctions(swipeDigitsAndScientificFunctions)
+        preferences.setAutoSavingResults(autoSavingResults)
         preferences.setVibration(vibration)
         preferences.setSoundEffects(sound)
     }

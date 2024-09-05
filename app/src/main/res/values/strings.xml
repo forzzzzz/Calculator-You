@@ -65,6 +65,7 @@
     <string name="title_separator">Separator</string>
     <string name="title_decimal_separator">Decimal separator</string>
     <string name="title_swipes">Swipes</string>
+    <string name="title_saving_intermediate_results">Automatic saving of results</string>
 
 
     <string name="description_vibrations">Haptic feedback when clicking keyboard buttons</string>
@@ -79,6 +80,7 @@
     <string name="description_swipes">Swipes across the screen</string>
     <string name="description_swipes2">Main tabs</string>
     <string name="description_swipes3">Digits and scientific functions</string>
+    <string name="description_saving_intermediate_results">Automatic saving of results to the history. The equal button is optional</string>
 
 
     <string name="theme_element_1">System</string>

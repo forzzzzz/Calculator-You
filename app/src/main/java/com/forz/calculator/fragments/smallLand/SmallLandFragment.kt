@@ -11,7 +11,7 @@ import android.view.ViewTreeObserver
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.forz.calculator.App
-import com.forz.calculator.OnBackPressedListener
+import com.forz.calculator.OnMainActivityListener
 import com.forz.calculator.databinding.FragmentSmallLandBinding
 import com.forz.calculator.fragments.HistoryFragment
 import com.forz.calculator.fragments.adapters.ViewPageAdapter
@@ -27,11 +27,12 @@ import com.forz.calculator.fragments.Fragments.CALCULATOR_FRAGMENT
 import com.forz.calculator.fragments.Fragments.currentItemMainPager
 import com.forz.calculator.fragments.UnitConverterFragment
 import com.forz.calculator.history.HistoryService
+import com.forz.calculator.settings.Config.autoSavingResults
 import com.forz.calculator.utils.InsertInExpression
 import kotlin.properties.Delegates.notNull
 
 class SmallLandFragment : Fragment(),
-    OnBackPressedListener,
+    OnMainActivityListener,
     CalculatorFragment.OnButtonClickListener,
     HistoryFragment.OnButtonClickListener,
     UnitConverterFragment.OnButtonClickListener
@@ -122,6 +123,22 @@ class SmallLandFragment : Fragment(),
 
         expression = binding.expressionEditText.text.toString()
         cursorPositionStart = binding.expressionEditText.selectionStart
+
+        if (Evaluator.isCalculated && autoSavingResults){
+            val result = result
+
+            val expression: String = if (ExpressionViewModel.isSelected.value == true){
+                binding.expressionEditText.text
+                    .toString()
+                    .substring(
+                        binding.expressionEditText.selectionStart, binding.expressionEditText.selectionEnd
+                    )
+            } else {
+                binding.expressionEditText.text.toString()
+            }
+
+            historyService.addHistoryData(expression, result)
+        }
     }
 
     override fun onBackPressed(): Boolean {

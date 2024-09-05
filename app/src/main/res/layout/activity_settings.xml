@@ -510,6 +510,45 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/savingIntermediateResultsLayout"
+                style="@style/optionLayout">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/savingIntermediateResultsImage"
+                    style="@style/optionImage"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/baseline_history" />
+
+                <TextView
+                    android:id="@+id/savingIntermediateResultsTitleText"
+                    style="@style/optionTitleText"
+                    android:text="@string/title_saving_intermediate_results"
+                    app:layout_constraintEnd_toStartOf="@id/savingIntermediateResultsSwitch"
+                    app:layout_constraintStart_toEndOf="@id/savingIntermediateResultsImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/savingIntermediateResultsText"
+                    style="@style/optionDescriptionText"
+                    android:text="@string/description_saving_intermediate_results"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/savingIntermediateResultsSwitch"
+                    app:layout_constraintStart_toEndOf="@id/savingIntermediateResultsImage"
+                    app:layout_constraintTop_toBottomOf="@id/savingIntermediateResultsTitleText" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/savingIntermediateResultsSwitch"
+                    style="@style/optionSwitch"
+                    android:contentDescription="@string/title_vibrations"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/vibrationLayout"
                 style="@style/optionLayout">
 
@@ -545,7 +584,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
-
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

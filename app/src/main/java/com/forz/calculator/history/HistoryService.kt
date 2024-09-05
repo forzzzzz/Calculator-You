@@ -18,17 +18,19 @@ class HistoryService(context: Context) {
 
 
     fun addHistoryData(expression: String, result: String){
-        val id = if (historyDataList.isNotEmpty()) historyDataList.first().id + 1 else 1
-        val historyData = HistoryData(
-            id = id,
-            expression = expression,
-            result = result,
-            date = LocalDate.now())
+        if (historyDataList.isEmpty() || expression != historyDataList.first().expression){
+            val id = if (historyDataList.isNotEmpty()) historyDataList.first().id + 1 else 1
+            val historyData = HistoryData(
+                id = id,
+                expression = expression,
+                result = result,
+                date = LocalDate.now())
 
-        historyDataList = ArrayList(historyDataList)
-        historyDataList.add(0, historyData)
-        dbHelper.insertData(historyData.expression, historyData.result)
-        notifyChanges()
+            historyDataList = ArrayList(historyDataList)
+            historyDataList.add(0, historyData)
+            dbHelper.insertData(historyData.expression, historyData.result)
+            notifyChanges()
+        }
     }
 
     fun deleteHistoryData(indexToDelete: Int){

@@ -17,7 +17,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.forz.calculator.AboutActivity
 import com.forz.calculator.App
 import com.forz.calculator.MainActivity
-import com.forz.calculator.OnBackPressedListener
+import com.forz.calculator.OnMainActivityListener
 import com.forz.calculator.R
 import com.forz.calculator.databinding.FragmentSmallBinding
 import com.forz.calculator.fragments.HistoryFragment
@@ -37,6 +37,7 @@ import com.forz.calculator.fragments.Fragments.UNIT_CONVERTER_FRAGMENT
 import com.forz.calculator.fragments.Fragments.currentItemMainPager
 import com.forz.calculator.fragments.UnitConverterFragment
 import com.forz.calculator.history.HistoryService
+import com.forz.calculator.settings.Config.autoSavingResults
 import com.forz.calculator.settings.SettingsActivity
 import com.forz.calculator.utils.HapticAndSound
 import com.forz.calculator.utils.InsertInExpression
@@ -45,7 +46,7 @@ import kotlin.properties.Delegates.notNull
 
 @Suppress("DEPRECATION")
 class SmallFragment : Fragment(),
-    OnBackPressedListener,
+    OnMainActivityListener,
     CalculatorFragment.OnButtonClickListener,
     HistoryFragment.OnButtonClickListener,
     UnitConverterFragment.OnButtonClickListener
@@ -113,6 +114,24 @@ class SmallFragment : Fragment(),
         binding.pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 currentItemMainPager = position
+
+                if (currentItemMainPager == HISTORY_FRAGMENT){
+                    if (Evaluator.isCalculated && autoSavingResults){
+                        val result = result
+
+                        val expression: String = if (ExpressionViewModel.isSelected.value == true){
+                            binding.expressionEditText.text
+                                .toString()
+                                .substring(
+                                    binding.expressionEditText.selectionStart, binding.expressionEditText.selectionEnd
+                                )
+                        } else {
+                            binding.expressionEditText.text.toString()
+                        }
+
+                        historyService.addHistoryData(expression, result)
+                    }
+                }
 
                 binding.toolbar.let { toolbar ->
                     if (currentItemMainPager == HISTORY_FRAGMENT) {
@@ -227,6 +246,22 @@ class SmallFragment : Fragment(),
 
         expression = binding.expressionEditText.text.toString()
         cursorPositionStart = binding.expressionEditText.selectionStart
+
+        if (Evaluator.isCalculated && autoSavingResults){
+            val result = result
+
+            val expression: String = if (ExpressionViewModel.isSelected.value == true){
+                binding.expressionEditText.text
+                    .toString()
+                    .substring(
+                        binding.expressionEditText.selectionStart, binding.expressionEditText.selectionEnd
+                    )
+            } else {
+                binding.expressionEditText.text.toString()
+            }
+
+            historyService.addHistoryData(expression, result)
+        }
     }
 
     override fun onBackPressed(): Boolean {

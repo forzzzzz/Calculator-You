@@ -21,6 +21,7 @@ class Preferences(context: Context) {
 
         private const val KEY_DEGREE_MOD = "marktka.calculatorYou.DEGREE_MOD"
 
+        private const val KEY_AUTO_SAVING_RESULTS = "marktka.calculatorYou.AUTO_SAVING_RESULTS"
         private const val KEY_SWIPE_MAIN = "marktka.calculatorYou.SWIPE_HISTORY_AND_CALCULATOR"
         private const val KEY_SWIPE_DIGITS_AND_SCIENTIFIC_FUNCTIONS = "marktka.calculatorYou.SWIPE_DIGITS_AND_SCIENTIFIC_FUNCTIONS"
 
@@ -116,6 +117,12 @@ class Preferences(context: Context) {
         editor.apply()
     }
 
+    fun setAutoSavingResults(input: Boolean){
+        val editor = preferences.edit()
+        editor.putBoolean(KEY_AUTO_SAVING_RESULTS, input)
+        editor.apply()
+    }
+
 
 
 
@@ -179,5 +186,9 @@ class Preferences(context: Context) {
 
     fun getUnit(): Int{
         return preferences.getInt(KEY_UNIT, 1010)
+    }
+
+    fun getAutoSavingResults(): Boolean{
+        return preferences.getBoolean(KEY_AUTO_SAVING_RESULTS, false)
     }
 }

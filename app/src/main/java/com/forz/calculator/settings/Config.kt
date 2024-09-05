@@ -16,6 +16,7 @@ object Config {
 
     var swipeMain: Boolean by notNull()
     var swipeDigitsAndScientificFunctions: Boolean by notNull()
+    var autoSavingResults: Boolean by notNull()
     var vibration: Boolean by notNull()
     var sound: Boolean by notNull()
 
@@ -31,6 +32,7 @@ object Config {
             maxIntegerDigits: Int,
             swipeHistoryAndCalculator: Boolean,
             swipeDigitsAndScientificFunctions: Boolean,
+            savingIntermediateResults: Boolean,
             vibration: Boolean,
             sound: Boolean
     ){
@@ -48,6 +50,7 @@ object Config {
 
         this.swipeMain = swipeHistoryAndCalculator
         this.swipeDigitsAndScientificFunctions = swipeDigitsAndScientificFunctions
+        this.autoSavingResults = savingIntermediateResults
         this.vibration = vibration
         this.sound = sound
     }

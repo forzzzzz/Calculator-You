@@ -23,7 +23,7 @@ import com.forz.calculator.fragments.largeLand.LargeLandFragment
 import kotlin.properties.Delegates.notNull
 
 
-interface OnBackPressedListener {
+interface OnMainActivityListener {
     fun onBackPressed(): Boolean
 }
 
@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
             preferences.getMaxScientificNotationDigits(),
             preferences.getSwipeHistoryAndCalculator(),
             preferences.getSwipeDigitsAndScientificFunctions(),
+            preferences.getAutoSavingResults(),
             preferences.getVibration(),
             preferences.getSoundEffects()
         )
@@ -156,11 +157,10 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     override fun onBackPressed() {
         val fragment = supportFragmentManager.findFragmentById(R.id.main)
-        if (fragment is OnBackPressedListener) {
-            val handled = (fragment as OnBackPressedListener).onBackPressed()
+        if (fragment is OnMainActivityListener) {
+            val handled = (fragment as OnMainActivityListener).onBackPressed()
             if (!handled) {
                 super.onBackPressed()
             }
