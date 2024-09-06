@@ -22,8 +22,6 @@ import com.forz.calculator.settings.Preferences
 import com.forz.calculator.calculator.CalculatorViewModel
 import com.forz.calculator.calculator.Evaluator
 import com.forz.calculator.fragments.UnitConverterFragment
-import com.forz.calculator.fragments.UnitConverterFragment.Companion.physicalQuantity
-import com.forz.calculator.fragments.UnitConverterFragment.Companion.unit
 import com.forz.calculator.fragments.largeLand.LargeLandFragment
 import kotlin.properties.Delegates.notNull
 
