@@ -231,4 +231,8 @@
     <string name="unit_gallon_uk">Галон (Великобританія)</string>
     <string name="unit_barrel">Барель</string>
     <string name="unit_gradian">Градіан</string>
+    <string name="title_max_scientific_notation_digits">Наукова нотація</string>
+    <string name="title_saving_intermediate_results">Автоматичне збереження результатів</string>
+    <string name="description_saving_intermediate_results">Автоматичне збереження результатів в історії. Кнопка рівності є необов’язковою</string>
+    <string name="description_max_scientific_notation_digits">Максимальна кількість цифр наукової нотації</string>
 </resources>
