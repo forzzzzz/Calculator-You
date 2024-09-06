@@ -85,4 +85,5 @@
     <string name="month_11_date">November</string>
     <string name="days_ago_2_date">2 dage siden</string>
     <string name="yesterday_date">I går</string>
+    <string name="app_name">Lommeregner</string>
 </resources>
