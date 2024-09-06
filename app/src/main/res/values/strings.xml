@@ -80,7 +80,7 @@
     <string name="description_swipes">Swipes across the screen</string>
     <string name="description_swipes2">Main tabs</string>
     <string name="description_swipes3">Digits and scientific functions</string>
-    <string name="description_saving_intermediate_results">Automatic saving of results to the history. The equal button is optional</string>
+    <string name="description_saving_intermediate_results">Automatic saving of results in the history. The equal button is optional</string>
 
 
     <string name="theme_element_1">System</string>
