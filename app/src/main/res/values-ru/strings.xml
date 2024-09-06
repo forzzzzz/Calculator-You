@@ -231,4 +231,7 @@
     <string name="physical_quantity_light">Свет</string>
     <string name="physical_quantity_storage">Хранилище</string>
     <string name="app_name">Калькулятор</string>
+    <string name="title_max_scientific_notation_digits">Научное обозначение</string>
+    <string name="title_saving_intermediate_results">Автоматическое сохранение результатов</string>
+    <string name="description_max_scientific_notation_digits">Максимальное количество цифр в научном обозначении</string>
 </resources>
