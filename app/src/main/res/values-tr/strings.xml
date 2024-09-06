@@ -233,4 +233,6 @@
     <string name="app_name">Hesap Makinesi</string>
     <string name="description_max_scientific_notation_digits">En fazla bilimsel gösterim basamağı</string>
     <string name="title_max_scientific_notation_digits">Bilimsel gösterim</string>
+    <string name="description_saving_intermediate_results">Sonuçların geçmişe otomatik olarak kaydedilmesi. Eşittir düğmesi isteğe bağlıdır</string>
+    <string name="title_saving_intermediate_results">Sonuçların otomatik kaydedilmesi</string>
 </resources>
