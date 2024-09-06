@@ -30,8 +30,8 @@ object NumberFormatter {
         return exp
     }
 
-    fun formatResult(result: BigDecimal, numberPrecision: Int, maxIntegerDigits: Int, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String {
-        var res = bigDecimalToString(result, numberPrecision, maxIntegerDigits)
+    fun formatResult(result: BigDecimal, numberPrecision: Int, maxScientificNotationDigits: Int, groupingSeparatorSymbol: String, decimalSeparatorSymbol: String): String {
+        var res = bigDecimalToString(result, numberPrecision, maxScientificNotationDigits)
         res = replaceSeparators(separateNumbers(res), groupingSeparatorSymbol, decimalSeparatorSymbol)
         res = res.replace(DefaultOperator.Minus.value, DefaultOperator.Minus.text)
 

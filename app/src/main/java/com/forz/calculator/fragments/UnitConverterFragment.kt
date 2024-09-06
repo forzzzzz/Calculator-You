@@ -154,6 +154,7 @@ class UnitConverterFragment : Fragment() {
             updateUnitPager(Evaluator.converterResult.value, physicalQuantities.find { it.second.id == physicalQuantity }!!.second, unit)
         }
 
+
         Evaluator.converterResult.observe(requireActivity()){ converterResult ->
             updateUnitPager(converterResult, physicalQuantities.find { it.second.id == physicalQuantity }!!.second, unit)
         }

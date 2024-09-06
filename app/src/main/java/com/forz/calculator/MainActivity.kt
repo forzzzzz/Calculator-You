@@ -1,10 +1,12 @@
 package com.forz.calculator
 
 import android.annotation.SuppressLint
+import android.content.ComponentName
 import android.content.Intent
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.service.quicksettings.TileService
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.forz.calculator.databinding.ActivityMainBinding
@@ -18,7 +20,10 @@ import com.forz.calculator.settings.SettingsActivity.Companion.firstCreatedSetti
 import com.forz.calculator.settings.Config
 import com.forz.calculator.settings.Preferences
 import com.forz.calculator.calculator.CalculatorViewModel
+import com.forz.calculator.calculator.Evaluator
 import com.forz.calculator.fragments.UnitConverterFragment
+import com.forz.calculator.fragments.UnitConverterFragment.Companion.physicalQuantity
+import com.forz.calculator.fragments.UnitConverterFragment.Companion.unit
 import com.forz.calculator.fragments.largeLand.LargeLandFragment
 import kotlin.properties.Delegates.notNull
 
@@ -123,6 +128,11 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+        }
+
+        Evaluator.converterResult.observe(this){
+            val componentName = ComponentName(this, MyQSTileService::class.java)
+            TileService.requestListeningState(this, componentName)
         }
     }
 
