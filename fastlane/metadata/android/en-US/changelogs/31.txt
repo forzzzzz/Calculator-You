@@ -2,5 +2,6 @@
 - Added an adaptive app icon.
 - Added an auto-saving results setting.
 - Added a maximum scientific notation digits setting.
+- Updated translation.
 - Improved result formatting.
 - Fixed all known bugs and made various improvements.
