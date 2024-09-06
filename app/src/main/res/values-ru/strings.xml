@@ -234,4 +234,5 @@
     <string name="title_max_scientific_notation_digits">Научное обозначение</string>
     <string name="title_saving_intermediate_results">Автоматическое сохранение результатов</string>
     <string name="description_max_scientific_notation_digits">Максимальное количество цифр в научном обозначении</string>
+    <string name="description_saving_intermediate_results">Автоматическое сохранение результатов в истории. Кнопка равенства необязательна</string>
 </resources>
