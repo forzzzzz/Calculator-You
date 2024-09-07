@@ -231,4 +231,8 @@
     <string name="unit_barrel">桶</string>
     <string name="description_swipes2">主界面</string>
     <string name="app_name">计算器</string>
+    <string name="title_max_scientific_notation_digits">科学计数法</string>
+    <string name="description_max_scientific_notation_digits">科学记数法最大位数</string>
+    <string name="description_saving_intermediate_results">自动将结果保存在历史记录中。等号按钮是可选的</string>
+    <string name="title_saving_intermediate_results">自动保存结果</string>
 </resources>
