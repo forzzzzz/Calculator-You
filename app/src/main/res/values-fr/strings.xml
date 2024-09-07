@@ -234,5 +234,5 @@
     <string name="description_max_scientific_notation_digits">Nombre maximal de chiffres de la notation scientifique</string>
     <string name="app_name">Calculatrice</string>
     <string name="title_saving_intermediate_results">Sauvegarde automatique des résultats</string>
-    <string name="description_saving_intermediate_results">Enregistrement automatique des résultats dans l\'historique. Le bouton \"égal\" est facultatif</string>
+    <string name="description_saving_intermediate_results">Sauvegarde automatiquement les résultats dans l\'historique. Appuyer sur le bouton \"égal\" est facultatif</string>
 </resources>
