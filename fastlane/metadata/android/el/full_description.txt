@@ -1,17 +1,17 @@
-Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
+Ανακαλύψτε την απόλυτη εμπειρία αριθμομηχανής με την όμορφα σχεδιασμένη εφαρμογή μας, που διαθέτει 60+ εντυπωσιακά χρωματικά θέματα που ταιριάζουν στο στυλ σας.  Είτε αντιμετωπίζετε σύνθετες επιστημονικές εξισώσεις είτε απλούς καθημερινούς υπολογισμούς, η ισχυρή και φιλική προς το χρήστη διεπαφή μας τα καθιστά όλα.
 
-Key Features:
+Βασικά  χαρακτηριστικά:
 
-🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
+🎨 Όμορφος σχεδιασμός και 60+ έγχρωμα θέματα: Εξατομικεύστε την αριθμομηχανή σας με μια επιλογή από 60+ ζωηρά χρωματικά θέματα, κάνοντας κάθε υπολογισμό οπτικά ευχάριστο.
 
-🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
+🔬 Επιστημονική λειτουργία: Αποκτήστε πρόσβαση σε προηγμένες μαθηματικές συναρτήσεις με την ολοκληρωμένη επιστημονική αριθμομηχανή μας, ιδανική για φοιτητές, μηχανικούς και λάτρεις των μαθηματικών.
 
-🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
+🕒 Ιστορικό: Παρακολουθήστε και ελέγξτε εύκολα προηγούμενους υπολογισμούς με τη εύχρηστη λειτουργία ιστορικού, διασφαλίζοντας ότι δεν θα χάσετε ποτέ σημαντική δουλειά.
 
-📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
+📏 Μετατροπέας μονάδων: Μετατρέψτε μονάδες χωρίς κόπο με τον ενσωματωμένο μετατροπέα μας, υποστηρίζοντας ένα ευρύ φάσμα μετρήσεων, όπως μήκος, βάρος και άλλα.
 
-👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
+👌Φιλική προς το χρήστη διεπαφή: Απολαύστε μια καθαρή, διαισθητική διεπαφή σχεδιασμένη για εύκολη πλοήγηση και αποτελεσματικούς υπολογισμούς.
 
-Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
+Είτε είστε μαθητής, είτε επαγγελματίας ή οποιοσδήποτε άλλος, η αριθμομηχανή μας είναι το εργαλείο σας για όλες τις μαθηματικές πράξεις και μετατροπές σας.  Κάντε λήψη τώρα και αναβαθμίστε την εμπειρία των υπολογισμών σας!
 
-Made not with love❤️, but by love❤️.
+Φτιαγμένο όχι με αγάπη❤️, αλλά από αγάπη❤️.
