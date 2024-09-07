@@ -25,4 +25,5 @@
     <string name="title_separator">Separatore</string>
     <string name="description_sound_effects">Effetti sonori quando clicchi i pulsanti della tastiera</string>
     <string name="expression_error">Errore</string>
+    <string name="app_name">Calcolatrice</string>
 </resources>
