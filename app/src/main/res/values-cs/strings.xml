@@ -11,7 +11,7 @@
     <string name="title_select_color">Vybrat barvu</string>
     <string name="title_precision">Přesnost</string>
     <string name="title_separator">Oddělovač</string>
-    <string name="title_swipes">Swipes</string>
+    <string name="title_swipes">Přechody</string>
     <string name="description_vibrations">Hmatová zpětná vazba při klikání na tlačítka klávesnice</string>
     <string name="description_select_theme">Světlý nebo tmavý motiv pro vaši aplikaci</string>
     <string name="description_select_color">Více než 60 barev podle vašeho vkusu</string>
@@ -85,4 +85,7 @@
     <string name="month_12_date">Prosinec</string>
     <string name="expression_error">Chyba</string>
     <string name="expression_infinity">Hodnota je příliš vysoká</string>
+    <string name="title_max_scientific_notation_digits">Vědecký zápis</string>
+    <string name="title_saving_intermediate_results">Automaticky ukládat výsledky</string>
+    <string name="app_name">Kalkulačka</string>
 </resources>
