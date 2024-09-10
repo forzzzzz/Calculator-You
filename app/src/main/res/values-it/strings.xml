@@ -212,4 +212,27 @@
     <string name="title_translate">Traduci</string>
     <string name="description_swipes3">Cifre e funzioni scientifiche</string>
     <string name="title_privacy_policy">Informativa sulla privacy</string>
+    <string name="unit_petabyte">Petabyte</string>
+    <string name="unit__byte">Byte</string>
+    <string name="unit_kilobit">Kilobit</string>
+    <string name="unit_exbibyte">Exbibyte</string>
+    <string name="unit_poiseuille">Poiseuille</string>
+    <string name="unit_stoke">Stoke</string>
+    <string name="unit_gigibyte">Gigibyte</string>
+    <string name="unit_kilobyte">Kilobyte</string>
+    <string name="unit_kibibyte">Kibibyte</string>
+    <string name="unit_mebibyte">Mebibyte</string>
+    <string name="unit_megabyte">Megabyte</string>
+    <string name="unit_gigabit">Gigabit</string>
+    <string name="unit_gigabyte">Gigabyte</string>
+    <string name="unit_megabit">Megabit</string>
+    <string name="unit_terabit">Terabit</string>
+    <string name="unit_terabyte">Terabyte</string>
+    <string name="unit_tebibyte">Tebibyte</string>
+    <string name="unit_petabit">Petabit</string>
+    <string name="unit_centipoise">Centipoise</string>
+    <string name="unit_exabyte">Exabyte</string>
+    <string name="unit_bit">Bit</string>
+    <string name="unit_pebibyte">Pebibyte</string>
+    <string name="unit_exabit">Exabit</string>
 </resources>
