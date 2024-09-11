@@ -25,4 +25,26 @@
     <string name="title_dynamic_colors">ダイナミックカラー</string>
     <string name="title_select_color">色を選んでください</string>
     <string name="title_precision">精度</string>
+    <string name="title_max_scientific_notation_digits">科学的表記法</string>
+    <string name="description_swipes2">メインタブ</string>
+    <string name="help_selection_text">ヘルプ</string>
+    <string name="title_saving_intermediate_results">結果の自動保存</string>
+    <string name="description_precision">小数点以下の桁数</string>
+    <string name="description_max_scientific_notation_digits">科学表記の最大桁数</string>
+    <string name="description_separator">区切り記号</string>
+    <string name="theme_element_3">ダーク</string>
+    <string name="separator_element_1">コンマ</string>
+    <string name="info_selection_text">アプリについて</string>
+    <string name="description_select_color">あなたの好みに合わせて60色以上のカラーがあります</string>
+    <string name="description_saving_intermediate_results">結果を履歴に自動保存します。イコールボタンはオプションです</string>
+    <string name="description_swipes">スワイプで画面を切り替える</string>
+    <string name="theme_element_2">ライト</string>
+    <string name="support_selection_text">サポート</string>
+    <string name="app_name">電卓</string>
+    <string name="description_decimal_separator">小数区切り記号</string>
+    <string name="description_swipes3">数字と科学関数</string>
+    <string name="theme_element_1">システム</string>
+    <string name="separator_element_2">ドット</string>
+    <string name="separator_element_3">スペース</string>
+    <string name="title_translate">翻訳</string>
 </resources>
