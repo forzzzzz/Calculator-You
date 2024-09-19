@@ -81,4 +81,6 @@
     <string name="month_5_date">5月</string>
     <string name="yesterday_date">昨日</string>
     <string name="month_10_date">10月</string>
+    <string name="unit_mile_per_hour">マイル毎時</string>
+    <string name="unit_knot">結び目</string>
 </resources>
