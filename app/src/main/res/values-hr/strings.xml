@@ -230,4 +230,5 @@
     <string name="unit_petabyte">Petabajt</string>
     <string name="unit_petabit">Petabit</string>
     <string name="unit_pebibyte">Pebibajt</string>
+    <string name="app_name"></string>
 </resources>
