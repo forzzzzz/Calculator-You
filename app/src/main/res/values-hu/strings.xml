@@ -21,7 +21,7 @@
     <string name="history_data_menu_copy">Másolás</string>
     <string name="month_2_date">Február</string>
     <string name="other_selection_text">Egyéb</string>
-    <string name="history_options_menu">Előzmények törlése</string>
+    <string name="history_options_menu">Előzmények kiürítése</string>
     <string name="title_dynamic_colors">Dinamikus színek</string>
     <string name="swipes_ok">OK</string>
     <string name="title_settings">Beállítások</string>
@@ -52,7 +52,7 @@
     <string name="love_text">Nem szeretettel❤️, hanem szeretetből készül❤️</string>
     <string name="expression_infinity">Az érték túl magas</string>
     <string name="clear_history_dismiss">Mégse</string>
-    <string name="clear_history_clear">Törlés</string>
+    <string name="clear_history_clear">Kiürítés</string>
     <string name="options_tool_tip">További beállítások</string>
     <string name="month_7_date">Július</string>
     <string name="month_10_date">Október</string>
@@ -64,7 +64,7 @@
     <string name="days_ago_5_date">5 napja</string>
     <string name="days_ago_6_date">6 napja</string>
     <string name="days_ago_7_date">7 napja</string>
-    <string name="clear_history_title">Törli az előzményeket?</string>
+    <string name="clear_history_title">Kiüríti az előzményeket?</string>
     <string name="arrow_back_tool_tip">Vissza</string>
     <string name="history_data_menu_share">Megosztás</string>
     <string name="history_data_menu_delete">Törlés</string>
