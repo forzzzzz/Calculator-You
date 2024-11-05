@@ -195,7 +195,7 @@
     <string name="title_saving_intermediate_results">Automatische Speicherung der Ergebnisse</string>
     <string name="unit_feet_per_second">Fuß pro Sekunde</string>
     <string name="unit_dyne">Dyn</string>
-    <string name="unit_pound_force">Kraftpfund</string>
+    <string name="unit_pound_force">Pfund-Kraft</string>
     <string name="unit_grams_of_carbohydrate">Kohlenhydrate in Gramm</string>
     <string name="unit_atmosphere">Atmosphäre</string>
     <string name="unit_kiloliter">Kiloliter</string>
@@ -221,4 +221,18 @@
     <string name="unit_kilogram_per_cubic_meter">Kilogramm pro Kubikmeter</string>
     <string name="unit_kilohertz">Kilohertz</string>
     <string name="unit_gigahertz">Gigahertz</string>
+    <string name="unit_centipoise">Centipoise</string>
+    <string name="unit_barrel">Barrel</string>
+    <string name="app_name">Taschenrechner</string>
+    <string name="unit_ounce_force">Unze-Kraft</string>
+    <string name="unit_btu_per_hour">BTU pro Stunde</string>
+    <string name="unit_pound_foot">Foot-pound</string>
+    <string name="unit_ounce_inch">Unzenzoll</string>
+    <string name="unit_stoke">Stokes</string>
+    <string name="unit_poiseuille">Poiseuille</string>
+    <string name="description_max_scientific_notation_digits">Maximale Anzahl an Stellen bei wissenschaftlicher Darstellung</string>
+    <string name="unit_h2o">H₂O (Wasertiefe in Zoll)</string>
+    <string name="unit_footcandle">Foot Candle</string>
+    <string name="unit_turn">Umdrehungen</string>
+    <string name="description_saving_intermediate_results">Automatisches Speichern von Ergebnissen im Verlauf. Das Gleichheitszeichen ist optional</string>
 </resources>
