@@ -112,4 +112,7 @@
     <string name="unit_kilometer">Kilômét</string>
     <string name="unit_centimeter">Centimét</string>
     <string name="app_name">Máy tính</string>
+    <string name="title_max_scientific_notation_digits">Ký hiệu khoa học</string>
+    <string name="description_max_scientific_notation_digits">Số chữ số ký hiệu khoa học tối đa</string>
+    <string name="title_saving_intermediate_results">Tự động lưu kết quả</string>
 </resources>
