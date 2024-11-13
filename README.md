@@ -1,6 +1,6 @@
 <div align="center">
 
-#### I will rewrite this calculator to MVVM architecture during my thesis
+#### I will rewrite this calculator to MVVM architecture during my dissertation to continue supporting it💪
 
 <img src="fastlane/metadata/android/en-US/images/featureGraphic.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
 
