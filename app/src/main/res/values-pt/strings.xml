@@ -221,4 +221,5 @@
     <string name="unit_kilobyte">Kilobyte</string>
     <string name="unit_gigabyte">Gigabyte</string>
     <string name="unit_petabyte">Petabyte</string>
+    <string name="unit_knot">Knot</string>
 </resources>
