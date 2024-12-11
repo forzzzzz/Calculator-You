@@ -115,4 +115,9 @@
     <string name="title_max_scientific_notation_digits">Ký hiệu khoa học</string>
     <string name="description_max_scientific_notation_digits">Số chữ số ký hiệu khoa học tối đa</string>
     <string name="title_saving_intermediate_results">Tự động lưu kết quả</string>
+    <string name="unit_mile_per_hour">Dặm mỗi giờ</string>
+    <string name="unit_millimeter">Milimét</string>
+    <string name="unit_mile">Dặm</string>
+    <string name="unit_nautical_mile">Hải lý</string>
+    <string name="description_saving_intermediate_results">Tự động lưu kết quả vào lịch sử. Nút bằng là tùy chọn</string>
 </resources>
