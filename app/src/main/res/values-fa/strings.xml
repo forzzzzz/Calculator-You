@@ -8,7 +8,7 @@
     <string name="swipes_ok">باشد</string>
     <string name="options_tool_tip">گزینه‌های بیشتر</string>
     <string name="arrow_back_tool_tip">بازگشت</string>
-    <string name="empty_history">بی پیشینه</string>
+    <string name="empty_history">بدون پیشینه</string>
     <string name="yesterday_date">دیروز</string>
     <string name="days_ago_2_date">پریروز</string>
     <string name="days_ago_5_date">۵ ر‌وز پیش</string>
@@ -85,4 +85,70 @@
     <string name="title_licenses">پروانه‌ها</string>
     <string name="tap_me">اینجا بزنید😊</string>
     <string name="love_text">با عشق ❤️ ساخته نشده، ونکه عشق ❤️ آن را ساخته است</string>
+    <string name="physical_quantity_area">مساحت</string>
+    <string name="physical_quantity_energy">انرژی</string>
+    <string name="physical_quantity_speed">سرعت</string>
+    <string name="unit_ounce_force">اونس-نیرو</string>
+    <string name="physical_quantity_power">توان</string>
+    <string name="unit_ounce">اونس</string>
+    <string name="unit_gram">گرم</string>
+    <string name="unit_newton">نیوتون</string>
+    <string name="unit_mile">مایل</string>
+    <string name="unit_watt">وات</string>
+    <string name="copy_text_tool_tip">کپی متن</string>
+    <string name="title_unit">واحد</string>
+    <string name="physical_quantity_length">مسافت</string>
+    <string name="physical_quantity_time">زمان</string>
+    <string name="physical_quantity_mass">جرم</string>
+    <string name="physical_quantity_force">نیرو</string>
+    <string name="physical_quantity_pressure">فشار</string>
+    <string name="physical_quantity_volume">حجم</string>
+    <string name="physical_quantity_torque">گشتاور</string>
+    <string name="physical_quantity_light">نور</string>
+    <string name="physical_quantity_storage">حافظه</string>
+    <string name="physical_quantity_angle">زاویه</string>
+    <string name="unit_meter">متر</string>
+    <string name="unit_kilometer">کیلومتر</string>
+    <string name="unit_centimeter">سانتیمتر</string>
+    <string name="unit_inch">اینچ</string>
+    <string name="unit_minute">دقیقه</string>
+    <string name="unit_kilogram">کیلوگرم</string>
+    <string name="unit_milligram">میلیگرم</string>
+    <string name="unit_celsius">سلسیوس</string>
+    <string name="unit_fahrenheit">فارنهایت</string>
+    <string name="unit_meter_per_second">متر بر ثانیه</string>
+    <string name="unit_kilometer_per_hour">کیلومتر در ساعت</string>
+    <string name="unit_mile_per_hour">مایل در ساعت</string>
+    <string name="unit_knot">گره</string>
+    <string name="unit_feet_per_second">فوت بر ثانیه</string>
+    <string name="unit_dyne">داین</string>
+    <string name="unit_pound_force">پوند-نیرو</string>
+    <string name="unit_joule">ژول</string>
+    <string name="unit_kilojoule">کیلوژول</string>
+    <string name="unit_megajoule">مگاژول</string>
+    <string name="unit_kilowatt">کیلو وات</string>
+    <string name="unit_grams_of_fat">گرم چربی</string>
+    <string name="physical_quantity_temperature">دما</string>
+    <string name="physical_quantity_density">چگالی</string>
+    <string name="physical_quantity_frequency">فرکانس</string>
+    <string name="physical_quantity_viscosity">کشسانی</string>
+    <string name="unit_millimeter">میلیمتر</string>
+    <string name="unit_yard">یارد</string>
+    <string name="unit_second">ثانیه</string>
+    <string name="unit_hour">ساعت</string>
+    <string name="unit_day">روز</string>
+    <string name="unit_week">هفته</string>
+    <string name="unit_tonne">تن</string>
+    <string name="unit_pound">پوند</string>
+    <string name="unit_kilonewton">کیلونیوتون</string>
+    <string name="unit_calorie">کالری</string>
+    <string name="unit_kilocalorie">کیلوکالری</string>
+    <string name="unit_grams_of_carbohydrate">گرم در کربوهیدرات</string>
+    <string name="unit_horsepower">اسب بخار</string>
+    <string name="physical_quantity_fuel">سوخت</string>
+    <string name="unit_foot">فوت</string>
+    <string name="unit_grams_of_protein">گرم پروتئین</string>
+    <string name="unit_kelvin">کلوین</string>
+    <string name="unit_megawatt">مگاوات</string>
+    <string name="unit_nautical_mile">مایل دریایی</string>
 </resources>
