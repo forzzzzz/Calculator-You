@@ -205,7 +205,6 @@
     <string name="unit_lux">லக்ச்</string>
     <string name="unit_footcandle">கால்-மெழுகு</string>
     <string name="unit_bit">துணுக்கு</string>
-    <string name="unit__byte">பைட்</string>
     <string name="unit_kilobit">கிலோபிட்</string>
     <string name="unit_kilobyte">கிலோபைட்</string>
     <string name="unit_kibibyte">விசிறி</string>

@@ -201,7 +201,6 @@
     <string name="unit_candela">Kandela</string>
     <string name="unit_lux">Luks</string>
     <string name="unit_bit">Bitt</string>
-    <string name="unit__byte">Bait</string>
     <string name="unit_kilobit">Kilobitt</string>
     <string name="unit_kilobyte">Kilobait</string>
     <string name="unit_megabit">Megabitt</string>

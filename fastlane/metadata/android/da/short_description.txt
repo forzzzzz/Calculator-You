@@ -1,1 +1,1 @@
-Calculator You er en smuk lommeregner til løsning af enkle opgaver.
+Calculator You er en smuk lommeregner til løsning af simple problemer.
