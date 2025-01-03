@@ -1,7 +1,5 @@
 <div align="center">
 
-#### I will rewrite this calculator to MVVM architecture during my dissertation to continue supporting it💪
-
 <img src="fastlane/metadata/android/en-US/images/featureGraphic.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
 
 # Calculator You
@@ -80,6 +78,14 @@ Support this app with a [PayPal](https://www.paypal.com/donate/?hosted_button_id
 [<img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white"
 alt="Donate with PayPal"
 height="40">](https://www.paypal.com/donate/?hosted_button_id=GKC26SLPUTQMU)
+
+## 📢 Join the telegram channel
+
+Join the [telegram channel](https://t.me/devBlogCalculatorYou) to follow the project news and suggest your ideas
+
+[<img src="https://img.shields.io/badge/Telegram%20channel-white?style=for-the-badge&logo=telegram"
+alt="Join the telegram channel"
+height="40">](https://t.me/devBlogCalculatorYou)
 
 ## 🔢 Math Expressions Parser
 
