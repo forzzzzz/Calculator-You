@@ -114,4 +114,10 @@
     <string name="unit_hertz">Hertz</string>
     <string name="unit_kilohertz">Kilohertz</string>
     <string name="formatting_selection_text">Formatering</string>
+    <string name="other_selection_text">Annet</string>
+    <string name="description_precision">Antall desimaler</string>
+    <string name="separator_element_2">Punktum</string>
+    <string name="title_precision">Presisjon</string>
+    <string name="title_decimal_separator">Desimaltegn</string>
+    <string name="description_decimal_separator">Desimaltegnsymbol</string>
 </resources>
