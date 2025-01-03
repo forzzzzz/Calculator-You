@@ -81,7 +81,7 @@ height="40">](https://www.paypal.com/donate/?hosted_button_id=GKC26SLPUTQMU)
 
 ## 📢 Join the telegram channel
 
-Join the [telegram channel](https://t.me/devBlogCalculatorYou) to follow the project news and suggest your ideas
+Join the [telegram channel](https://t.me/devBlogCalculatorYou) to follow the project
 
 [<img src="https://img.shields.io/badge/Telegram%20channel-white?style=for-the-badge&logo=telegram"
 alt="Join the telegram channel"
