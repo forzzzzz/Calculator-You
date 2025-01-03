@@ -1,0 +1,3 @@
+- Updated translation.
+
+For more information, please read the full changelog on GitHub.
