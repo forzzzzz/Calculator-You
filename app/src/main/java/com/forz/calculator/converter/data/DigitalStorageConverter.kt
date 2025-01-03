@@ -7,7 +7,7 @@ class DigitalStorageConverter : UnitConverter {
 
     override val units: List<ConverterUnit> = listOf(
         FactorUnit(R.string.unit_bit, 1.0, "${id}10".toInt()),
-        FactorUnit(R.string.unit__byte, 8.0, "${id}11".toInt()),
+        FactorUnit(R.string.unit_byte, 8.0, "${id}11".toInt()),
         FactorUnit(R.string.unit_kilobit, 1E3, "${id}12".toInt()),
         FactorUnit(R.string.unit_kilobyte, 8E3, "${id}13".toInt()),
         FactorUnit(R.string.unit_kibibyte, 8.0 * 1024, "${id}14".toInt()),
