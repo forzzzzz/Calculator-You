@@ -109,7 +109,7 @@
     <string name="unit_gigapascal">Gigapascal</string>
     <string name="physical_quantity_frequency">Frekvencia</string>
     <string name="unit_yard">Yard</string>
-    <string name="unit_gigibyte">Gigibájt</string>
+    <string name="unit_gigibyte">Gibibájt</string>
     <string name="unit_gradian">Gradián</string>
     <string name="physical_quantity_storage">Tárhely</string>
     <string name="unit_square_yard">Négyzetyard</string>
@@ -197,7 +197,7 @@
     <string name="unit_grams_of_protein">Proteingramm</string>
     <string name="unit_kilowatt">Kilowatt</string>
     <string name="unit_megawatt">Megawatt</string>
-    <string name="unit_horsepower">Horsepower</string>
+    <string name="unit_horsepower">Lóerő</string>
     <string name="unit_psi">PSI</string>
     <string name="unit_cubic_centimeter">Köbcentiméter</string>
     <string name="unit_atmosphere">Atmoszféra</string>
@@ -234,4 +234,5 @@
     <string name="unit_gigabyte">Gigabájt</string>
     <string name="description_swipes2">Fő lapok</string>
     <string name="app_name">Calculator You</string>
+    <string name="unit_byte">Bájt</string>
 </resources>
