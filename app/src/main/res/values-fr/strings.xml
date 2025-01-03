@@ -124,7 +124,6 @@
     <string name="unit_pebibyte">Pebibyte</string>
     <string name="unit_dyne">Dyne</string>
     <string name="unit_turn">Tour</string>
-    <string name="unit__byte">Byte</string>
     <string name="unit_megahertz">Megahertz</string>
     <string name="unit_watt">Watt</string>
     <string name="physical_quantity_energy">Énergie</string>

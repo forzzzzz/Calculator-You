@@ -213,7 +213,6 @@
     <string name="unit_kilohertz">Kilohertz</string>
     <string name="unit_candela">Kandela</string>
     <string name="unit_bit">Bit</string>
-    <string name="unit__byte">Bajt</string>
     <string name="unit_degree">Stupeň</string>
     <string name="unit_radian">Radián</string>
     <string name="unit_gradian">Gradián</string>

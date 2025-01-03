@@ -212,7 +212,6 @@
     <string name="unit_hertz">Hertz</string>
     <string name="unit_kilohertz">Kilohertz</string>
     <string name="unit_bit">Bit</string>
-    <string name="unit__byte">Byte</string>
     <string name="unit_footcandle">Fod-candle</string>
     <string name="unit_kilobyte">Kilobyte</string>
     <string name="unit_petabyte">Petabyte</string>
