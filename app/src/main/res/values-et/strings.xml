@@ -208,7 +208,7 @@
     <string name="unit_megabyte">Megabait</string>
     <string name="unit_gigabit">Gigabitt</string>
     <string name="unit_gigabyte">Gigabait</string>
-    <string name="unit_gigibyte">Gigibait</string>
+    <string name="unit_gigibyte">Gibibait</string>
     <string name="unit_terabyte">Terabait</string>
     <string name="unit_tebibyte">Tebibait</string>
     <string name="unit_petabit">Petabitt</string>
@@ -234,4 +234,5 @@
     <string name="title_saving_intermediate_results">Salvesta tulemused automaatselt</string>
     <string name="description_max_scientific_notation_digits">Numbrite arv teadusarvutuse puhul</string>
     <string name="description_saving_intermediate_results">Tulemused salvestatakse ajalukku automaatselt. Võrdusmärgi kasutamine pole kohustuslik</string>
+    <string name="unit_byte">Bait</string>
 </resources>
