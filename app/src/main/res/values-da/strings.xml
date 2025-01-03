@@ -181,7 +181,7 @@
     <string name="unit_barrel">Tønde</string>
     <string name="description_swipes2">Faner</string>
     <string name="unit_mile">Mil</string>
-    <string name="title_saving_intermediate_results">Gem automatisk resultater</string>
+    <string name="title_saving_intermediate_results">Gem resultater automatisk</string>
     <string name="description_max_scientific_notation_digits">Max videnskabelige notationscifre</string>
     <string name="title_unit">Enhed</string>
     <string name="physical_quantity_length">Længde</string>
