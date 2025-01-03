@@ -234,4 +234,5 @@
     <string name="yesterday_date">Χθες</string>
     <string name="today_date">Σήμερα</string>
     <string name="month_2_date">Φεβρουαρίου</string>
+    <string name="unit_byte">Byte</string>
 </resources>
