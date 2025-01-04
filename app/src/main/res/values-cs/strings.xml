@@ -227,11 +227,12 @@
     <string name="unit_ounce_inch">Unce-palec</string>
     <string name="unit_exabyte">Exabajt</string>
     <string name="unit_mebibyte">Mebibajt</string>
-    <string name="unit_gigibyte">Gigibajt</string>
+    <string name="unit_gigibyte">Gibibajt</string>
     <string name="unit_terabyte">Terabajt</string>
     <string name="unit_petabit">Petabit</string>
     <string name="unit_exabit">Exabit</string>
     <string name="unit_pascal_second">Pascal-sekunda</string>
     <string name="unit_gallon_uk">Galon (VB)</string>
     <string name="unit_gallon_us">Galon (USA)</string>
+    <string name="unit_byte">Bajt</string>
 </resources>
