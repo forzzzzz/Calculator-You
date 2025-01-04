@@ -141,7 +141,7 @@
     <string name="unit_mebibyte">Mebibyte</string>
     <string name="unit_megabyte">Megabyte</string>
     <string name="unit_gigabyte">Gigabyte</string>
-    <string name="unit_gigibyte">Gigibyte</string>
+    <string name="unit_gigibyte">Gibibyte</string>
     <string name="unit_terabyte">Terabyte</string>
     <string name="unit_tebibyte">Tebibyte</string>
     <string name="unit_petabyte">Petabyte</string>
@@ -234,4 +234,5 @@
     <string name="unit_footcandle">Foot Candle</string>
     <string name="unit_turn">Umdrehungen</string>
     <string name="description_saving_intermediate_results">Automatisches Speichern von Ergebnissen im Verlauf. Das Gleichheitszeichen ist optional</string>
+    <string name="unit_byte">Byte</string>
 </resources>
