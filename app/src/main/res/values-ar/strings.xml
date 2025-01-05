@@ -1,3 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <string name="app_name">الحاسبة</string>
+    <string name="formatting_selection_text">التنسيق</string>
+    <string name="history_data_menu_share">مشاركة</string>
+    <string name="title_vibrations">الاهتزاز</string>
+    <string name="title_sound_effects">الأصوات</string>
+    <string name="expression_error">خطأ</string>
+    <string name="title_swipes">الإيماءات</string>
+    <string name="title_settings">الإعدادات</string>
+    <string name="title_select_theme">اختيار الثيم</string>
+    <string name="title_history">التاريخ</string>
+    <string name="other_selection_text">أخرى</string>
+    <string name="title_dynamic_colors">ألوان ديناميكية</string>
+    <string name="history_data_menu_copy">نسخ</string>
+    <string name="title_select_color">اختيار اللون</string>
+    <string name="expression_infinity">القيمة عالية جداً</string>
+    <string name="theme_selection_text">الثيم</string>
+    <string name="title_about">حول</string>
+    <string name="title_saving_intermediate_results">حفظ النتائج تلقائياً</string>
+    <string name="history_data_menu_delete">حذف</string>
+    <string name="history_options_menu">مسح السجل</string>
+</resources>
