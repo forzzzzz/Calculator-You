@@ -234,4 +234,5 @@
     <string name="description_max_scientific_notation_digits">科学记数法最大位数</string>
     <string name="description_saving_intermediate_results">自动将结果保存在历史记录中。等号按钮是可选的</string>
     <string name="title_saving_intermediate_results">自动保存结果</string>
+    <string name="unit_byte">字节</string>
 </resources>
