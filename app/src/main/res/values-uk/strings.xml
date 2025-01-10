@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_about">Про додаток</string>
+    <string name="title_about">Про застосунок</string>
     <string name="title_select_theme">Обрати тему</string>
     <string name="title_vibrations">Вібрації</string>
     <string name="title_sound_effects">Звуки</string>
@@ -30,10 +30,10 @@
     <string name="description_swipes">Змахи по екрану</string>
     <string name="title_telegram">Телеграм</string>
     <string name="title_open_source">Вихідний код</string>
-    <string name="info_selection_text">Інформація про додаток</string>
-    <string name="description_select_theme">Світла чи темна тема для вашого додатку</string>
+    <string name="info_selection_text">Інформація про застосунок</string>
+    <string name="description_select_theme">Світла чи темна тема для вашого застосунку</string>
     <string name="description_select_color">60+ кольорів на ваш смак</string>
-    <string name="theme_element_1">За замовчуванням</string>
+    <string name="theme_element_1">Системна</string>
     <string name="theme_element_3">Темна</string>
     <string name="title_licenses">Ліцензії</string>
     <string name="title_privacy_policy">Політика конфіденційності</string>
@@ -55,13 +55,13 @@
     <string name="description_open_source">Подивитися вихідний код на GitHub</string>
     <string name="description_licenses">Подивитися ліцензії</string>
     <string name="description_privacy_policy">Ознайомитися з політикою конфіденційності</string>
-    <string name="tap_me">Натисни сюди😊</string>
+    <string name="tap_me">Натисніть сюди😊</string>
     <string name="clear_history_dismiss">Відхилити</string>
     <string name="clear_history_clear">Очистити</string>
     <string name="swipes_cancel">Скасувати</string>
-    <string name="swipes_ok">ОК</string>
-    <string name="options_tool_tip">Більше опцій</string>
-    <string name="arrow_back_tool_tip">Повернутися назад</string>
+    <string name="swipes_ok">Гаразд</string>
+    <string name="options_tool_tip">Більше параметрів</string>
+    <string name="arrow_back_tool_tip">Повернутися</string>
     <string name="empty_history">Немає історії</string>
     <string name="month_5_date">Травня</string>
     <string name="month_4_date">Квітня</string>
@@ -215,7 +215,7 @@
     <string name="unit_megabyte">Мегабайт</string>
     <string name="unit_gigabit">Гігабіт</string>
     <string name="unit_gigabyte">Гігабайт</string>
-    <string name="unit_gigibyte">Гігібайт</string>
+    <string name="unit_gigibyte">Гібібайт</string>
     <string name="unit_terabyte">Терабайт</string>
     <string name="unit_tebibyte">Тебібайт</string>
     <string name="unit_petabit">Петабіт</string>
@@ -234,4 +234,5 @@
     <string name="title_saving_intermediate_results">Автоматичне збереження результатів</string>
     <string name="description_saving_intermediate_results">Автоматичне збереження результатів в історії. Кнопка рівності є необов’язковою</string>
     <string name="description_max_scientific_notation_digits">Максимальна кількість цифр наукової нотації</string>
+    <string name="unit_byte">Байт</string>
 </resources>
