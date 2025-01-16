@@ -168,7 +168,7 @@
     <string name="unit_megabyte">Megabyte</string>
     <string name="unit_gigabit">Gigabit</string>
     <string name="unit_gigabyte">Gigabyte</string>
-    <string name="unit_gigibyte">Gigibyte</string>
+    <string name="unit_gigibyte">Gibibyte</string>
     <string name="unit_terabit">Terabit</string>
     <string name="unit_tebibyte">Tebibyte</string>
     <string name="unit_petabit">Petabit</string>
@@ -234,4 +234,5 @@
     <string name="physical_quantity_area">Areal</string>
     <string name="unit_week">Uge</string>
     <string name="unit_kelvin">Kelvin</string>
+    <string name="unit_byte">Byte</string>
 </resources>
