@@ -143,39 +143,9 @@
                 android:text="@string/support_selection_text" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/telegramLayout"
+                android:id="@+id/emailLayout"
                 style="@style/optionLayout"
                 android:layout_marginTop="8dp">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/telegramImage"
-                    style="@style/optionImage"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/baseline_telegram" />
-
-                <TextView
-                    android:id="@+id/telegramTitleText"
-                    style="@style/optionTitleText"
-                    android:text="@string/title_telegram"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/telegramImage"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/telegramText"
-                    style="@style/optionDescriptionText"
-                    android:text="@string/description_telegram"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/telegramImage"
-                    app:layout_constraintTop_toBottomOf="@id/telegramTitleText" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/emailLayout"
-                style="@style/optionLayout">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/emailImage"

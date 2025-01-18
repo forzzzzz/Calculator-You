@@ -101,7 +101,6 @@
     <string name="title_translate">Translate</string>
     <string name="title_rate">Rate</string>
     <string name="title_donate">Donate</string>
-    <string name="title_telegram">Telegram</string>
     <string name="title_email">Email</string>
     <string name="title_open_source">Open source code</string>
     <string name="title_licenses">Licenses</string>
@@ -112,8 +111,7 @@
     <string name="description_translate">Help translate with Hosted Weblate</string>
     <string name="description_rate">Write a review about the app</string>
     <string name="description_donate">Support this app with a PayPal donation</string>
-    <string name="description_telegram" translatable="false">\@millioner_1OODollar</string>
-    <string name="description_email" translatable="false">mark.tka.development@gmail.com</string>
+    <string name="description_email" translatable="false">calculatoryou.help@gmail.com</string>
     <string name="description_open_source">View open source on GitHub</string>
     <string name="description_licenses">View licenses</string>
     <string name="description_privacy_policy">View privacy policy</string>
@@ -125,12 +123,11 @@
 
     <!--Url-->
     <string name="url_app" translatable="false">https://play.google.com/store/apps/details?id=com.marktka.calculatorYou</string>
-    <string name="url_telegram" translatable="false">https://t.me/millioner_1OODollar</string>
     <string name="url_privacy_policy" translatable="false">https://github.com/forzzzzz/Calculator-You/blob/master/Privacy%20Policy.md</string>
     <string name="url_open_source" translatable="false">https://github.com/forzzzzz/Calculator-You</string>
     <string name="url_translate" translatable="false">https://hosted.weblate.org/engage/calculator-you/</string>
     <string name="url_donate" translatable="false">https://www.paypal.com/donate/?hosted_button_id=GKC26SLPUTQMU</string>
-    <string name="url_email" translatable="false">mailto:mark.tka.development@gmail.com</string>
+    <string name="url_email" translatable="false">mailto:calculatoryou.help@gmail.com</string>
 
     <!--Dialogs-->
     <string name="clear_history_title">Clear the history?</string>

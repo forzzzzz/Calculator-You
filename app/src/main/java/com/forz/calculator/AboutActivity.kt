@@ -57,15 +57,6 @@ class AboutActivity : AppCompatActivity() {
             InteractionAndroid.openUrl(getString(R.string.url_donate), this)
         }
 
-        binding.telegramLayout.setOnClickListener {
-            InteractionAndroid.openUrl(getString(R.string.url_telegram), this)
-        }
-
-        binding.telegramLayout.setOnLongClickListener {
-            InteractionAndroid.copyToClipboard(getString(R.string.description_telegram), this)
-            true
-        }
-
         binding.emailLayout.setOnClickListener {
             InteractionAndroid.openUrl(getString(R.string.url_email), this)
         }
