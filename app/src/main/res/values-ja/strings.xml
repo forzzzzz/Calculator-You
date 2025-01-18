@@ -98,7 +98,6 @@
     <string name="unit_newton">ニュートン</string>
     <string name="unit_kilometer_per_hour">キロメートル毎時</string>
     <string name="unit_megapascal">メガパスカル</string>
-    <string name="title_telegram">Telegram</string>
     <string name="title_email">メールアドレス</string>
     <string name="description_rate">アプリのレビューをお願いします</string>
     <string name="description_open_source">ソースコードをGitHubで閲覧</string>

@@ -28,7 +28,6 @@
     <string name="description_vibrations">Тактильний зворотний зв\'язок під час натискання кнопок</string>
     <string name="description_donate">Підтримати цей застосунок за допомогою PayPal пожертвуванням</string>
     <string name="description_swipes">Змахи по екрану</string>
-    <string name="title_telegram">Телеграм</string>
     <string name="title_open_source">Вихідний код</string>
     <string name="info_selection_text">Інформація про застосунок</string>
     <string name="description_select_theme">Світла чи темна тема для вашого застосунку</string>
