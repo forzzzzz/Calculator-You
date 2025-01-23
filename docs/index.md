@@ -1,7 +1,5 @@
 ***This is for my dissertation***
 
-<img src="../fastlane/metadata/android/en-US/images/featureGraphic.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
-
 # Мобільний застосунок "Caculator You"
 
 Кваліфікаційна робота на підтвердження ступеня фахового молодшого бакалавра ([ВСП «ППФК НТУ «ХПІ»](http://polytechnic.poltava.ua)).
