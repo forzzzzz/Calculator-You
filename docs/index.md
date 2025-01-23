@@ -1,4 +1,4 @@
-***This version readme for my dissertation***
+***This is for my dissertation***
 
 <img src="../fastlane/metadata/android/en-US/images/featureGraphic.png" alt="Feature graphic" style="display: block; margin: 0 auto 30px;">
 
