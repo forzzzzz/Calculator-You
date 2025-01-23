@@ -1,3 +1,8 @@
 remote_theme: pages-themes/tactile@v0.2.0
 plugins:
 - jekyll-remote-theme
+
+title: Мобільний застосунок "Caculator You"
+description: Calculator You - гарний та зручний калькулятор для вирішення простих завдань
+
+show_downloads: true
