@@ -13,6 +13,7 @@
 ## Використані технології
 
 * Kotlin
+* Java
 * Android SDK
 * Android Views
 * Room
