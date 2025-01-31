@@ -6,7 +6,7 @@
     <string name="title_separator">Razdjelnik</string>
     <string name="theme_element_2">Svijetla</string>
     <string name="separator_element_3">Razmak</string>
-    <string name="theme_element_1">Standard sustava</string>
+    <string name="theme_element_1">Sustav</string>
     <string name="title_donate">Doniraj</string>
     <string name="separator_element_2">Točka</string>
     <string name="theme_element_3">Tamna</string>
@@ -160,8 +160,8 @@
     <string name="unit_megawatt">Megavat</string>
     <string name="unit_btu_per_hour">BTU na sat</string>
     <string name="unit_pascal">Pascal</string>
-    <string name="unit_kilopascal">KiloPascal</string>
-    <string name="unit_megapascal">MegaPascal</string>
+    <string name="unit_kilopascal">Kilopaskal</string>
+    <string name="unit_megapascal">Megapaskal</string>
     <string name="unit_bar">Bar</string>
     <string name="unit_millibar">Milibar</string>
     <string name="unit_psi">PSI</string>
@@ -193,20 +193,20 @@
     <string name="unit_gigahertz">Gigahertz</string>
     <string name="unit_kilonewton_meter">Kilonewton-metar</string>
     <string name="unit_pound_foot">Funta-stopa</string>
-    <string name="unit_footcandle">Lumen po kvadratnoj stopi</string>
+    <string name="unit_footcandle">Foot-candle</string>
     <string name="unit_kilobit">Kilobit</string>
     <string name="unit_kilobyte">Kilobajt</string>
     <string name="unit_kibibyte">Kibibajt</string>
     <string name="unit_megabit">Megabit</string>
     <string name="unit_megabyte">Megabajt</string>
     <string name="unit_gigabyte">Gigabajt</string>
-    <string name="unit_gigibyte">Gigibajt</string>
+    <string name="unit_gigibyte">Gibibajt</string>
     <string name="unit_terabit">Terabit</string>
     <string name="unit_terabyte">Terabajt</string>
     <string name="unit_tebibyte">Tebibajt</string>
     <string name="unit_exabit">Exabit</string>
     <string name="unit_exabyte">Exabajt</string>
-    <string name="unit_exbibyte">Exbibajt</string>
+    <string name="unit_exbibyte">Egzbibajt</string>
     <string name="unit_pascal_second">Pascal-sekunda</string>
     <string name="unit_degree">Stupanj</string>
     <string name="unit_radian">Radijan</string>
@@ -216,7 +216,7 @@
     <string name="description_swipes2">Glavne kartice</string>
     <string name="unit_gallon_us">Galon (SAD)</string>
     <string name="unit_barrel">Bačva</string>
-    <string name="unit_gigapascal">GigaPascal</string>
+    <string name="unit_gigapascal">Gigapaskal</string>
     <string name="unit_minute">Minuta</string>
     <string name="unit_hour">Sat</string>
     <string name="unit_atmosphere">Atmosfera</string>
@@ -228,4 +228,10 @@
     <string name="unit_petabyte">Petabajt</string>
     <string name="unit_petabit">Petabit</string>
     <string name="unit_pebibyte">Pebibajt</string>
+    <string name="title_max_scientific_notation_digits">Znanstvena notacija</string>
+    <string name="app_name">Kalkulator</string>
+    <string name="title_saving_intermediate_results">Automatsko spremanje rezultata</string>
+    <string name="description_max_scientific_notation_digits">Maksimalni broj znamenki u znanstvenoj notaciji</string>
+    <string name="description_saving_intermediate_results">Automatsko spremanje rezultata u povijest. Gumb znaka jednakosti je opcionalan</string>
+    <string name="unit_byte">Bajt</string>
 </resources>
