@@ -146,8 +146,8 @@
     <string name="unit_ounce_force">Unciaerő</string>
     <string name="unit_kilocalorie">Kilokalória</string>
     <string name="unit_watt">Watt</string>
-    <string name="unit_grams_of_carbohydrate">Szénhidrátgramm</string>
-    <string name="unit_grams_of_fat">Zsírgramm</string>
+    <string name="unit_grams_of_carbohydrate">Szénhidrát-gramm</string>
+    <string name="unit_grams_of_fat">Zsír-gramm</string>
     <string name="unit_pascal">Pascal</string>
     <string name="unit_kilopascal">Kilopascal</string>
     <string name="unit_bar">Bar</string>
@@ -161,7 +161,7 @@
     <string name="unit_pint">Pint</string>
     <string name="unit_fluid_ounce">Folyadékuncia</string>
     <string name="unit_square_meter">Négyzetméter</string>
-    <string name="unit_square_kilometer">Négyzetkilóméter</string>
+    <string name="unit_square_kilometer">Négyzetkilométer</string>
     <string name="unit_pound_per_cubic_foot">Font per köbláb</string>
     <string name="unit_acre">Ár</string>
     <string name="unit_square_foot">Négyzetláb</string>
@@ -178,7 +178,7 @@
     <string name="unit_exabit">Exabit</string>
     <string name="unit_exabyte">Exabájt</string>
     <string name="unit_exbibyte">Exbibájt</string>
-    <string name="unit_pascal_second">Paszkálmásodperc</string>
+    <string name="unit_pascal_second">Paszkál-másodperc</string>
     <string name="unit_centipoise">Centipoise</string>
     <string name="unit_poiseuille">Poiseuille</string>
     <string name="unit_degree">Fok</string>
@@ -193,7 +193,7 @@
     <string name="unit_nautical_mile">Tengeri mérföld</string>
     <string name="unit_mile_per_hour">Mérföld per óra</string>
     <string name="unit_knot">Csomó</string>
-    <string name="unit_grams_of_protein">Proteingramm</string>
+    <string name="unit_grams_of_protein">Protein-gramm</string>
     <string name="unit_kilowatt">Kilowatt</string>
     <string name="unit_megawatt">Megawatt</string>
     <string name="unit_horsepower">Lóerő</string>
