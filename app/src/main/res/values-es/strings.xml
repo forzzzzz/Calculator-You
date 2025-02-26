@@ -224,7 +224,7 @@
     <string name="unit_petabyte">Petabyte</string>
     <string name="unit_pascal_second">Pascal por segundo</string>
     <string name="unit_mebibyte">Mebibyte</string>
-    <string name="unit_gigibyte">GigiByte</string>
+    <string name="unit_gigibyte">Gibibyte</string>
     <string name="unit_exbibyte">Exbibyte</string>
     <string name="unit_gradian">Grado centesimal</string>
     <string name="unit_gallon_uk">Galón (Reino Unido)</string>
@@ -233,4 +233,5 @@
     <string name="description_max_scientific_notation_digits">Máximo de dígitos en la anotación científica</string>
     <string name="title_saving_intermediate_results">Almacenamiento automático de resultados</string>
     <string name="description_saving_intermediate_results">Guardado automático de los resultados en el historial. El botón igual es opcional</string>
+    <string name="unit_byte">Byte</string>
 </resources>
