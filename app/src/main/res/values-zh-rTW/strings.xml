@@ -84,4 +84,5 @@
     <string name="days_ago_7_date">7 天前</string>
     <string name="clear_history_title">清除歷史記錄？</string>
     <string name="description_swipes">在螢幕上滑動</string>
+    <string name="app_name">計算機</string>
 </resources>
