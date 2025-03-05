@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layoutDirection="ltr"
     android:importantForAccessibility="noHideDescendants"
-    tools:context=".fragments.xLargeLand.XLargeLandCalculatorFragment">
+    tools:context=".old_arch.fragments.xLargeLand.XLargeLandCalculatorFragment">
 
     <View
         android:id="@+id/block1"

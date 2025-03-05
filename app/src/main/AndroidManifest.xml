@@ -5,8 +5,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
-
-        android:name=".App"
+        android:name=".new_arch.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,45 +13,61 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/color_0"
+        android:theme="@style/Base.Theme.Calculator"
         tools:targetApi="31">
 
-        <service
-            android:name=".MyQSTileService"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:icon="@drawable/tile_icon"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <meta-data android:name="android.service.quicksettings.ACTIVE_TILE"
-                android:value="true" />
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE" />
-            </intent-filter>
-        </service>
 
         <activity
-            android:name=".LicensesActivity"
-            android:exported="false" />
+            android:name=".new_arch.presentation.main.AppActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+<!--        <service-->
+<!--            android:name=".old_arch.MyQSTileService"-->
+<!--            android:exported="true"-->
+<!--            android:icon="@drawable/tile_icon"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">-->
+<!--            <meta-data-->
+<!--                android:name="android.service.quicksettings.ACTIVE_TILE"-->
+<!--                android:value="true" />-->
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.service.quicksettings.action.QS_TILE" />-->
+<!--            </intent-filter>-->
+<!--        </service>-->
+
+<!--        <activity-->
+<!--            android:name=".old_arch.LicensesActivity"-->
+<!--            android:exported="false" />-->
 
         <profileable
             android:shell="true"
             tools:targetApi="29" />
 
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="stateAlwaysHidden">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".AboutActivity"
-            android:exported="false" />
-        <activity
-            android:name=".settings.SettingsActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".old_arch.MainActivity"-->
+<!--            android:exported="true"-->
+<!--            android:windowSoftInputMode="stateAlwaysHidden">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        <activity-->
+<!--            android:name=".old_arch.AboutActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".old_arch.settings.SettingsActivity"-->
+<!--            android:exported="false" />-->
     </application>
 
 </manifest>

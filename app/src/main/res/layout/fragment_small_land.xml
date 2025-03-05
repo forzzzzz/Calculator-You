@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
     android:importantForAccessibility="noHideDescendants"
-    tools:context=".fragments.smallLand.SmallLandFragment"
+    tools:context=".old_arch.fragments.smallLand.SmallLandFragment"
     tools:ignore="RtlHardcoded">
 
     <View
@@ -20,7 +20,7 @@
         app:layout_constraintBottom_toTopOf="@id/pagerGuideline"/>
 
 
-    <com.forz.calculator.expression.ExpressionEditText
+    <com.forz.calculator.old_arch.expression.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
         app:layout_constraintBottom_toBottomOf="@id/background_expression"

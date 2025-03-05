@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="@dimen/_12sdp"
     app:cardElevation="0dp"
-    tools:context=".fragments.CalculatorFragment"
+    tools:context=".old_arch.fragments.CalculatorFragment"
     android:orientation="vertical">
 
     <LinearLayout
