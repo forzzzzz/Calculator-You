@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
-    tools:context=".LicensesActivity">
+    tools:context=".old_arch.LicensesActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
     android:importantForAccessibility="noHideDescendants"
-    tools:context=".fragments.land.MainLandFragment"
+    tools:context=".old_arch.fragments.land.MainLandFragment"
     tools:ignore="RtlHardcoded">
 
     <androidx.constraintlayout.widget.Guideline
@@ -21,7 +21,7 @@
         android:id="@+id/historyFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:name="com.forz.calculator.fragments.HistoryFragment"
+        android:name="com.forz.calculator.old_arch.fragments.HistoryFragment"
         android:layout_marginBottom="@dimen/_4sdp"
         android:layout_marginRight="@dimen/_6sdp"
         android:layout_marginLeft="@dimen/_6sdp"
@@ -72,7 +72,7 @@
             app:layout_constraintEnd_toEndOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.forz.calculator.expression.ExpressionEditText
+    <com.forz.calculator.old_arch.expression.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
         android:layoutDirection="locale"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
     android:importantForAccessibility="noHideDescendants"
-    tools:context=".fragments.MainFragment"
+    tools:context=".old_arch.fragments.MainFragment"
     tools:ignore="RtlHardcoded">
 
     <View
@@ -57,7 +57,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topResultGuideline" />
 
-    <com.forz.calculator.expression.ExpressionEditText
+    <com.forz.calculator.old_arch.expression.ExpressionEditText
         android:id="@+id/expressionEditText"
         style="@style/Expression"
         app:layout_constraintBottom_toTopOf="@+id/resultText"
