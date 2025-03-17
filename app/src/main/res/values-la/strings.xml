@@ -65,4 +65,15 @@
     <string name="unit_day">Dies</string>
     <string name="unit_milligram">Milligramma</string>
     <string name="unit_pound">Libra</string>
+    <string name="unit_watt">Vattium</string>
+    <string name="unit_megajoule">Megajoulium</string>
+    <string name="unit_atmosphere">Atmosphaera</string>
+    <string name="unit_kilojoule">Chiliojoulium</string>
+    <string name="unit_pascal">Pascalium</string>
+    <string name="unit_gigapascal">Gigapascalium</string>
+    <string name="unit_btu_per_hour">BTU per hora</string>
+    <string name="unit_kilopascal">Chiliopascalium</string>
+    <string name="unit_megapascal">Magapascalium</string>
+    <string name="unit_kilowatt">Chiliovattium</string>
+    <string name="unit_megawatt">Magavattium</string>
 </resources>
