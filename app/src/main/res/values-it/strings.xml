@@ -216,7 +216,7 @@
     <string name="unit_exbibyte">Exbibyte</string>
     <string name="unit_poiseuille">Poiseuille</string>
     <string name="unit_stoke">Stoke</string>
-    <string name="unit_gigibyte">Gigibyte</string>
+    <string name="unit_gigibyte">Gibibyte</string>
     <string name="unit_kilobyte">Kilobyte</string>
     <string name="unit_kibibyte">Kibibyte</string>
     <string name="unit_mebibyte">Mebibyte</string>
@@ -233,4 +233,5 @@
     <string name="unit_bit">Bit</string>
     <string name="unit_pebibyte">Pebibyte</string>
     <string name="unit_exabit">Exabit</string>
+    <string name="unit_byte">Byte</string>
 </resources>
