@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    </resources>
+    <string name="theme_selection_text">주제</string>
+    <string name="formatting_selection_text">서식 지정</string>
+    <string name="expression_error">오류</string>
+    <string name="expression_infinity">값이 너무 높습니다</string>
+    <string name="app_name">계산자</string>
+</resources>
