@@ -4,7 +4,7 @@
     <string name="title_settings">Instellingen</string>
     <string name="title_decimal_separator">Decimale splitsing</string>
     <string name="title_sound_effects">Geluiden</string>
-    <string name="title_precision">Precisie</string>
+    <string name="title_precision">Nauwkeurigheid</string>
     <string name="description_select_theme">Licht of donker thema voor je app</string>
     <string name="title_saving_intermediate_results">Automatisch opslaan van resultaten</string>
     <string name="expression_error">Fout</string>
@@ -12,14 +12,14 @@
     <string name="title_max_scientific_notation_digits">Wetenschappelijke notatie</string>
     <string name="description_vibrations">Haptische feedback wanneer je op het toetsenbord tikt</string>
     <string name="other_selection_text">Anders</string>
-    <string name="history_options_menu">Verwijder geschiedenis</string>
+    <string name="history_options_menu">Wis geschiedenis</string>
     <string name="history_data_menu_share">Delen</string>
     <string name="history_data_menu_delete">Verwijder</string>
     <string name="title_about">Over</string>
-    <string name="title_select_theme">Kies Thema</string>
+    <string name="title_select_theme">Kies thema</string>
     <string name="title_vibrations">Trillingen</string>
     <string name="title_dynamic_colors">Dynamische kleuren</string>
-    <string name="title_select_color">Kies een kleur</string>
+    <string name="title_select_color">Kleur kiezen</string>
     <string name="title_separator">Verdeling</string>
     <string name="title_swipes">Vegen</string>
     <string name="description_sound_effects">Geluidseffecten wanneer je op het toetsenbord tikt</string>
@@ -105,7 +105,7 @@
     <string name="unit_gallon_uk">Gallon (VK)</string>
     <string name="unit_barrel">Vat</string>
     <string name="description_max_scientific_notation_digits">Max. aantal wetenschappelijke notatiecijfers</string>
-    <string name="description_saving_intermediate_results">Automatisch opslaan van resultaten in de geschiedenis. De gelijkheidsknop is optioneel.</string>
+    <string name="description_saving_intermediate_results">Automatisch opslaan van resultaten in de geschiedenis. De gelijkknop is optioneel.</string>
     <string name="separator_element_2">Punt</string>
     <string name="help_selection_text">Hulp</string>
     <string name="title_open_source">Open broncode</string>
@@ -232,4 +232,6 @@
     <string name="unit_petabit">Petabit</string>
     <string name="unit_pebibyte">Pebibyte</string>
     <string name="unit_degree">Graden</string>
+    <string name="unit_turn">Hoek</string>
+    <string name="unit_ounce">Ons</string>
 </resources>
