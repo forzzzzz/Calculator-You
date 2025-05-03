@@ -110,7 +110,7 @@
     <string name="unit_cubic_decimeter">Décimètre cube</string>
     <string name="unit_square_millimeter">Millimètre carré</string>
     <string name="unit_hectare">Hectare</string>
-    <string name="unit_gigibyte">Gigibyte</string>
+    <string name="unit_gigibyte">Gigioctet</string>
     <string name="unit_kilonewton">Kilonewton</string>
     <string name="unit_liter">Litre</string>
     <string name="unit_gradian">Grade</string>
@@ -233,4 +233,5 @@
     <string name="app_name">Calculatrice</string>
     <string name="title_saving_intermediate_results">Sauvegarde automatique des résultats</string>
     <string name="description_saving_intermediate_results">Sauvegarde automatiquement les résultats dans l\'historique. Appuyer sur le bouton \"égal\" est facultatif</string>
+    <string name="unit_byte">Octet</string>
 </resources>
