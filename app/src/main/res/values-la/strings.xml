@@ -46,7 +46,7 @@
     <string name="other_selection_text">Cetera</string>
     <string name="physical_quantity_pressure">Pressio</string>
     <string name="history_data_menu_copy">Transcribe</string>
-    <string name="history_options_menu">Deles historiam</string>
+    <string name="history_options_menu">Dele historiam</string>
     <string name="title_history">Historia</string>
     <string name="separator_element_2">Punctum</string>
     <string name="title_donate">Dona</string>
@@ -76,4 +76,7 @@
     <string name="unit_megapascal">Magapascalium</string>
     <string name="unit_kilowatt">Chiliovattium</string>
     <string name="unit_megawatt">Magavattium</string>
+    <string name="title_vibrations">Vibratio</string>
+    <string name="physical_quantity_energy">Energia</string>
+    <string name="separator_element_3">Spatium</string>
 </resources>
