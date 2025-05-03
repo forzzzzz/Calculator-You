@@ -233,5 +233,5 @@
     <string name="unit_pebibyte">Pebibyte</string>
     <string name="unit_degree">Graden</string>
     <string name="unit_turn">Hoek</string>
-    <string name="unit_ounce">Ons</string>
+    <string name="unit_ounce">Ounce</string>
 </resources>
