@@ -109,7 +109,7 @@
     <string name="physical_quantity_area">Área</string>
     <string name="physical_quantity_frequency">Frecuencia</string>
     <string name="physical_quantity_torque">Torque (Torsión)</string>
-    <string name="physical_quantity_light">Claro</string>
+    <string name="physical_quantity_light">Luz</string>
     <string name="physical_quantity_viscosity">Viscosidad</string>
     <string name="unit_kilometer">Kilómetro</string>
     <string name="unit_centimeter">Centímetro</string>
