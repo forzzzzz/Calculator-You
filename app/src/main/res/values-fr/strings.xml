@@ -188,7 +188,7 @@
     <string name="unit_megapascal">Megapascal</string>
     <string name="unit_bar">Bar</string>
     <string name="unit_atmosphere">Atmosphère</string>
-    <string name="unit_h2o">H2O (Pouces d\'eau)</string>
+    <string name="unit_h2o">H₂O (pouces d’eau)</string>
     <string name="unit_cubic_meter">Mètre cube</string>
     <string name="unit_cubic_centimeter">Centimètre cube</string>
     <string name="unit_quart">Quart</string>
