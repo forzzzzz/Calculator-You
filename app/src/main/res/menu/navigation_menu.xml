@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/calculators_title">
+        <menu>
+            <group
+                android:id="@+id/calculators"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/calculator"
+                    android:title="@string/calculator_navigation"
+                    android:icon="@drawable/baseline_calculate"/>
+                <item
+                    android:id="@+id/unit_converter"
+                    android:title="@string/unit_converter_navigation"
+                    android:icon="@drawable/ic_compare" />
+                <item
+                    android:id="@+id/currency_converter"
+                    android:title="@string/currency_converter_navigation"
+                    android:icon="@drawable/ic_currency_exchange" />
+            </group>
+        </menu>
+    </item>
+
+    <group
+        android:id="@+id/other"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/settings"
+            android:title="@string/title_settings"
+            android:icon="@drawable/ic_settings"/>
+        <item
+            android:id="@+id/about_app"
+            android:title="@string/title_about"
+            android:icon="@drawable/ic_info_outline"/>
+    </group>
+</menu>

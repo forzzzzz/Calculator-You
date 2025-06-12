@@ -14,11 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.Calculator"
-        tools:targetApi="31">
+        tools:targetApi="33">
 
 
         <activity
-            android:name=".new_arch.presentation.main.AppActivity"
+            android:name=".new_arch.presentation.AppActivity"
             android:exported="true"
             android:windowSoftInputMode="stateAlwaysHidden">
             <intent-filter>

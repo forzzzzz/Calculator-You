@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/back_up"
+        android:title="@string/back_up_settings_menu"/>
+    <item
+        android:id="@+id/restore"
+        android:title="@string/restore_settings_menu"/>
+    <item
+        android:id="@+id/set_by_default"
+        android:title="@string/set_by_default_settings_menu"/>
+</menu>

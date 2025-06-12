@@ -2,10 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Calculator" parent="Theme.Material3.DynamicColors.Light.NoActionBar">
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:statusBarColor">?attr/colorSurfaceVariant</item>
+<!--        <item name="android:statusBarColor">?attr/colorSurfaceVariant</item>-->
         <item name="android:colorControlActivated">?attr/colorPrimary</item>
         <item name="android:textColorHighlight">?attr/colorPrimaryContainer</item>
-        <item name="android:navigationBarColor">?attr/colorSurface</item>
+<!--        <item name="android:navigationBarColor">?attr/colorSurface</item>-->
         <item name="android:windowLightNavigationBar">true</item>
     </style>
     

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.forz.calculator.new_arch.presentation.mainScreen.MainFragment"
+        android:label="fragment_main2"
+        tools:layout="@layout/fragment_main2" >
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.forz.calculator.new_arch.presentation.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+    </fragment>
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.forz.calculator.new_arch.presentation.about_app.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" >
+    </fragment>
+</navigation>

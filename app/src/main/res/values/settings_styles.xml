@@ -17,9 +17,6 @@
         <item name="android:layout_height">?attr/actionBarSize</item>
 
         <item name="layout_collapseMode">pin</item>
-        <item name="titleTextColor">?attr/colorOnSurface</item>
-        <item name="navigationIcon">@drawable/baseline_arrow_back</item>
-        <item name="navigationIconTint">?attr/colorOnSurface</item>
         <item name="navigationContentDescription">@string/arrow_back_tool_tip</item>
     </style>
 

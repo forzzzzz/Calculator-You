@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculator_navigation"
+    app:startDestination="@id/calculatorFragment">
+
+    <fragment
+        android:id="@+id/calculatorFragment"
+        android:name="com.forz.calculator.new_arch.presentation.calculator.CalculatorFragment"
+        android:label="fragment_calculator2"
+        tools:layout="@layout/fragment_calculator2" />
+    <fragment
+        android:id="@+id/unitConverterFragment"
+        android:name="com.forz.calculator.new_arch.presentation.unit_converter.UnitConverterFragment"
+        android:label="fragment_unit_converter2"
+        tools:layout="@layout/fragment_unit_converter2" />
+    <fragment
+        android:id="@+id/currencyConverterFragment"
+        android:name="com.forz.calculator.new_arch.presentation.currency_converter.CurrencyConverterFragment"
+        android:label="fragment_currency_converter"
+        tools:layout="@layout/fragment_currency_converter" />
+</navigation>
