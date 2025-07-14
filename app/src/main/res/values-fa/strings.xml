@@ -209,5 +209,10 @@
     <string name="unit_kilobyte">کیلوبایت</string>
     <string name="unit_kibibyte">کیبی‌بایت</string>
     <string name="unit_megabit">مگابیت</string>
-    <string name="unit_mebibyte">مگابایت</string>
+    <string name="unit_mebibyte">مِبی‌بایت</string>
+    <string name="unit_megabyte">مگابایت</string>
+    <string name="unit_gigabit">گیگابیت</string>
+    <string name="unit_gigabyte">گیگابایت</string>
+    <string name="unit_gigibyte">گیبی‌بایت</string>
+    <string name="unit_terabit">ترابایت</string>
 </resources>
