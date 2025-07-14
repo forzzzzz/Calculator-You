@@ -67,7 +67,7 @@
     <string name="description_decimal_separator">نشان جداکننده‌ی اعشار</string>
     <string name="description_swipes">جابجا شدن میان برگه‌ها</string>
     <string name="description_swipes3">اعداد و عملیات علمی</string>
-    <string name="theme_element_1">پیش‌گزیده‌ی سامانه</string>
+    <string name="theme_element_1">سیستم</string>
     <string name="theme_element_2">روشن</string>
     <string name="theme_element_3">تاریک</string>
     <string name="separator_element_1">ویرگول</string>
@@ -214,5 +214,24 @@
     <string name="unit_gigabit">گیگابیت</string>
     <string name="unit_gigabyte">گیگابایت</string>
     <string name="unit_gigibyte">گیبی‌بایت</string>
-    <string name="unit_terabit">ترابایت</string>
+    <string name="unit_terabit">ترابیت</string>
+    <string name="unit_terabyte">ترابایت</string>
+    <string name="unit_tebibyte">تِبی‌بایت</string>
+    <string name="unit_petabit">پتابیت</string>
+    <string name="unit_petabyte">پتابایت</string>
+    <string name="unit_pebibyte">پِبی‌بایت</string>
+    <string name="unit_exabit">اگزابیت</string>
+    <string name="unit_exabyte">اگزابایت</string>
+    <string name="unit_exbibyte">اگزبی‌بایت</string>
+    <string name="unit_pascal_second">پاسکال-ثانیه</string>
+    <string name="unit_centipoise">سانتی‌پویز</string>
+    <string name="unit_stoke">استوک</string>
+    <string name="unit_poiseuille">Poiseuille</string>
+    <string name="unit_degree">درجه</string>
+    <string name="unit_radian">رادیان</string>
+    <string name="unit_gradian">گرادیان</string>
+    <string name="unit_turn">دور</string>
+    <string name="unit_gallon_us">گالن</string>
+    <string name="unit_gallon_uk">گالن (US)</string>
+    <string name="unit_barrel">بشکه</string>
 </resources>
