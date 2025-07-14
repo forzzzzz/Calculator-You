@@ -155,5 +155,25 @@
     <string name="title_saving_intermediate_results">ذخیره کردن خودکار نتایج</string>
     <string name="description_max_scientific_notation_digits">حداکثر ارقام نماد علمی</string>
     <string name="description_swipes2">برگه های اصلی</string>
-    <string name="description_saving_intermediate_results">ذخیره کردن خودکار نتایج در تاریخچه. دکمه ی مساوی اختیاری است.</string>
+    <string name="description_saving_intermediate_results">ذخیره کردن خودکار نتایج در تاریخچه. دکمه ی مساوی اختیاری است</string>
+    <string name="title_physical_quantity">کمیت فیزیکی</string>
+    <string name="unit_btu_per_hour">BTU در ساعت</string>
+    <string name="unit_pascal">پاسکال</string>
+    <string name="unit_kilopascal">کیلوپاسکال</string>
+    <string name="unit_megapascal">مگاپاسکال</string>
+    <string name="unit_gigapascal">گیگاپاسکال</string>
+    <string name="unit_bar">بار</string>
+    <string name="unit_millibar">میلی‌بار</string>
+    <string name="unit_atmosphere">اتمسفر</string>
+    <string name="unit_psi">PSI</string>
+    <string name="unit_h2o">H2O</string>
+    <string name="unit_milliliter">میلی‌لیتر</string>
+    <string name="unit_liter">لیتر</string>
+    <string name="unit_kiloliter">کیلولیتر</string>
+    <string name="unit_cubic_meter">متر مکعب</string>
+    <string name="unit_cubic_centimeter">سانتی‌متر مکعب</string>
+    <string name="unit_cubic_decimeter">دسی‌متر مکعب</string>
+    <string name="unit_gallon">گالن</string>
+    <string name="unit_quart">کوارت</string>
+    <string name="unit_pint">پاینت</string>
 </resources>
