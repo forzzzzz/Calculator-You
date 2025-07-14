@@ -150,4 +150,10 @@
     <string name="unit_kelvin">کلوین</string>
     <string name="unit_megawatt">مگاوات</string>
     <string name="unit_nautical_mile">مایل دریایی</string>
+    <string name="app_name">ماشین حساب</string>
+    <string name="title_max_scientific_notation_digits">نماد علمی</string>
+    <string name="title_saving_intermediate_results">ذخیره کردن خودکار نتایج</string>
+    <string name="description_max_scientific_notation_digits">حداکثر ارقام نماد علمی</string>
+    <string name="description_swipes2">برگه های اصلی</string>
+    <string name="description_saving_intermediate_results">ذخیره کردن خودکار نتایج در تاریخچه. دکمه ی مساوی اختیاری است.</string>
 </resources>
