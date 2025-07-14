@@ -184,7 +184,7 @@
     <string name="unit_degree">Fok</string>
     <string name="unit_barrel">Hordó</string>
     <string name="unit_gallon_uk">Gallon (UK)</string>
-    <string name="title_saving_intermediate_results">Az eredmények automatikus mentése</string>
+    <string name="title_saving_intermediate_results">Eredmények automatikus mentése</string>
     <string name="description_max_scientific_notation_digits">Normálalak maximális számjegyei</string>
     <string name="physical_quantity_energy">Energia</string>
     <string name="physical_quantity_pressure">Nyomás</string>
