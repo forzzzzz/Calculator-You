@@ -176,4 +176,19 @@
     <string name="unit_gallon">گالن</string>
     <string name="unit_quart">کوارت</string>
     <string name="unit_pint">پاینت</string>
+    <string name="unit_fluid_ounce">اونس مایع</string>
+    <string name="unit_tablespoon">قاشق غذاخوری</string>
+    <string name="unit_teaspoon">قاشق چایخوری</string>
+    <string name="unit_square_meter">متر مربع</string>
+    <string name="unit_square_kilometer">کیلومتر مربع</string>
+    <string name="unit_square_centimeter">سانتی‌متر مربع</string>
+    <string name="unit_square_millimeter">میلی‌متر مربع</string>
+    <string name="unit_hectare">هکتار</string>
+    <string name="unit_acre">جریب</string>
+    <string name="unit_square_yard">یارد مربع</string>
+    <string name="unit_square_foot">فوت مربع</string>
+    <string name="unit_kilogram_per_cubic_meter">کیلوگرم در متر مکعب</string>
+    <string name="unit_gram_per_cubic_centimeter">گرم در سانتی‌متر مکعب</string>
+    <string name="unit_pound_per_cubic_foot">پوند در فوت مکعب</string>
+    <string name="unit_pound_per_gallon">پوند در گالن</string>
 </resources>
