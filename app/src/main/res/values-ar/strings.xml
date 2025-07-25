@@ -226,4 +226,12 @@
     <string name="unit_pascal_second">باسكال-ثانية</string>
     <string name="unit_centipoise">سنتيبواز</string>
     <string name="unit_stoke">ستوك</string>
+    <string name="unit_poiseuille">بوازوي</string>
+    <string name="unit_degree">درجة</string>
+    <string name="unit_radian">راديان</string>
+    <string name="unit_gradian">غراديان</string>
+    <string name="unit_turn">دورة</string>
+    <string name="unit_gallon_us">جالون أمريكي</string>
+    <string name="unit_gallon_uk">جالون إمبراطوري</string>
+    <string name="unit_barrel">برميل</string>
 </resources>
