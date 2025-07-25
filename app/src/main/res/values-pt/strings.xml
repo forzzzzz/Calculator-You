@@ -220,4 +220,12 @@
     <string name="unit_gigabyte">Gigabyte</string>
     <string name="unit_petabyte">Petabyte</string>
     <string name="unit_knot">Knot</string>
+    <string name="unit_candela">Candela</string>
+    <string name="unit_lux">Lux</string>
+    <string name="unit_byte">Byte</string>
+    <string name="unit_tebibyte">Tebibyte</string>
+    <string name="unit_petabit">Petabit</string>
+    <string name="unit_pebibyte">Pebibyte</string>
+    <string name="unit_exabit">Exabit</string>
+    <string name="unit_exabyte">Exabyte</string>
 </resources>
