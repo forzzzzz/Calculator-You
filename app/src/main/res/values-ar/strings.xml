@@ -20,4 +20,210 @@
     <string name="title_saving_intermediate_results">حفظ النتائج تلقائياً</string>
     <string name="history_data_menu_delete">حذف</string>
     <string name="history_options_menu">مسح السجل</string>
+    <string name="title_precision">دقة</string>
+    <string name="title_max_scientific_notation_digits">الصيغة العلمية</string>
+    <string name="title_separator">الفاصل</string>
+    <string name="title_decimal_separator">فاصل عشري</string>
+    <string name="description_vibrations">اهتزاز عند الضغط على ازرار لوحة المفاتيح</string>
+    <string name="description_sound_effects">مؤثرات صوتية عند الضغط على ازرار لوحة المفاتيح</string>
+    <string name="description_select_theme">سمة فاتحة او داكنة للتطبيق</string>
+    <string name="description_dynamic_colors">الوان ديناميكية من خلفية الشاشة</string>
+    <string name="description_select_color">اكثر من 60 لون لتناسب ذوقك</string>
+    <string name="description_precision">عدد المنازل العشرية</string>
+    <string name="description_max_scientific_notation_digits">اقصى عدد من خانات الصيغة العلمية</string>
+    <string name="description_separator">رمز فاصل المجموعات</string>
+    <string name="description_decimal_separator">رمز الفاصل العشري</string>
+    <string name="description_swipes">سحب عبر الشاشة</string>
+    <string name="description_swipes2">علامات التبويب الرئيسية</string>
+    <string name="description_swipes3">الارقام والوظائف العلمية</string>
+    <string name="description_saving_intermediate_results">حفظ النتائج تلقائيًا في السجل. زر المساواة اختياري</string>
+    <string name="theme_element_1">النظام</string>
+    <string name="theme_element_2">فاتح</string>
+    <string name="theme_element_3">داكن</string>
+    <string name="separator_element_1">فاصلة</string>
+    <string name="separator_element_2">نقطة</string>
+    <string name="separator_element_3">مسافة</string>
+    <string name="help_selection_text">مساعدة</string>
+    <string name="support_selection_text">دعم</string>
+    <string name="info_selection_text">معلومات التطبيق</string>
+    <string name="title_translate">ترجمة</string>
+    <string name="title_rate">تقييم</string>
+    <string name="title_donate">تبرع</string>
+    <string name="title_email">بريد إلكتروني</string>
+    <string name="title_open_source">كود المصدر المفتوح</string>
+    <string name="title_licenses">التراخيص</string>
+    <string name="title_privacy_policy">سياسة الخصوصية</string>
+    <string name="title_version_app">الإصدار</string>
+    <string name="description_translate">ساعد في الترجمة عبر Hosted Weblate</string>
+    <string name="description_rate">اكتب مراجعة عن التطبيق</string>
+    <string name="description_donate">ادعم هذا التطبيق بتبرع عبر PayPal</string>
+    <string name="description_open_source">عرض المصدر المفتوح على GitHub</string>
+    <string name="description_licenses">عرض التراخيص</string>
+    <string name="description_privacy_policy">عرض سياسة الخصوصية</string>
+    <string name="love_text">مصنوع ليس من الحب❤️، بل بدافع الحب❤️</string>
+    <string name="tap_me">اضغط هنا😊</string>
+    <string name="clear_history_title">مسح السجل؟</string>
+    <string name="clear_history_dismiss">رفض</string>
+    <string name="clear_history_clear">مسح</string>
+    <string name="swipes_cancel">إلغاء</string>
+    <string name="swipes_ok">حسنا</string>
+    <string name="options_tool_tip">المزيد من الخيارات</string>
+    <string name="arrow_back_tool_tip">رجوع</string>
+    <string name="copy_text_tool_tip">نسخ النص</string>
+    <string name="empty_history">لا يوجد سجل</string>
+    <string name="month_1_date">يناير</string>
+    <string name="month_2_date">فبراير</string>
+    <string name="month_3_date">مارس</string>
+    <string name="month_4_date">أبريل</string>
+    <string name="month_5_date">مايو</string>
+    <string name="month_6_date">يونيو</string>
+    <string name="month_7_date">يوليو</string>
+    <string name="month_8_date">أغسطس</string>
+    <string name="month_9_date">سبتمبر</string>
+    <string name="month_10_date">أكتوبر</string>
+    <string name="month_11_date">نوفمبر</string>
+    <string name="month_12_date">ديسمبر</string>
+    <string name="today_date">اليوم</string>
+    <string name="yesterday_date">أمس</string>
+    <string name="days_ago_2_date">منذ يومين</string>
+    <string name="days_ago_3_date">منذ ثلاثة أيام</string>
+    <string name="days_ago_4_date">منذ أربعة أيام</string>
+    <string name="days_ago_5_date">منذ خمسة أيام</string>
+    <string name="days_ago_6_date">منذ ستة أيام</string>
+    <string name="days_ago_7_date">منذ سبعة أيام</string>
+    <string name="title_physical_quantity">كمية فيزيائية</string>
+    <string name="title_unit">وحدة</string>
+    <string name="physical_quantity_length">طول</string>
+    <string name="physical_quantity_time">زمن</string>
+    <string name="physical_quantity_mass">كتلة</string>
+    <string name="physical_quantity_temperature">درجة الحرارة</string>
+    <string name="physical_quantity_speed">سرعة</string>
+    <string name="physical_quantity_force">قوة</string>
+    <string name="physical_quantity_energy">طاقة</string>
+    <string name="physical_quantity_power">قدرة</string>
+    <string name="physical_quantity_pressure">ضغط</string>
+    <string name="physical_quantity_volume">حجم</string>
+    <string name="physical_quantity_area">مساحة</string>
+    <string name="physical_quantity_density">كثافة</string>
+    <string name="physical_quantity_frequency">تردد</string>
+    <string name="physical_quantity_torque">عزم</string>
+    <string name="physical_quantity_light">ضوء</string>
+    <string name="physical_quantity_storage">تخزين</string>
+    <string name="physical_quantity_viscosity">لزوجة</string>
+    <string name="physical_quantity_angle">زاوية</string>
+    <string name="physical_quantity_fuel">وقود</string>
+    <string name="unit_meter">متر</string>
+    <string name="unit_kilometer">كيلومتر</string>
+    <string name="unit_centimeter">سنتيمتر</string>
+    <string name="unit_millimeter">ملليمتر</string>
+    <string name="unit_mile">ميل</string>
+    <string name="unit_yard">ياردة</string>
+    <string name="unit_foot">قدم</string>
+    <string name="unit_inch">بوصة</string>
+    <string name="unit_nautical_mile">ميل بحري</string>
+    <string name="unit_second">ثانية</string>
+    <string name="unit_minute">دقيقة</string>
+    <string name="unit_hour">ساعة</string>
+    <string name="unit_day">يوم</string>
+    <string name="unit_week">أسبوع</string>
+    <string name="unit_kilogram">كيلوجرام</string>
+    <string name="unit_gram">جرام</string>
+    <string name="unit_milligram">ملليجرام</string>
+    <string name="unit_tonne">طن</string>
+    <string name="unit_pound">رطل</string>
+    <string name="unit_ounce">أونصة</string>
+    <string name="unit_celsius">سيلسيوس</string>
+    <string name="unit_fahrenheit">فهرنهايت</string>
+    <string name="unit_kelvin">كلفن</string>
+    <string name="unit_meter_per_second">متر في الثانية</string>
+    <string name="unit_kilometer_per_hour">كيلومتر في الساعة</string>
+    <string name="unit_mile_per_hour">ميل في الساعة</string>
+    <string name="unit_knot">عقدة</string>
+    <string name="unit_feet_per_second">قدم في الثانية</string>
+    <string name="unit_newton">نيوتن</string>
+    <string name="unit_kilonewton">كيلو نيوتن</string>
+    <string name="unit_dyne">داين</string>
+    <string name="unit_pound_force">رطل-قوة</string>
+    <string name="unit_ounce_force">أونصة-قوة</string>
+    <string name="unit_joule">جول</string>
+    <string name="unit_kilojoule">كيلوجول</string>
+    <string name="unit_megajoule">ميجاجول</string>
+    <string name="unit_calorie">سعرة حرارية</string>
+    <string name="unit_kilocalorie">كيلو سعرة حرارية</string>
+    <string name="unit_grams_of_carbohydrate">جرامات الكربوهيدرات</string>
+    <string name="unit_grams_of_fat">جرامات الدهون</string>
+    <string name="unit_grams_of_protein">جرامات البروتين</string>
+    <string name="unit_watt">واط</string>
+    <string name="unit_kilowatt">كيلوواط</string>
+    <string name="unit_megawatt">ميجاواط</string>
+    <string name="unit_horsepower">حصان بخاري</string>
+    <string name="unit_btu_per_hour">وحدة حرارية بريطانية في الساعة</string>
+    <string name="unit_pascal">باسكال</string>
+    <string name="unit_kilopascal">كيلوباسكال</string>
+    <string name="unit_megapascal">ميجاباسكال</string>
+    <string name="unit_gigapascal">جيجاباسكال</string>
+    <string name="unit_bar">بار</string>
+    <string name="unit_millibar">مليبار</string>
+    <string name="unit_atmosphere">ضغط جوي</string>
+    <string name="unit_psi">رطل لكل بوصة مربعة</string>
+    <string name="unit_h2o">بوصة ماء</string>
+    <string name="unit_milliliter">ملليلتر</string>
+    <string name="unit_liter">لتر</string>
+    <string name="unit_kiloliter">كيلولتر</string>
+    <string name="unit_cubic_meter">متر مكعب</string>
+    <string name="unit_cubic_centimeter">سنتيمتر مكعب</string>
+    <string name="unit_cubic_decimeter">ديسيمتر مكعب</string>
+    <string name="unit_gallon">جالون</string>
+    <string name="unit_quart">كوارت</string>
+    <string name="unit_pint">باينت</string>
+    <string name="unit_fluid_ounce">أونصة سائلة</string>
+    <string name="unit_tablespoon">ملعقة طعام</string>
+    <string name="unit_teaspoon">ملعقة شاي</string>
+    <string name="unit_square_meter">متر مربع</string>
+    <string name="unit_square_kilometer">كيلومتر مربع</string>
+    <string name="unit_square_centimeter">سنتيمتر مربع</string>
+    <string name="unit_square_millimeter">ملليمتر مربع</string>
+    <string name="unit_hectare">هكتار</string>
+    <string name="unit_acre">فدان</string>
+    <string name="unit_square_yard">ياردة مربعة</string>
+    <string name="unit_square_foot">قدم مربعة</string>
+    <string name="unit_kilogram_per_cubic_meter">كيلوجرام لكل متر مكعب</string>
+    <string name="unit_gram_per_cubic_centimeter">جرام لكل سنتيمتر مكعب</string>
+    <string name="unit_pound_per_cubic_foot">رطل لكل قدم مكعب</string>
+    <string name="unit_pound_per_gallon">رطل لكل جالون</string>
+    <string name="unit_hertz">هرتز</string>
+    <string name="unit_kilohertz">كيلوهرتز</string>
+    <string name="unit_megahertz">ميجاهرتز</string>
+    <string name="unit_gigahertz">جيجاهرتز</string>
+    <string name="unit_newton_meter">نيوتن متر</string>
+    <string name="unit_kilonewton_meter">كيلو نيوتن متر</string>
+    <string name="unit_pound_foot">رطل قدم</string>
+    <string name="unit_ounce_inch">أونصة بوصة</string>
+    <string name="unit_lumen">لومن</string>
+    <string name="unit_candela">قنديلة</string>
+    <string name="unit_lux">لوكس</string>
+    <string name="unit_footcandle">شمعة قدم</string>
+    <string name="unit_bit">بت</string>
+    <string name="unit_byte">بايت</string>
+    <string name="unit_kilobit">كيلوبت</string>
+    <string name="unit_kilobyte">كيلوبايت</string>
+    <string name="unit_kibibyte">كيبيبايت</string>
+    <string name="unit_megabit">ميجابت</string>
+    <string name="unit_mebibyte">ميبيبايت</string>
+    <string name="unit_megabyte">ميجابايت</string>
+    <string name="unit_gigabit">جيجابت</string>
+    <string name="unit_gigabyte">جيجابايت</string>
+    <string name="unit_gigibyte">جيبيبايت</string>
+    <string name="unit_terabit">تيرابت</string>
+    <string name="unit_terabyte">تيرابايت</string>
+    <string name="unit_tebibyte">تيبيبايت</string>
+    <string name="unit_petabit">بيتابت</string>
+    <string name="unit_petabyte">بيتابايت</string>
+    <string name="unit_pebibyte">بيبيبايت</string>
+    <string name="unit_exabit">إكسابت</string>
+    <string name="unit_exabyte">إكسابايت</string>
+    <string name="unit_exbibyte">إكسيبيبايت</string>
+    <string name="unit_pascal_second">باسكال-ثانية</string>
+    <string name="unit_centipoise">سنتيبواز</string>
+    <string name="unit_stoke">ستوك</string>
 </resources>
