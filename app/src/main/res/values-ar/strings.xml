@@ -14,10 +14,10 @@
     <string name="title_dynamic_colors">ألوان ديناميكية</string>
     <string name="history_data_menu_copy">نسخ</string>
     <string name="title_select_color">اختيار اللون</string>
-    <string name="expression_infinity">القيمة عالية جداً</string>
+    <string name="expression_infinity">القيمة عالية جدا</string>
     <string name="theme_selection_text">الثيم</string>
     <string name="title_about">حول</string>
-    <string name="title_saving_intermediate_results">حفظ النتائج تلقائياً</string>
+    <string name="title_saving_intermediate_results">حفظ النتائج تلقائيا</string>
     <string name="history_data_menu_delete">حذف</string>
     <string name="history_options_menu">مسح السجل</string>
     <string name="title_precision">دقة</string>
@@ -36,7 +36,7 @@
     <string name="description_swipes">سحب عبر الشاشة</string>
     <string name="description_swipes2">علامات التبويب الرئيسية</string>
     <string name="description_swipes3">الارقام والوظائف العلمية</string>
-    <string name="description_saving_intermediate_results">حفظ النتائج تلقائيًا في السجل. زر المساواة اختياري</string>
+    <string name="description_saving_intermediate_results">حفظ النتائج تلقائيا في السجل. زر المساواة اختياري</string>
     <string name="theme_element_1">النظام</string>
     <string name="theme_element_2">فاتح</string>
     <string name="theme_element_3">داكن</string>
@@ -60,7 +60,7 @@
     <string name="description_open_source">عرض المصدر المفتوح على GitHub</string>
     <string name="description_licenses">عرض التراخيص</string>
     <string name="description_privacy_policy">عرض سياسة الخصوصية</string>
-    <string name="love_text">مصنوع ليس من الحب❤️، بل بدافع الحب❤️</string>
+    <string name="love_text">مصنوع ليس من الحب❤️، بل عن حب❤️</string>
     <string name="tap_me">اضغط هنا😊</string>
     <string name="clear_history_title">مسح السجل؟</string>
     <string name="clear_history_dismiss">رفض</string>
@@ -85,12 +85,12 @@
     <string name="month_12_date">ديسمبر</string>
     <string name="today_date">اليوم</string>
     <string name="yesterday_date">أمس</string>
-    <string name="days_ago_2_date">منذ يومين</string>
-    <string name="days_ago_3_date">منذ ثلاثة أيام</string>
-    <string name="days_ago_4_date">منذ أربعة أيام</string>
-    <string name="days_ago_5_date">منذ خمسة أيام</string>
-    <string name="days_ago_6_date">منذ ستة أيام</string>
-    <string name="days_ago_7_date">منذ سبعة أيام</string>
+    <string name="days_ago_2_date">قبل 2 أيام</string>
+    <string name="days_ago_3_date">قبل 3 أيام</string>
+    <string name="days_ago_4_date">قبل 4 أيام</string>
+    <string name="days_ago_5_date">قبل 5 أيام</string>
+    <string name="days_ago_6_date">قبل 6 أيام</string>
+    <string name="days_ago_7_date">قبل 7 أيام</string>
     <string name="title_physical_quantity">كمية فيزيائية</string>
     <string name="title_unit">وحدة</string>
     <string name="physical_quantity_length">طول</string>
