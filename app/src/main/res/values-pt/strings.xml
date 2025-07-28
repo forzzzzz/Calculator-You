@@ -228,4 +228,9 @@
     <string name="unit_pebibyte">Pebibyte</string>
     <string name="unit_exabit">Exabit</string>
     <string name="unit_exabyte">Exabyte</string>
+    <string name="unit_square_yard">Jarda quadrada</string>
+    <string name="unit_pascal_second">Pascal-segundo</string>
+    <string name="unit_centipoise">Centipoise</string>
+    <string name="unit_poiseuille">Poiseuille</string>
+    <string name="unit_turn">Volta</string>
 </resources>
