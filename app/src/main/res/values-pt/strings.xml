@@ -209,7 +209,7 @@
     <string name="unit_mebibyte">Mebibyte</string>
     <string name="unit_megabyte">Megabyte</string>
     <string name="unit_gigabit">Gigabit</string>
-    <string name="unit_gigibyte">Gigibyte</string>
+    <string name="unit_gigibyte">Gibibyte</string>
     <string name="unit_terabit">Terabit</string>
     <string name="unit_terabyte">Terabyte</string>
     <string name="unit_newton">Newton</string>
@@ -233,4 +233,5 @@
     <string name="unit_centipoise">Centipoise</string>
     <string name="unit_poiseuille">Poiseuille</string>
     <string name="unit_turn">Volta</string>
+    <string name="unit_footcandle">Vela pé</string>
 </resources>
