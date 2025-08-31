@@ -2,6 +2,8 @@ package com.forz.calculator.fragments.smallLand
 
 import android.os.Bundle
 import android.text.Editable
+import android.text.InputFilter
+import android.text.Spanned
 import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -80,6 +82,16 @@ class SmallLandFragment : Fragment(),
                 view.requestFocus()
             }
         }
+
+        binding.expressionEditText.filters = arrayOf(object : InputFilter {
+            override fun filter(source: CharSequence?, start: Int, end: Int,
+                                dest: Spanned?, dstart: Int, dend: Int
+            ): CharSequence? {
+                val result = dest.toString().substring(0, dstart) + source?.subSequence(start, end) + dest.toString().substring(dend)
+                val findPattern = Regex("^0[0-9]")
+                return if(findPattern.find(result) != null) "" else null
+            }
+        })
 
         binding.expressionEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
