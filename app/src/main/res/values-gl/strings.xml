@@ -126,9 +126,9 @@
     <string name="unit_nautical_mile">Milla náutica</string>
     <string name="unit_foot">Pé</string>
     <string name="unit_milligram">Miligramo</string>
-    <string name="title_swipes">Escorregamentos</string>
+    <string name="title_swipes">Arrastres</string>
     <string name="description_saving_intermediate_results">Gardado automático dos resultados no historial. O botón de igual é opcional</string>
-    <string name="description_swipes">Escorregamentos pola pantalla</string>
+    <string name="description_swipes">Arrastres pola pantalla</string>
     <string name="unit_tonne">Tonelada</string>
     <string name="unit_pound">Libra</string>
     <string name="unit_celsius">Celsius</string>
