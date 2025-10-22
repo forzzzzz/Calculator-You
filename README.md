@@ -11,7 +11,7 @@
       <img alt="Latest release" src="https://img.shields.io/github/v/release/forzzzzz/Calculator-You?color=8E4A4B&style=for-the-badge">
 </a>
 <a href="https://github.com/forzzzzz/Calculator-You/releases/latest">
-      <img alt="Releases" src="https://img.shields.io/github/downloads/forzzzzz/Calculator-You/total?color=8E4A4B&label=GitHub downloads&style=for-the-badge">
+      <img alt="GitHub downloads" src="https://img.shields.io/github/downloads/forzzzzz/Calculator-You/total?color=8E4A4B&label=GitHub downloads&style=for-the-badge">
 </a>
 <a href="https://github.com/forzzzzz/Calculator-You/releases/latest">
       <img alt="Releases" src="https://img.shields.io/badge/Android-8.1+-blue?color=8E4A4B&style=for-the-badge">
