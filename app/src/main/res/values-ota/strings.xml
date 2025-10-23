@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="expression_error">خطا</string>
+    <string name="theme_selection_text">تەم</string>
+    <string name="formatting_selection_text">بیچیملەندرمە</string>
+    <string name="other_selection_text">دیگر</string>
+    <string name="history_data_menu_copy">قوپیالا</string>
+    <string name="history_data_menu_share">پایلاش</string>
+    <string name="history_data_menu_delete">سیل</string>
+</resources>

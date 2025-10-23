@@ -7,7 +7,7 @@
     <string name="copy_text_tool_tip">Copiar texto</string>
     <string name="days_ago_2_date">2 dias atrás</string>
     <string name="days_ago_3_date">3 dias atrás</string>
-    <string name="unit_h2o">H20 (polegadas d\'água)</string>
+    <string name="unit_h2o">H₂O (polegadas de água)</string>
     <string name="unit_milliliter">Mililitro</string>
     <string name="swipes_cancel">Cancelar</string>
     <string name="unit_fluid_ounce">Onça líquida</string>
@@ -209,7 +209,7 @@
     <string name="unit_mebibyte">Mebibyte</string>
     <string name="unit_megabyte">Megabyte</string>
     <string name="unit_gigabit">Gigabit</string>
-    <string name="unit_gigibyte">Gigibyte</string>
+    <string name="unit_gigibyte">Gibibyte</string>
     <string name="unit_terabit">Terabit</string>
     <string name="unit_terabyte">Terabyte</string>
     <string name="unit_newton">Newton</string>
@@ -220,4 +220,18 @@
     <string name="unit_gigabyte">Gigabyte</string>
     <string name="unit_petabyte">Petabyte</string>
     <string name="unit_knot">Knot</string>
+    <string name="unit_candela">Candela</string>
+    <string name="unit_lux">Lux</string>
+    <string name="unit_byte">Byte</string>
+    <string name="unit_tebibyte">Tebibyte</string>
+    <string name="unit_petabit">Petabit</string>
+    <string name="unit_pebibyte">Pebibyte</string>
+    <string name="unit_exabit">Exabit</string>
+    <string name="unit_exabyte">Exabyte</string>
+    <string name="unit_square_yard">Jarda quadrada</string>
+    <string name="unit_pascal_second">Pascal-segundo</string>
+    <string name="unit_centipoise">Centipoise</string>
+    <string name="unit_poiseuille">Poiseuille</string>
+    <string name="unit_turn">Volta</string>
+    <string name="unit_footcandle">Vela pé</string>
 </resources>

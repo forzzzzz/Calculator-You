@@ -68,12 +68,12 @@
     <string name="description_dynamic_colors">Laadi värvid töölaua taustapildi alusel</string>
     <string name="title_open_source">Avatud lähtekood</string>
     <string name="title_licenses">Litsentsid</string>
-    <string name="title_privacy_policy">Privaatsuspoliitika</string>
+    <string name="title_privacy_policy">Andmekaitsepõhimõtted</string>
     <string name="title_version_app">Versioon</string>
     <string name="description_translate">Aita tõlkida Weblate\'i keskkonnas</string>
     <string name="description_open_source">Vaata lähtekoodi GitHubis</string>
     <string name="description_licenses">Vaata litsentse</string>
-    <string name="description_privacy_policy">Tutvu meie privaatsuspoliitikaga</string>
+    <string name="description_privacy_policy">Tutvu meie andmekaitsepõhimõtetega</string>
     <string name="love_text">Pole tehtud armastusega❤️ vaid armsama poolt❤️</string>
     <string name="description_rate">Kirjuta meie kohta arvustus</string>
     <string name="month_5_date">mai</string>

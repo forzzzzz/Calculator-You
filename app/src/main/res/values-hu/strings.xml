@@ -34,7 +34,7 @@
     <string name="month_8_date">Augusztus</string>
     <string name="title_precision">Pontosság</string>
     <string name="title_separator">Elválasztó</string>
-    <string name="title_decimal_separator">Tizedes elválasztó</string>
+    <string name="title_decimal_separator">Tizedeselválasztó</string>
     <string name="description_sound_effects">Hanghatások a billentyűzet gombjaira való koppintáskor</string>
     <string name="description_select_theme">Világos vagy sötét téma az alkalmazáshoz</string>
     <string name="title_swipes">Húzások</string>
@@ -75,12 +75,12 @@
     <string name="description_precision">Tizedesjegyek száma</string>
     <string name="description_swipes3">Számjegyek és tudományos funkciók</string>
     <string name="separator_element_3">Szóköz</string>
-    <string name="theme_element_1">Rendszer alapértelmezett</string>
+    <string name="theme_element_1">Rendszer alapértelmezése</string>
     <string name="separator_element_1">Vessző</string>
     <string name="separator_element_2">Pont</string>
     <string name="help_selection_text">Súgó</string>
     <string name="support_selection_text">Támogatás</string>
-    <string name="info_selection_text">Alkalmazás infó</string>
+    <string name="info_selection_text">Alkalmazásinformáció</string>
     <string name="description_translate">Segítsen fordítani a Weblate-en</string>
     <string name="description_rate">Írjon egy értékelést az alkalmazásról</string>
     <string name="description_open_source">Forráskód megtekintése a GitHubon</string>
@@ -184,7 +184,7 @@
     <string name="unit_degree">Fok</string>
     <string name="unit_barrel">Hordó</string>
     <string name="unit_gallon_uk">Gallon (UK)</string>
-    <string name="title_saving_intermediate_results">Az eredmények automatikus mentése</string>
+    <string name="title_saving_intermediate_results">Eredmények automatikus mentése</string>
     <string name="description_max_scientific_notation_digits">Normálalak maximális számjegyei</string>
     <string name="physical_quantity_energy">Energia</string>
     <string name="physical_quantity_pressure">Nyomás</string>

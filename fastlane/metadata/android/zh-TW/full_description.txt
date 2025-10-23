@@ -1,17 +1,17 @@
-Discover the ultimate calculator experience with our beautifully designed app, featuring 60+ stunning color themes to match your style. Whether you're tackling complex scientific equations or simple everyday calculations, our powerful and user-friendly interface makes it all easy.
+快來體驗我們精心設計的應用程式，享受極致的運算體驗。應用程式內建超過 60 種絢麗的色彩主題，可完美搭配你的個人風格。無論是複雜的科學運算，還是簡單的日常計算，我們功能強大又友善的應用程式都能讓你輕鬆應對。
 
-Key Features:
+主要功能：
 
-🎨 Beautiful Design & 60+ Color Themes: Personalize your calculator with a choice of 60+ vibrant color themes, making every calculation visually enjoyable.
+🎨 精美的設計與超過 60 種色彩主題**：從超過 60 種鮮豔的色彩主題中挑選，讓你的計算機獨具個人風格，將每次運算都變成一種視覺享受。
 
-🔬 Scientific Mode: Access advanced mathematical functions with our comprehensive scientific calculator, perfect for students, engineers, and math enthusiasts.
+🔬 科學模式：運用我們功能全面的科學計算機，呼叫進階數學函數，非常適合學生、工程師和數學愛好者。
 
-🕒 History: Easily track and review previous calculations with our handy history feature, ensuring you never lose important work.
+🕒 歷史紀錄：透過便利的歷史紀錄功能，輕鬆追溯和查看先前的運算紀錄，確保你永遠不會遺失重要的紀錄。
 
-📏 Unit Converter: Convert units effortlessly with our built-in converter, supporting a wide range of measurements, including length, weight, and more.
+📏 單位換算：使用內建換算功能輕鬆進行單位換算，支援長度、重量等多種測量單位。
 
-👌 User-Friendly Interface: Enjoy a clean, intuitive interface designed for effortless navigation and efficient calculations.
+👌 友善的使用者介面：享受簡潔直觀的介面設計，輕鬆實現導航功能和高效運算。
 
-Whether you're a student, professional, or anyone in between, our calculator is your go-to tool for all your math and conversion needs. Download now and elevate your calculation experience!
+無論你是學生、專業人士，或是介於兩者之間的任何人，我們的計算機都是你進行數學運算和單位換算的最佳首選。立即下載，提升你的運算體驗！
 
-Made not with love❤️, but by love❤️.
+非為愛而造❤️，但為愛而生❤️。

@@ -215,7 +215,7 @@
     <string name="unit_lux">Lüks</string>
     <string name="unit_footcandle">Foot-kandela</string>
     <string name="unit_kibibyte">Kibibayt</string>
-    <string name="unit_gigibyte">Gigibayt</string>
+    <string name="unit_gigibyte">Gibibayt</string>
     <string name="unit_terabit">Terabit</string>
     <string name="unit_terabyte">Terabayt</string>
     <string name="unit_tebibyte">Tebibayt</string>
@@ -233,4 +233,5 @@
     <string name="title_max_scientific_notation_digits">Bilimsel gösterim</string>
     <string name="description_saving_intermediate_results">Sonuçların geçmişe otomatik olarak kaydedilmesi. Eşittir düğmesi isteğe bağlıdır</string>
     <string name="title_saving_intermediate_results">Sonuçların otomatik kaydedilmesi</string>
+    <string name="unit_byte">Bayt</string>
 </resources>

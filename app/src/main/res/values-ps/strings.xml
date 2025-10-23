@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ګڼون مېچن</string>
+    <string name="expression_error">تیروتنه</string>
+    <string name="title_settings">سمون</string>
+    <string name="title_about">د کاریال په اړه</string>
+    <string name="title_select_theme">سروکی سڼخاب کړئ</string>
+    <string name="history_data_menu_copy">لمېسل کړئ</string>
+    <string name="history_data_menu_share">ګډ کړئ</string>
+    <string name="history_data_menu_delete">ړنګ کړئ</string>
+    <string name="title_history">کړکېښ</string>
+    <string name="title_sound_effects">غږونه</string>
+</resources>

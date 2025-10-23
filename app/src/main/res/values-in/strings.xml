@@ -192,4 +192,14 @@
     <string name="unit_pint">Pint</string>
     <string name="unit_fluid_ounce">Ons cairan</string>
     <string name="unit_gram_per_cubic_centimeter">Gram per sentimeter kubik</string>
+    <string name="unit_kilohertz">Kilohertz</string>
+    <string name="unit_megahertz">Megahertz</string>
+    <string name="unit_gigahertz">Gigahertz</string>
+    <string name="unit_pound_foot">Pound-kaki</string>
+    <string name="unit_lux">Lux</string>
+    <string name="unit_newton_meter">Newton-meter</string>
+    <string name="unit_lumen">Lumen</string>
+    <string name="unit_kilonewton_meter">Kilonewton-meter</string>
+    <string name="unit_ounce_inch">Ons-inci</string>
+    <string name="unit_candela">Candela</string>
 </resources>

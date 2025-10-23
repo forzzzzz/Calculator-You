@@ -93,7 +93,7 @@
     <string name="physical_quantity_time">Zeit</string>
     <string name="physical_quantity_force">Kraft</string>
     <string name="physical_quantity_energy">Energie</string>
-    <string name="physical_quantity_power">Strom</string>
+    <string name="physical_quantity_power">Leistung</string>
     <string name="physical_quantity_pressure">Druck</string>
     <string name="physical_quantity_volume">Volumen</string>
     <string name="unit_hour">Stunde</string>

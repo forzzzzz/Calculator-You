@@ -212,7 +212,7 @@
     <string name="unit_megabyte">மெகாபைட்</string>
     <string name="unit_gigabit">கிகாபிட்</string>
     <string name="unit_gigabyte">சிகாபைட்</string>
-    <string name="unit_gigibyte">கிகிபைட்</string>
+    <string name="unit_gigibyte">கிபிபைட்</string>
     <string name="unit_terabit">டெராபிட்</string>
     <string name="unit_terabyte">டெராபைட்</string>
     <string name="unit_tebibyte">டெபிபைட்</string>
@@ -233,4 +233,5 @@
     <string name="unit_gallon_us">கேலன் (யு.எச்)</string>
     <string name="unit_gallon_uk">கேலன் (யுகே)</string>
     <string name="unit_barrel">பீப்பாய்</string>
+    <string name="unit_byte">பைட்</string>
 </resources>
