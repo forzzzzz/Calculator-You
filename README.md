@@ -73,6 +73,10 @@ Help translate with [Hosted Weblate](https://hosted.weblate.org/engage/calculato
 <img src="https://hosted.weblate.org/widget/calculator-you/88x31-white.png" alt="Translating status" height="40" />
 </a>
 
+<span style="color:#d9534f"><em>The translation service is temporarily unavailable</em></span>
+
+###
+
 Support this app with a [PayPal](https://www.paypal.com/donate/?hosted_button_id=GKC26SLPUTQMU) donation 
 
 [<img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white"
