@@ -73,7 +73,9 @@ Help translate with [Hosted Weblate](https://hosted.weblate.org/engage/calculato
 <img src="https://hosted.weblate.org/widget/calculator-you/88x31-white.png" alt="Translating status" height="40" />
 </a>
 
-<span style="color:#d9534f"><em>The translation service is temporarily unavailable</em></span>
+###
+
+🔴 The translation service is temporarily unavailable
 
 ###
 
